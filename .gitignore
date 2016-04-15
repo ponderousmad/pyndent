@@ -54,5 +54,5 @@ pyprompt.bat
 
 # Large data files
 
-attitude
-noattitude
+captures/
+
