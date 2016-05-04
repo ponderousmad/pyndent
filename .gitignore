@@ -1,3 +1,31 @@
+# =========================
+# Project specific files
+# =========================
+
+# Temporary/local files
+pyprompt.bat
+
+# Large data files
+captures/
+
+# =========================
+# Language/tool files
+# =========================
+
+# Python
+# =========================
+
+*.pyc
+.ipynb_checkpoints
+
+# =========================
+# Operating System Files
+# =========================
+
+
+# Windows
+# =========================
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -16,10 +44,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
-# =========================
-# Operating System Files
-# =========================
 
 # OSX
 # =========================
@@ -45,14 +69,4 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-
-# Temporary/local files
-
-pyprompt.bat
-.ipynb_checkpoints
-
-
-# Large data files
-
-captures/
 
