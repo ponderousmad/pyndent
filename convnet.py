@@ -50,14 +50,14 @@ def setup_initializer(mean=0.0, scale=1.0, distribution="constant", seed=None):
 
 # Shape functions.
 
-def same_output_shape(input_shape, options):
+def same_output_shape(input_shape, options=None):
     return input_shape
 
 def matrix_output_shape(input_shape, options):
     matrix_size = options["size"]
     return (int(input_shape[0]), matrix_size[1])
 
-def flatten_output_shape(input_shape, options):
+def flatten_output_shape(input_shape, options=None):
     return (int(input_shape[0]), int(input_shape[1] * input_shape[2] * input_shape[3]))
 
 def unflatten_output_shape(input_shape, options):
@@ -65,7 +65,7 @@ def unflatten_output_shape(input_shape, options):
     pixels = size[0] * size[1]
     return (int(input_shape[0]), size[0], size[1], int(input_shape[1] / pixels))
 
-def image_output_shape(input_shape, size, stride, padding):
+def image_output_size(input_shape, size, stride, padding):
     if len(size) > 2 and input_shape[3] != size[2]:
         print("Matrix size incompatible!")
 
@@ -89,6 +89,9 @@ def image_output_shape(input_shape, size, stride, padding):
 
 def image_size_options(options):
     return {key: options[key] for key in ('size', 'stride', 'padding')}
+
+def image_output_shape(input_shape, options):
+    return image_output_size(input_shape, **image_size_options(options))
 
 # Node connection functions
 
