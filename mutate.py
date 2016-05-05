@@ -16,8 +16,8 @@ class Mutagen(object):
         ]
         self.change_distribution = 0.01
         self.initial_means = [
-            (0.03, 0)
-            (0.02, 1)
+            (0.03, 0),
+            (0.02, 1),
             (0.01, -1)
         ]
         self.image_operations = [
@@ -54,6 +54,10 @@ class Mutagen(object):
             (0.05, "SAME"),
             (0.05, "VALID")
         ]
+        self.add_image_layer = 0.005
+        self.remove_image_layer = 0.004
+        self.add_hidden_layer = 0.003
+        self.remove_hidden_layer = 0.002
         self.entropy = random.Random(seed)
 
     def branch(self, bias):
@@ -101,3 +105,15 @@ class Mutagen(object):
 
     def mutate_padding(self, padding):
         return self.select(self.paddings, padding)
+
+    def mutate_duplicate_layer(self, is_image, layer_count):
+        probability = self.add_image_layer if is_image else self.add_hidden_layer
+        if layer_count > 0 and self.branch(probability):
+            return self.entropy.randint(0, layer_count - 1)
+        return None
+
+    def mutate_remove_layer(self, is_image, layer_count):
+        probability = self.add_image_layer if is_image else self.add_hidden_layer
+        if layer_count > 1 and self.branch(probability):
+            return self.entropy.randint(0, layer_count - 1)
+        return None

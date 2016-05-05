@@ -1,8 +1,10 @@
 from __future__ import print_function
 
+import copy
 import lxml.etree as et
 
 import convnet
+import mutate
 
 class EvoLayer(object):
     """ An evolvable layer representation.
@@ -169,14 +171,24 @@ class LayerStack(object):
         else:
             self.hidden_layers.append(layer)
 
+    def mutate_layers(self, is_image, layers, mutagen):
+        slot = mutagen.mutate_duplicate_layer(is_image, len(layers))
+        if slot != None:
+            layer = layers[slot]
+            layers.insert(slot, copy.deepcopy(layer))
+            
+        slot = mutagen.mutate_remove_layer(is_image, len(layers))
+        if slot != None:
+            layers.pop(slot)
+
+        for layer in layers:
+            layer.mutate(mutagen)
+
     def mutate(self, seed):
-        muatagen = mutate.Mutagen(seed)
+        mutagen = mutate.Mutagen(seed)
 
-        for layer in self.image_layers:
-            layer.mutate(mutagen)
-
-        for layer in self.hidden_layers:
-            layer.mutate(mutagen)
+        self.mutate_layers(True, self.image_layers, mutagen)
+        self.mutate_layers(False, self.hidden_layers, mutagen)
 
     def reseed(self, entropy):
         for layer in self.image_layers:
