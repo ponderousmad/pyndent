@@ -173,12 +173,12 @@ class LayerStack(object):
 
     def mutate_layers(self, is_image, layers, mutagen):
         slot = mutagen.mutate_duplicate_layer(is_image, len(layers))
-        if slot != None:
+        if slot is not None:
             layer = layers[slot]
             layers.insert(slot, copy.deepcopy(layer))
             
         slot = mutagen.mutate_remove_layer(is_image, len(layers))
-        if slot != None:
+        if slot is not None:
             layers.pop(slot)
 
         for layer in layers:
