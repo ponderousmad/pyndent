@@ -1,5 +1,7 @@
 from __future__ import print_function
 
+import lxml.etree as et
+
 import convnet
 
 class EvoLayer(object):
@@ -33,6 +35,14 @@ class EvoLayer(object):
             layers.append(convnet.create_dropout_layer(self.dropout_rate, self.dropout_seed))
         return self.output_shape(input_shape)
 
+    def to_xml(self, parent):
+        element = et.SubElement(parent, "layer")
+        element.set("dropout_rate", str(self.dropout_rate))
+        if self.dropout_seed:
+            element.set("dropout_seed", str(self.dropout_seed))
+        element.set("relu", str(self.relu))
+        self.primary.to_xml(element)
+
 class Initializer(object):
     """ Keep track of hyper parameters for tensor initialization"""
     def __init__(self, distribution="constant", mean=0.0, scale=1.0):
@@ -51,6 +61,14 @@ class Initializer(object):
 
     def construct(self):
         return convnet.setup_initializer(self.mean, self.scale, self.distribution, self.seed)
+
+    def to_xml(self, parent):
+        element = et.SubElement(parent, "initializer")
+        element.set("distribution", self.distribution)
+        element.set("mean", str(self.mean))
+        element.set("scale", str(self.scale))
+        if self.seed:
+            element.set("seed", str(self.seed))
 
 class HiddenLayer(object):
     """ Non convolutional hidden layer. """
@@ -74,6 +92,12 @@ class HiddenLayer(object):
 
     def construct(self, input_shape):
         return convnet.create_matrix_layer(input_shape[1], self.output_size, self.bias, self.initializer.construct())
+
+    def to_xml(self, parent):
+        element = et.SubElement(parent, "hidden")
+        element.set("output_size", str(self.output_size))
+        element.set("bias", str(self.bias))
+        self.initializer.to_xml(element)
 
 class ImageLayer(object):
     def __init__(self, operation, patch_size, stride, output_channels, padding, initializer):
@@ -122,11 +146,19 @@ class ImageLayer(object):
                 self.padding
             )
 
+    def to_xml(self, parent):
+        element = et.SubElement(parent, "image")
+        element.set("operation", self.operation)
+        element.set("patch_size", str(self.patch_size))
+        element.set("stride", str(self.stride))
+        element.set("padding", self.padding)
+        element.set("output_channels", str(self.output_channels))
+        self.initializer.to_xml(element)
+
 class LayerStack(object):
     """Overall structure for the network"""
-    def __init__(self, input_size, output_size):
-        self.input_size = input_size
-        self.output_size = output_size
+    def __init__(self, flatten):
+        self.flatten = flatten
         self.image_layers = []
         self.hidden_layers = []
 
@@ -153,17 +185,37 @@ class LayerStack(object):
         for layer in self.hidden_layers:
             layer.mutate(entropy)
 
-    def construct(self):
+    def construct(self, input_shape):
         layers = []
 
-        shape = self.input_size
+        shape = input_shape
         for layer in self.image_layers:
             shape = layer.construct(shape, layers)
 
-        layers.append(convnet.create_flatten_layer())
-        shape = convnet.flatten_output_shape(shape)
+        if self.flatten:
+            layers.append(convnet.create_flatten_layer())
+            shape = convnet.flatten_output_shape(shape)
+
 
         for layer in self.hidden_layers:
             shape = layer.construct(shape, layers)
 
         return layers
+
+    def to_xml(self, parent = None):
+        if parent:
+            element = et.SubElement(parent, "evostack")
+        else:
+            element = et.Element("evostack")
+        element.set("flatten", str(self.flatten))
+        if self.image_layers:
+            children = et.SubElement(element, "layers")
+            children.set("type", "image")
+            for layer in self.image_layers:
+                layer.to_xml(children)
+        if self.image_layers:
+            children = et.SubElement(element, "layers")
+            children.set("type", "hidden")
+            for layer in self.hidden_layers:
+                layer.to_xml(children)
+        return element
