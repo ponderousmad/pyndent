@@ -149,9 +149,18 @@ class Layer(object):
         self.parameter_setup = parameter_setup
         self.node_setup = node_setup
         self.parameters = None
+        self.loss_factor = 0
 
     def setup_parameters(self):
         self.parameters = self.parameter_setup(self.options)
+    
+    def set_l2_factor(self, loss_factor):
+        self.loss_factor = loss_factor
+    
+    def update_loss(self, loss):
+        if self.loss_factor:
+            return loss + loss_factor * tf.nn.l2_loss(self.parameters[0])
+        return loss       
 
     def connect(self, input_node, train):
         node = self.node_setup(input_node, train, self.parameters, self.options)

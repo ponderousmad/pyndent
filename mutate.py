@@ -54,6 +54,12 @@ class Mutagen(object):
             (0.05, "SAME"),
             (0.05, "VALID")
         ]
+        self.l2_factors = [
+            (0.05, 0),
+            (0.02, 0.001),
+            (0.01, 0.01),
+            (0.001, 0.1)
+        ]
         self.add_image_layer = 0.005
         self.remove_image_layer = 0.004
         self.add_hidden_layer = 0.003
@@ -105,6 +111,9 @@ class Mutagen(object):
 
     def mutate_padding(self, padding):
         return self.select(self.paddings, padding)
+
+    def mutate_l2_factor(self, l2_factor):
+        return self.select(self.l2_factors, l2_factor)
 
     def mutate_duplicate_layer(self, is_image, layer_count):
         probability = self.add_image_layer if is_image else self.add_hidden_layer

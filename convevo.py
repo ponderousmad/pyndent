@@ -74,9 +74,10 @@ class Initializer(object):
 
 class HiddenLayer(object):
     """ Non convolutional hidden layer. """
-    def __init__(self, output_size, bias, initializer):
+    def __init__(self, output_size, bias, initializer, l2_factor=0):
         self.output_size = output_size
         self.bias = bias
+        self.l2_factor = l2_factor
         self.initializer = initializer
 
     def is_image(self):
@@ -88,26 +89,31 @@ class HiddenLayer(object):
     def mutate(self, mutagen):
         self.output_size = mutagen.mutate_output_size(self.output_size)
         self.initializer.mutate(mutagen)
+        self.l2_factor = mutagen.mutate_l2_factor(self.l2_factor)
 
     def reseed(self, entropy):
         self.initializer.reseed(entropy)
 
     def construct(self, input_shape):
-        return convnet.create_matrix_layer(input_shape[1], self.output_size, self.bias, self.initializer.construct())
+        layer = convnet.create_matrix_layer(input_shape[1], self.output_size, self.bias, self.initializer.construct())
+        layer.set_l2_factor(self.l2_factor)
+        return layer
 
     def to_xml(self, parent):
         element = et.SubElement(parent, "hidden")
         element.set("output_size", str(self.output_size))
         element.set("bias", str(self.bias))
+        element.set("l2_factor", str(self.l2_factor))
         self.initializer.to_xml(element)
 
 class ImageLayer(object):
-    def __init__(self, operation, patch_size, stride, output_channels, padding, initializer):
+    def __init__(self, operation, patch_size, stride, output_channels, padding, initializer, l2_factor=0):
         self.operation = operation
         self.patch_size = patch_size
         self.stride = stride
         self.output_channels = output_channels
         self.padding = padding
+        self.l2_factor = l2_factor
         self.initializer = initializer
 
     def is_image(self):
@@ -128,18 +134,21 @@ class ImageLayer(object):
         self.padding = mutagen.mutate_padding(self.padding)
         self.output_channels = mutagen.mutate_output_size(self.output_channels)
         self.initializer.mutate(mutagen)
+        self.l2_factor = mutagen.mutate_l2_factor(self.l2_factor)
 
     def reseed(self, entropy):
         self.initializer.reseed(entropy)
 
     def construct(self, input_shape):
         if self.operation.startswith("conv"):
-            return convnet.create_conv_layer(
+            layer = convnet.create_conv_layer(
                 (self.patch_size, self.patch_size),
                 (self.stride, self.stride),
                 input_shape[3], self.output_channels,
                 self.operation.endswith("bias"), self.padding
             )
+            layer.set_l2_factor(self.l2_factor)
+            return layer
         else:
             return convnet.create_pool_layer(
                 self.operation,
@@ -155,6 +164,7 @@ class ImageLayer(object):
         element.set("stride", str(self.stride))
         element.set("padding", self.padding)
         element.set("output_channels", str(self.output_channels))
+        element.set("l2_factor", str(self.l2_factor))
         self.initializer.to_xml(element)
 
 class LayerStack(object):
