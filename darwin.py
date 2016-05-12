@@ -51,4 +51,4 @@ class Darwin(object):
         self.population = new_population
 
     def best(self):
-        return max(self.history.iteritems(), key=(lambda entry: entry[1][0]))[0]
+        return max(self.history.iteritems(), key=(lambda entry: entry[1][1]))[1]
