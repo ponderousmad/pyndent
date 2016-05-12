@@ -188,8 +188,7 @@ def create_dropout_layer(rate, seed):
     }
     return Layer(options, no_parameters, apply_dropout)
 
-def create_conv_layer(patch_size, stride, in_channels, out_channels, bias=True, padding="SAME"):
-    init = lambda size: tf.truncated_normal(size, stddev=0.1)
+def create_conv_layer(patch_size, stride, in_channels, out_channels, bias=True, padding="SAME", init=setup_initializer(distribution="normal", scale=0.1)):
     options = {
         "size": patch_size + (in_channels, out_channels),
         "bias": bias,

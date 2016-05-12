@@ -145,7 +145,8 @@ class ImageLayer(object):
                 (self.patch_size, self.patch_size),
                 (self.stride, self.stride),
                 input_shape[3], self.output_channels,
-                self.operation.endswith("bias"), self.padding
+                self.operation.endswith("bias"), self.padding,
+                self.initializer.construct()
             )
             layer.set_l2_factor(self.l2_factor)
             return layer
@@ -205,7 +206,7 @@ class LayerStack(object):
             layer.reseed(entropy)
 
         for layer in self.hidden_layers:
-            layer.mutate(entropy)
+            layer.reseed(entropy)
 
     def construct(self, input_shape):
         layers = []
