@@ -152,7 +152,7 @@ class Layer(object):
     
     def update_loss(self, loss):
         if self.loss_factor:
-            return loss + loss_factor * tf.nn.l2_loss(self.parameters[0])
+            return loss + self.loss_factor * tf.nn.l2_loss(self.parameters[0])
         return loss       
 
     def connect(self, input_node, train):
