@@ -22,9 +22,15 @@ class Darwin(object):
         results.append((member, score))
         return sorted(results, reverse=True, key=lambda e: e[1])
 
-    def repopulate(self, survival_rate, results, entropy):
+    def repopulate(self, survival_rate, from_history, results, entropy):
         survivor_count = int(math.ceil(len(results) * survival_rate))
         survivors = results[:survivor_count]
+        
+        best_score = survivors[0][1]
+        for entry in self.history.values():
+            if (entry[1] > best_score) and from_history > 0:
+                survivors.append(entry)
+                from_history -= 1
 
         new_population = []
         while len(new_population) < len(self.population):
