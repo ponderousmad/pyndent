@@ -3,22 +3,22 @@ import random
 class Mutagen(object):
     """Keep track of probabilities and randomness for mutating conv nets."""
     def __init__(self, seed):
-        self.toggle_relu = 0.01
-        self.change_dropout_rate = 0.05
+        self.toggle_relu = 0.2
+        self.change_dropout_rate = 0.1
         self.DROPOUT_GRANULARITY = 4
         self.output_size_factors = [
-            (0.02, 0.5),
-            (0.01, 0.75),
-            (0.01, 0.9),
+            (0.04, 0.5),
+            (0.02, 0.75),
+            (0.02, 0.9),
             (0.02, 1.1),
             (0.02, 1.25),
-            (0.02, 2.0)
+            (0.04, 2.0)
         ]
         self.distributions = [
-            (0.005, "constant"),
-            (0.005, "uniform"),
-            (0.020, "normal"),
-            (0.010, "truncated")
+            (0.01, "constant"),
+            (0.01, "uniform"),
+            (0.04, "normal"),
+            (0.02, "truncated")
         ]
         self.initial_means = [
             (0.03, 0),
@@ -26,20 +26,20 @@ class Mutagen(object):
             (0.01, -1)
         ]
         self.image_operations = [
-            (0.05, "conv_bias"),
-            (0.01, "conv"),
-            (0.03, "max_pool"),
-            (0.03, "avg_pool")
+            (0.08, "conv_bias"),
+            (0.02, "conv"),
+            (0.05, "max_pool"),
+            (0.05, "avg_pool")
         ]
         self.patches = [
-            (0.005, 1),
-            (0.008, 2),
-            (0.009, 3),
-            (0.010, 4),
-            (0.015, 5),
-            (0.010, 6),
-            (0.009, 7),
-            (0.008, 8),
+            (0.008, 1),
+            (0.010, 2),
+            (0.012, 3),
+            (0.014, 4),
+            (0.018, 5),
+            (0.014, 6),
+            (0.011, 7),
+            (0.009, 8),
             (0.007, 9),
             (0.006, 10),
             (0.005, 11),
@@ -49,26 +49,26 @@ class Mutagen(object):
             (0.001, 15)
         ]
         self.strides = [
-            (0.005, 1),
-            (0.010, 2),
-            (0.002, 3),
-            (0.001, 4),
-            (0.001, 5)
+            (0.020, 1),
+            (0.040, 2),
+            (0.010, 3),
+            (0.005, 4),
+            (0.002, 5)
         ]
         self.paddings = [
-            (0.05, "SAME"),
-            (0.05, "VALID")
+            (0.15, "SAME"),
+            (0.15, "VALID")
         ]
         self.l2_factors = [
-            (0.05, 0),
-            (0.02, 0.001),
-            (0.01, 0.01),
-            (0.001, 0.1)
+            (0.08, 0),
+            (0.03, 0.001),
+            (0.02, 0.01),
+            (0.01, 0.1)
         ]
-        self.add_image_layer = 0.005
-        self.remove_image_layer = 0.004
-        self.add_hidden_layer = 0.003
-        self.remove_hidden_layer = 0.002
+        self.add_image_layer = 0.08
+        self.remove_image_layer = 0.05
+        self.add_hidden_layer = 0.10
+        self.remove_hidden_layer = 0.6
         self.entropy = random.Random(seed)
 
     def branch(self, bias):
@@ -125,7 +125,7 @@ class Mutagen(object):
         return None
 
     def mutate_remove_layer(self, is_image, layer_count):
-        probability = self.add_image_layer if is_image else self.add_hidden_layer
+        probability = self.remove_image_layer if is_image else self.remove_hidden_layer
         if layer_count > 1 and self.branch(probability):
             return self.entropy.randint(0, layer_count - 1)
         return None
