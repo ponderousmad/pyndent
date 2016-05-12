@@ -33,19 +33,12 @@ def setup_matrix(options):
         return (matrix, bias)
     return (matrix,)
 
-DISTRIBUTIONS = [
-    "constant",
-    "uniform",
-    "normal",
-    "truncated"
-]
-
 def setup_initializer(mean=0.0, scale=1.0, distribution="constant", seed=None):
     return {
-        DISTRIBUTIONS[0]: lambda shape: tf.fill(shape, mean),
-        DISTRIBUTIONS[1]: lambda shape: tf.random_uniform(shape, mean - scale, mean + scale, seed=seed),
-        DISTRIBUTIONS[2]: lambda shape: tf.random_normal(shape, mean, scale, seed=seed),
-        DISTRIBUTIONS[3]: lambda shape: tf.truncated_normal(shape, mean, scale, seed=seed)
+        "constant":  lambda shape: tf.fill(shape, mean),
+        "uniform":   lambda shape: tf.random_uniform(shape, mean - scale, mean + scale, seed=seed),
+        "normal":    lambda shape: tf.random_normal(shape, mean, scale, seed=seed),
+        "truncated": lambda shape: tf.truncated_normal(shape, mean, scale, seed=seed)
     }[distribution]
 
 # Shape functions.

@@ -14,7 +14,12 @@ class Mutagen(object):
             (0.02, 1.25),
             (0.02, 2.0)
         ]
-        self.change_distribution = 0.01
+        self.distributions = [
+            (0.005, "constant"),
+            (0.005, "uniform"),
+            (0.020, "normal"),
+            (0.010, "truncated")
+        ]
         self.initial_means = [
             (0.03, 0),
             (0.02, 1),
@@ -90,9 +95,7 @@ class Mutagen(object):
         return int(output_size * self.select(self.output_size_factors, 1))
 
     def mutate_distribution(self, distribution):
-        if self.branch(self.change_distribution):
-            return self.entropy.choice(DISTRIBUTIONS)
-        return distribution
+        return self.select(self.distributions, distribution)
 
     def mutate_initial_mean(self, mean):
         return self.select(self.initial_means, mean)

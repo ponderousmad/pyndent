@@ -24,8 +24,8 @@ class EvoLayer(object):
         self.primary.reseed(entropy)
         self.dropout_seed = entropy.randint(1, 100000)
 
-    def mutate(self, mutagen):
-        self.primary.mutate(mutagen)
+    def mutate(self, mutagen, is_last):
+        self.primary.mutate(mutagen, is_last)
         self.relu = mutagen.mutate_relu(self.relu)
         self.dropout_rate = mutagen.mutate_dropout(self.dropout_rate)
 
@@ -86,8 +86,9 @@ class HiddenLayer(object):
     def output_shape(self, input_shape):
         return (input_shape[0], self.output_size)
 
-    def mutate(self, mutagen):
-        self.output_size = mutagen.mutate_output_size(self.output_size)
+    def mutate(self, mutagen, is_last):
+        if not is_last:
+            self.output_size = mutagen.mutate_output_size(self.output_size)
         self.initializer.mutate(mutagen)
         self.l2_factor = mutagen.mutate_l2_factor(self.l2_factor)
 
@@ -127,7 +128,7 @@ class ImageLayer(object):
             self.padding
         )
 
-    def mutate(self, mutagen):
+    def mutate(self, mutagen, is_last):
         self.operation = mutagen.mutate_image_operation(self.operation)
         self.patch_size = mutagen.mutate_patch_size(self.patch_size)
         self.stride = mutagen.mutate_stride(self.stride)
@@ -193,7 +194,7 @@ class LayerStack(object):
             layers.pop(slot)
 
         for layer in layers:
-            layer.mutate(mutagen)
+            layer.mutate(mutagen, layer == layers[-1])
 
     def mutate(self, seed):
         mutagen = mutate.Mutagen(seed)
@@ -226,10 +227,10 @@ class LayerStack(object):
         return layers
 
     def to_xml(self, parent = None):
-        if parent:
-            element = et.SubElement(parent, "evostack")
-        else:
+        if parent is None:
             element = et.Element("evostack")
+        else:
+            element = et.SubElement(parent, "evostack")
         element.set("flatten", str(self.flatten))
         if self.image_layers:
             children = et.SubElement(element, "layers")

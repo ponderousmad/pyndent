@@ -8,6 +8,9 @@ pyprompt.bat
 # Large data files
 captures/
 
+# Temporary test results
+temp/
+
 # =========================
 # Language/tool files
 # =========================
