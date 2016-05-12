@@ -1,6 +1,8 @@
 from __future__ import print_function
 
 import copy
+import datetime
+import os
 import lxml.etree as et
 
 import convnet
@@ -121,9 +123,10 @@ class ImageLayer(object):
         return True
 
     def output_shape(self, input_shape):
+        depth = self.output_channels if self.operation.startswith("conv") else input_shape[3]
         return convnet.image_output_size(
             input_shape,
-            (self.patch_size, self.patch_size, input_shape[3], self.output_channels),
+            (self.patch_size, self.patch_size, input_shape[3], depth),
             (self.stride, self.stride),
             self.padding
         )
@@ -154,7 +157,7 @@ class ImageLayer(object):
         else:
             return convnet.create_pool_layer(
                 self.operation,
-                (self.patch_size, self.patch_size)
+                (self.patch_size, self.patch_size),
                 (self.stride, self.stride),
                 self.padding
             )
@@ -186,10 +189,13 @@ class LayerStack(object):
     def mutate_layers(self, is_image, layers, mutagen):
         slot = mutagen.mutate_duplicate_layer(is_image, len(layers))
         if slot is not None:
-            layer = layers[slot]
+            layer = layers[slot]            
             layers.insert(slot, copy.deepcopy(layer))
-            
-        slot = mutagen.mutate_remove_layer(is_image, len(layers))
+        
+        layer_count = len(layers)
+        if not is_image:
+            layer_count -= 1
+        slot = mutagen.mutate_remove_layer(is_image, layer_count)
         if slot is not None:
             layers.pop(slot)
 
@@ -243,3 +249,60 @@ class LayerStack(object):
             for layer in self.hidden_layers:
                 layer.to_xml(children)
         return element
+
+    def same_as(self, other):
+        selfie = et.tostring(self.to_xml())
+        return selfie == et.tostring(other.to_xml())
+
+def serialize(stack):
+    return et.tostring(stack.to_xml(), pretty_print=True)
+
+def breed(parents, entropy):
+    offspring = copy.deepcopy(parents[0])
+    offspring.mutate(entropy.randint(0,20000))
+    return offspring
+
+def init_population(prototype, population_target, entropy):
+    population = [prototype]
+
+    while (len(population) < population_target):
+        parent = entropy.choice(population)
+        offspring = breed([parent], entropy)
+        if parent.same_as(offspring):
+            print("Offspring is clone.")
+        else:
+            population.append(offspring)
+    return population
+
+def output_results(results, path, filename=None):
+    if not filename:
+        filename = datetime.datetime.now().strftime("%Y-%m-%d~%H_%M_%S_%f")[0:-3] + ".xml"
+    root = et.Element("population")
+    for stack, score in results:
+        eval = et.SubElement(root, "result")
+        eval.set("score", str(score))
+        stack.to_xml(eval)
+
+    try:    
+        os.makedirs(path)
+    except OSError:
+        pass
+
+    with open(os.path.join(path, filename), "w") as text_file:
+        text_file.write(et.tostring(root, pretty_print=True))
+        
+def output_error(stack, error_data, path, filename=None):
+    if not filename:
+        filename = datetime.datetime.now().strftime("ERR~%Y-%m-%d~%H_%M_%S_%f")[0:-3] + ".txt"
+
+    try:    
+        os.makedirs(path)
+    except OSError:
+        pass
+
+    with open(os.path.join(path, filename), "w") as text_file:
+        text_file.write(et.tostring(stack.to_xml(), pretty_print=True))        
+        text_file.write("\n------------------------------------------------------------\n")
+        for line in error_data:
+            print(line)
+            text_file.write(line)
