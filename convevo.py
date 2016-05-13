@@ -274,10 +274,15 @@ def init_population(prototype, population_target, entropy):
             population.append(offspring)
     return population
 
-def output_results(results, path, filename=None):
+def output_results(results, path, filename=None, mutate_seed=None, eval_seed=None):
     if not filename:
         filename = datetime.datetime.now().strftime("%Y-%m-%d~%H_%M_%S_%f")[0:-3] + ".xml"
     root = et.Element("population")
+    if mutate_seed is not None:
+        root.set("mutate_seed", str(mutate_seed))
+    if eval_seed is not None:
+        root.set("eval_seed", str(eval_seed))
+    
     for stack, score in results:
         eval = et.SubElement(root, "result")
         eval.set("score", str(score))
@@ -289,7 +294,7 @@ def output_results(results, path, filename=None):
         pass
 
     with open(os.path.join(path, filename), "w") as text_file:
-        text_file.write(et.tostring(root, pretty_print=True))
+        text_file.write(et.tostring(root, xml_declaration=True, encoding='UTF-8', pretty_print=True))
         
 def output_error(stack, error_data, path, filename=None):
     if not filename:
