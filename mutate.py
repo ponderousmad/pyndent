@@ -2,7 +2,7 @@ import random
 
 class Mutagen(object):
     """Keep track of probabilities and randomness for mutating conv nets."""
-    def __init__(self, seed):
+    def __init__(self, entropy):
         self.toggle_relu = 0.2
         self.change_dropout_rate = 0.1
         self.DROPOUT_GRANULARITY = 4
@@ -69,7 +69,7 @@ class Mutagen(object):
         self.remove_image_layer = 0.05
         self.add_hidden_layer = 0.10
         self.remove_hidden_layer = 0.6
-        self.entropy = random.Random(seed)
+        self.entropy = entropy
 
     def branch(self, bias):
         return self.entropy.random() < bias
@@ -129,3 +129,11 @@ class Mutagen(object):
         if layer_count > 1 and self.branch(probability):
             return self.entropy.randint(0, layer_count - 1)
         return None
+
+def cross_lists(list_a, list_b, entropy):
+    if len(list_a) < len(list_b):
+        list_a, list_b = list_b, list_a
+    split_at = entropy.randint(0, len(list_b) - 1) if len(list_b) > 0 else 0
+    result = list_b[:split_at]
+    result.extend(list_a[-(len(list_a) - split_at):])
+    return result

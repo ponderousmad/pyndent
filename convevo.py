@@ -202,11 +202,19 @@ class LayerStack(object):
         for layer in layers:
             layer.mutate(mutagen, layer == layers[-1])
 
-    def mutate(self, seed):
-        mutagen = mutate.Mutagen(seed)
+    def mutate(self, entropy):
+        mutagen = mutate.Mutagen(entropy)
 
         self.mutate_layers(True, self.image_layers, mutagen)
         self.mutate_layers(False, self.hidden_layers, mutagen)
+        
+    def cross(self, other, entropy):
+        offspring = LayerStack(self.flatten)
+        image = mutate.cross_lists(self.image_layers, other.image_layers, entropy)
+        offspring.image_layers = copy.deepcopy(image)
+        hidden = mutate.cross_lists(self.hidden_layers, other.hidden_layers, entropy)
+        offspring.hidden_layers = copy.deepcopy(hidden)
+        return offspring
 
     def reseed(self, entropy):
         for layer in self.image_layers:
@@ -345,12 +353,15 @@ def load_population(file):
     return parse_population(tree.getroot())
 
 def breed(parents, entropy):
-    offspring = copy.deepcopy(parents[0])
-    offspring.mutate(entropy.randint(0,20000))
+    if (len(parents) < 2 or parents[0] is parents[1]):
+        offspring = copy.deepcopy(parents[0])
+    else:
+        offspring = parents[0].cross(parents[1], entropy)
+    offspring.mutate(entropy)
     return offspring
 
-def init_population(prototype, population_target, entropy):
-    population = [prototype]
+def init_population(prototypes, population_target, entropy):
+    population = list(prototypes)
 
     while (len(population) < population_target):
         parent = entropy.choice(population)
