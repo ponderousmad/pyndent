@@ -13,11 +13,11 @@ class EvoLayer(object):
     Each layer consists of either a conv or pool in the image section, or a hidden layer otherwise,
     followed optionally by a relu and/or dropout.
     """
-    def __init__(self, primary, relu, dropout_rate):
+    def __init__(self, primary, relu, dropout_rate, dropout_seed=None):
         self.primary = primary
         self.dropout_rate = dropout_rate
-        self.dropout_seed = None # Use graph level seed.
-        self.relu = False
+        self.dropout_seed = dropout_seed
+        self.relu = relu
 
     def output_shape(self, input_shape):
         return self.primary.output_shape(input_shape)
@@ -49,11 +49,11 @@ class EvoLayer(object):
 
 class Initializer(object):
     """ Keep track of hyper parameters for tensor initialization"""
-    def __init__(self, distribution="constant", mean=0.0, scale=1.0):
+    def __init__(self, distribution="constant", mean=0.0, scale=1.0, seed=None):
         self.distribution = distribution
         self.mean = mean
         self.scale = scale
-        self.seed = None
+        self.seed = seed
 
     def mutate(self, mutagen):
         self.distribution = mutagen.mutate_distribution(self.distribution)
@@ -76,7 +76,7 @@ class Initializer(object):
 
 class HiddenLayer(object):
     """ Non convolutional hidden layer. """
-    def __init__(self, output_size, bias, initializer, l2_factor=0):
+    def __init__(self, output_size, bias, initializer, l2_factor=0.0):
         self.output_size = output_size
         self.bias = bias
         self.l2_factor = l2_factor
@@ -110,7 +110,7 @@ class HiddenLayer(object):
         self.initializer.to_xml(element)
 
 class ImageLayer(object):
-    def __init__(self, operation, patch_size, stride, output_channels, padding, initializer, l2_factor=0):
+    def __init__(self, operation, patch_size, stride, output_channels, padding, initializer, l2_factor=0.0):
         self.operation = operation
         self.patch_size = patch_size
         self.stride = stride
@@ -179,8 +179,8 @@ class LayerStack(object):
         self.image_layers = []
         self.hidden_layers = []
 
-    def add_layer(self, operation, relu=False, dropout_rate=0):
-        layer = EvoLayer(operation, relu, dropout_rate)
+    def add_layer(self, operation, relu=False, dropout_rate=0.0, dropout_seed=None):
+        layer = EvoLayer(operation, relu, dropout_rate, dropout_seed)
         if operation.is_image():
             self.image_layers.append(layer)
         else:
@@ -256,6 +256,93 @@ class LayerStack(object):
 
 def serialize(stack):
     return et.tostring(stack.to_xml(), pretty_print=True)
+
+def as_int(text, default=None, base=10):
+    try:
+        return int(text, base)
+    except ValueError:
+        return default
+
+def as_float(text, default=None):
+    try:
+        return float(text)
+    except ValueError:
+        return default
+
+def parse_initializer(operation_element):
+    init_element = operation_element.find("initializer")
+    if init_element is not None:
+        distribution = init_element.get("distribution")
+        mean = as_float(init_element.get("mean"), 0.0)
+        scale = as_float(init_element.get("scale"), 1.0)
+        seed = as_int(init_element.get("seed"))
+        if distribution:
+            return Initializer(distribution, mean, scale, seed)        
+        print("Bad initializer:", et.tostring(init_element))
+        return None
+    print("Missing initializer element")
+    return None
+
+def parse_image(image_element):
+    if image_element is not None:
+        operation = image_element.get("operation")
+        patch_size = as_int(image_element.get("patch_size"))
+        stride =  as_int(image_element.get("stride"))
+        padding = image_element.get("padding")
+        outputs = as_int(image_element.get("output_channels"))
+        l2_factor = as_int(image_element.get("l2_factor"), 0)
+        initializer = parse_initializer(image_element)
+        if operation and patch_size and stride and outputs and padding and initializer:
+            return ImageLayer(operation, patch_size, stride, outputs, padding, initializer, l2_factor)
+        print("Bad image layer:", et.tostring(image_element))
+        return None
+    print("Missing image element.")
+    return None
+
+def parse_hidden(hidden_element):
+    if hidden_element is not None:
+        outputs = as_int(hidden_element.get("output_size"))
+        bias = hidden_element.get("bias") == "True"
+        l2_factor = as_int(hidden_element.get("l2_factor"), 0)
+        initializer = parse_initializer(hidden_element)
+        if outputs and initializer:
+            return HiddenLayer(outputs, bias, initializer, l2_factor)
+        print("Bad hidden layer:", et.tostring(hidden_element))
+        return None
+    print("Missing hidden element.")
+    return None
+
+def parse_operation(layer_element, is_image):
+    if is_image:
+        return parse_image(layer_element.find("image"))
+    else:
+        return parse_hidden(layer_element.find("hidden"))
+
+def parse_stack(stack_element):
+    stack = LayerStack(stack_element.get("flatten") == "True")
+    for layers in stack_element.iter("layers"):
+        is_image = (layers.get("type") == "image")
+        for layer in layers.iter("layer"):
+            relu = layer.get("relu") == "True"
+            dropout_rate = as_float(layer.get("dropout_rate"), 0)
+            dropout_seed = as_int(layer.get("dropout_seed"))
+            operation = parse_operation(layer, is_image)
+            if operation:
+                stack.add_layer(operation, relu, dropout_rate, dropout_seed)
+    return stack
+
+def parse_population(population_element):
+    population = []
+    mutate_seed = as_int(population_element.get("mutate_seed"))
+    eval_seed = as_int(population_element.get("eval_seed"))
+    for result in population_element.iter("result"):
+        stack_element = result.find("evostack")
+        population.append(parse_stack(stack_element))
+    return (population, mutate_seed, eval_seed)
+    
+def load_population(file):
+    tree = et.parse(file)
+    return parse_population(tree.getroot())
 
 def breed(parents, entropy):
     offspring = copy.deepcopy(parents[0])
