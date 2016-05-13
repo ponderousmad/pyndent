@@ -407,5 +407,4 @@ def output_error(stack, error_data, path, filename=None):
         text_file.write(et.tostring(stack.to_xml(), pretty_print=True))        
         text_file.write("\n------------------------------------------------------------\n")
         for line in error_data:
-            print(line)
             text_file.write(line)
