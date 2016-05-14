@@ -1,5 +1,6 @@
 from __future__ import print_function
 
+import gc
 import math
 
 def descending_score(results):
@@ -22,6 +23,7 @@ class Darwin(object):
             score = self.history.get(serialized)
             if score is None:
                 score = self.evaluator(member, entropy)
+                gc.collect()
                 self.history[serialized] = (member, score)
             print ("Score:", score)
             results.append((member, score))
