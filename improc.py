@@ -1,21 +1,23 @@
 from __future__ import print_function
 
+import math
 import numpy as np
 
 def split(image):
     """Split the image data into the top and bottom half."""
     split_height = image.shape[0] / 2
     return image[:split_height], image[split_height:]
-    
-    
+
+BYTE_MAX = 255
+CHANNEL_MAX = np.float32(8)
+MAX_RED_VALUE = BYTE_MAX - CHANNEL_MAX
+CHANNELS_MAX = CHANNEL_MAX * CHANNEL_MAX
+MAX_DEPTH = MAX_RED_VALUE * CHANNELS_MAX
+
 def decode_depth(image):
-    """12 bits of depth in millimeters is encoded with 6 bits in red and 3 bits in each of green and blue."""
-    BYTE_MAX = 255
-    CHANNEL_MAX = 8.0
-    MAX_RED_VALUE = BYTE_MAX - CHANNEL_MAX
-    CHANNELS_MAX = CHANNEL_MAX * CHANNEL_MAX
+    """~14 bits of depth in millimeters is encoded with 8 bits in red and 3 bits in each of green and blue."""
     orientation = [1, 0, 0, 0] # default orientation if not present in image.
-    
+   
     if np.array_equal(image[0, 0], [BYTE_MAX, 0, 0, BYTE_MAX]):
         # Orientation quaternion is present.
         pixel = image[0, 1]
