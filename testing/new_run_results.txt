@@ -1,0 +1,1475 @@
+Mutate Seed: 77821
+Eval Seed: 48951
+Offspring is clone.
+Generation 0
+Evaluating 0
+Initialized
+Validation accuracy: 20.4%
+Validation accuracy: 89.5%
+Validation accuracy: 89.7%
+Validation accuracy: 89.6%
+Validation accuracy: 89.9%
+Score: 89.9038461538
+Evaluating 1
+Initialized
+Validation accuracy: 10.3%
+Validation accuracy: 76.2%
+Validation accuracy: 85.5%
+Validation accuracy: 85.4%
+Validation accuracy: 85.1%
+Score: 85.0761217949
+Evaluating 2
+Initialized
+Validation accuracy: 9.3%
+Validation accuracy: 35.8%
+Early out.
+Score: 35.8373397436
+Evaluating 3
+Initialized
+Validation accuracy: 16.4%
+Validation accuracy: 88.3%
+Validation accuracy: 87.6%
+Validation accuracy: 88.0%
+Validation accuracy: 88.0%
+Score: 88.0008012821
+Evaluating 4
+Initialized
+Validation accuracy: 10.8%
+Validation accuracy: 73.1%
+Validation accuracy: 73.7%
+Validation accuracy: 74.0%
+Validation accuracy: 73.8%
+Score: 73.7580128205
+Evaluating 5
+Initialized
+Validation accuracy: 16.7%
+Validation accuracy: 76.7%
+Validation accuracy: 83.6%
+Validation accuracy: 84.2%
+Validation accuracy: 84.3%
+Score: 84.2548076923
+Evaluating 6
+Initialized
+Validation accuracy: 11.1%
+Validation accuracy: 80.6%
+Validation accuracy: 81.9%
+Validation accuracy: 82.1%
+Validation accuracy: 82.6%
+Score: 82.6322115385
+Evaluating 7
+Initialized
+Validation accuracy: 12.2%
+Validation accuracy: 10.3%
+Early out.
+Score: 10.2764423077
+Evaluating 8
+Initialized
+Validation accuracy: 11.2%
+Validation accuracy: 84.1%
+Validation accuracy: 85.1%
+Validation accuracy: 85.6%
+Validation accuracy: 86.1%
+Score: 86.1177884615
+Evaluating 9
+Initialized
+Validation accuracy: 15.1%
+Validation accuracy: 9.8%
+Early out.
+Score: 9.83573717949
+Evaluating 10
+Initialized
+Validation accuracy: 13.5%
+Validation accuracy: 85.5%
+Validation accuracy: 87.0%
+Validation accuracy: 87.4%
+Validation accuracy: 88.0%
+Score: 88.0208333333
+Evaluating 11
+Initialized
+Validation accuracy: 14.7%
+Validation accuracy: 81.9%
+Validation accuracy: 81.6%
+Validation accuracy: 81.8%
+Validation accuracy: 82.2%
+Score: 82.171474359
+Evaluating 12
+Initialized
+Validation accuracy: 14.0%
+Validation accuracy: 76.9%
+Validation accuracy: 78.7%
+Validation accuracy: 79.2%
+Validation accuracy: 76.4%
+Score: 76.4423076923
+Evaluating 13
+Initialized
+Validation accuracy: 17.8%
+Validation accuracy: 84.6%
+Validation accuracy: 85.9%
+Validation accuracy: 86.2%
+Validation accuracy: 86.3%
+Score: 86.3381410256
+Evaluating 14
+Initialized
+Validation accuracy: 9.9%
+Validation accuracy: 38.2%
+Early out.
+Score: 38.2011217949
+Evaluating 15
+Initialized
+Validation accuracy: 9.3%
+Validation accuracy: 10.1%
+Early out.
+Score: 10.0961538462
+Evaluating 16
+Initialized
+Validation accuracy: 10.8%
+Validation accuracy: 88.3%
+Validation accuracy: 89.2%
+Validation accuracy: 89.5%
+Validation accuracy: 89.3%
+Score: 89.3028846154
+Evaluating 17
+Initialized
+Validation accuracy: 9.7%
+Validation accuracy: 53.1%
+Validation accuracy: 57.7%
+Validation accuracy: 57.6%
+Validation accuracy: 53.2%
+Score: 53.2251602564
+Evaluating 18
+Initialized
+Validation accuracy: 10.0%
+Validation accuracy: 10.3%
+Early out.
+Score: 10.3165064103
+Evaluating 19
+Initialized
+Validation accuracy: 15.9%
+Validation accuracy: 89.0%
+Validation accuracy: 89.2%
+Validation accuracy: 89.8%
+Validation accuracy: 89.4%
+Score: 89.3830128205
+Generation 1
+Evaluating 0
+Initialized
+Validation accuracy: 13.6%
+Validation accuracy: 89.8%
+Validation accuracy: 89.7%
+Validation accuracy: 90.3%
+Validation accuracy: 90.1%
+Score: 90.0641025641
+Evaluating 1
+Initialized
+Validation accuracy: 12.3%
+Validation accuracy: 87.4%
+Validation accuracy: 87.7%
+Validation accuracy: 88.1%
+Validation accuracy: 87.8%
+Score: 87.8205128205
+Evaluating 2
+Initialized
+Validation accuracy: 11.1%
+Validation accuracy: 87.7%
+Validation accuracy: 88.1%
+Validation accuracy: 88.0%
+Validation accuracy: 88.0%
+Score: 88.0008012821
+Evaluating 3
+Initialized
+Validation accuracy: 15.8%
+Validation accuracy: 88.5%
+Validation accuracy: 88.0%
+Validation accuracy: 88.4%
+Validation accuracy: 87.9%
+Score: 87.9407051282
+Evaluating 4
+Initialized
+Validation accuracy: 9.7%
+Error computing loss
+Score: 0
+Evaluating 5
+Initialized
+Validation accuracy: 10.2%
+Validation accuracy: 16.3%
+Early out.
+Score: 16.3060897436
+Evaluating 6
+Initialized
+Validation accuracy: 20.1%
+Validation accuracy: 89.2%
+Validation accuracy: 88.8%
+Validation accuracy: 88.3%
+Validation accuracy: 88.9%
+Score: 88.8621794872
+Evaluating 7
+Initialized
+Validation accuracy: 8.7%
+Error computing loss
+Score: 0
+Evaluating 8
+Initialized
+Validation accuracy: 11.1%
+Validation accuracy: 89.4%
+Validation accuracy: 90.3%
+Validation accuracy: 89.9%
+Validation accuracy: 90.4%
+Score: 90.4046474359
+Evaluating 9
+Initialized
+Validation accuracy: 13.3%
+Validation accuracy: 81.8%
+Validation accuracy: 83.1%
+Validation accuracy: 83.7%
+Validation accuracy: 83.9%
+Score: 83.8741987179
+Evaluating 10
+Initialized
+Validation accuracy: 9.5%
+Validation accuracy: 68.2%
+Validation accuracy: 73.6%
+Validation accuracy: 74.6%
+Validation accuracy: 74.9%
+Score: 74.8798076923
+Evaluating 11
+Initialized
+Validation accuracy: 20.2%
+Validation accuracy: 86.8%
+Validation accuracy: 86.7%
+Validation accuracy: 86.5%
+Validation accuracy: 85.9%
+Score: 85.9375
+Evaluating 12
+Initialized
+Validation accuracy: 20.2%
+Validation accuracy: 85.5%
+Validation accuracy: 86.4%
+Validation accuracy: 86.6%
+Validation accuracy: 86.2%
+Score: 86.1778846154
+Evaluating 13
+Initialized
+Validation accuracy: 15.2%
+Validation accuracy: 84.2%
+Validation accuracy: 84.7%
+Validation accuracy: 84.7%
+Validation accuracy: 84.8%
+Score: 84.7756410256
+Evaluating 14
+Initialized
+Validation accuracy: 14.4%
+Validation accuracy: 84.8%
+Validation accuracy: 85.2%
+Validation accuracy: 86.6%
+Validation accuracy: 86.4%
+Score: 86.3581730769
+Evaluating 15
+Initialized
+Validation accuracy: 7.4%
+Validation accuracy: 80.1%
+Validation accuracy: 81.6%
+Validation accuracy: 82.0%
+Validation accuracy: 81.9%
+Score: 81.8709935897
+Evaluating 16
+Initialized
+Validation accuracy: 12.1%
+Error computing loss
+Score: 0
+Evaluating 17
+Initialized
+Validation accuracy: 9.6%
+Validation accuracy: 87.4%
+Validation accuracy: 87.4%
+Validation accuracy: 88.1%
+Validation accuracy: 87.7%
+Score: 87.7203525641
+Evaluating 18
+Initialized
+Validation accuracy: 12.8%
+Validation accuracy: 84.3%
+Validation accuracy: 84.5%
+Validation accuracy: 84.1%
+Validation accuracy: 84.5%
+Score: 84.4551282051
+Evaluating 19
+Initialized
+Validation accuracy: 17.7%
+Validation accuracy: 87.4%
+Validation accuracy: 88.1%
+Validation accuracy: 87.8%
+Validation accuracy: 87.9%
+Score: 87.9006410256
+Generation 2
+Evaluating 0
+Initialized
+Validation accuracy: 10.2%
+Validation accuracy: 10.2%
+Early out.
+Score: 10.1963141026
+Evaluating 1
+Initialized
+Validation accuracy: 18.6%
+Validation accuracy: 86.3%
+Validation accuracy: 86.5%
+Validation accuracy: 86.5%
+Validation accuracy: 85.2%
+Score: 85.15625
+Evaluating 2
+Initialized
+Validation accuracy: 9.9%
+Error computing loss
+Score: 0
+Evaluating 3
+Initialized
+Validation accuracy: 12.2%
+Validation accuracy: 85.9%
+Validation accuracy: 86.8%
+Validation accuracy: 87.3%
+Validation accuracy: 86.9%
+Score: 86.9391025641
+Evaluating 4
+Initialized
+Validation accuracy: 10.7%
+Validation accuracy: 88.8%
+Validation accuracy: 89.7%
+Validation accuracy: 90.2%
+Validation accuracy: 90.2%
+Score: 90.1842948718
+Evaluating 5
+Initialized
+Validation accuracy: 17.8%
+Validation accuracy: 10.4%
+Early out.
+Score: 10.3966346154
+Evaluating 6
+Initialized
+Validation accuracy: 13.0%
+Validation accuracy: 89.4%
+Validation accuracy: 89.8%
+Validation accuracy: 89.5%
+Validation accuracy: 89.8%
+Score: 89.8237179487
+Evaluating 7
+Initialized
+Validation accuracy: 12.8%
+Validation accuracy: 9.1%
+Early out.
+Score: 9.09455128205
+Evaluating 8
+Initialized
+Validation accuracy: 15.0%
+Validation accuracy: 85.8%
+Validation accuracy: 86.1%
+Validation accuracy: 86.3%
+Validation accuracy: 85.5%
+Score: 85.5368589744
+Evaluating 9
+ValueError: filter must not be larger than the input: Filter: [7x7] Input: [4x4]
+
+Score: -10
+Evaluating 10
+Initialized
+Validation accuracy: 10.7%
+Validation accuracy: 89.3%
+Validation accuracy: 89.9%
+Validation accuracy: 89.8%
+Validation accuracy: 90.0%
+Score: 90.0040064103
+Evaluating 11
+Initialized
+Validation accuracy: 15.9%
+Validation accuracy: 88.4%
+Validation accuracy: 87.8%
+Validation accuracy: 87.0%
+Validation accuracy: 87.5%
+Score: 87.5400641026
+Evaluating 12
+ValueError: filter must not be larger than the input: Filter: [9x9] Input: [6x6]
+
+Score: -10
+Evaluating 13
+Initialized
+Validation accuracy: 11.8%
+Validation accuracy: 89.5%
+Validation accuracy: 90.0%
+Validation accuracy: 90.2%
+Validation accuracy: 90.3%
+Score: 90.2844551282
+Evaluating 14
+Initialized
+Validation accuracy: 8.5%
+Validation accuracy: 88.2%
+Validation accuracy: 89.1%
+Validation accuracy: 89.9%
+Validation accuracy: 90.0%
+Score: 90.0040064103
+Evaluating 15
+Initialized
+Validation accuracy: 15.2%
+Validation accuracy: 88.7%
+Validation accuracy: 88.0%
+Validation accuracy: 88.6%
+Validation accuracy: 88.3%
+Score: 88.3213141026
+Evaluating 16
+Initialized
+Validation accuracy: 15.6%
+Validation accuracy: 89.8%
+Validation accuracy: 89.3%
+Validation accuracy: 89.9%
+Validation accuracy: 89.4%
+Score: 89.3629807692
+Evaluating 17
+Initialized
+Validation accuracy: 14.6%
+Validation accuracy: 86.5%
+Validation accuracy: 86.2%
+Validation accuracy: 85.4%
+Validation accuracy: 86.2%
+Score: 86.1578525641
+Evaluating 18
+Initialized
+Validation accuracy: 10.2%
+Error computing loss
+Score: 0
+Evaluating 19
+Initialized
+Validation accuracy: 11.0%
+Validation accuracy: 80.1%
+Validation accuracy: 80.6%
+Validation accuracy: 80.4%
+Validation accuracy: 80.3%
+Score: 80.2884615385
+Generation 3
+Evaluating 0
+Initialized
+Validation accuracy: 12.7%
+Validation accuracy: 85.6%
+Validation accuracy: 86.4%
+Validation accuracy: 87.6%
+Validation accuracy: 87.7%
+Score: 87.7203525641
+Evaluating 1
+Initialized
+Validation accuracy: 10.8%
+Validation accuracy: 89.9%
+Validation accuracy: 90.7%
+Validation accuracy: 90.3%
+Validation accuracy: 90.5%
+Score: 90.5448717949
+Evaluating 2
+Initialized
+Validation accuracy: 7.9%
+Validation accuracy: 65.8%
+Validation accuracy: 57.1%
+Validation accuracy: 54.2%
+Validation accuracy: 52.2%
+Score: 52.2435897436
+Evaluating 3
+Initialized
+Validation accuracy: 7.2%
+Error computing loss
+Score: 0
+Evaluating 4
+Initialized
+Validation accuracy: 15.0%
+Validation accuracy: 90.0%
+Validation accuracy: 90.2%
+Validation accuracy: 90.2%
+Validation accuracy: 90.1%
+Score: 90.0641025641
+Evaluating 5
+Initialized
+Validation accuracy: 13.7%
+Validation accuracy: 61.0%
+Validation accuracy: 60.7%
+Validation accuracy: 61.8%
+Validation accuracy: 62.3%
+Score: 62.2596153846
+Evaluating 6
+Initialized
+Validation accuracy: 9.0%
+Validation accuracy: 90.3%
+Validation accuracy: 90.4%
+Validation accuracy: 90.5%
+Validation accuracy: 91.0%
+Score: 91.0056089744
+Evaluating 7
+Initialized
+Validation accuracy: 11.4%
+Validation accuracy: 89.1%
+Validation accuracy: 90.3%
+Validation accuracy: 90.8%
+Validation accuracy: 90.8%
+Score: 90.7852564103
+Evaluating 8
+Initialized
+Validation accuracy: 11.9%
+Validation accuracy: 77.9%
+Validation accuracy: 79.9%
+Validation accuracy: 80.4%
+Validation accuracy: 82.2%
+Score: 82.1915064103
+Evaluating 9
+Initialized
+Validation accuracy: 10.1%
+Validation accuracy: 86.9%
+Validation accuracy: 87.6%
+Validation accuracy: 88.7%
+Validation accuracy: 89.1%
+Score: 89.0825320513
+Evaluating 10
+Initialized
+Validation accuracy: 10.0%
+Error computing loss
+Score: 0
+Evaluating 11
+Initialized
+Validation accuracy: 9.8%
+Validation accuracy: 73.6%
+Validation accuracy: 75.2%
+Validation accuracy: 75.1%
+Validation accuracy: 73.4%
+Score: 73.4174679487
+Evaluating 12
+Initialized
+Validation accuracy: 9.6%
+Validation accuracy: 9.6%
+Early out.
+Score: 9.61538461538
+Evaluating 13
+Initialized
+Validation accuracy: 7.1%
+Validation accuracy: 10.1%
+Early out.
+Score: 10.0961538462
+Evaluating 14
+Initialized
+Validation accuracy: 10.0%
+Validation accuracy: 88.8%
+Validation accuracy: 89.2%
+Validation accuracy: 89.2%
+Validation accuracy: 88.7%
+Score: 88.6618589744
+Evaluating 15
+Initialized
+Validation accuracy: 14.6%
+Validation accuracy: 84.4%
+Validation accuracy: 86.3%
+Validation accuracy: 86.5%
+Validation accuracy: 87.0%
+Score: 86.9591346154
+Evaluating 16
+Initialized
+Validation accuracy: 10.0%
+Validation accuracy: 85.9%
+Validation accuracy: 87.3%
+Validation accuracy: 87.8%
+Validation accuracy: 88.3%
+Score: 88.3413461538
+Evaluating 17
+Initialized
+Validation accuracy: 9.1%
+Validation accuracy: 86.1%
+Validation accuracy: 86.7%
+Validation accuracy: 87.1%
+Validation accuracy: 87.1%
+Score: 87.1394230769
+Evaluating 18
+Initialized
+Validation accuracy: 9.8%
+Validation accuracy: 87.2%
+Validation accuracy: 88.2%
+Validation accuracy: 88.9%
+Validation accuracy: 89.4%
+Score: 89.3629807692
+Evaluating 19
+Initialized
+Validation accuracy: 9.6%
+Validation accuracy: 86.6%
+Validation accuracy: 88.1%
+Validation accuracy: 88.4%
+Validation accuracy: 88.2%
+Score: 88.1810897436
+Generation 4
+Evaluating 0
+Initialized
+Validation accuracy: 5.1%
+Validation accuracy: 88.8%
+Validation accuracy: 89.3%
+Validation accuracy: 89.9%
+Validation accuracy: 90.3%
+Score: 90.3044871795
+Evaluating 1
+Initialized
+Validation accuracy: 16.2%
+Validation accuracy: 89.0%
+Validation accuracy: 89.6%
+Validation accuracy: 90.1%
+Validation accuracy: 89.8%
+Score: 89.84375
+Evaluating 2
+ValueError: ('stride must be less than or equal to filter size', 'stride: [3x3] filter: [2x2]')
+
+Score: -10
+Evaluating 3
+Initialized
+Validation accuracy: 18.4%
+Error computing loss
+Score: 0
+Evaluating 4
+Initialized
+Validation accuracy: 8.8%
+Validation accuracy: 79.5%
+Validation accuracy: 80.3%
+Validation accuracy: 80.6%
+Validation accuracy: 80.5%
+Score: 80.5488782051
+Evaluating 5
+Initialized
+Validation accuracy: 9.3%
+Error computing loss
+Score: 0
+Evaluating 6
+Initialized
+Validation accuracy: 10.9%
+Error computing loss
+Score: 0
+Evaluating 7
+Initialized
+Validation accuracy: 11.5%
+Validation accuracy: 87.4%
+Validation accuracy: 87.5%
+Validation accuracy: 87.6%
+Validation accuracy: 87.2%
+Score: 87.1794871795
+Evaluating 8
+Initialized
+Validation accuracy: 11.0%
+Validation accuracy: 87.2%
+Validation accuracy: 88.5%
+Validation accuracy: 89.2%
+Validation accuracy: 89.9%
+Score: 89.8637820513
+Evaluating 9
+Initialized
+Validation accuracy: 7.5%
+Validation accuracy: 90.2%
+Validation accuracy: 90.1%
+Validation accuracy: 90.2%
+Validation accuracy: 89.9%
+Score: 89.9238782051
+Evaluating 10
+Initialized
+Validation accuracy: 9.6%
+Validation accuracy: 66.5%
+Validation accuracy: 66.8%
+Validation accuracy: 68.1%
+Validation accuracy: 69.1%
+Score: 69.0504807692
+Evaluating 11
+Initialized
+Validation accuracy: 12.1%
+Validation accuracy: 89.3%
+Validation accuracy: 89.2%
+Validation accuracy: 89.3%
+Validation accuracy: 89.4%
+Score: 89.4230769231
+Evaluating 12
+Initialized
+Validation accuracy: 8.5%
+Validation accuracy: 9.7%
+Early out.
+Score: 9.73557692308
+Evaluating 13
+Initialized
+Validation accuracy: 8.8%
+Validation accuracy: 10.1%
+Early out.
+Score: 10.0761217949
+Evaluating 14
+Initialized
+Validation accuracy: 9.8%
+Validation accuracy: 84.2%
+Validation accuracy: 85.1%
+Validation accuracy: 86.0%
+Validation accuracy: 86.6%
+Score: 86.5584935897
+Evaluating 15
+Initialized
+Validation accuracy: 11.9%
+Validation accuracy: 89.8%
+Validation accuracy: 89.8%
+Validation accuracy: 89.6%
+Validation accuracy: 89.6%
+Score: 89.6033653846
+Evaluating 16
+Initialized
+Validation accuracy: 9.9%
+Validation accuracy: 9.9%
+Early out.
+Score: 9.9358974359
+Evaluating 17
+Initialized
+Validation accuracy: 8.3%
+Validation accuracy: 86.4%
+Validation accuracy: 87.0%
+Validation accuracy: 87.4%
+Validation accuracy: 87.2%
+Score: 87.1594551282
+Evaluating 18
+Initialized
+Validation accuracy: 16.2%
+Error computing loss
+Score: 0
+Evaluating 19
+Initialized
+Validation accuracy: 12.6%
+Validation accuracy: 87.8%
+Validation accuracy: 88.3%
+Validation accuracy: 88.4%
+Validation accuracy: 88.6%
+Score: 88.6017628205
+Generation 5
+Evaluating 0
+Initialized
+Validation accuracy: 10.4%
+Error computing loss
+Score: 0
+Evaluating 1
+Initialized
+Validation accuracy: 11.6%
+Error computing loss
+Score: 0
+Evaluating 2
+Initialized
+Validation accuracy: 12.6%
+Validation accuracy: 78.9%
+Validation accuracy: 79.2%
+Validation accuracy: 80.0%
+Validation accuracy: 80.1%
+Score: 80.0881410256
+Evaluating 3
+Initialized
+Validation accuracy: 10.1%
+Validation accuracy: 87.2%
+Validation accuracy: 87.5%
+Validation accuracy: 87.5%
+Validation accuracy: 87.7%
+Score: 87.6802884615
+Evaluating 4
+Initialized
+Validation accuracy: 8.7%
+Validation accuracy: 84.3%
+Validation accuracy: 84.3%
+Validation accuracy: 85.3%
+Validation accuracy: 85.8%
+Score: 85.797275641
+Evaluating 5
+Initialized
+Validation accuracy: 9.5%
+Validation accuracy: 77.0%
+Validation accuracy: 77.9%
+Validation accuracy: 78.0%
+Validation accuracy: 77.7%
+Score: 77.7443910256
+Evaluating 6
+Initialized
+Validation accuracy: 16.1%
+Validation accuracy: 89.7%
+Validation accuracy: 90.2%
+Validation accuracy: 90.7%
+Validation accuracy: 90.9%
+Score: 90.9455128205
+Evaluating 7
+Initialized
+Validation accuracy: 9.1%
+Validation accuracy: 9.2%
+Early out.
+Score: 9.23477564103
+Evaluating 8
+Initialized
+Validation accuracy: 9.9%
+Validation accuracy: 84.2%
+Validation accuracy: 84.8%
+Validation accuracy: 85.4%
+Validation accuracy: 85.5%
+Score: 85.5168269231
+Evaluating 9
+Initialized
+Validation accuracy: 10.5%
+Validation accuracy: 86.8%
+Validation accuracy: 86.1%
+Validation accuracy: 87.6%
+Validation accuracy: 87.4%
+Score: 87.4399038462
+Evaluating 10
+Initialized
+Validation accuracy: 18.4%
+Validation accuracy: 88.3%
+Validation accuracy: 88.9%
+Validation accuracy: 88.8%
+Validation accuracy: 89.1%
+Score: 89.0625
+Evaluating 11
+Initialized
+Validation accuracy: 20.9%
+Validation accuracy: 90.5%
+Validation accuracy: 90.2%
+Validation accuracy: 89.7%
+Validation accuracy: 90.3%
+Score: 90.2844551282
+Evaluating 12
+Initialized
+Validation accuracy: 12.5%
+Validation accuracy: 88.9%
+Validation accuracy: 89.0%
+Validation accuracy: 89.6%
+Validation accuracy: 89.8%
+Score: 89.7836538462
+Evaluating 13
+Initialized
+Validation accuracy: 12.3%
+Validation accuracy: 76.6%
+Validation accuracy: 74.6%
+Validation accuracy: 76.1%
+Validation accuracy: 74.3%
+Score: 74.2788461538
+Evaluating 14
+Initialized
+Validation accuracy: 7.6%
+Validation accuracy: 87.6%
+Validation accuracy: 88.7%
+Validation accuracy: 89.2%
+Validation accuracy: 89.2%
+Score: 89.2227564103
+Evaluating 15
+Initialized
+Validation accuracy: 11.7%
+Error computing loss
+Score: 0
+Evaluating 16
+Initialized
+Validation accuracy: 15.2%
+Error computing loss
+Score: 0
+Evaluating 17
+Initialized
+Validation accuracy: 24.2%
+Validation accuracy: 10.5%
+Early out.
+Score: 10.5368589744
+Evaluating 18
+Initialized
+Validation accuracy: 11.0%
+Validation accuracy: 88.2%
+Validation accuracy: 88.6%
+Validation accuracy: 88.3%
+Validation accuracy: 89.6%
+Score: 89.5833333333
+Evaluating 19
+Initialized
+Validation accuracy: 13.3%
+Validation accuracy: 88.6%
+Validation accuracy: 89.3%
+Validation accuracy: 89.4%
+Validation accuracy: 89.8%
+Score: 89.7836538462
+Generation 6
+Evaluating 0
+Initialized
+Validation accuracy: 7.0%
+Error computing loss
+Score: 0
+Evaluating 1
+Initialized
+Validation accuracy: 17.5%
+Validation accuracy: 88.7%
+Validation accuracy: 89.5%
+Validation accuracy: 89.0%
+Validation accuracy: 89.1%
+Score: 89.1225961538
+Evaluating 2
+Initialized
+Validation accuracy: 12.4%
+Validation accuracy: 89.3%
+Validation accuracy: 89.0%
+Validation accuracy: 89.2%
+Validation accuracy: 89.4%
+Score: 89.4230769231
+Evaluating 3
+Initialized
+Validation accuracy: 10.5%
+Validation accuracy: 87.1%
+Validation accuracy: 88.0%
+Validation accuracy: 87.8%
+Validation accuracy: 87.6%
+Score: 87.6201923077
+Evaluating 4
+Initialized
+Validation accuracy: 9.4%
+Validation accuracy: 89.7%
+Validation accuracy: 90.4%
+Validation accuracy: 90.8%
+Validation accuracy: 90.9%
+Score: 90.8854166667
+Evaluating 5
+Initialized
+Validation accuracy: 10.1%
+Validation accuracy: 90.8%
+Validation accuracy: 90.4%
+Validation accuracy: 90.8%
+Validation accuracy: 90.8%
+Score: 90.7852564103
+Evaluating 6
+Initialized
+Validation accuracy: 10.0%
+Validation accuracy: 9.9%
+Early out.
+Score: 9.89583333333
+Evaluating 7
+Initialized
+Validation accuracy: 19.3%
+Validation accuracy: 83.9%
+Validation accuracy: 84.6%
+Validation accuracy: 85.3%
+Validation accuracy: 85.2%
+Score: 85.15625
+Evaluating 8
+Initialized
+Validation accuracy: 14.4%
+Validation accuracy: 90.1%
+Validation accuracy: 90.6%
+Validation accuracy: 90.9%
+Validation accuracy: 90.9%
+Score: 90.9054487179
+Evaluating 9
+Initialized
+Validation accuracy: 8.5%
+Validation accuracy: 79.4%
+Validation accuracy: 80.1%
+Validation accuracy: 79.9%
+Validation accuracy: 80.1%
+Score: 80.1282051282
+Evaluating 10
+Initialized
+Validation accuracy: 8.2%
+Validation accuracy: 75.3%
+Validation accuracy: 73.9%
+Validation accuracy: 71.9%
+Validation accuracy: 76.4%
+Score: 76.4423076923
+Evaluating 11
+Initialized
+Validation accuracy: 12.3%
+Validation accuracy: 9.1%
+Early out.
+Score: 9.05448717949
+Evaluating 12
+Initialized
+Validation accuracy: 10.0%
+Validation accuracy: 9.7%
+Early out.
+Score: 9.71554487179
+Evaluating 13
+Initialized
+Validation accuracy: 17.5%
+Error computing loss
+Score: 0
+Evaluating 14
+Initialized
+Validation accuracy: 11.9%
+Validation accuracy: 87.7%
+Validation accuracy: 88.9%
+Validation accuracy: 89.2%
+Validation accuracy: 89.5%
+Score: 89.4631410256
+Evaluating 15
+Initialized
+Validation accuracy: 13.5%
+Validation accuracy: 62.4%
+Validation accuracy: 71.7%
+Validation accuracy: 81.2%
+Validation accuracy: 81.6%
+Score: 81.5905448718
+Evaluating 16
+Initialized
+Validation accuracy: 11.3%
+Validation accuracy: 88.9%
+Validation accuracy: 89.1%
+Validation accuracy: 89.4%
+Validation accuracy: 89.1%
+Score: 89.1025641026
+Evaluating 17
+Initialized
+Validation accuracy: 9.2%
+Validation accuracy: 87.4%
+Validation accuracy: 87.9%
+Validation accuracy: 87.9%
+Validation accuracy: 88.1%
+Score: 88.141025641
+Evaluating 18
+Initialized
+Validation accuracy: 10.7%
+Validation accuracy: 86.9%
+Validation accuracy: 86.6%
+Validation accuracy: 86.4%
+Validation accuracy: 87.3%
+Score: 87.2996794872
+Evaluating 19
+Initialized
+Validation accuracy: 11.0%
+Validation accuracy: 68.0%
+Validation accuracy: 69.9%
+Validation accuracy: 71.6%
+Validation accuracy: 70.7%
+Score: 70.6530448718
+Generation 7
+Evaluating 0
+Initialized
+Validation accuracy: 10.6%
+Validation accuracy: 89.0%
+Validation accuracy: 89.5%
+Validation accuracy: 89.9%
+Validation accuracy: 90.4%
+Score: 90.4246794872
+Evaluating 1
+Initialized
+Validation accuracy: 12.9%
+Error computing loss
+Score: 0
+Evaluating 2
+Initialized
+Validation accuracy: 13.4%
+Validation accuracy: 91.2%
+Validation accuracy: 91.0%
+Validation accuracy: 90.7%
+Validation accuracy: 90.3%
+Score: 90.3245192308
+Evaluating 3
+Initialized
+Validation accuracy: 11.0%
+Error computing loss
+Score: 0
+Evaluating 4
+TypeError: Input 'b' of 'MatMul' Op has type int32 that does not match type float32 of argument 'a'.
+
+Score: -10
+Evaluating 5
+Initialized
+Validation accuracy: 3.9%
+Error computing loss
+Score: 0
+Evaluating 6
+Initialized
+Validation accuracy: 19.1%
+Validation accuracy: 87.3%
+Validation accuracy: 87.7%
+Validation accuracy: 88.0%
+Validation accuracy: 88.3%
+Score: 88.3213141026
+Evaluating 7
+Initialized
+Validation accuracy: 13.0%
+Validation accuracy: 87.1%
+Validation accuracy: 87.6%
+Validation accuracy: 88.3%
+Validation accuracy: 88.6%
+Score: 88.5817307692
+Evaluating 8
+ValueError: ('stride must be less than or equal to filter size', 'stride: [3x3] filter: [2x2]')
+
+Score: -10
+Evaluating 9
+Initialized
+Validation accuracy: 10.9%
+Validation accuracy: 80.7%
+Validation accuracy: 80.8%
+Validation accuracy: 81.0%
+Validation accuracy: 81.1%
+Score: 81.0897435897
+Evaluating 10
+Initialized
+Validation accuracy: 11.7%
+Validation accuracy: 88.1%
+Validation accuracy: 88.7%
+Validation accuracy: 88.5%
+Validation accuracy: 88.8%
+Score: 88.8421474359
+Evaluating 11
+Initialized
+Validation accuracy: 8.4%
+Validation accuracy: 84.0%
+Validation accuracy: 85.2%
+Validation accuracy: 85.5%
+Validation accuracy: 85.5%
+Score: 85.4767628205
+Evaluating 12
+Initialized
+Validation accuracy: 16.0%
+Validation accuracy: 88.9%
+Validation accuracy: 88.7%
+Validation accuracy: 89.0%
+Validation accuracy: 89.0%
+Score: 88.9623397436
+Evaluating 13
+Initialized
+Validation accuracy: 13.9%
+Validation accuracy: 87.0%
+Validation accuracy: 87.0%
+Validation accuracy: 87.1%
+Validation accuracy: 87.3%
+Score: 87.2796474359
+Evaluating 14
+Initialized
+Validation accuracy: 12.5%
+Validation accuracy: 88.2%
+Validation accuracy: 88.4%
+Validation accuracy: 88.4%
+Validation accuracy: 88.6%
+Score: 88.6017628205
+Evaluating 15
+Initialized
+Validation accuracy: 12.9%
+Validation accuracy: 87.4%
+Validation accuracy: 88.8%
+Validation accuracy: 88.8%
+Validation accuracy: 89.7%
+Score: 89.703525641
+Evaluating 16
+Initialized
+Validation accuracy: 7.5%
+Validation accuracy: 79.7%
+Validation accuracy: 80.7%
+Validation accuracy: 80.9%
+Validation accuracy: 80.8%
+Score: 80.8092948718
+Evaluating 17
+Initialized
+Validation accuracy: 14.7%
+Validation accuracy: 87.7%
+Validation accuracy: 88.9%
+Validation accuracy: 88.8%
+Validation accuracy: 89.1%
+Score: 89.1426282051
+Evaluating 18
+Initialized
+Validation accuracy: 13.8%
+Validation accuracy: 87.8%
+Validation accuracy: 88.5%
+Validation accuracy: 88.4%
+Validation accuracy: 88.1%
+Score: 88.1009615385
+Evaluating 19
+Initialized
+Validation accuracy: 12.6%
+Validation accuracy: 70.1%
+Validation accuracy: 70.3%
+Validation accuracy: 71.2%
+Validation accuracy: 69.3%
+Score: 69.2908653846
+Generation 8
+Evaluating 0
+Initialized
+Validation accuracy: 11.3%
+Validation accuracy: 89.0%
+Validation accuracy: 90.5%
+Validation accuracy: 91.1%
+Validation accuracy: 91.0%
+Score: 91.0056089744
+Evaluating 1
+Initialized
+Validation accuracy: 12.6%
+Validation accuracy: 86.3%
+Validation accuracy: 87.6%
+Validation accuracy: 87.4%
+Validation accuracy: 87.8%
+Score: 87.7804487179
+Evaluating 2
+Initialized
+Validation accuracy: 14.9%
+Validation accuracy: 88.8%
+Validation accuracy: 88.6%
+Validation accuracy: 88.8%
+Validation accuracy: 88.9%
+Score: 88.8621794872
+Evaluating 3
+Initialized
+Validation accuracy: 9.8%
+Validation accuracy: 89.0%
+Validation accuracy: 89.6%
+Validation accuracy: 90.4%
+Validation accuracy: 90.7%
+Score: 90.7251602564
+Evaluating 4
+Initialized
+Validation accuracy: 12.3%
+Validation accuracy: 89.3%
+Validation accuracy: 90.1%
+Validation accuracy: 90.4%
+Validation accuracy: 91.0%
+Score: 90.9655448718
+Evaluating 5
+Initialized
+Validation accuracy: 12.3%
+Validation accuracy: 89.7%
+Validation accuracy: 89.5%
+Validation accuracy: 89.6%
+Validation accuracy: 90.0%
+Score: 90.0040064103
+Evaluating 6
+Initialized
+Validation accuracy: 15.0%
+Validation accuracy: 87.9%
+Validation accuracy: 88.1%
+Validation accuracy: 88.3%
+Validation accuracy: 87.9%
+Score: 87.9407051282
+Evaluating 7
+Initialized
+Validation accuracy: 10.8%
+Validation accuracy: 90.3%
+Validation accuracy: 90.1%
+Validation accuracy: 90.1%
+Validation accuracy: 90.2%
+Score: 90.2443910256
+Evaluating 8
+Initialized
+Validation accuracy: 18.4%
+Validation accuracy: 78.6%
+Validation accuracy: 87.9%
+Validation accuracy: 88.3%
+Validation accuracy: 88.2%
+Score: 88.2211538462
+Evaluating 9
+Initialized
+Validation accuracy: 11.2%
+Validation accuracy: 85.5%
+Validation accuracy: 85.6%
+Validation accuracy: 85.7%
+Validation accuracy: 86.2%
+Score: 86.2379807692
+Evaluating 10
+Initialized
+Validation accuracy: 9.9%
+Validation accuracy: 86.8%
+Validation accuracy: 88.0%
+Validation accuracy: 87.9%
+Validation accuracy: 88.0%
+Score: 88.0208333333
+Evaluating 11
+Initialized
+Validation accuracy: 8.6%
+Error computing loss
+Score: 0
+Evaluating 12
+Initialized
+Validation accuracy: 11.8%
+Validation accuracy: 89.1%
+Validation accuracy: 89.4%
+Validation accuracy: 89.6%
+Validation accuracy: 89.4%
+Score: 89.3830128205
+Evaluating 13
+Initialized
+Validation accuracy: 8.4%
+Validation accuracy: 89.8%
+Validation accuracy: 90.1%
+Validation accuracy: 90.5%
+Validation accuracy: 90.5%
+Score: 90.5448717949
+Evaluating 14
+Initialized
+Validation accuracy: 15.9%
+Validation accuracy: 88.3%
+Validation accuracy: 88.8%
+Validation accuracy: 89.0%
+Validation accuracy: 89.1%
+Score: 89.0625
+Evaluating 15
+Initialized
+Validation accuracy: 11.1%
+Validation accuracy: 87.8%
+Validation accuracy: 88.8%
+Validation accuracy: 89.2%
+Validation accuracy: 89.4%
+Score: 89.4431089744
+Evaluating 16
+Initialized
+Validation accuracy: 16.4%
+Validation accuracy: 85.9%
+Validation accuracy: 87.2%
+Validation accuracy: 86.4%
+Validation accuracy: 87.8%
+Score: 87.8004807692
+Evaluating 17
+Initialized
+Validation accuracy: 10.4%
+Validation accuracy: 88.7%
+Validation accuracy: 89.5%
+Validation accuracy: 89.9%
+Validation accuracy: 90.4%
+Score: 90.4246794872
+Evaluating 18
+Initialized
+Validation accuracy: 14.8%
+Validation accuracy: 88.6%
+Validation accuracy: 89.0%
+Validation accuracy: 89.3%
+Validation accuracy: 89.9%
+Score: 89.9439102564
+Evaluating 19
+Initialized
+Validation accuracy: 11.4%
+Validation accuracy: 89.1%
+Validation accuracy: 90.3%
+Validation accuracy: 90.5%
+Validation accuracy: 91.1%
+Score: 91.1057692308
+Generation 9
+Evaluating 0
+Initialized
+Validation accuracy: 11.9%
+Validation accuracy: 90.1%
+Validation accuracy: 90.3%
+Validation accuracy: 90.5%
+Validation accuracy: 90.5%
+Score: 90.5048076923
+Evaluating 1
+Initialized
+Validation accuracy: 9.1%
+Validation accuracy: 9.9%
+Early out.
+Score: 9.85576923077
+Evaluating 2
+Initialized
+Validation accuracy: 12.0%
+Validation accuracy: 89.4%
+Validation accuracy: 91.0%
+Validation accuracy: 91.4%
+Validation accuracy: 91.6%
+Score: 91.5665064103
+Evaluating 3
+Initialized
+Validation accuracy: 12.6%
+Validation accuracy: 89.6%
+Validation accuracy: 90.5%
+Validation accuracy: 90.7%
+Validation accuracy: 90.4%
+Score: 90.3645833333
+Evaluating 4
+Initialized
+Validation accuracy: 11.1%
+Validation accuracy: 90.3%
+Validation accuracy: 90.6%
+Validation accuracy: 90.8%
+Validation accuracy: 90.8%
+Score: 90.765224359
+Evaluating 5
+Initialized
+Validation accuracy: 12.5%
+Validation accuracy: 89.6%
+Validation accuracy: 90.1%
+Validation accuracy: 90.5%
+Validation accuracy: 90.1%
+Score: 90.1241987179
+Evaluating 6
+Initialized
+Validation accuracy: 9.9%
+Error computing loss
+Score: 0
+Evaluating 7
+Initialized
+Validation accuracy: 9.4%
+Validation accuracy: 10.7%
+Early out.
+Score: 10.7371794872
+Evaluating 8
+Initialized
+Validation accuracy: 9.9%
+Error computing loss
+Score: 0
+Evaluating 9
+Initialized
+Validation accuracy: 10.4%
+Validation accuracy: 87.0%
+Validation accuracy: 87.8%
+Validation accuracy: 87.9%
+Validation accuracy: 88.6%
+Score: 88.5616987179
+Evaluating 10
+Initialized
+Validation accuracy: 17.0%
+Validation accuracy: 88.6%
+Validation accuracy: 89.6%
+Validation accuracy: 89.9%
+Validation accuracy: 90.2%
+Score: 90.2243589744
+Evaluating 11
+Initialized
+Validation accuracy: 9.6%
+Validation accuracy: 78.7%
+Validation accuracy: 79.4%
+Validation accuracy: 80.1%
+Validation accuracy: 80.8%
+Score: 80.7692307692
+Evaluating 12
+Initialized
+Validation accuracy: 14.7%
+Validation accuracy: 89.8%
+Validation accuracy: 90.0%
+Validation accuracy: 90.6%
+Validation accuracy: 90.5%
+Score: 90.5048076923
+Evaluating 13
+Initialized
+Validation accuracy: 14.3%
+Validation accuracy: 89.3%
+Validation accuracy: 90.3%
+Validation accuracy: 90.4%
+Validation accuracy: 90.4%
+Score: 90.4246794872
+Evaluating 14
+Initialized
+Validation accuracy: 11.6%
+Validation accuracy: 90.6%
+Validation accuracy: 90.6%
+Validation accuracy: 90.2%
+Validation accuracy: 90.6%
+Score: 90.5849358974
+Evaluating 15
+Initialized
+Validation accuracy: 6.3%
+Validation accuracy: 47.7%
+Early out.
+Score: 47.6963141026
+Evaluating 16
+Initialized
+Validation accuracy: 24.2%
+Error computing loss
+Score: 0
+Evaluating 17
+Initialized
+Validation accuracy: 12.8%
+Validation accuracy: 89.2%
+Validation accuracy: 88.7%
+Validation accuracy: 89.0%
+Validation accuracy: 88.6%
+Score: 88.6217948718
+Evaluating 18
+Initialized
+Validation accuracy: 6.2%
+Validation accuracy: 88.4%
+Validation accuracy: 89.2%
+Validation accuracy: 90.1%
+Validation accuracy: 90.6%
+Score: 90.625
+Evaluating 19
+Initialized
+Validation accuracy: 10.7%
+Validation accuracy: 70.3%
+Validation accuracy: 70.2%
+Validation accuracy: 69.2%
+Validation accuracy: 69.2%
+Score: 69.1706730769
