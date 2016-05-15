@@ -2,6 +2,7 @@ from __future__ import print_function
 
 import math
 import numpy as np
+from six.moves import zip_longest
 
 def split(image):
     """Split the image data into the top and bottom half."""
@@ -38,11 +39,25 @@ def decode_depth(image):
     depth[np.where(red == 0)] = float('nan')
     return depth, orientation
 
+def ascending_factors(number):
+    factor = 2
+    while number > 1:
+        if number % factor == 0:
+            yield factor
+            number = number / factor
+        else:
+            factor += 1
+
+def compute_scales(height, width):
+    height_scales = reversed(list(ascending_factors(height)))
+    width_scales = reversed(list(ascending_factors(width)))
+    return list(zip_longest(height_scales, width_scales, fillvalue=1))
+
 def mipmap_imputer(image, strategy=np.mean, scales=None):
     """Fill NaNs with localized aggregate values using mipmaps"""
     # Combination of: http://stackoverflow.com/questions/14549696/mipmap-of-image-in-numpy
     # and: http://stackoverflow.com/questions/5480694/numpy-calculate-averages-with-nans-removed
-    scales = scales if scales else [(5,5), (3,2), (2,2), (2,2), (2,2), (2,2), (2,2), (1,2)]
+    scales = scales if scales else compute_scales(image.shape[0], image.shape[1])
     mipmaps = []
     mipmap = image
     for y, x in scales:
