@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<population mutate_seed="77821" eval_seed="48951">
+  <result score="-1">
+	<evostack flatten="True">
+	  <layers type="image">
+	    <layer dropout_rate="0.0" dropout_seed="88946" relu="True">
+	      <image operation="conv_bias" patch_size="2" stride="2" padding="SAME" output_channels="64" l2_factor="0.0">
+		<initializer distribution="truncated" mean="0.0" scale="0.05" seed="42814"/>
+	      </image>
+	    </layer>
+	    <layer dropout_rate="0.5" dropout_seed="20814" relu="False">
+	      <image operation="conv_bias" patch_size="6" stride="2" padding="VALID" output_channels="28" l2_factor="0.0">
+		<initializer distribution="normal" mean="0" scale="0.15" seed="4508"/>
+	      </image>
+	    </layer>
+	  </layers>
+	  <layers type="hidden">
+	    <layer dropout_rate="0.0" dropout_seed="19376" relu="True">
+	      <hidden output_size="128" bias="True" l2_factor="0">
+		<initializer distribution="constant" mean="-1" scale="0.1" seed="89135"/>
+	      </hidden>
+	    </layer>
+	    <layer dropout_rate="0.0" dropout_seed="68959" relu="True">
+	      <hidden output_size="10" bias="True" l2_factor="0.001">
+		<initializer distribution="normal" mean="0.0" scale="0.1" seed="92939"/>
+	      </hidden>
+	    </layer>
+	  </layers>
+	</evostack>
+  </result>
+</population>
