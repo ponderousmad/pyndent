@@ -298,7 +298,7 @@ def parse_image(image_element):
         stride =  as_int(image_element.get("stride"))
         padding = image_element.get("padding")
         outputs = as_int(image_element.get("output_channels"))
-        l2_factor = as_int(image_element.get("l2_factor"), 0)
+        l2_factor = as_float(image_element.get("l2_factor"), 0.0)
         initializer = parse_initializer(image_element)
         if operation and patch_size and stride and outputs and padding and initializer:
             return ImageLayer(operation, patch_size, stride, outputs, padding, initializer, l2_factor)
@@ -311,7 +311,7 @@ def parse_hidden(hidden_element):
     if hidden_element is not None:
         outputs = as_int(hidden_element.get("output_size"))
         bias = hidden_element.get("bias") == "True"
-        l2_factor = as_int(hidden_element.get("l2_factor"), 0)
+        l2_factor = as_float(hidden_element.get("l2_factor"), 0.0)
         initializer = parse_initializer(hidden_element)
         if outputs and initializer:
             return HiddenLayer(outputs, bias, initializer, l2_factor)
