@@ -131,9 +131,11 @@ class Mutagen(object):
         return None
 
 def cross_lists(list_a, list_b, entropy):
-    if len(list_a) < len(list_b):
-        list_a, list_b = list_b, list_a
-    split_at = entropy.randint(0, len(list_b) - 1) if len(list_b) > 0 else 0
+    if len(list_a) < 1:
+        return list_b
+    if len(list_b) < 1:
+        return list_a
+    split_at = entropy.randint(0, len(list_a) - 1)
     result = list_b[:split_at]
     result.extend(list_a[-(len(list_a) - split_at):])
     return result
