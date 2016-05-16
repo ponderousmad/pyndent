@@ -25,6 +25,8 @@ class Darwin(object):
                 score = self.evaluator(member, entropy)
                 gc.collect()
                 self.history[serialized] = (member, score)
+            else:
+                score = score[1]
             print ("Score:", score)
             results.append((member, score))
         return descending_score(results)
