@@ -172,12 +172,41 @@ class ImageLayer(object):
         element.set("l2_factor", str(self.l2_factor))
         self.initializer.to_xml(element)
 
+class Optimizer(object):
+    """Optimizer and settings to use in the graph."""
+    def __init__(self, name, alpha=None, beta=None, gamma=None, delta=None, epoch=None):
+        self.name = name
+        self.alpha = alpha
+        self.beta = beta
+        self.gamma = gamma
+        self.delta = delta
+        self.epoch = epoch
+
+    def to_xml(self, parent):
+        element = et.SubElement(parent, "optimizer")
+        element.set("name", self.name)
+        if self.alpha is not None:
+            element.set("alpha", str(self.alpha))
+        if self.beta is not None:
+            element.set("beta", str(self.beta))
+        if self.gamma is not None:
+            element.set("gamma", str(self.gamma))
+        if self.delta is not None:
+            element.set("delta", str(self.delta))
+        if self.epoch is not None:
+            element.set("epoch", str(self.epoch))
+        return element
+
 class LayerStack(object):
     """Overall structure for the network"""
-    def __init__(self, flatten):
+    def __init__(self, flatten, optimizer=None):
         self.flatten = flatten
         self.image_layers = []
         self.hidden_layers = []
+        if optimizer:
+            self.optimizer = optimizer
+        else:
+            self.optimizer = Optimizer("GradientDescent", 0.05, 1.0, epoch=1000)
 
     def add_layer(self, operation, relu=False, dropout_rate=0.0, dropout_seed=None):
         layer = EvoLayer(operation, relu, dropout_rate, dropout_seed)
@@ -240,12 +269,25 @@ class LayerStack(object):
 
         return layers
 
+    def construct_optimizer(self, global_step):
+        optimizer = self.optimizer;
+        return convnet.create_optimizer(
+            optimizer.name,
+            global_step,
+            optimizer.alpha,
+            optimizer.beta,
+            optimizer.gamma,
+            optimizer.delta,
+            optimizer.epoch
+        )
+
     def to_xml(self, parent = None):
         if parent is None:
             element = et.Element("evostack")
         else:
             element = et.SubElement(parent, "evostack")
         element.set("flatten", str(self.flatten))
+        self.optimizer.to_xml(element)
         if self.image_layers:
             children = et.SubElement(element, "layers")
             children.set("type", "image")
@@ -325,9 +367,25 @@ def parse_operation(layer_element, is_image):
         return parse_image(layer_element.find("image"))
     else:
         return parse_hidden(layer_element.find("hidden"))
+        
+def parse_optimizer(optimizer_element):
+    if optimizer_element is not None:
+        name = operation_element.get("name")
+        alpha = as_float(operation_element.get("alpha"))
+        beta = as_float(operation_element.get("beta"))
+        gamma = as_float(operation_element.get("gamma"))
+        delta = as_float(operation_element.get("delta"))
+        epoch = as_int(operation_element.get("epoch"))
+        if name:
+            return Optimizer(name, alpha, beta, gamma, delta, epoch)
+        print("Missing optimizer name.")
+        return None
+    print("No optimizer found.")
+    return None
 
 def parse_stack(stack_element):
-    stack = LayerStack(stack_element.get("flatten") == "True")
+    optimizer = parse_optimizer(stack_element.find("optimizer"))
+    stack = LayerStack(stack_element.get("flatten") == "True", optimizer)
     for layers in stack_element.iter("layers"):
         is_image = (layers.get("type") == "image")
         for layer in layers.iter("layer"):

@@ -211,3 +211,57 @@ def create_unflatten_layer(size):
     }
     return Layer(options, no_parameters, apply_unflatten)
 
+def make_options(a, b, g, d, alpha_name, beta_name=None, gamma_name=None, delta_name=None):
+    options = {}
+    if a is not None and alpha_name:
+        options[alpha_name] = a
+    if b is not None and beta_name:
+        options[beta_name] = b
+    if g is not None and gamma_name:
+        options[gamma_name] = g
+    if d is not None and delta_name:
+        options[delta_name] = d
+    return options
+
+def make_gradient_descent(step, alpha, beta, gamma, delta, epoch):
+    learning_rate = alpha
+    if beta and epoch:
+        learning_rate = tf.train.exponential_decay(alpha, step, epoch, beta)
+    return tf.train.GradientDescentOptimizer(learning_rate)
+
+def make_adadelta(step, alpha, beta, gamma, delta, epoch):
+    options = make_options(alpha, beta, gamma, delta, "learning_rate", "rho", "epsilon")
+    return tf.train.AdadeltaOptimizer(**options)
+
+def make_adagrad(step, alpha, beta, gamma, delta, epoch):
+    options = make_options(alpha, beta, gamma, delta, "learning_rate", "initial_accumulator_value")
+    return tf.train.AdagradOptimizer(**options)
+
+def make_momentum(step, alpha, beta, gamma, delta, epoch):
+    options = make_options(alpha, beta, gamma, delta, "learning_rate", "momentum")
+    return tf.train.MomentumOptimizer(**options)
+
+def make_adam(step, alpha, beta, gamma, delta, epoch):
+    options = make_options(alpha, beta, gamma, delta, "learning_rate", "beta1", "beta2", "epsilon")
+    return tf.train.AdamOptimizer(**options)
+
+def make_ftrl(step, alpha, beta, gamma, delta, epoch):
+    # not enouch parameters, skipped "learning_rate_power" because it should be negative
+    options = make_options(alpha, beta, gamma, delta, "learning_rate", "initial_accumulator_value", "l1_regularization_strength", "l2_regularization_strength")
+    return tf.train.FtrlOptimizer(**options)
+
+def make_rmsprop(step, alpha, beta, gamma, delta, epoch):
+    options = make_options(alpha, beta, gamma, delta, "learning_rate", "decay", "momentum", "epsilon")
+    return tf.train.RMSPropOptimizer(**options)
+
+def create_optimizer(name, step, alpha, beta, gamma, delta, epoch):
+    constructors = {
+        "GradientDescent": make_gradient_descent,
+        "Adadelta": make_adadelta,
+        "Adagrad": make_adagrad,
+        "Momentum": make_momentum,
+        "Adam": make_adam,
+        "Ftrl": make_ftrl,
+        "RMSProp": make_rmsprop
+    }
+    return constructors[name](step, alpha, beta, gamma, delta, epoch)
