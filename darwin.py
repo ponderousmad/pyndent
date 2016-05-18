@@ -18,7 +18,7 @@ class Darwin(object):
     def evaluate(self, entropy):
         results = []
         for index, member in enumerate(self.population):
-            print ("Evaluating", index)
+            print("Evaluating", index)
             serialized = self.serializer(member)
             score = self.history.get(serialized)
             if score is None:
@@ -27,7 +27,7 @@ class Darwin(object):
                 self.history[serialized] = (member, score)
             else:
                 score = score[1]
-            print ("Score:", score)
+            print("Score:", score)
             results.append((member, score))
         return descending_score(results)
     
