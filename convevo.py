@@ -174,21 +174,43 @@ class ImageLayer(object):
 
 class Optimizer(object):
     """Optimizer and settings to use in the graph."""
-    def __init__(self, name, alpha=None, beta=None, gamma=None, delta=None, epoch=None):
+    def __init__(self, name, learning_rate, alpha=None, beta=None, gamma=None, delta=None):
         self.name = name
+        self.learning_rate = learning_rate
         self.alpha = alpha
         self.beta = beta
         self.gamma = gamma
         self.delta = delta
-        self.epoch = epoch
 
     def mutate(self, mutagen):
-        self.name = mutaten.mutate_optimizer(self.name)
-        self.alpha = mutagen.mutate_optimizer_alpha(self.alpha)
+        new_name = mutagen.mutate_optimizer(self.name)
+        if self.name != new_name:
+            self.name = new_name
+            self.default_parameters()
+        self.learning_rate = mutagen.mutate_learning_rate(self.learning_rate)
+
+    def cross(self, other, entropy):
+        self.learning_rate = entropy.choice([self.learning_rate, other.learning_rate])
+        new_name = entropy.choice([self.name, other.name])
+        if self.name != new_name:
+            self.name = new_name
+            self.default_parameters()
+        
+    def default_parameters(self):
+        self.alpha = None
+        self.beta = None
+        self.gamma = None
+        self.delta = None
+        if self.name == "GradientDescent":
+            self.alpha = 1.0
+            self.beta = 1000
+        elif self.name == "Momentum":
+            self.alpha = 1.0
 
     def to_xml(self, parent):
         element = et.SubElement(parent, "optimizer")
         element.set("name", self.name)
+        element.set("learning_rate", str(self.learning_rate))
         if self.alpha is not None:
             element.set("alpha", str(self.alpha))
         if self.beta is not None:
@@ -197,8 +219,6 @@ class Optimizer(object):
             element.set("gamma", str(self.gamma))
         if self.delta is not None:
             element.set("delta", str(self.delta))
-        if self.epoch is not None:
-            element.set("epoch", str(self.epoch))
         return element
 
 class LayerStack(object):
@@ -210,7 +230,9 @@ class LayerStack(object):
         if optimizer:
             self.optimizer = optimizer
         else:
-            self.optimizer = Optimizer("GradientDescent", 0.05, 1.0, epoch=1000)
+            self.optimizer = Optimizer("GradientDescent", 0.05)
+            # Match parameters from before optimizer was in the stack.
+            self.optimizer.default_parameters()
 
     def add_layer(self, operation, relu=False, dropout_rate=0.0, dropout_seed=None):
         layer = EvoLayer(operation, relu, dropout_rate, dropout_seed)
@@ -237,12 +259,14 @@ class LayerStack(object):
 
     def mutate(self, entropy):
         mutagen = mutate.Mutagen(entropy)
-
+        self.optimizer.mutate(mutagen)
         self.mutate_layers(True, self.image_layers, mutagen)
         self.mutate_layers(False, self.hidden_layers, mutagen)
         
     def cross(self, other, entropy):
-        offspring = LayerStack(self.flatten)
+        optimizer = copy.deepcopy(self.optimizer)
+        optimizer.cross(other.optimizer, entropy)
+        offspring = LayerStack(self.flatten, optimizer)
         image = mutate.cross_lists(self.image_layers, other.image_layers, entropy)
         offspring.image_layers = copy.deepcopy(image)
         hidden = mutate.cross_lists(self.hidden_layers, other.hidden_layers, entropy)
@@ -278,11 +302,11 @@ class LayerStack(object):
         return convnet.create_optimizer(
             optimizer.name,
             global_step,
+            optimizer.learning_rate,
             optimizer.alpha,
             optimizer.beta,
             optimizer.gamma,
-            optimizer.delta,
-            optimizer.epoch
+            optimizer.delta
         )
 
     def to_xml(self, parent = None):
@@ -375,14 +399,14 @@ def parse_operation(layer_element, is_image):
 def parse_optimizer(optimizer_element):
     if optimizer_element is not None:
         name = operation_element.get("name")
+        learning_rate = as_float(operation_element.get("learning_rate"))
         alpha = as_float(operation_element.get("alpha"))
         beta = as_float(operation_element.get("beta"))
         gamma = as_float(operation_element.get("gamma"))
         delta = as_float(operation_element.get("delta"))
-        epoch = as_int(operation_element.get("epoch"))
-        if name:
-            return Optimizer(name, alpha, beta, gamma, delta, epoch)
-        print("Missing optimizer name.")
+        if name and learning_rate:
+            return Optimizer(name, learning_rate, alpha, beta, gamma, delta)
+        print("Bad optimizer.")
         return None
     print("No optimizer found.")
     return None
