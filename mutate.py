@@ -69,6 +69,21 @@ class Mutagen(object):
         self.remove_image_layer = 0.05
         self.add_hidden_layer = 0.10
         self.remove_hidden_layer = 0.6
+        self.optimizers = [
+            (0.01, "GradientDescent"),
+            (0.01, "Adadelta"),
+            (0.01, "Adagrad"),
+            (0.01, "Momentum"),
+            (0.01, "Adam"),
+            (0.01, "Ftrl"),
+            (0.01, "RMSProp")
+        ]
+        self.optimizer_alpha_factors = [
+            (0.01, 0.5),
+            (0.02, 0.75),
+            (0.02, 1.5),
+            (0.01, 2.0)
+        ]
         self.entropy = entropy
 
     def branch(self, bias):
@@ -129,6 +144,12 @@ class Mutagen(object):
         if layer_count > 1 and self.branch(probability):
             return self.entropy.randint(0, layer_count - 1)
         return None
+    
+    def mutate_optimizer(self, optimizer_name):
+        return self.select(self.optimizers, optimizer_name)
+        
+    def mutate_optimizer_alpha(self, alpha):
+        return alpha * self.select(self.optimizer_alpha_factors, 1)
 
 def cross_lists(list_a, list_b, entropy):
     if len(list_a) < 1:

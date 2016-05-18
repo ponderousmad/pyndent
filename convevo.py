@@ -182,6 +182,10 @@ class Optimizer(object):
         self.delta = delta
         self.epoch = epoch
 
+    def mutate(self, mutagen):
+        self.name = mutaten.mutate_optimizer(self.name)
+        self.alpha = mutagen.mutate_optimizer_alpha(self.alpha)
+
     def to_xml(self, parent):
         element = et.SubElement(parent, "optimizer")
         element.set("name", self.name)
