@@ -38,6 +38,9 @@ class EvoLayer(object):
         if self.dropout_rate > 0:
             layers.append(convnet.create_dropout_layer(self.dropout_rate, self.dropout_seed))
         return self.output_shape(input_shape)
+        
+    def make_safe(self):
+        self.primary.make_safe()
 
     def to_xml(self, parent):
         element = et.SubElement(parent, "layer")
@@ -101,6 +104,9 @@ class HiddenLayer(object):
         layer = convnet.create_matrix_layer(input_shape[1], self.output_size, self.bias, self.initializer.construct())
         layer.set_l2_factor(self.l2_factor)
         return layer
+        
+    def make_safe(self):
+        pass # Nothing to do.
 
     def to_xml(self, parent):
         element = et.SubElement(parent, "hidden")
@@ -161,6 +167,10 @@ class ImageLayer(object):
                 (self.stride, self.stride),
                 self.padding
             )
+
+    def make_safe(self):
+        self.stride = 1
+        self.padding = "SAME"
 
     def to_xml(self, parent):
         element = et.SubElement(parent, "image")
@@ -244,8 +254,10 @@ class LayerStack(object):
     def mutate_layers(self, is_image, layers, mutagen):
         slot = mutagen.mutate_duplicate_layer(is_image, len(layers))
         if slot is not None:
-            layer = layers[slot]            
-            layers.insert(slot, copy.deepcopy(layer))
+            layer = layers[slot]
+            layer = copy.deepcopy(layer)
+            layer.make_safe()
+            layers.insert(slot, layer)
         
         layer_count = len(layers)
         if not is_image:
@@ -338,13 +350,13 @@ def serialize(stack):
 def as_int(text, default=None, base=10):
     try:
         return int(text, base)
-    except ValueError:
+    except (ValueError, TypeError):
         return default
 
 def as_float(text, default=None):
     try:
         return float(text)
-    except ValueError:
+    except (ValueError, TypeError):
         return default
 
 def parse_initializer(operation_element):
@@ -398,12 +410,12 @@ def parse_operation(layer_element, is_image):
         
 def parse_optimizer(optimizer_element):
     if optimizer_element is not None:
-        name = operation_element.get("name")
-        learning_rate = as_float(operation_element.get("learning_rate"))
-        alpha = as_float(operation_element.get("alpha"))
-        beta = as_float(operation_element.get("beta"))
-        gamma = as_float(operation_element.get("gamma"))
-        delta = as_float(operation_element.get("delta"))
+        name = optimizer_element.get("name")
+        learning_rate = as_float(optimizer_element.get("learning_rate"))
+        alpha = as_float(optimizer_element.get("alpha"))
+        beta = as_float(optimizer_element.get("beta"))
+        gamma = as_float(optimizer_element.get("gamma"))
+        delta = as_float(optimizer_element.get("delta"))
         if name and learning_rate:
             return Optimizer(name, learning_rate, alpha, beta, gamma, delta)
         print("Bad optimizer.")
@@ -425,18 +437,23 @@ def parse_stack(stack_element):
                 stack.add_layer(operation, relu, dropout_rate, dropout_seed)
     return stack
 
-def parse_population(population_element):
+def parse_population(population_element, include_score):
     population = []
     mutate_seed = as_int(population_element.get("mutate_seed"))
     eval_seed = as_int(population_element.get("eval_seed"))
     for result in population_element.iter("result"):
         stack_element = result.find("evostack")
-        population.append(parse_stack(stack_element))
+        stack = parse_stack(stack_element)
+        if include_score:
+            score = as_float(result.get("score"), -10) 
+            population.append((stack, score))
+        else:
+            population.append(stack)
     return (population, mutate_seed, eval_seed)
     
-def load_population(file):
+def load_population(file, include_score=False):
     tree = et.parse(file)
-    return parse_population(tree.getroot())
+    return parse_population(tree.getroot(), include_score)
 
 def breed(parents, entropy):
     if (len(parents) < 2 or parents[0] is parents[1]):

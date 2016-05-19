@@ -65,10 +65,10 @@ class Mutagen(object):
             (0.02, 0.01),
             (0.01, 0.1)
         ]
-        self.add_image_layer = 0.08
-        self.remove_image_layer = 0.05
+        self.add_image_layer = 0.10
+        self.remove_image_layer = 0.06
         self.add_hidden_layer = 0.10
-        self.remove_hidden_layer = 0.6
+        self.remove_hidden_layer = 0.06
         self.optimizers = [
             (0.040, "GradientDescent"),
             (0.040, "Adadelta"),
