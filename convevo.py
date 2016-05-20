@@ -213,7 +213,7 @@ class Optimizer(object):
         self.gamma = None
         self.delta = None
         if self.name == "GradientDescent":
-            self.alpha = 1.0
+            self.alpha = 0.999
             self.beta = 1000
         elif self.name == "Momentum":
             self.alpha = 1.0
