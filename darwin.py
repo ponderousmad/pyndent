@@ -16,7 +16,7 @@ class Darwin(object):
         self.history = {}
 
     def evaluate(self, entropy):
-        results = []
+        self.results = []
         for index, member in enumerate(self.population):
             print("Evaluating", index)
             serialized = self.serializer(member)
@@ -28,8 +28,11 @@ class Darwin(object):
             else:
                 score = score[1]
             print("Score:", score)
-            results.append((member, score))
-        return descending_score(results)
+            self.results.append((member, score))
+       return self.sorted_results()
+        
+    def sorted_results(self):
+        return descending_score(this.results)
     
     def repopulate(self, survival_rate, from_history, results, options, entropy):
         survivor_count = int(math.ceil(len(results) * survival_rate))
