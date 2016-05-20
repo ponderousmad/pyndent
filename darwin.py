@@ -29,7 +29,7 @@ class Darwin(object):
                 score = score[1]
             print("Score:", score)
             self.results.append((member, score))
-       return self.sorted_results()
+        return self.sorted_results()
         
     def sorted_results(self):
         return descending_score(this.results)
