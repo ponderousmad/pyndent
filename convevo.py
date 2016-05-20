@@ -39,8 +39,9 @@ class EvoLayer(object):
             layers.append(convnet.create_dropout_layer(self.dropout_rate, self.dropout_seed))
         return self.output_shape(input_shape)
         
-    def make_safe(self):
-        self.primary.make_safe()
+    def make_safe(self, input_shape):
+        self.primary.make_safe(input_shape)
+        return self.output_shape(input_shape)
 
     def to_xml(self, parent):
         element = et.SubElement(parent, "layer")
@@ -105,7 +106,7 @@ class HiddenLayer(object):
         layer.set_l2_factor(self.l2_factor)
         return layer
         
-    def make_safe(self):
+    def make_safe(self, input_shape):
         pass # Nothing to do.
 
     def to_xml(self, parent):
@@ -168,9 +169,9 @@ class ImageLayer(object):
                 self.padding
             )
 
-    def make_safe(self):
-        self.stride = 1
-        self.padding = "SAME"
+    def make_safe(self, input_shape):
+        self.patch_size = min(self.patch_size, input_shape[1], input_shape[2])
+        self.stride = min(self.stride, self.patch_size)
 
     def to_xml(self, parent):
         element = et.SubElement(parent, "image")
@@ -251,12 +252,11 @@ class LayerStack(object):
         else:
             self.hidden_layers.append(layer)
 
-    def mutate_layers(self, is_image, layers, mutagen):
+    def mutate_layers(self, is_image, layers, input_shape, mutagen):
         slot = mutagen.mutate_duplicate_layer(is_image, len(layers))
         if slot is not None:
             layer = layers[slot]
             layer = copy.deepcopy(layer)
-            layer.make_safe()
             layers.insert(slot, layer)
         
         layer_count = len(layers)
@@ -266,14 +266,31 @@ class LayerStack(object):
         if slot is not None:
             layers.pop(slot)
 
+        shape = input_shape
         for layer in layers:
             layer.mutate(mutagen, layer == layers[-1])
+            shape = layer.make_safe(shape)
+        return shape
 
-    def mutate(self, entropy):
+    def mutate(self, input_shape, entropy):
         mutagen = mutate.Mutagen(entropy)
         self.optimizer.mutate(mutagen)
-        self.mutate_layers(True, self.image_layers, mutagen)
-        self.mutate_layers(False, self.hidden_layers, mutagen)
+        shape = self.mutate_layers(True, self.image_layers, input_shape, mutagen)
+        
+        if self.flatten:
+            shape = convnet.flatten_output_shape(shape)
+        
+        return self.mutate_layers(False, self.hidden_layers, shape, mutagen)
+        
+    def make_safe(self, input_shape):
+        shape = input_shape
+        for layer in self.image_layers:
+            shape = layer.make_safe(shape)
+        if self.flatten:
+            shape = convnet.flatten_output_shape(shape)    
+        for layer in self.hidden_layers:
+            shape = layer.make_safe(shape)
+        return shape
         
     def cross(self, other, entropy):
         optimizer = copy.deepcopy(self.optimizer)
@@ -302,7 +319,6 @@ class LayerStack(object):
         if self.flatten:
             layers.append(convnet.create_flatten_layer())
             shape = convnet.flatten_output_shape(shape)
-
 
         for layer in self.hidden_layers:
             shape = layer.construct(shape, layers)
@@ -455,20 +471,20 @@ def load_population(file, include_score=False):
     tree = et.parse(file)
     return parse_population(tree.getroot(), include_score)
 
-def breed(parents, entropy):
+def breed(parents, options, entropy):
     if (len(parents) < 2 or parents[0] is parents[1]):
         offspring = copy.deepcopy(parents[0])
     else:
         offspring = parents[0].cross(parents[1], entropy)
-    offspring.mutate(entropy)
+    offspring.mutate(options["input_shape"], entropy)
     return offspring
 
-def init_population(prototypes, population_target, entropy):
+def init_population(prototypes, population_target, breed_options, entropy):
     population = list(prototypes)
 
     while (len(population) < population_target):
         parent = entropy.choice(population)
-        offspring = breed([parent], entropy)
+        offspring = breed([parent], breed_options, entropy)
         if parent.same_as(offspring):
             print("Offspring is clone.")
         else:

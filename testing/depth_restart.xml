@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<population>
+<population mutate_seed="9175" eval_seed="748">
   <result score="14.475">
     <evostack flatten="True">
-      <optimizer name="GradientDescent" learning_rate="0.01" alpha="1.0" beta="1000"/>
+      <optimizer name="GradientDescent" learning_rate="0.01" alpha="1.0" beta="1000.0"/>
       <layers type="image">
         <layer dropout_rate="0.0" dropout_seed="2298" relu="False">
           <image operation="conv_bias" patch_size="20" stride="2" padding="SAME" output_channels="10" l2_factor="0.001">
@@ -10,29 +10,29 @@
           </image>
         </layer>
         <layer dropout_rate="0.0" dropout_seed="39249" relu="True">
-          <image operation="avg_pool" patch_size="10" stride="5" padding="VALID" output_channels="10" l2_factor="0.0">
+          <image operation="avg_pool" patch_size="10" stride="5" padding="VALID" output_channels="10" l2_factor="0.001">
             <initializer distribution="normal" mean="1.0" scale="0.0375" seed="91417"/>
           </image>
         </layer>
         <layer dropout_rate="0.0" dropout_seed="29540" relu="False">
-          <image operation="conv_bias" patch_size="2" stride="2" padding="VALID" output_channels="40" l2_factor="0.01">
+          <image operation="conv_bias" patch_size="2" stride="2" padding="VALID" output_channels="40" l2_factor="0.001">
             <initializer distribution="normal" mean="0.0" scale="0.055" seed="59227"/>
           </image>
         </layer>
       </layers>
       <layers type="hidden">
         <layer dropout_rate="0.0" dropout_seed="70759" relu="True">
-          <hidden output_size="200" bias="True" l2_factor="0">
+          <hidden output_size="200" bias="True" l2_factor="0.001">
             <initializer distribution="normal" mean="0.0" scale="0.1" seed="12074"/>
           </hidden>
         </layer>
         <layer dropout_rate="0.0" dropout_seed="66843" relu="True">
-          <hidden output_size="400" bias="True" l2_factor="0">
+          <hidden output_size="400" bias="True" l2_factor="0.001">
             <initializer distribution="normal" mean="0.0" scale="0.1" seed="62833"/>
           </hidden>
         </layer>
         <layer dropout_rate="0.0" dropout_seed="62982" relu="True">
-          <hidden output_size="21" bias="True" l2_factor="0">
+          <hidden output_size="21" bias="True" l2_factor="0.001">
             <initializer distribution="normal" mean="0.0" scale="0.05" seed="75984"/>
           </hidden>
         </layer>
@@ -49,34 +49,34 @@
           </image>
         </layer>
         <layer dropout_rate="0.0" dropout_seed="39249" relu="True">
-          <image operation="conv_bias" patch_size="10" stride="5" padding="VALID" output_channels="20" l2_factor="0.0">
+          <image operation="conv_bias" patch_size="10" stride="5" padding="VALID" output_channels="20" l2_factor="0.001">
             <initializer distribution="normal" mean="1.0" scale="0.0375" seed="91417"/>
           </image>
         </layer>
         <layer dropout_rate="0.0" dropout_seed="39249" relu="True">
-          <image operation="avg_pool" patch_size="10" stride="1" padding="VALID" output_channels="20" l2_factor="0.0">
+          <image operation="avg_pool" patch_size="9" stride="1" padding="VALID" output_channels="20" l2_factor="0.001">
             <initializer distribution="normal" mean="1.0" scale="0.0375" seed="91417"/>
           </image>
         </layer>
         <layer dropout_rate="0.0" dropout_seed="29540" relu="False">
-          <image operation="conv_bias" patch_size="2" stride="2" padding="VALID" output_channels="40" l2_factor="0.01">
+          <image operation="conv_bias" patch_size="1" stride="1" padding="VALID" output_channels="40" l2_factor="0.001">
             <initializer distribution="normal" mean="0.0" scale="0.055" seed="59227"/>
           </image>
         </layer>
       </layers>
       <layers type="hidden">
         <layer dropout_rate="0.0" dropout_seed="70759" relu="True">
-          <hidden output_size="500" bias="True" l2_factor="0">
+          <hidden output_size="500" bias="True" l2_factor="0.001">
             <initializer distribution="normal" mean="0.0" scale="0.1" seed="12074"/>
           </hidden>
         </layer>
         <layer dropout_rate="0.0" dropout_seed="66843" relu="True">
-          <hidden output_size="200" bias="True" l2_factor="0">
+          <hidden output_size="200" bias="True" l2_factor="0.001">
             <initializer distribution="normal" mean="0.0" scale="0.1" seed="62833"/>
           </hidden>
         </layer>
         <layer dropout_rate="0.0" dropout_seed="62982" relu="True">
-          <hidden output_size="21" bias="True" l2_factor="0">
+          <hidden output_size="21" bias="True" l2_factor="0.001">
             <initializer distribution="normal" mean="0.0" scale="0.05" seed="75984"/>
           </hidden>
         </layer>
@@ -93,34 +93,34 @@
           </image>
         </layer>
         <layer dropout_rate="0.0" dropout_seed="39249" relu="True">
-          <image operation="conv_bias" patch_size="10" stride="5" padding="VALID" output_channels="20" l2_factor="0.0">
+          <image operation="conv_bias" patch_size="10" stride="5" padding="VALID" output_channels="20" l2_factor="0.001">
             <initializer distribution="normal" mean="1.0" scale="0.0375" seed="91417"/>
           </image>
         </layer>
         <layer dropout_rate="0.0" dropout_seed="39249" relu="True">
-          <image operation="avg_pool" patch_size="10" stride="1" padding="VALID" output_channels="20" l2_factor="0.0">
+          <image operation="avg_pool" patch_size="5" stride="1" padding="VALID" output_channels="20" l2_factor="0.001">
             <initializer distribution="normal" mean="1.0" scale="0.0375" seed="91417"/>
           </image>
         </layer>
         <layer dropout_rate="0.0" dropout_seed="29540" relu="False">
-          <image operation="conv_bias" patch_size="2" stride="2" padding="VALID" output_channels="40" l2_factor="0.01">
+          <image operation="conv_bias" patch_size="2" stride="1" padding="VALID" output_channels="40" l2_factor="0.001">
             <initializer distribution="normal" mean="0.0" scale="0.055" seed="59227"/>
           </image>
         </layer>
       </layers>
       <layers type="hidden">
         <layer dropout_rate="0.0" dropout_seed="70759" relu="True">
-          <hidden output_size="200" bias="True" l2_factor="0">
+          <hidden output_size="200" bias="True" l2_factor="0.001">
             <initializer distribution="normal" mean="0.0" scale="0.1" seed="12074"/>
           </hidden>
         </layer>
         <layer dropout_rate="0.0" dropout_seed="66843" relu="True">
-          <hidden output_size="400" bias="True" l2_factor="0">
+          <hidden output_size="400" bias="True" l2_factor="0.001">
             <initializer distribution="normal" mean="0.0" scale="0.1" seed="62833"/>
           </hidden>
         </layer>
         <layer dropout_rate="0.0" dropout_seed="62982" relu="True">
-          <hidden output_size="21" bias="True" l2_factor="0">
+          <hidden output_size="21" bias="True" l2_factor="0.001">
             <initializer distribution="normal" mean="0.0" scale="0.05" seed="75984"/>
           </hidden>
         </layer>

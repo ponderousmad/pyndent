@@ -31,7 +31,7 @@ class Darwin(object):
             results.append((member, score))
         return descending_score(results)
     
-    def repopulate(self, survival_rate, from_history, results, entropy):
+    def repopulate(self, survival_rate, from_history, results, options, entropy):
         survivor_count = int(math.ceil(len(results) * survival_rate))
         survivors = results[:survivor_count]
         
@@ -50,7 +50,7 @@ class Darwin(object):
                 entropy.choice(survivors)[0],
                 entropy.choice(survivors)[0]
             ]
-            offspring = self.breeder(parents, entropy)
+            offspring = self.breeder(parents, options, entropy)
             new_population.append(offspring)
         self.population = new_population
 
