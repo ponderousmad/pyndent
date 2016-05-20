@@ -2,7 +2,7 @@
 <population mutate_seed="9175" eval_seed="748">
   <result score="14.475">
     <evostack flatten="True">
-      <optimizer name="GradientDescent" learning_rate="0.01" alpha="1.0" beta="1000.0"/>
+      <optimizer name="GradientDescent" learning_rate="0.005" alpha="0.999" beta="1000.0"/>
       <layers type="image">
         <layer dropout_rate="0.0" dropout_seed="2298" relu="False">
           <image operation="conv_bias" patch_size="20" stride="2" padding="SAME" output_channels="10" l2_factor="0.001">
@@ -41,7 +41,7 @@
   </result>
   <result score="14.475">
     <evostack flatten="True">
-      <optimizer name="Adagrad" learning_rate="0.01"/>
+      <optimizer name="Adagrad" learning_rate="0.005"/>
       <layers type="image">
         <layer dropout_rate="0.0" dropout_seed="2298" relu="False">
           <image operation="conv_bias" patch_size="20" stride="2" padding="SAME" output_channels="10" l2_factor="0.001">
@@ -85,7 +85,7 @@
   </result>
   <result score="14.475">
     <evostack flatten="True">
-      <optimizer name="Adadelta" learning_rate="0.01"/>
+      <optimizer name="Adadelta" learning_rate="0.005"/>
       <layers type="image">
         <layer dropout_rate="0.0" dropout_seed="2298" relu="False">
           <image operation="conv_bias" patch_size="20" stride="2" padding="SAME" output_channels="10" l2_factor="0.001">
