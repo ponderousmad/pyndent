@@ -1,0 +1,901 @@
+Mutate Seed: 42719
+Eval Seed: 11528
+Generation 0
+Evaluating 0
+Initialized
+Minibatch loss at step 0 : 3.27642
+Minibatch accuracy: 10.0%
+[ 8  9  2 18 18  2 18 18  8  8  2 16  8 19  0 16  8  3 12  9]
+[11  9 11 13  9  9  8 12  9 11  9 11  8 10 13 10 12  9 13 13]
+Minibatch average depth error: 0.0907873
+Validation accuracy: 13.1%
+[8 9 9 9 9 9 9 9 9 9 9 9 9 3 9 9 8 9 9 8]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 25000 : 2.94407
+Minibatch accuracy: 10.0%
+[ 8 14  8 11 10 11 10 14 12  0  8 12 11  9 13  0 12 11  0 11]
+[10  9 11 12  9  9  9 12  9 11 12 11 10 10 13 11  9 11 13 13]
+Minibatch average depth error: 0.0525004
+Validation accuracy: 19.5%
+[10 11 10 11 12 12 11 12 11 14 11 11 12 12 10 12 11 11 11 10]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 50000 : 2.90135
+Minibatch accuracy: 15.0%
+[ 9 13 12  9 11  9 10 10  9  0  0 13 11  9 14  0 12 10  8 13]
+[10  9 13 13  7  9 11 12  9 13 12 11 10 10 10 10 10 13 13 13]
+Minibatch average depth error: 0.0530541
+Validation accuracy: 20.6%
+[11 12 10 10 12 12 10 11 11 13 11 11 12 12 10 11 12 11 12 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 75000 : 2.95692
+Minibatch accuracy: 10.0%
+[10 10  0 11 10 10  0  0  0  0  0  0 10 13 14  9 12  0 11 12]
+[ 9  9 13 12  7 10  8 12  9 11 11 11 13 10 13 11 10 14 13 12]
+Minibatch average depth error: 0.0530059
+Validation accuracy: 18.2%
+[12 11 10 10 12  8 10 11 11 11 11 11 12 12  9 10 13 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 100000 : 2.77636
+Minibatch accuracy: 25.0%
+[10  9 11 14  9  0 11 10  0 12 14 10 11 11 13  0  7 13  0 10]
+[10  9 13 12 12 10 10 13  9 11  9 11 13 10 13 11  9 13 13 10]
+Minibatch average depth error: 0.0531206
+Validation accuracy: 17.9%
+[12 11 10 10 12  8 10 11 11 11 12 11 12 12  9 10 10 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Score: 17.94
+Evaluating 1
+Initialized
+Minibatch loss at step 0 : 13.5286
+Minibatch accuracy: 0.0%
+[14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14]
+[11  9 11 13  9  9  8 12  9 11  9 11  8 10 13 10 12  9 13 13]
+Minibatch average depth error: 0.0524055
+Validation accuracy: 19.6%
+[ 9 11  9 11  9  9 11  9  9  9  9 11  9  9 11  9  9  9 11  9]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 25000 : 10.2069
+Minibatch accuracy: 30.0%
+[11 11 11 11 10 10 11 11 11 11 11 11 10 11 11 11 11 11 11 11]
+[10  9 11 12  9  9  9 12  9 11 12 11 10 10 13 11  9 11 13 13]
+Minibatch average depth error: 0.0525004
+Validation accuracy: 18.0%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 50000 : 10.3792
+Minibatch accuracy: 15.0%
+[12 12 12  9 12  9 12 12 12 12 12 12 12 12 12 12 12 12 12 12]
+[10  9 13 13  7  9 11 12  9 13 12 11 10 10 10 10 10 13 13 13]
+Minibatch average depth error: 0.0530541
+Validation accuracy: 19.5%
+[12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 75000 : 10.3544
+Minibatch accuracy: 25.0%
+[11 11 11 11 11 10 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 9  9 13 12  7 10  8 12  9 11 11 11 13 10 13 11 10 14 13 12]
+Minibatch average depth error: 0.0530059
+Validation accuracy: 18.0%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 100000 : 10.228
+Minibatch accuracy: 15.0%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[10  9 13 12 12 10 10 13  9 11  9 11 13 10 13 11  9 13 13 10]
+Minibatch average depth error: 0.0531206
+Validation accuracy: 18.1%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Score: 18.055
+Evaluating 2
+Initialized
+Minibatch loss at step 0 : 5.91662
+Minibatch accuracy: 5.0%
+[12  1 12 12 12  1 19 12  1 19 12  1 12 19 12 19  1 19 18 12]
+[11  9 11 13  9  9  8 12  9 11  9 11  8 10 13 10 12  9 13 13]
+Minibatch average depth error: 0.0675653
+Validation accuracy: 15.2%
+[12 10 10 10 12 10 10 10 10 10 10 10 12 12 10 10 12 12 10 12]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0722634
+Minibatch loss at step 25000 : 2.37811
+Minibatch accuracy: 55.0%
+[11 10  0 12  9  9 11 12 10 11 12 11 10 12  0  0  9 11 13  0]
+[10  9 11 12  9  9  9 12  9 11 12 11 10 10 13 11  9 11 13 13]
+Minibatch average depth error: 0.0876741
+Validation accuracy: 13.8%
+[14 11 10 12  0  0 12  9 10 12  0 13 13 11  9  0 10  0 12  9]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0662195
+Minibatch loss at step 50000 : 2.18833
+Minibatch accuracy: 50.0%
+[10 11 13 13  7  9 11 12 13  8 12 11 11 10  0 12  6  7 10  7]
+[10  9 13 13  7  9 11 12  9 13 12 11 10 10 10 10 10 13 13 13]
+Minibatch average depth error: 0.0990205
+Validation accuracy: 15.6%
+[ 9 13  8  9  8 11 11 15 11 15 10 13 13 12  9 15 14 10 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.177842
+Minibatch loss at step 75000 : 2.52982
+Minibatch accuracy: 20.0%
+[14  9  0 11 11 12 11 11 13 11 11 14 11 11 15 10 10 12 11 11]
+[ 9  9 13 12  7 10  8 12  9 11 11 11 13 10 13 11 10 14 13 12]
+Minibatch average depth error: 0.153975
+Validation accuracy: 18.1%
+[11 12 10 11 11 10 13 12  9 11 12 14 13 11 13 12 10 12 10  9]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.150694
+Minibatch loss at step 100000 : 2.19593
+Minibatch accuracy: 55.0%
+[10  9 14 10  9 11 10  9  9  9  9 11 12 10 13 10  9 13 15 10]
+[10  9 13 12 12 10 10 13  9 11  9 11 13 10 13 11  9 13 13 10]
+Minibatch average depth error: 0.153586
+Validation accuracy: 20.2%
+[10 10 12 11 11  8 13 12 10 11 12 14  9 11  9 10 10 14 10 10]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.16158
+Score: 20.175
+Evaluating 3
+Initialized
+Minibatch loss at step 0 : 24.4883
+Minibatch accuracy: 0.0%
+[12 14 10  7 12 10 10  7 14 14 10 14  7 14  0 14 10 14 10 12]
+[11  9 11 13  9  9  8 12  9 11  9 11  8 10 13 10 12  9 13 13]
+Minibatch average depth error: 0.872297
+Validation accuracy: 12.6%
+[13 13 13 13 13 13 13 13 13 13 13 13 13 13 13 13  9 13 13 13]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.945767
+Minibatch loss at step 25000 : 7.97775
+Minibatch accuracy: 25.0%
+[11 11 11 11 11 11 11 10 11 11 11 11 10 11 11 12 12 11 12 11]
+[10  9 11 12  9  9  9 12  9 11 12 11 10 10 13 11  9 11 13 13]
+Minibatch average depth error: 0.113513
+Validation accuracy: 17.8%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.157996
+Minibatch loss at step 50000 : 8.20934
+Minibatch accuracy: 15.0%
+[11 12 11 12 11 11 11 11 11 11 12 11 11 11 11 12 11 11 11 11]
+[10  9 13 13  7  9 11 12  9 13 12 11 10 10 10 10 10 13 13 13]
+Minibatch average depth error: 0.144325
+Validation accuracy: 17.8%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.148407
+Minibatch loss at step 75000 : 7.99136
+Minibatch accuracy: 25.0%
+[11 12 11 12 11 11 11 10 11 11 11 11 12 11 11 11 11 11 11 11]
+[ 9  9 13 12  7 10  8 12  9 11 11 11 13 10 13 11 10 14 13 12]
+Minibatch average depth error: 0.129738
+Validation accuracy: 17.8%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.134876
+Minibatch loss at step 100000 : 7.87503
+Minibatch accuracy: 25.0%
+[10 10 10 10 11 10 10 11 12 10 10 10 11 10 10 10 12 10 10 10]
+[10  9 13 12 12 10 10 13  9 11  9 11 13 10 13 11  9 13 13 10]
+Minibatch average depth error: 0.148237
+Validation accuracy: 16.9%
+[10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.166581
+Score: 16.8725
+Evaluating 4
+Initialized
+Minibatch loss at step 0 : 8.70919e+07
+Minibatch accuracy: 0.0%
+[7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7]
+[11  9 11 13  9  9  8 12  9 11  9 11  8 10 13 10 12  9 13 13]
+Minibatch average depth error: 5402.83
+Validation accuracy: 0.0%
+[4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.768119
+Minibatch loss at step 25000 : 14.9059
+Minibatch accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[10  9 11 12  9  9  9 12  9 11 12 11 10 10 13 11  9 11 13 13]
+Minibatch average depth error: 0.0525004
+Validation accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 50000 : 14.9093
+Minibatch accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[10  9 13 13  7  9 11 12  9 13 12 11 10 10 10 10 10 13 13 13]
+Minibatch average depth error: 0.0530541
+Validation accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 75000 : 14.9091
+Minibatch accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[ 9  9 13 12  7 10  8 12  9 11 11 11 13 10 13 11 10 14 13 12]
+Minibatch average depth error: 0.0530059
+Validation accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 100000 : 14.9092
+Minibatch accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[10  9 13 12 12 10 10 13  9 11  9 11 13 10 13 11  9 13 13 10]
+Minibatch average depth error: 0.0531206
+Validation accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Score: 0.0
+Evaluating 5
+Initialized
+Minibatch loss at step 0 : 1.42618e+06
+Minibatch accuracy: 0.0%
+[19  6  3 19 16 19 14  3  1 13  1  4 19 19  3  4  1 14 19 16]
+[11  9 11 13  9  9  8 12  9 11  9 11  8 10 13 10 12  9 13 13]
+Minibatch average depth error: 438.639
+Validation accuracy: 0.0%
+[19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.945767
+Error computing loss at step 1
+Minibatch accuracy: 0.0%
+[19 19 19 19  9 19 19  3 19 19 19 19 19 19  3  3 19 19 19 19]
+[10 13 11 11 14 12 12 10 11 10  8 14 14 10 10 10 11 12 14  9]
+Minibatch average depth error: nan
+Score: 0
+Evaluating 6
+Initialized
+Minibatch loss at step 0 : 4.52905
+Minibatch accuracy: 0.0%
+[14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14 14]
+[11  9 11 13  9  9  8 12  9 11  9 11  8 10 13 10 12  9 13 13]
+Minibatch average depth error: 0.0633254
+Validation accuracy: 12.7%
+[11 11 11 14 14 11 14 11 14 14 14 14 14 11 14 11 14 14 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.125978
+Minibatch loss at step 25000 : 1.78385
+Minibatch accuracy: 50.0%
+[11 12 11 12  9 11 11 12  9 11 12 12  9 11 13 11 11 11 14 10]
+[10  9 11 12  9  9  9 12  9 11 12 11 10 10 13 11  9 11 13 13]
+Minibatch average depth error: 0.102562
+Validation accuracy: 15.5%
+[15 11 14  9 12 12  9 11 12 11 13 13 13 11  9 11 10 12 11 12]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.123898
+Minibatch loss at step 50000 : 2.31263
+Minibatch accuracy: 45.0%
+[ 9 11 14 11 13 11 10 12  9 11 13 11 10 10 10 14 10 14 13 13]
+[10  9 13 13  7  9 11 12  9 13 12 11 10 10 10 10 10 13 13 13]
+Minibatch average depth error: 0.0731652
+Validation accuracy: 19.5%
+[ 9 10  9 13  8 12 11 10  9  8  0 11 13 10 13 12 11 10 12 10]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0860309
+Minibatch loss at step 75000 : 1.94782
+Minibatch accuracy: 60.0%
+[ 9  9 13 12 12  9 11 10  9 11 11 11 13 10  8 11 10 11 10  0]
+[ 9  9 13 12  7 10  8 12  9 11 11 11 13 10 13 11 10 14 13 12]
+Minibatch average depth error: 0.150074
+Validation accuracy: 19.6%
+[ 9 10 10 13 15 12  9 11  9 14 10 10  9  9 13 11 11 14 11 13]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.151104
+Minibatch loss at step 100000 : 2.50285
+Minibatch accuracy: 35.0%
+[ 8 12 11 12 10 10 10 12 13  9  8  9 13 10  0 11 12 11 11 10]
+[10  9 13 12 12 10 10 13  9 11  9 11 13 10 13 11  9 13 13 10]
+Minibatch average depth error: 0.15432
+Validation accuracy: 19.9%
+[ 9 10 10 13 14 12 12 10  9 13  8 10  9  9 15  9  9 13 10 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.159007
+Score: 19.9325
+Evaluating 7
+Initialized
+Minibatch loss at step 0 : 4.25567
+Minibatch accuracy: 10.0%
+[10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10]
+[11  9 11 13  9  9  8 12  9 11  9 11  8 10 13 10 12  9 13 13]
+Minibatch average depth error: 0.0966822
+Validation accuracy: 13.6%
+[13 10 10 10 10 10 10 10 13 10  8 10 13 13 10 10 13 10 10 13]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.111785
+Error computing loss at step 9
+Minibatch accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[12 12 17  9 12 13 15 12 10  9 10 10 11 11 12 12 11 11 14 15]
+Minibatch average depth error: 0.0547857
+Score: 0
+Evaluating 8
+Initialized
+Minibatch loss at step 0 : 110.352
+Minibatch accuracy: 0.0%
+[2 2 2 2 2 2 2 2 2 7 2 2 2 2 2 2 2 2 2 2]
+[11  9 11 13  9  9  8 12  9 11  9 11  8 10 13 10 12  9 13 13]
+Minibatch average depth error: 0.0524055
+Validation accuracy: 17.8%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.945767
+Minibatch loss at step 25000 : 19.6275
+Minibatch accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[10  9 11 12  9  9  9 12  9 11 12 11 10 10 13 11  9 11 13 13]
+Minibatch average depth error: 0.0525004
+Validation accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 50000 : 19.6309
+Minibatch accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[10  9 13 13  7  9 11 12  9 13 12 11 10 10 10 10 10 13 13 13]
+Minibatch average depth error: 0.0530541
+Validation accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 75000 : 19.6304
+Minibatch accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[ 9  9 13 12  7 10  8 12  9 11 11 11 13 10 13 11 10 14 13 12]
+Minibatch average depth error: 0.0530059
+Validation accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 100000 : 19.631
+Minibatch accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[10  9 13 12 12 10 10 13  9 11  9 11 13 10 13 11  9 13 13 10]
+Minibatch average depth error: 0.0531206
+Validation accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Score: 0.0
+Evaluating 9
+Initialized
+Minibatch loss at step 0 : 3.00089
+Minibatch accuracy: 10.0%
+[11  2 14 11  4 10 10  4 10 10 11 10 11 11 11 10 10 10 11 11]
+[11  9 11 13  9  9  8 12  9 11  9 11  8 10 13 10 12  9 13 13]
+Minibatch average depth error: 0.100295
+Validation accuracy: 17.5%
+[11 11 11 11 11 11 11 10 11 11 10 10 11 11 11 10 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.165021
+Minibatch loss at step 25000 : 1.37485
+Minibatch accuracy: 55.0%
+[ 9 10 11 12  9 12 10 12 12 11 12 12 10 10 13 11 10 12  9 13]
+[10  9 11 12  9  9  9 12  9 11 12 11 10 10 13 11  9 11 13 13]
+Minibatch average depth error: 0.138056
+Validation accuracy: 17.9%
+[14 11 11 11 12 12 12 12 11 13  9 11 13 11  9 11 10 13 12  7]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.146764
+Minibatch loss at step 50000 : 1.74538
+Minibatch accuracy: 30.0%
+[11 11 15 11 10  9 15 11  9 12 11 11 10 11 10 10 12 12 10 14]
+[10  9 13 13  7  9 11 12  9 13 12 11 10 10 10 10 10 13 13 13]
+Minibatch average depth error: 0.15052
+Validation accuracy: 20.1%
+[ 9 10 10 12 11 12 11  9 11 11 11 11 13 14  9 10 10 14 12  9]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.152194
+Minibatch loss at step 75000 : 1.65489
+Minibatch accuracy: 40.0%
+[12  9 14 12 11 11  8 10 13 11 12 14 11 10 13  9 11 14 11 12]
+[ 9  9 13 12  7 10  8 12  9 11 11 11 13 10 13 11 10 14 13 12]
+Minibatch average depth error: 0.163822
+Validation accuracy: 19.7%
+[ 9 10 10 11 11 12 11 12 11 10 10 14 13 14 11 11 10 14 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.167334
+Minibatch loss at step 100000 : 1.45431
+Minibatch accuracy: 60.0%
+[10 12 13 12 12 10 10 12  9 11 11 11 10 11 13 11 12 10 11 10]
+[10  9 13 12 12 10 10 13  9 11  9 11 13 10 13 11  9 13 13 10]
+Minibatch average depth error: 0.163116
+Validation accuracy: 21.5%
+[ 9 10 10 11 11 12  9  9 11 10 10 14 11 14 13 10 10 14 10  9]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.161371
+Score: 21.495
+Evaluating 10
+Initialized
+Minibatch loss at step 0 : 69.772
+Minibatch accuracy: 15.0%
+[16  8 11 11 18 18 18 11 11 11  8 11 11 11 11 11 11 11  8  8]
+[11  9 11 13  9  9  8 12  9 11  9 11  8 10 13 10 12  9 13 13]
+Minibatch average depth error: 0.15643
+Validation accuracy: 17.8%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.251107
+Minibatch loss at step 25000 : 2.06629
+Minibatch accuracy: 25.0%
+[11 11 12 11 11 11 10 12 10 11 11 11 11 11 11 11 12 11 11 11]
+[10  9 11 12  9  9  9 12  9 11 12 11 10 10 13 11  9 11 13 13]
+Minibatch average depth error: 0.118088
+Validation accuracy: 17.8%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.128541
+Minibatch loss at step 50000 : 2.38591
+Minibatch accuracy: 15.0%
+[12 11 11 11 11 11 11 12 11 10 11 11 11 11 11 11 11 11 11 11]
+[10  9 13 13  7  9 11 12  9 13 12 11 10 10 10 10 10 13 13 13]
+Minibatch average depth error: 0.136734
+Validation accuracy: 17.8%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.127983
+Minibatch loss at step 75000 : 2.35906
+Minibatch accuracy: 15.0%
+[11 12 12 11 12 11 11 11 11 11 11 12 12 11 11 12 11 12 11 12]
+[ 9  9 13 12  7 10  8 12  9 11 11 11 13 10 13 11 10 14 13 12]
+Minibatch average depth error: 0.144962
+Validation accuracy: 17.8%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.12889
+Minibatch loss at step 100000 : 2.21617
+Minibatch accuracy: 15.0%
+[11 10 11 10 11 11 10 11 11 10 11 11 11 11 11 11 11 11 11 11]
+[10  9 13 12 12 10 10 13  9 11  9 11 13 10 13 11  9 13 13 10]
+Minibatch average depth error: 0.126911
+Validation accuracy: 17.8%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.133558
+Score: 17.8225
+Evaluating 11
+Initialized
+Minibatch loss at step 0 : 3.80318
+Minibatch accuracy: 5.0%
+[16  2  9 16 16  9 16 16  2 16 16 16  9  2 16 16  9 16  9  9]
+[11  9 11 13  9  9  8 12  9 11  9 11  8 10 13 10 12  9 13 13]
+Minibatch average depth error: 0.126634
+Validation accuracy: 17.8%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.102088
+Minibatch loss at step 25000 : 2.44936
+Minibatch accuracy: 30.0%
+[ 0 12  0  0  9  9 12 12 13 12  0  9 14 12 13 12  9 12 10 13]
+[10  9 11 12  9  9  9 12  9 11 12 11 10 10 13 11  9 11 13 13]
+Minibatch average depth error: 0.0818061
+Validation accuracy: 18.8%
+[ 8 11  0 11 12 12  9 11 10 11 11 13 13  9  9  9 13 13 11 10]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0677525
+Minibatch loss at step 50000 : 3.05319
+Minibatch accuracy: 15.0%
+[ 9  9 10 10  0 11  0 11 13 11 12 12  0 12  0  0 13 11  9 13]
+[10  9 13 13  7  9 11 12  9 13 12 11 10 10 10 10 10 13 13 13]
+Minibatch average depth error: 0.0851643
+Validation accuracy: 18.1%
+[11 10  9 13 12 12  9 11 12 11 11 13 13  9 13 12 10 13 11 10]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0989282
+Minibatch loss at step 75000 : 2.77624
+Minibatch accuracy: 25.0%
+[ 8 11 13  0 12 10 10 10  9  0 11 15  9 10 12 13 11 11 11 13]
+[ 9  9 13 12  7 10  8 12  9 11 11 11 13 10 13 11 10 14 13 12]
+Minibatch average depth error: 0.0855349
+Validation accuracy: 20.7%
+[11 10 10 11 12 12  9 11 12 11 13 14 13 14 13 10  9 13 10 10]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.110182
+Minibatch loss at step 100000 : 2.72524
+Minibatch accuracy: 30.0%
+[ 8 12 14 11 12  9 10 13  9  9 11  9 12 10  0 13  8 13  9  0]
+[10  9 13 12 12 10 10 13  9 11  9 11 13 10 13 11  9 13 13 10]
+Minibatch average depth error: 0.089422
+Validation accuracy: 20.7%
+[14 10 10 11 11 12  9 11 12 11 13 14 13 14 13 11  9 13 10 10]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.112598
+Score: 20.6525
+Evaluating 12
+Initialized
+Minibatch loss at step 0 : 135.896
+Minibatch accuracy: 15.0%
+[9 4 5 4 5 9 9 9 4 4 9 4 9 9 5 4 9 9 4 9]
+[11  9 11 13  9  9  8 12  9 11  9 11  8 10 13 10 12  9 13 13]
+Minibatch average depth error: 0.0524055
+Validation accuracy: 17.8%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 25000 : 5.5898e+08
+Minibatch accuracy: 5.0%
+[12  0 12 12  0 12 12  0 12  0  0 12  0  0  0 12  0  0 12  0]
+[10  9 11 12  9  9  9 12  9 11 12 11 10 10 13 11  9 11 13 13]
+Minibatch average depth error: 0.105016
+Validation accuracy: 17.4%
+[12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.104501
+Minibatch loss at step 50000 : 3.1105e+08
+Minibatch accuracy: 0.0%
+[12  0  0 12 12  0  0  0  0  0  0  0  0  0  0 12 12 12 12 12]
+[10  9 13 13  7  9 11 12  9 13 12 11 10 10 10 10 10 13 13 13]
+Minibatch average depth error: 0.0985339
+Validation accuracy: 17.4%
+[12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.104105
+Minibatch loss at step 75000 : 2.64373e+08
+Minibatch accuracy: 10.0%
+[ 0  0 12 12  0 12 12 12 12 12 12 12 12  0 12  0 12 12  0  0]
+[ 9  9 13 12  7 10  8 12  9 11 11 11 13 10 13 11 10 14 13 12]
+Minibatch average depth error: 0.0949598
+Validation accuracy: 17.4%
+[12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.105568
+Minibatch loss at step 100000 : 2.52716e+08
+Minibatch accuracy: 5.0%
+[12 12  0  0 12 12  0  0  0  0  0 12 12  0 12  0  0  0 12  0]
+[10  9 13 12 12 10 10 13  9 11  9 11 13 10 13 11  9 13 13 10]
+Minibatch average depth error: 0.10955
+Validation accuracy: 17.4%
+[12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.10461
+Score: 17.355
+Evaluating 13
+Initialized
+Minibatch loss at step 0 : 8.55929
+Minibatch accuracy: 20.0%
+[13  5 13 13 13 13 13 13 13 13 13 13 13 13 13 13 13  5 13 13]
+[11  9 11 13  9  9  8 12  9 11  9 11  8 10 13 10 12  9 13 13]
+Minibatch average depth error: 0.0883985
+Validation accuracy: 16.2%
+[9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 25000 : 3.28988
+Minibatch accuracy: 35.0%
+[10 11 11 11 10 11 11 11 11 11 11 11 10 11 10 11 12 11 11 10]
+[10  9 11 12  9  9  9 12  9 11 12 11 10 10 13 11  9 11 13 13]
+Minibatch average depth error: 0.0525004
+Validation accuracy: 19.8%
+[11 11 13 11 11 10 11 11 11 11 11 11 11 10 11 11 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 50000 : 2.64188
+Minibatch accuracy: 15.0%
+[11 11 11  8 11  8 12 11 11 12 11 11 11 11 10 10 11 11 11 12]
+[10  9 13 13  7  9 11 12  9 13 12 11 10 10 10 10 10 13 13 13]
+Minibatch average depth error: 0.0530541
+Validation accuracy: 18.7%
+[11 11 10 11 11 10 11 11 11 11 11 11 11 11 11 11 12 11 11 12]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 75000 : 2.5308
+Minibatch accuracy: 25.0%
+[11 11 13 11 11 12 11 11 11 11 10 11 11 11  8 11 10 11 11 14]
+[ 9  9 13 12  7 10  8 12  9 11 11 11 13 10 13 11 10 14 13 12]
+Minibatch average depth error: 0.0530059
+Validation accuracy: 18.1%
+[11 11  8 11 13 10 11 11 11 11 12 11 13 10 11 11 12 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 100000 : 2.39746
+Minibatch accuracy: 25.0%
+[11 12 11 12  8 12 10 10 12 10 11 12 13 11  8 11 11 11 11 10]
+[10  9 13 12 12 10 10 13  9 11  9 11 13 10 13 11  9 13 13 10]
+Minibatch average depth error: 0.0531206
+Validation accuracy: 19.6%
+[11 10 10 10 12 11 12 11 11 10 14 11 12 10 12 11 12 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Score: 19.6
+Evaluating 14
+Initialized
+Minibatch loss at step 0 : 3.03323
+Minibatch accuracy: 0.0%
+[ 5 16 16 16 16 13 13 16 16 13 16 16 16 13  3  1 16 16  1  3]
+[11  9 11 13  9  9  8 12  9 11  9 11  8 10 13 10 12  9 13 13]
+Minibatch average depth error: 0.0524055
+Validation accuracy: 7.5%
+[16 13 16 13 16 16 13 16 16  5 16  5 16 16 13 16 16 16 13  1]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 25000 : 2.63935
+Minibatch accuracy: 10.0%
+[ 9 10 12  9  9  8 10 10 12 11 15 12  9 12  0 12 12 12 12 14]
+[10  9 11 12  9  9  9 12  9 11 12 11 10 10 13 11  9 11 13 13]
+Minibatch average depth error: 0.143902
+Validation accuracy: 18.1%
+[ 8 11 11 12 13 12 12 11 11 11 11 13 14 12  9 11  9 13 12 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.12148
+Minibatch loss at step 50000 : 2.4589
+Minibatch accuracy: 20.0%
+[11  9 15 11 10 10 12 11 12 12 11 11 10 12 11 14 12 12  9 13]
+[10  9 13 13  7  9 11 12  9 13 12 11 10 10 10 10 10 13 13 13]
+Minibatch average depth error: 0.120505
+Validation accuracy: 19.2%
+[ 9 11 10 12 11 12 11 12 11 12  9 11 13 12  9 12 14 13 12  9]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.139576
+Minibatch loss at step 75000 : 1.79935
+Minibatch accuracy: 55.0%
+[10  9 15 12 13 10  8 11 13 11  9 11 13 10 13  9 11 14 11 12]
+[ 9  9 13 12  7 10  8 12  9 11 11 11 13 10 13 11 10 14 13 12]
+Minibatch average depth error: 0.122766
+Validation accuracy: 18.4%
+[ 9 11 11 12 11 12 11 10 11 12 13  9 13 12 13 10 14 13 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.136008
+Minibatch loss at step 100000 : 2.01505
+Minibatch accuracy: 60.0%
+[12 10 13 12  9 10 10 13 12 11 11 11 12 10 13 11 12 12 13 10]
+[10  9 13 12 12 10 10 13  9 11  9 11 13 10 13 11  9 13 13 10]
+Minibatch average depth error: 0.137163
+Validation accuracy: 19.6%
+[ 9 12 11 12 11 12 11 10 11 12 13 13 13 12 13 12  9 13 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.136669
+Score: 19.625
+Evaluating 15
+Initialized
+Minibatch loss at step 0 : 5.00864
+Minibatch accuracy: 0.0%
+[ 9 19 19 19 19 19 11 11 19 19 19  2 19 19 11  9 19 19 19 19]
+[11  9 11 13  9  9  8 12  9 11  9 11  8 10 13 10 12  9 13 13]
+Minibatch average depth error: 0.0524055
+Validation accuracy: 17.9%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Error computing loss at step 7
+Minibatch accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[ 9  9  8 10 15 13 15  8 15 12 11  9 13 15 14 11  9 13 12 12]
+Minibatch average depth error: 0.0546535
+Score: 0
+Evaluating 16
+Initialized
+Minibatch loss at step 0 : 1.88493e+12
+Minibatch accuracy: 10.0%
+[ 4  4  4 18 18  4  4  4  4  8  4  4 13 18 13  4  8 13  4 13]
+[11  9 11 13  9  9  8 12  9 11  9 11  8 10 13 10 12  9 13 13]
+Minibatch average depth error: 700165.0
+Validation accuracy: 16.9%
+[10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 25000 : 28.7939
+Minibatch accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[10  9 11 12  9  9  9 12  9 11 12 11 10 10 13 11  9 11 13 13]
+Minibatch average depth error: 0.0525004
+Validation accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 50000 : 28.7973
+Minibatch accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[10  9 13 13  7  9 11 12  9 13 12 11 10 10 10 10 10 13 13 13]
+Minibatch average depth error: 0.0530541
+Validation accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 75000 : 28.799
+Minibatch accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[ 9  9 13 12  7 10  8 12  9 11 11 11 13 10 13 11 10 14 13 12]
+Minibatch average depth error: 0.0530059
+Validation accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 100000 : 28.7988
+Minibatch accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[10  9 13 12 12 10 10 13  9 11  9 11 13 10 13 11  9 13 13 10]
+Minibatch average depth error: 0.0531206
+Validation accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Score: 0.0
+Evaluating 17
+Initialized
+Minibatch loss at step 0 : 4.63308e+06
+Minibatch accuracy: 0.0%
+[ 3  3  3  3 18  3  2  3  3  3 18  3  2  3  3  3  3  3  3  3]
+[11  9 11 13  9  9  8 12  9 11  9 11  8 10 13 10 12  9 13 13]
+Minibatch average depth error: 645.077
+Validation accuracy: 16.2%
+[9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 25000 : 71.102
+Minibatch accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[10  9 11 12  9  9  9 12  9 11 12 11 10 10 13 11  9 11 13 13]
+Minibatch average depth error: 0.0525004
+Validation accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 50000 : 71.103
+Minibatch accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[10  9 13 13  7  9 11 12  9 13 12 11 10 10 10 10 10 13 13 13]
+Minibatch average depth error: 0.0530541
+Validation accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 75000 : 71.1013
+Minibatch accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[ 9  9 13 12  7 10  8 12  9 11 11 11 13 10 13 11 10 14 13 12]
+Minibatch average depth error: 0.0530059
+Validation accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 100000 : 71.1002
+Minibatch accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[10  9 13 12 12 10 10 13  9 11  9 11 13 10 13 11  9 13 13 10]
+Minibatch average depth error: 0.0531206
+Validation accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Score: 0.0
+Evaluating 18
+Initialized
+Minibatch loss at step 0 : 3.01989
+Minibatch accuracy: 5.0%
+[ 5 12  0 19  3 19 19 12  5  5  0  3  0  0  1  3  3 19  0  0]
+[11  9 11 13  9  9  8 12  9 11  9 11  8 10 13 10 12  9 13 13]
+Minibatch average depth error: 0.0524055
+Validation accuracy: 0.0%
+[3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 25000 : 2.90804
+Minibatch accuracy: 15.0%
+[12 12 11 10 10 10 12 10 11 10 11  0 13 10 12 10  0 11 14 10]
+[10  9 11 12  9  9  9 12  9 11 12 11 10 10 13 11  9 11 13 13]
+Minibatch average depth error: 0.0667734
+Validation accuracy: 17.8%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0770949
+Minibatch loss at step 50000 : 2.96456
+Minibatch accuracy: 0.0%
+[11 10  0 12 11  0  0  0 12 10 11 12 14 12 11  0 12 10 10 14]
+[10  9 13 13  7  9 11 12  9 13 12 11 10 10 10 10 10 13 13 13]
+Minibatch average depth error: 0.0831539
+Validation accuracy: 17.4%
+[12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0790018
+Minibatch loss at step 75000 : 2.79388
+Minibatch accuracy: 20.0%
+[ 0 11 13  0 11 14 12 12  0 13  0 14 10 10 10 12 10 11 11 10]
+[ 9  9 13 12  7 10  8 12  9 11 11 11 13 10 13 11 10 14 13 12]
+Minibatch average depth error: 0.0781578
+Validation accuracy: 17.8%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0787152
+Minibatch loss at step 100000 : 2.88827
+Minibatch accuracy: 15.0%
+[12 11 11 10 10 10 11 12  0 11  0 10  0 11 10 11 11 11 14  0]
+[10  9 13 12 12 10 10 13  9 11  9 11 13 10 13 11  9 13 13 10]
+Minibatch average depth error: 0.0733015
+Validation accuracy: 17.8%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0792564
+Score: 17.8225
+Evaluating 19
+Initialized
+Minibatch loss at step 0 : 5.03831
+Minibatch accuracy: 0.0%
+[ 5 10  5  5  5  5  5  5  5  5  5  5  5  5  5  5  5  5  5  5]
+[11  9 11 13  9  9  8 12  9 11  9 11  8 10 13 10 12  9 13 13]
+Minibatch average depth error: 0.0524055
+Validation accuracy: 13.0%
+[13 13 13 10 13 13 10 13 13 13 13 13 13 13 10 13 13 13 10 13]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.768119
+Minibatch loss at step 25000 : 3.20079
+Minibatch accuracy: 25.0%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[10  9 11 12  9  9  9 12  9 11 12 11 10 10 13 11  9 11 13 13]
+Minibatch average depth error: 0.0525004
+Validation accuracy: 17.8%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 50000 : 3.29336
+Minibatch accuracy: 10.0%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[10  9 13 13  7  9 11 12  9 13 12 11 10 10 10 10 10 13 13 13]
+Minibatch average depth error: 0.0530541
+Validation accuracy: 17.8%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 75000 : 3.33152
+Minibatch accuracy: 20.0%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 9  9 13 12  7 10  8 12  9 11 11 11 13 10 13 11 10 14 13 12]
+Minibatch average depth error: 0.0530059
+Validation accuracy: 17.8%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Minibatch loss at step 100000 : 3.05016
+Minibatch accuracy: 15.0%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[10  9 13 12 12 10 10 13  9 11  9 11 13 10 13 11  9 13 13 10]
+Minibatch average depth error: 0.0531206
+Validation accuracy: 17.8%
+[11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11 11]
+[ 7  9  9 12 10 13 12 14  7 15 11  9 16 11 13 11  9 14 14  9]
+Validation average depth error: 0.0542332
+Score: 17.8225
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-23-f30befc7aa71> in <module>()
+     19 for g in range(generations):
+     20     print("Generation", g)
+---> 21     results = restart_darwin.evaluate(eval_entropy)
+     22     convevo.output_results(results, "temp")
+     23     restart_darwin.repopulate(0.25, 4, results, breed_options, mutate_entropy)
+
+/home/agnomen/Documents/github/pyndent/darwin.pyc in evaluate(self, entropy)
+     30             print("Score:", score)
+     31             self.results.append((member, score))
+---> 32         return self.sorted_results()
+     33 
+     34     def sorted_results(self):
+
+/home/agnomen/Documents/github/pyndent/darwin.pyc in sorted_results(self)
+     33 
+     34     def sorted_results(self):
+---> 35         return descending_score(this.results)
+     36 
+     37     def repopulate(self, survival_rate, from_history, results, options, entropy):
+
+NameError: global name 'this' is not defined
+
+In [24]:
+
+3
+results = darwin.descending_score(restart_darwin.history.values())
+convevo.output_results(results, "testing", "depth_restart3.xml", mutate_seed, eval_seed)
+len(results)
