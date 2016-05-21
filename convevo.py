@@ -356,10 +356,6 @@ class LayerStack(object):
                 layer.to_xml(children)
         return element
 
-    def same_as(self, other):
-        selfie = et.tostring(self.to_xml())
-        return selfie == et.tostring(other.to_xml())
-
 def serialize(stack):
     return et.tostring(stack.to_xml(), pretty_print=True)
 
@@ -478,18 +474,6 @@ def breed(parents, options, entropy):
         offspring = parents[0].cross(parents[1], entropy)
     offspring.mutate(options["input_shape"], entropy)
     return offspring
-
-def init_population(prototypes, population_target, breed_options, entropy):
-    population = list(prototypes)
-
-    while (len(population) < population_target):
-        parent = entropy.choice(population)
-        offspring = breed([parent], breed_options, entropy)
-        if parent.same_as(offspring):
-            print("Offspring is clone.")
-        else:
-            population.append(offspring)
-    return population
 
 def output_results(results, path, filename=None, mutate_seed=None, eval_seed=None):
     if not filename:
