@@ -32,7 +32,7 @@ class Darwin(object):
         return self.sorted_results()
         
     def sorted_results(self):
-        return descending_score(this.results)
+        return descending_score(self.results)
     
     def repopulate(self, survival_rate, from_history, results, options, entropy):
         survivor_count = int(math.ceil(len(results) * survival_rate))
