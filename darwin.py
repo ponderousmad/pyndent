@@ -33,6 +33,10 @@ class Darwin(object):
         
     def sorted_results(self):
         return descending_score(self.results)
+        
+    def load_history(self, results):
+        for member, score in results:
+            self.history[self.serializer(member)] = (member, score)
     
     def repopulate(self, survival_rate, from_history, results, options, entropy):
         survivor_count = int(math.ceil(len(results) * survival_rate))
