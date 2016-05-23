@@ -1,0 +1,159 @@
+Mutate Seed: 23716
+Eval Seed: 66525
+Generation 0
+Evaluating 0
+Initialized
+Minibatch loss at step 0 : 3.06186
+Minibatch accuracy: 0.0%
+[17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17]
+[14 12 14 11 11 12 14 10 11 11  9 11 12 15 14 12 14 12 10 10]
+Minibatch average depth error: 0.163092
+Validation accuracy: 0.2%
+[17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17]
+[14 13  8 11 10 13 13  7 12 13  9  9 11  9 12 13 12  8 12  9]
+Validation average depth error: 0.11636
+Minibatch loss at step 500000 : 2.10112
+Minibatch accuracy: 18.0%
+[11 12 11 11 11 10 12 10  9 11  9 10 11 10 10  9 10 11 11 11]
+[13 12 12 12 12 11 12 12 11 10  8 12 12 14 13 11 12  9 10  9]
+Minibatch average depth error: 0.150433
+Validation accuracy: 17.2%
+[10 11  9 11  9  9 11  9 11  9 11 10 10  9 11 10 10 11 11 10]
+[14 13  8 11 10 13 13  7 12 13  9  9 11  9 12 13 12  8 12  9]
+Validation average depth error: 0.150765
+Minibatch loss at step 1000000 : 2.16252
+Minibatch accuracy: 18.0%
+[10 10  9 11 11 12 11 10 11 11 12 10 12  9 10 11  9 12 11 10]
+[12 12 12 11 12 11 13 11 10  8  7 13 11 15 12 10 13  8 10  8]
+Minibatch average depth error: 0.150562
+Validation accuracy: 17.2%
+[10 11  9 11  9  9 11  9 11  9 11 10 10  9 11 10 10 11 11 10]
+[14 13  8 11 10 13 13  7 12 13  9  9 11  9 12 13 12  8 12  9]
+Validation average depth error: 0.150765
+Minibatch loss at step 1500000 : 2.11902
+Minibatch accuracy: 21.0%
+[12 10 11 11 11 12 11 10 11 11 11 12 12  9 11 11 11  9 11 12]
+[12 12 12 11 12 11 11 10 12  8  7 13 11 13 12 10 14 12 11  7]
+Minibatch average depth error: 0.150297
+Validation accuracy: 17.2%
+[10 11  9 11  9  9 11  9 11  9 11 10 10  9 11 10 10 11 11 10]
+[14 13  8 11 10 13 13  7 12 13  9  9 11  9 12 13 12  8 12  9]
+Validation average depth error: 0.150765
+Minibatch loss at step 2000000 : 2.05903
+Minibatch accuracy: 24.0%
+[11 11 10 11 12 11 10  9 11 12 12 11 12  9 11  9 10  9 11 11]
+[11  7  9 11  8 10 10 11 13  9 11  8 10 11 11 11 13 12 11 11]
+Minibatch average depth error: 0.150421
+Validation accuracy: 17.2%
+[10 11  9 11  9  9 11  9 11  9 11 10 10  9 11 10 10 11 11 10]
+[14 13  8 11 10 13 13  7 12 13  9  9 11  9 12 13 12  8 12  9]
+Validation average depth error: 0.150765
+Score: 17.236
+Evaluating 1
+Initialized
+Minibatch loss at step 0 : 150.16
+Minibatch accuracy: 5.0%
+[ 5  5 10  5  5  5  5 10  5  5  5  5 17  5  1  5 10 10  5 17]
+[14 12 14 11 11 12 14 10 11 11  9 11 12 15 14 12 14 12 10 10]
+Minibatch average depth error: 0.320862
+Validation accuracy: 15.8%
+[10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10]
+[14 13  8 11 10 13 13  7 12 13  9  9 11  9 12 13 12  8 12  9]
+Validation average depth error: 0.0532857
+Minibatch loss at step 500000 : 19.3866
+Minibatch accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[13 12 12 12 12 11 12 12 11 10  8 12 12 14 13 11 12  9 10  9]
+Minibatch average depth error: 0.0527275
+Validation accuracy: 0.0%
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+[14 13  8 11 10 13 13  7 12 13  9  9 11  9 12 13 12  8 12  9]
+Validation average depth error: 0.0532857
+Early out.
+Score: 0.0
+Evaluating 2
+Initialized
+Minibatch loss at step 0 : 113.195
+Minibatch accuracy: 0.0%
+[3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3]
+[14 12 14 11 11 12 14 10 11 11  9 11 12 15 14 12 14 12 10 10]
+Minibatch average depth error: 0.136788
+Validation accuracy: 0.0%
+[3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3]
+[14 13  8 11 10 13 13  7 12 13  9  9 11  9 12 13 12  8 12  9]
+Validation average depth error: 0.0901714
+Minibatch loss at step 500000 : 2.02319
+Minibatch accuracy: 19.0%
+[12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12]
+[13 12 12 12 12 11 12 12 11 10  8 12 12 14 13 11 12  9 10  9]
+Minibatch average depth error: 0.148605
+Validation accuracy: 14.6%
+[12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12]
+[14 13  8 11 10 13 13  7 12 13  9  9 11  9 12 13 12  8 12  9]
+Validation average depth error: 0.148243
+---------------------------------------------------------------------------
+KeyboardInterrupt                         Traceback (most recent call last)
+<ipython-input-25-78e13697afc6> in <module>()
+     20 for g in range(generations):
+     21     print("Generation", g)
+---> 22     results = charles.evaluate(eval_entropy)
+     23     convevo.output_results(results, "temp")
+     24     charles.repopulate(population_size, 0.25, 4, results, breed_options, mutate_entropy)
+
+/home/agnomen/Documents/github/pyndent/darwin.pyc in evaluate(self, entropy)
+     49             score = self.history.get(serialized)
+     50             if score is None:
+---> 51                 score = self.evaluator(member, entropy)
+     52                 gc.collect()
+     53                 self.history[serialized] = (member, score)
+
+<ipython-input-20-4d2cd6d62f9b> in evaluate(stack, entropy)
+     50                 verbose=True,
+     51                 accuracy_minimum=10.0,
+---> 52                 valid_pickle=valid_pickle
+     53             )
+     54         except KeyboardInterrupt:
+
+<ipython-input-15-a9b0fa000f59> in run_graph(graph_info, data, step_count, valid_count, test_count, batch_sampler_count, report_every, verbose, accuracy_minimum, valid_pickle)
+     46             ]
+     47             feed_dict = {graph_info["train"] : inputs, graph_info["targets"] : labels}
+---> 48             _, l, predictions, depths = session.run(run_targets, feed_dict=feed_dict)
+     49             if np.isnan(l):
+     50                 print("Error computing loss at step", step)
+
+/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/client/session.pyc in run(self, fetches, feed_dict, options, run_metadata)
+    338     try:
+    339       result = self._run(None, fetches, feed_dict, options_ptr,
+--> 340                          run_metadata_ptr)
+    341       if run_metadata:
+    342         proto_data = tf_session.TF_GetBuffer(run_metadata_ptr)
+
+/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/client/session.pyc in _run(self, handle, fetches, feed_dict, options, run_metadata)
+    562     try:
+    563       results = self._do_run(handle, target_list, unique_fetches,
+--> 564                              feed_dict_string, options, run_metadata)
+    565     finally:
+    566       # The movers are no longer used. Delete them.
+
+/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/client/session.pyc in _do_run(self, handle, target_list, fetch_list, feed_dict, options, run_metadata)
+    635     if handle is None:
+    636       return self._do_call(_run_fn, self._session, feed_dict, fetch_list,
+--> 637                            target_list, options, run_metadata)
+    638     else:
+    639       return self._do_call(_prun_fn, self._session, handle, feed_dict,
+
+/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/client/session.pyc in _do_call(self, fn, *args)
+    642   def _do_call(self, fn, *args):
+    643     try:
+--> 644       return fn(*args)
+    645     except tf_session.StatusNotOK as e:
+    646       error_message = compat.as_text(e.error_message)
+
+/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/client/session.pyc in _run_fn(session, feed_dict, fetch_list, target_list, options, run_metadata)
+    626       else:
+    627         return tf_session.TF_Run(
+--> 628             session, None, feed_dict, fetch_list, target_list, None)
+    629 
+    630     def _prun_fn(session, handle, feed_dict, fetch_list):
+
+KeyboardInterrupt: 
