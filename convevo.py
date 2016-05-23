@@ -32,7 +32,9 @@ class EvoLayer(object):
         self.dropout_rate = mutagen.mutate_dropout(self.dropout_rate)
 
     def construct(self, input_shape, layers):
-        layers.append(self.primary.construct(input_shape))
+        layer = self.primary.construct(input_shape)
+        layers.append(layer)
+        layer.set_layer_number(len(layers))
         if self.relu:
             layers.append(convnet.create_relu_layer())
         if self.dropout_rate > 0:

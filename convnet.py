@@ -20,16 +20,21 @@ import tensorflow as tf
 
 # Parameter setup functions
 
+def name_options(options, base_name):
+    postfix = options.get("name_postfix")
+    if postfix is not None:
+        return { "name": base_name + str(postfix) }
+
 def no_parameters(options):
     return ()
 
 def setup_matrix(options):
     initialize_matrix = options["init"]
     size = options["size"]
-    matrix = tf.Variable(initialize_matrix(size))
+    matrix = tf.Variable(initialize_matrix(size), **name_options(options, "w"))
     if options["bias"]:
         initialize_bias = options["bias_init"]
-        bias = tf.Variable(initialize_bias(size[-1:]))
+        bias = tf.Variable(initialize_bias(size[-1:]), **name_options(options, "b"))
         return (matrix, bias)
     return (matrix,)
 
@@ -143,6 +148,9 @@ class Layer(object):
         self.node_setup = node_setup
         self.parameters = None
         self.loss_factor = 0
+        
+    def set_layer_number(self, number):
+        self.options["name_postfix"] = str(number)
 
     def setup_parameters(self):
         self.parameters = self.parameter_setup(self.options)
