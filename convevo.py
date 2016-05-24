@@ -8,6 +8,13 @@ import lxml.etree as et
 import convnet
 import mutate
 
+def fstr(value):
+    """Canonical xml float value output"""
+    int_value = int(value)
+    if int_value == value:
+        return str(int_value)
+    return str(value)
+
 class EvoLayer(object):
     """ An evolvable layer representation.
     Each layer consists of either a conv or pool in the image section, or a hidden layer otherwise,
@@ -47,7 +54,7 @@ class EvoLayer(object):
 
     def to_xml(self, parent):
         element = et.SubElement(parent, "layer")
-        element.set("dropout_rate", str(self.dropout_rate))
+        element.set("dropout_rate", fstr(self.dropout_rate))
         if self.dropout_seed:
             element.set("dropout_seed", str(self.dropout_seed))
         element.set("relu", str(self.relu))
@@ -75,8 +82,8 @@ class Initializer(object):
     def to_xml(self, parent):
         element = et.SubElement(parent, "initializer")
         element.set("distribution", self.distribution)
-        element.set("mean", str(self.mean))
-        element.set("scale", str(self.scale))
+        element.set("mean", fstr(self.mean))
+        element.set("scale", fstr(self.scale))
         if self.seed:
             element.set("seed", str(self.seed))
 
@@ -113,9 +120,9 @@ class HiddenLayer(object):
 
     def to_xml(self, parent):
         element = et.SubElement(parent, "hidden")
-        element.set("output_size", str(self.output_size))
+        element.set("output_size", fstr(self.output_size))
         element.set("bias", str(self.bias))
-        element.set("l2_factor", str(self.l2_factor))
+        element.set("l2_factor", fstr(self.l2_factor))
         self.initializer.to_xml(element)
 
 class ImageLayer(object):
@@ -178,11 +185,11 @@ class ImageLayer(object):
     def to_xml(self, parent):
         element = et.SubElement(parent, "image")
         element.set("operation", self.operation)
-        element.set("patch_size", str(self.patch_size))
-        element.set("stride", str(self.stride))
+        element.set("patch_size", fstr(self.patch_size))
+        element.set("stride", fstr(self.stride))
         element.set("padding", self.padding)
         element.set("output_channels", str(self.output_channels))
-        element.set("l2_factor", str(self.l2_factor))
+        element.set("l2_factor", fstr(self.l2_factor))
         self.initializer.to_xml(element)
 
 class Optimizer(object):
@@ -223,15 +230,15 @@ class Optimizer(object):
     def to_xml(self, parent):
         element = et.SubElement(parent, "optimizer")
         element.set("name", self.name)
-        element.set("learning_rate", str(self.learning_rate))
+        element.set("learning_rate", fstr(self.learning_rate))
         if self.alpha is not None:
-            element.set("alpha", str(self.alpha))
+            element.set("alpha", fstr(self.alpha))
         if self.beta is not None:
-            element.set("beta", str(self.beta))
+            element.set("beta", fstr(self.beta))
         if self.gamma is not None:
-            element.set("gamma", str(self.gamma))
+            element.set("gamma", fstr(self.gamma))
         if self.delta is not None:
-            element.set("delta", str(self.delta))
+            element.set("delta", fstr(self.delta))
         return element
 
 class LayerStack(object):
@@ -488,7 +495,7 @@ def output_results(results, path, filename=None, mutate_seed=None, eval_seed=Non
     
     for stack, score in results:
         eval = et.SubElement(root, "result")
-        eval.set("score", str(score))
+        eval.set("score", fstr(score))
         stack.to_xml(eval)
 
     try:    
