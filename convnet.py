@@ -70,7 +70,7 @@ def depth_to_space_shape(input_shape, options):
     block_size = options["block_size"]
     height = int(input_shape[1] * block_size)
     width = int(input_shape[2] * block_size)
-    return (int(input_shape[0]), height, width, int(input_shape[3] / (block_size * block_size))
+    return (int(input_shape[0]), height, width, int(input_shape[3] / (block_size * block_size)))
     
 def depth_to_space_channels(depth, block_size):
     block = block_size * block_size
