@@ -16,6 +16,9 @@ import tensorflow as tf
 #   * Type (max, avg)
 #   * Size (height, width)
 #   * Stride (height, width)
+# * Deconvolve
+#   * Depth to shape (block_size)
+#   * Slice (height, width, h_align, w_align, d_align)
 
 
 # Parameter setup functions
@@ -62,6 +65,22 @@ def unflatten_output_shape(input_shape, options):
     size = options["size"]
     pixels = size[0] * size[1]
     return (int(input_shape[0]), size[0], size[1], int(input_shape[1] / pixels))
+    
+def depth_to_space_shape(input_shape, options):
+    block_size = options["block_size"]
+    height = int(input_shape[1] * block_size)
+    width = int(input_shape[2] * block_size)
+    return (int(input_shape[0]), height, width, int(input_shape[3] / (block_size * block_size))
+    
+def depth_to_space_channels(depth, block_size):
+    block = block_size * block_size
+    if depth % block != 0:
+        depth = block * (1 + (depth / block))
+    return depth
+
+def slice_output_shape(input_shape, options):
+    size = options["size"]
+    return (int(input_shape[0]),) + size
 
 def image_output_size(input_shape, size, stride, padding):
     if len(size) > 2 and input_shape[3] != size[2]:
@@ -131,6 +150,28 @@ def apply_flatten(input_node, train, parameters, options):
 
 def apply_unflatten(input_node, train, parameters, options):
     return tf.reshape(input_node, unflatten_output_shape(input_node.get_shape(), options))
+    
+def apply_depth_to_shape(input_node, train, parameters, options):
+    return tf.depth_to_space(input_node, options["block_size"])
+    
+def apply_slice(input_node, train, parameters, options):
+    size = (int(input_shape[0]),) + options["size"]
+    alignments = options.get["align"]
+    
+    dims = len(size)
+    if dims != len(input_shape[3]):
+        print("Incompatible size!")
+
+    begin = [0] * dims
+    spare = [i - s for i, s in zip(input_shape, size)]
+    
+    for i, align in enumerate(alignments):
+        if align == "center":
+            begin[i+1] = spare[i+1] / 2
+        elif align == "end":
+            begin[i+1] = spare[i+1]
+            
+    return tf.slice(input_node, begin, size)
 
 def shape_test(shape, options, func):
     graph = tf.Graph()
@@ -218,6 +259,21 @@ def create_unflatten_layer(size):
         "size": size
     }
     return Layer(options, no_parameters, apply_unflatten)
+
+def create_depth_to_shape(block_size):
+    options = {
+        "block_size": block_size
+    }
+    return Layer(options, no_parameters, apply_depth_to_shape)
+    
+def create_slice(size, alignments = None):
+    if not alignments:
+        alignments = ["center"] * len(size)
+    options = {
+        "size": size,
+        "align": alignments
+    }
+    return Layer(options, no_parameters, apply_slice)
 
 def make_options(a, b, g, d, alpha_name, beta_name=None, gamma_name=None, delta_name=None):
     options = {}
