@@ -482,6 +482,7 @@ def breed(parents, options, entropy):
     else:
         offspring = parents[0].cross(parents[1], entropy)
     offspring.mutate(options["input_shape"], entropy)
+    offspring.reseed(entropy)
     return offspring
 
 def output_results(results, path, filename=None, mutate_seed=None, eval_seed=None):
