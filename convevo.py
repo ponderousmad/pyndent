@@ -205,7 +205,7 @@ class ExpandLayer(object):
         self.initializer = initializer
 
     def layer_type(self):
-        return "image"
+        return "expand"
 
     def output_shape(self, input_shape):
         depth = self.output_channels if self.operation.startswith("conv") else input_shape[3]
@@ -387,6 +387,9 @@ class LayerStack(object):
         for layer in self.image_layers:
             layer.reseed(entropy)
 
+        for layer in self.expand_layers:
+            layer.reseed(entropy)
+
         for layer in self.hidden_layers:
             layer.reseed(entropy)
 
@@ -395,6 +398,9 @@ class LayerStack(object):
 
         shape = input_shape
         for layer in self.image_layers:
+            shape = layer.construct(shape, layers)
+
+        for layer in self.expand_layers:
             shape = layer.construct(shape, layers)
 
         if self.flatten:
@@ -429,6 +435,11 @@ class LayerStack(object):
             children = et.SubElement(element, "layers")
             children.set("type", "image")
             for layer in self.image_layers:
+                layer.to_xml(children)
+        if self.expand_layers:
+            children = et.SubElement(element, "layers")
+            children.set("type", "expand")
+            for layer in self.expand_layers:
                 layer.to_xml(children)
         if self.image_layers:
             children = et.SubElement(element, "layers")
@@ -482,6 +493,21 @@ def parse_image(image_element):
     print("Missing image element.")
     return None
 
+def parse_expand(expand_element):
+    if expand_element is not None:
+        block_size = as_int(expand_element.get("block_size"))
+        bias = expand_element.get("bias") == "True"
+        patch_size = as_int(expand_element.get("patch_size"))
+        padding = expand_element.get("padding")
+        l2_factor = as_float(expand_element.get("l2_factor"), 0.0)
+        initializer = parse_initializer(expand_element)
+        if outputs and initializer:
+            return ExpandLayer(block_size, patch_size, padding, bias, initializer, l2_factor)
+        print("Bad expand layer:", et.tostring(expand_element))
+        return None
+    print("Missing expand element.")
+    return None
+
 def parse_hidden(hidden_element):
     if hidden_element is not None:
         outputs = as_int(hidden_element.get("output_size"))
@@ -495,9 +521,11 @@ def parse_hidden(hidden_element):
     print("Missing hidden element.")
     return None
 
-def parse_operation(layer_element, is_image):
-    if is_image:
+def parse_operation(layer_element, layer_type):
+    if layer_type == "image":
         return parse_image(layer_element.find("image"))
+    elif layer_type == "expand":
+        return parse_expand(layer_element.find("expand"))
     else:
         return parse_hidden(layer_element.find("hidden"))
         
@@ -520,12 +548,12 @@ def parse_stack(stack_element):
     optimizer = parse_optimizer(stack_element.find("optimizer"))
     stack = LayerStack(stack_element.get("flatten") == "True", optimizer)
     for layers in stack_element.iter("layers"):
-        is_image = (layers.get("type") == "image")
+        layer_type = layers.get("type")
         for layer in layers.iter("layer"):
             relu = layer.get("relu") == "True"
             dropout_rate = as_float(layer.get("dropout_rate"), 0)
             dropout_seed = as_int(layer.get("dropout_seed"))
-            operation = parse_operation(layer, is_image)
+            operation = parse_operation(layer, layer_type)
             if operation:
                 stack.add_layer(operation, relu, dropout_rate, dropout_seed)
     return stack
