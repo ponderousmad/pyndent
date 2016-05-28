@@ -3,7 +3,8 @@ import random
 class Mutagen(object):
     """Keep track of probabilities and randomness for mutating conv nets."""
     def __init__(self, entropy, using_GPU=True):
-        self.toggle_relu = 0.2
+        self.toggle_relu = 0.1
+        self.toggle_bias = 0.05
         self.change_dropout_rate = 0.1
         self.DROPOUT_GRANULARITY = 4
         self.output_size_factors = [
@@ -59,16 +60,28 @@ class Mutagen(object):
             (0.15, "SAME"),
             (0.15, "VALID")
         ]
+        self.block_sizes = [
+            (0.050, 2),
+            (0.020, 3),
+            (0.010, 4),
+            (0.005, 5)
+        ]
         self.l2_factors = [
             (0.08, 0),
             (0.03, 0.001),
             (0.02, 0.01),
             (0.01, 0.1)
         ]
-        self.add_image_layer = 0.10
-        self.remove_image_layer = 0.06
-        self.add_hidden_layer = 0.10
-        self.remove_hidden_layer = 0.06
+        self.add_layer = {
+            "image": 0.10,
+            "hidden": 0.10,
+            "expand": 0.01
+        }
+        self.remove_layer = {
+            "image": 0.06,
+            "hidden": 0.06,
+            "expand": 0.01
+        }
         self.optimizers = [
             (0.040, "GradientDescent"),
             (0.040, "Adadelta"),
@@ -103,6 +116,9 @@ class Mutagen(object):
     def mutate_relu(self, relu):
         return (not relu) if self.branch(self.toggle_relu) else relu
 
+    def mutate_bias(self, bias):
+        return (not bias) if self.branch(self.toggle_bias) else bias
+
     def mutate_dropout(self, rate):
         if self.branch(self.change_dropout_rate):
             return (1.0 / self.DROPOUT_GRANULARITY) * self.entropy.randint(0, self.DROPOUT_GRANULARITY - 1)
@@ -126,6 +142,9 @@ class Mutagen(object):
     def mutate_patch_size(self, patch_size):
         return self.select(self.patches, patch_size)
 
+    def mutate_block_size(self, block_size):
+        return self.select(self.block_sizes, block_size)
+        
     def mutate_stride(self, stride):
         return self.select(self.strides, stride)
 
@@ -135,14 +154,14 @@ class Mutagen(object):
     def mutate_l2_factor(self, l2_factor):
         return self.select(self.l2_factors, l2_factor)
 
-    def mutate_duplicate_layer(self, is_image, layer_count):
-        probability = self.add_image_layer if is_image else self.add_hidden_layer
+    def mutate_duplicate_layer(self, layer_type, layer_count):
+        probability = self.add_layer[layer_type]
         if layer_count > 0 and self.branch(probability):
             return self.entropy.randint(0, layer_count - 1)
         return None
 
-    def mutate_remove_layer(self, is_image, layer_count):
-        probability = self.remove_image_layer if is_image else self.remove_hidden_layer
+    def mutate_remove_layer(self, layer_type, layer_count):
+        probability = self.remove_layer[layer_type]
         if layer_count > 1 and self.branch(probability):
             return self.entropy.randint(0, layer_count - 1)
         return None

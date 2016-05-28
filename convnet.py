@@ -260,7 +260,7 @@ def create_unflatten_layer(size):
     }
     return Layer(options, no_parameters, apply_unflatten)
 
-def create_depth_to_shape(block_size):
+def create_depth_to_shape_layer(block_size):
     options = {
         "block_size": block_size
     }

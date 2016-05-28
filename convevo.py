@@ -39,17 +39,17 @@ class EvoLayer(object):
         self.dropout_rate = mutagen.mutate_dropout(self.dropout_rate)
 
     def construct(self, input_shape, layers):
-        layer = self.primary.construct(input_shape)
-        layers.append(layer)
-        layer.set_layer_number(len(layers))
+        for layer in self.primary.construct(input_shape): 
+            layers.append(layer)
+            layer.set_layer_number(len(layers))
         if self.relu:
             layers.append(convnet.create_relu_layer())
         if self.dropout_rate > 0:
             layers.append(convnet.create_dropout_layer(self.dropout_rate, self.dropout_seed))
         return self.output_shape(input_shape)
         
-    def make_safe(self, input_shape):
-        self.primary.make_safe(input_shape)
+    def make_safe(self, input_shape, output_shape):
+        self.primary.make_safe(input_shape, output_shape)
         return self.output_shape(input_shape)
 
     def to_xml(self, parent):
@@ -95,13 +95,14 @@ class HiddenLayer(object):
         self.l2_factor = l2_factor
         self.initializer = initializer
 
-    def is_image(self):
-        return False
+    def layer_type(self):
+        return "hidden"
 
     def output_shape(self, input_shape):
         return (input_shape[0], self.output_size)
 
     def mutate(self, mutagen, is_last):
+        self.bias = mutagen.mutate_bias(self.bias)
         if not is_last:
             self.output_size = mutagen.mutate_output_size(self.output_size)
         self.initializer.mutate(mutagen)
@@ -113,10 +114,11 @@ class HiddenLayer(object):
     def construct(self, input_shape):
         layer = convnet.create_matrix_layer(input_shape[1], self.output_size, self.bias, self.initializer.construct())
         layer.set_l2_factor(self.l2_factor)
-        return layer
-        
-    def make_safe(self, input_shape):
-        pass # Nothing to do.
+        yield layer
+
+    def make_safe(self, input_shape, output_shape):
+        if output_shape:
+            self.output_size = output_shape[-1]
 
     def to_xml(self, parent):
         element = et.SubElement(parent, "hidden")
@@ -126,6 +128,7 @@ class HiddenLayer(object):
         self.initializer.to_xml(element)
 
 class ImageLayer(object):
+    """Image convolution or pooling layer"""
     def __init__(self, operation, patch_size, stride, output_channels, padding, initializer, l2_factor=0.0):
         self.operation = operation
         self.patch_size = patch_size
@@ -135,8 +138,8 @@ class ImageLayer(object):
         self.l2_factor = l2_factor
         self.initializer = initializer
 
-    def is_image(self):
-        return True
+    def layer_type(self):
+        return "image"
 
     def output_shape(self, input_shape):
         depth = self.output_channels if self.operation.startswith("conv") else input_shape[3]
@@ -169,26 +172,101 @@ class ImageLayer(object):
                 self.initializer.construct()
             )
             layer.set_l2_factor(self.l2_factor)
-            return layer
         else:
-            return convnet.create_pool_layer(
+            layer = convnet.create_pool_layer(
                 self.operation,
                 (self.patch_size, self.patch_size),
                 (self.stride, self.stride),
                 self.padding
             )
+        yield layer
 
-    def make_safe(self, input_shape):
+    def make_safe(self, input_shape, output_shape):
         self.patch_size = min(self.patch_size, input_shape[1], input_shape[2])
         self.stride = min(self.stride, self.patch_size)
+        assert(not output_shape), "Image layers cannot adapt to arbitrary sizes."
 
     def to_xml(self, parent):
         element = et.SubElement(parent, "image")
         element.set("operation", self.operation)
-        element.set("patch_size", fstr(self.patch_size))
-        element.set("stride", fstr(self.stride))
+        element.set("patch_size", str(self.patch_size))
+        element.set("stride", str(self.stride))
         element.set("padding", self.padding)
         element.set("output_channels", str(self.output_channels))
+        element.set("l2_factor", fstr(self.l2_factor))
+        self.initializer.to_xml(element)
+
+class ExpandLayer(object):
+    """Image 'deconvolve' layer."""
+    def __init__(self, block_size, patch_size, padding, bias, initializer, l2_factor=0.0):
+        self.block_size = block_size
+        self.patch_size = patch_size
+        self.padding = padding
+        self.bias = bias
+        self.l2_factor = l2_factor
+        self.initializer = initializer
+
+    def layer_type(self):
+        return "expand"
+
+    def output_shape(self, input_shape):
+        depth = self.output_channels if self.operation.startswith("conv") else input_shape[3]
+        return convnet.image_output_size(
+            input_shape,
+            (self.patch_size, self.patch_size, input_shape[3], depth),
+            (self.stride, self.stride),
+            self.padding
+        )
+
+    def mutate(self, mutagen, is_last):
+        self.block_size = mutagen.mutate_block_size(self.block_size)
+        self.patch_size = mutagen.mutate_patch_size(self.patch_size)
+        self.padding = mutagen.mutate_padding(self.padding)
+        self.bias = mutagen.mutate_bias(self.bias)
+        self.initializer.mutate(mutagen)
+        self.l2_factor = mutagen.mutate_l2_factor(self.l2_factor)
+
+    def reseed(self, entropy):
+        self.initializer.reseed(entropy)
+
+    def output_shape(self, input_shape):
+        depth = convnet.depth_to_space_channels(input_shape[-1], self.block_size)
+        shape = convnet.image_output_size(
+            input_shape,
+            (self.patch_size, self.patch_size, input_shape[3], depth),
+            (self.stride, self.stride),
+            self.padding
+        )
+        return depth_to_space_shape(shape, {"block_size":self.block_size})
+
+    def construct(self, input_shape):
+        depth = convnet.depth_to_space_channels(input_shape[-1], self.block_size)
+        layer = convnet.create_conv_layer(
+            (self.patch_size, self.patch_size),
+            (1, 1),
+            input_shape[3], depth,
+            self.bias, self.padding,
+            self.initializer.construct()
+        )
+        layer.set_l2_factor(self.l2_factor)
+        yield layer
+        yield convnet.create_depth_to_shape_layer(self.block_size)
+
+    def make_safe(self, input_shape, output_shape):
+        self.patch_size = min(self.patch_size, input_shape[1], input_shape[2])
+        if output_shape:
+            while True:
+                shape = self.output_shape(input_shape)
+                if shape[1] >= output_shape[1] and shape[2] >= output_shape[2]:
+                    return
+                self.block_size += 1
+
+    def to_xml(self, parent):
+        element = et.SubElement(parent, "expand")
+        element.set("block_size", str(self.block_size))
+        element.set("patch_size", fstr(self.patch_size))
+        element.set("padding", self.padding)
+        element.set("bias", str(self.bias))
         element.set("l2_factor", fstr(self.l2_factor))
         self.initializer.to_xml(element)
 
@@ -256,49 +334,58 @@ class LayerStack(object):
 
     def add_layer(self, operation, relu=False, dropout_rate=0.0, dropout_seed=None):
         layer = EvoLayer(operation, relu, dropout_rate, dropout_seed)
-        if operation.is_image():
+        if operation.layer_type() == "image":
             self.image_layers.append(layer)
+        elif operation.layer_type() == "expand":
+            self.expand_layers.append(layer)
         else:
             self.hidden_layers.append(layer)
 
-    def mutate_layers(self, is_image, layers, input_shape, mutagen):
-        slot = mutagen.mutate_duplicate_layer(is_image, len(layers))
+    def mutate_layers(self, layer_type, layers, input_shape, output_shape, mutagen):
+        slot = mutagen.mutate_duplicate_layer(layer_type, len(layers))
         if slot is not None:
             layer = layers[slot]
             layer = copy.deepcopy(layer)
             layers.insert(slot, layer)
-        
+
         layer_count = len(layers)
-        if not is_image:
+        if layer_type == "hidden":
             layer_count -= 1
-        slot = mutagen.mutate_remove_layer(is_image, layer_count)
+        slot = mutagen.mutate_remove_layer(layer_type, layer_count)
         if slot is not None:
             layers.pop(slot)
 
         shape = input_shape
         for layer in layers:
-            layer.mutate(mutagen, layer == layers[-1])
-            shape = layer.make_safe(shape)
+            is_last = layer == layers[-1]
+            layer.mutate(mutagen, is_last)
+            shape = layer.make_safe(shape, output_shape if is_last else None)
         return shape
 
-    def mutate(self, input_shape, entropy):
+    def mutate(self, input_shape, output_shape, entropy):
         mutagen = mutate.Mutagen(entropy)
         self.optimizer.mutate(mutagen)
-        shape = self.mutate_layers(True, self.image_layers, input_shape, mutagen)
-        
+        shape = self.mutate_layers("image", self.image_layers, input_shape, None, mutagen)
+        expand_output = None if self.flatten else output_shape
+        shape = self.mutate_layers("expand", self.expand_layers, shape, expand_output, mutagen)
+
         if self.flatten:
             shape = convnet.flatten_output_shape(shape)
+
+        return self.mutate_layers("hidden", self.hidden_layers, shape, output_shape, mutagen)
         
-        return self.mutate_layers(False, self.hidden_layers, shape, mutagen)
-        
-    def make_safe(self, input_shape):
+    def make_safe(self, input_shape, output_shape):
         shape = input_shape
         for layer in self.image_layers:
-            shape = layer.make_safe(shape)
+            shape = layer.make_safe(shape, None)
+        for layer in self.expand_layers:
+            is_output_layer = (layer == self.expand_layers[-1] and not self.flatten)
+            shape = layer.make_safe(shape, output_shape if is_output_layer else None)
         if self.flatten:
-            shape = convnet.flatten_output_shape(shape)    
+            shape = convnet.flatten_output_shape(shape)
         for layer in self.hidden_layers:
-            shape = layer.make_safe(shape)
+            is_output_layer = (layer == self.expand_layers[-1])
+            shape = layer.make_safe(shape, output_shape if is_output_layer else None)
         return shape
         
     def cross(self, other, entropy):
@@ -315,6 +402,9 @@ class LayerStack(object):
         for layer in self.image_layers:
             layer.reseed(entropy)
 
+        for layer in self.expand_layers:
+            layer.reseed(entropy)
+
         for layer in self.hidden_layers:
             layer.reseed(entropy)
 
@@ -323,6 +413,9 @@ class LayerStack(object):
 
         shape = input_shape
         for layer in self.image_layers:
+            shape = layer.construct(shape, layers)
+
+        for layer in self.expand_layers:
             shape = layer.construct(shape, layers)
 
         if self.flatten:
@@ -357,6 +450,11 @@ class LayerStack(object):
             children = et.SubElement(element, "layers")
             children.set("type", "image")
             for layer in self.image_layers:
+                layer.to_xml(children)
+        if self.expand_layers:
+            children = et.SubElement(element, "layers")
+            children.set("type", "expand")
+            for layer in self.expand_layers:
                 layer.to_xml(children)
         if self.image_layers:
             children = et.SubElement(element, "layers")
@@ -410,6 +508,21 @@ def parse_image(image_element):
     print("Missing image element.")
     return None
 
+def parse_expand(expand_element):
+    if expand_element is not None:
+        block_size = as_int(expand_element.get("block_size"))
+        bias = expand_element.get("bias") == "True"
+        patch_size = as_int(expand_element.get("patch_size"))
+        padding = expand_element.get("padding")
+        l2_factor = as_float(expand_element.get("l2_factor"), 0.0)
+        initializer = parse_initializer(expand_element)
+        if outputs and initializer:
+            return ExpandLayer(block_size, patch_size, padding, bias, initializer, l2_factor)
+        print("Bad expand layer:", et.tostring(expand_element))
+        return None
+    print("Missing expand element.")
+    return None
+
 def parse_hidden(hidden_element):
     if hidden_element is not None:
         outputs = as_int(hidden_element.get("output_size"))
@@ -423,9 +536,11 @@ def parse_hidden(hidden_element):
     print("Missing hidden element.")
     return None
 
-def parse_operation(layer_element, is_image):
-    if is_image:
+def parse_operation(layer_element, layer_type):
+    if layer_type == "image":
         return parse_image(layer_element.find("image"))
+    elif layer_type == "expand":
+        return parse_expand(layer_element.find("expand"))
     else:
         return parse_hidden(layer_element.find("hidden"))
         
@@ -448,12 +563,12 @@ def parse_stack(stack_element):
     optimizer = parse_optimizer(stack_element.find("optimizer"))
     stack = LayerStack(stack_element.get("flatten") == "True", optimizer)
     for layers in stack_element.iter("layers"):
-        is_image = (layers.get("type") == "image")
+        layer_type = layers.get("type")
         for layer in layers.iter("layer"):
             relu = layer.get("relu") == "True"
             dropout_rate = as_float(layer.get("dropout_rate"), 0)
             dropout_seed = as_int(layer.get("dropout_seed"))
-            operation = parse_operation(layer, is_image)
+            operation = parse_operation(layer, layer_type)
             if operation:
                 stack.add_layer(operation, relu, dropout_rate, dropout_seed)
     return stack
@@ -481,7 +596,7 @@ def breed(parents, options, entropy):
         offspring = copy.deepcopy(parents[0])
     else:
         offspring = parents[0].cross(parents[1], entropy)
-    offspring.mutate(options["input_shape"], entropy)
+    offspring.mutate(options["input_shape"], options.get("output_shape"), entropy)
     offspring.reseed(entropy)
     return offspring
 
