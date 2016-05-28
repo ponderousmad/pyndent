@@ -341,6 +341,7 @@ class LayerStack(object):
     def __init__(self, flatten, optimizer=None):
         self.flatten = flatten
         self.image_layers = []
+        self.expand_layers = []
         self.hidden_layers = []
         if optimizer:
             self.optimizer = optimizer
