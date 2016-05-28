@@ -2,6 +2,7 @@ from __future__ import print_function
 
 import copy
 import datetime
+import itertools
 import os
 import lxml.etree as et
 
@@ -29,6 +30,9 @@ class EvoLayer(object):
     def output_shape(self, input_shape):
         return self.primary.output_shape(input_shape)
 
+    def parameter_count(self, input_shape):
+        return self.primary.parameter_count(input_shape)
+
     def reseed(self, entropy):
         self.primary.reseed(entropy)
         self.dropout_seed = entropy.randint(1, 100000)
@@ -47,7 +51,7 @@ class EvoLayer(object):
         if self.dropout_rate > 0:
             layers.append(convnet.create_dropout_layer(self.dropout_rate, self.dropout_seed))
         return self.output_shape(input_shape)
-        
+
     def make_safe(self, input_shape, output_shape):
         self.primary.make_safe(input_shape, output_shape)
         return self.output_shape(input_shape)
@@ -101,6 +105,12 @@ class HiddenLayer(object):
     def output_shape(self, input_shape):
         return (input_shape[0], self.output_size)
 
+    def parameter_count(self, input_shape):
+        count = input_shape[1] * self.output_size
+        if self.bias:
+            count += self.output_size
+        return count
+
     def mutate(self, mutagen, is_last):
         self.bias = mutagen.mutate_bias(self.bias)
         if not is_last:
@@ -149,6 +159,15 @@ class ImageLayer(object):
             (self.stride, self.stride),
             self.padding
         )
+
+    def parameter_count(self, input_shape):
+        if self.operation.startswith("conv"):
+            count = self.patch_size * self.patch_size * input_shape[-1] * self.output_channels
+            if self.operation.endswith("bias"):
+                count += self.output_channels
+            return count
+        else:
+            return 0
 
     def mutate(self, mutagen, is_last):
         self.operation = mutagen.mutate_image_operation(self.operation)
@@ -210,13 +229,21 @@ class ExpandLayer(object):
         return "expand"
 
     def output_shape(self, input_shape):
-        depth = self.output_channels if self.operation.startswith("conv") else input_shape[3]
-        return convnet.image_output_size(
+        depth = convnet.depth_to_space_channels(input_shape[-1], self.block_size)
+        shape = convnet.image_output_size(
             input_shape,
             (self.patch_size, self.patch_size, input_shape[3], depth),
             (self.stride, self.stride),
             self.padding
         )
+        return depth_to_space_shape(shape, {"block_size":self.block_size})
+
+    def parameter_count(self, input_shape):
+        depth = convnet.depth_to_space_channels(input_shape[-1], self.block_size)
+        count = self.patch_size * self.patch_size * input_shape[-1] * depth
+        if self.bias:
+            count += depth 
+        return count
 
     def mutate(self, mutagen, is_last):
         self.block_size = mutagen.mutate_block_size(self.block_size)
@@ -228,16 +255,6 @@ class ExpandLayer(object):
 
     def reseed(self, entropy):
         self.initializer.reseed(entropy)
-
-    def output_shape(self, input_shape):
-        depth = convnet.depth_to_space_channels(input_shape[-1], self.block_size)
-        shape = convnet.image_output_size(
-            input_shape,
-            (self.patch_size, self.patch_size, input_shape[3], depth),
-            (self.stride, self.stride),
-            self.padding
-        )
-        return depth_to_space_shape(shape, {"block_size":self.block_size})
 
     def construct(self, input_shape):
         depth = convnet.depth_to_space_channels(input_shape[-1], self.block_size)
@@ -426,6 +443,28 @@ class LayerStack(object):
             shape = layer.construct(shape, layers)
 
         return layers
+
+    def all_layers(self):
+        return itertools.chain(self.image_layers, self.expand_layers, self.hidden_layers)
+
+    def layer_count(self):
+        return len(self.all_layers())
+
+    def parameter_count(self, input_shape):
+        count = 0
+        shape = input_shape
+        for layer in itertools.chain(self.image_layers, self.expand_layers):
+            count += layer.parameter_count(shape)
+            shape = layer.output_shape(shape)
+
+        if self.flatten:
+            shape = convnet.flatten_output_shape(shape)
+
+        for layer in self.hidden_layers:
+            count += layer.parameter_count(shape)
+            shape = layer.output_shape(shape)
+
+        return count
 
     def construct_optimizer(self, global_step):
         optimizer = self.optimizer;
