@@ -48,8 +48,8 @@ class EvoLayer(object):
             layers.append(convnet.create_dropout_layer(self.dropout_rate, self.dropout_seed))
         return self.output_shape(input_shape)
         
-    def make_safe(self, input_shape):
-        self.primary.make_safe(input_shape)
+    def make_safe(self, input_shape, output_shape):
+        self.primary.make_safe(input_shape, output_shape)
         return self.output_shape(input_shape)
 
     def to_xml(self, parent):
@@ -116,8 +116,9 @@ class HiddenLayer(object):
         layer.set_l2_factor(self.l2_factor)
         yield layer
 
-    def make_safe(self, input_shape):
-        pass # Nothing to do.
+    def make_safe(self, input_shape, output_shape):
+        if output_shape:
+            self.output_size = output_shape[-1]
 
     def to_xml(self, parent):
         element = et.SubElement(parent, "hidden")
@@ -180,9 +181,10 @@ class ImageLayer(object):
             )
         yield layer
 
-    def make_safe(self, input_shape):
+    def make_safe(self, input_shape, output_shape):
         self.patch_size = min(self.patch_size, input_shape[1], input_shape[2])
         self.stride = min(self.stride, self.patch_size)
+        assert(not output_shape), "Image layers cannot adapt to arbitrary sizes."
 
     def to_xml(self, parent):
         element = et.SubElement(parent, "image")
@@ -250,8 +252,14 @@ class ExpandLayer(object):
         yield layer
         yield convnet.create_depth_to_shape_layer(self.block_size)
 
-    def make_safe(self, input_shape):
+    def make_safe(self, input_shape, output_shape):
         self.patch_size = min(self.patch_size, input_shape[1], input_shape[2])
+        if output_shape:
+            while True:
+                shape = self.output_shape(input_shape)
+                if shape[1] >= output_shape[1] and shape[2] >= output_shape[2]:
+                    return
+                self.block_size += 1
 
     def to_xml(self, parent):
         element = et.SubElement(parent, "expand")
@@ -333,44 +341,51 @@ class LayerStack(object):
         else:
             self.hidden_layers.append(layer)
 
-    def mutate_layers(self, is_image, layers, input_shape, mutagen):
-        slot = mutagen.mutate_duplicate_layer(is_image, len(layers))
+    def mutate_layers(self, layer_type, layers, input_shape, output_shape, mutagen):
+        slot = mutagen.mutate_duplicate_layer(layer_type, len(layers))
         if slot is not None:
             layer = layers[slot]
             layer = copy.deepcopy(layer)
             layers.insert(slot, layer)
-        
+
         layer_count = len(layers)
-        if not is_image:
+        if layer_type == "hidden":
             layer_count -= 1
-        slot = mutagen.mutate_remove_layer(is_image, layer_count)
+        slot = mutagen.mutate_remove_layer(layer_type, layer_count)
         if slot is not None:
             layers.pop(slot)
 
         shape = input_shape
         for layer in layers:
-            layer.mutate(mutagen, layer == layers[-1])
-            shape = layer.make_safe(shape)
+            is_last = layer == layers[-1]
+            layer.mutate(mutagen, is_last)
+            shape = layer.make_safe(shape, output_shape if is_last else None)
         return shape
 
-    def mutate(self, input_shape, entropy):
+    def mutate(self, input_shape, output_shape, entropy):
         mutagen = mutate.Mutagen(entropy)
         self.optimizer.mutate(mutagen)
-        shape = self.mutate_layers(True, self.image_layers, input_shape, mutagen)
-        
+        shape = self.mutate_layers("image", self.image_layers, input_shape, None, mutagen)
+        expand_output = None if self.flatten else output_shape
+        shape = self.mutate_layers("expand", self.expand_layers, shape, expand_output, mutagen)
+
         if self.flatten:
             shape = convnet.flatten_output_shape(shape)
+
+        return self.mutate_layers("hidden", self.hidden_layers, shape, output_shape, mutagen)
         
-        return self.mutate_layers(False, self.hidden_layers, shape, mutagen)
-        
-    def make_safe(self, input_shape):
+    def make_safe(self, input_shape, output_shape):
         shape = input_shape
         for layer in self.image_layers:
-            shape = layer.make_safe(shape)
+            shape = layer.make_safe(shape, None)
+        for layer in self.expand_layers:
+            is_output_layer = (layer == self.expand_layers[-1] and not self.flatten)
+            shape = layer.make_safe(shape, output_shape if is_output_layer else None)
         if self.flatten:
-            shape = convnet.flatten_output_shape(shape)    
+            shape = convnet.flatten_output_shape(shape)
         for layer in self.hidden_layers:
-            shape = layer.make_safe(shape)
+            is_output_layer = (layer == self.expand_layers[-1])
+            shape = layer.make_safe(shape, output_shape if is_output_layer else None)
         return shape
         
     def cross(self, other, entropy):
@@ -581,7 +596,7 @@ def breed(parents, options, entropy):
         offspring = copy.deepcopy(parents[0])
     else:
         offspring = parents[0].cross(parents[1], entropy)
-    offspring.mutate(options["input_shape"], entropy)
+    offspring.mutate(options["input_shape"], options.get("output_shape"), entropy)
     offspring.reseed(entropy)
     return offspring
 

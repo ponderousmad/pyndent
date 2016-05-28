@@ -72,10 +72,16 @@ class Mutagen(object):
             (0.02, 0.01),
             (0.01, 0.1)
         ]
-        self.add_image_layer = 0.10
-        self.remove_image_layer = 0.06
-        self.add_hidden_layer = 0.10
-        self.remove_hidden_layer = 0.06
+        self.add_layer = {
+            "image": 0.10,
+            "hidden": 0.10,
+            "expand": 0.01
+        }
+        self.remove_layer = {
+            "image": 0.06,
+            "hidden": 0.06,
+            "expand": 0.01
+        }
         self.optimizers = [
             (0.040, "GradientDescent"),
             (0.040, "Adadelta"),
@@ -148,14 +154,14 @@ class Mutagen(object):
     def mutate_l2_factor(self, l2_factor):
         return self.select(self.l2_factors, l2_factor)
 
-    def mutate_duplicate_layer(self, is_image, layer_count):
-        probability = self.add_image_layer if is_image else self.add_hidden_layer
+    def mutate_duplicate_layer(self, layer_type, layer_count):
+        probability = self.add_layer[layer_type]
         if layer_count > 0 and self.branch(probability):
             return self.entropy.randint(0, layer_count - 1)
         return None
 
-    def mutate_remove_layer(self, is_image, layer_count):
-        probability = self.remove_image_layer if is_image else self.remove_hidden_layer
+    def mutate_remove_layer(self, layer_type, layer_count):
+        probability = self.remove_layer[layer_type]
         if layer_count > 1 and self.branch(probability):
             return self.entropy.randint(0, layer_count - 1)
         return None
