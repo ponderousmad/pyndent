@@ -233,10 +233,9 @@ class ExpandLayer(object):
         shape = convnet.image_output_size(
             input_shape,
             (self.patch_size, self.patch_size, input_shape[3], depth),
-            (self.stride, self.stride),
-            self.padding
+            (1, 1), self.padding
         )
-        return depth_to_space_shape(shape, {"block_size":self.block_size})
+        return convnet.depth_to_space_shape(shape, {"block_size":self.block_size})
 
     def parameter_count(self, input_shape):
         depth = convnet.depth_to_space_channels(input_shape[-1], self.block_size)
@@ -338,11 +337,12 @@ class Optimizer(object):
 
 class LayerStack(object):
     """Overall structure for the network"""
-    def __init__(self, flatten, optimizer=None):
+    def __init__(self, flatten, optimizer=None, output_size=None):
         self.flatten = flatten
         self.image_layers = []
         self.expand_layers = []
         self.hidden_layers = []
+        self.output_size = output_size
         if optimizer:
             self.optimizer = optimizer
         else:
@@ -442,6 +442,9 @@ class LayerStack(object):
 
         for layer in self.hidden_layers:
             shape = layer.construct(shape, layers)
+
+        if self.output_size and shape != self.output_size:
+            layers.append(convnet.create_slice(self.output_size))
 
         return layers
 
