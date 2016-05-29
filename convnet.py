@@ -155,11 +155,12 @@ def apply_depth_to_shape(input_node, train, parameters, options):
     return tf.depth_to_space(input_node, options["block_size"])
     
 def apply_slice(input_node, train, parameters, options):
+    input_shape = input_node.get_shape()
     size = (int(input_shape[0]),) + options["size"]
-    alignments = options.get["align"]
-    
+    alignments = options["align"]
+
     dims = len(size)
-    if dims != len(input_shape[3]):
+    if dims != len(input_shape):
         print("Incompatible size!")
 
     begin = [0] * dims
@@ -167,11 +168,11 @@ def apply_slice(input_node, train, parameters, options):
     
     for i, align in enumerate(alignments):
         if align == "center":
-            begin[i+1] = spare[i+1] / 2
+            begin[i+1] = int(spare[i+1] / 2)
         elif align == "end":
-            begin[i+1] = spare[i+1]
-            
-    return tf.slice(input_node, begin, size)
+            begin[i+1] = int(spare[i+1])
+
+    return tf.slice(input_node, begin=begin, size=size, name="slice")
 
 def shape_test(shape, options, func):
     graph = tf.Graph()
