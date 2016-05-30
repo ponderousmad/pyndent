@@ -2,6 +2,8 @@ from __future__ import print_function
 
 import math
 import numpy as np
+import skimage.color
+from scipy import ndimage
 from six.moves import zip_longest
 
 def split(image):
@@ -14,6 +16,7 @@ CHANNEL_MAX = np.float32(8)
 MAX_RED_VALUE = BYTE_MAX - CHANNEL_MAX
 CHANNELS_MAX = CHANNEL_MAX * CHANNEL_MAX
 MAX_DEPTH = MAX_RED_VALUE * CHANNELS_MAX
+COLOR_CHANNELS = 3
 
 def decode_depth(image):
     """~14 bits of depth in millimeters is encoded with 8 bits in red and 3 bits in each of green and blue."""
@@ -38,6 +41,13 @@ def decode_depth(image):
     # Zero in the red channel indicates the sensor provided no data.
     depth[np.where(red == 0)] = float('nan')
     return depth, orientation
+
+def load_image(image_path):
+    combined_image = ndimage.imread(image_path).astype(np.float32)
+    color_image, depth_image = split(combined_image)
+    color_image = color_image[:, :, 0 : COLOR_CHANNELS] / BYTE_MAX # Discard alpha and normalize
+    depths, attitude = decode_depth(depth_image)
+    return (color_image, depths, attitude)
 
 def ascending_factors(number):
     factor = 2
@@ -80,3 +90,11 @@ def mipmap_imputer(image, strategy=np.mean, scales=None):
         nans = np.where(np.isnan(target))
         target[nans] = expanded[nans]
     return target
+
+#CIELAB image component scales:
+L_MAX = 100
+AB_SCALE_MAX = 127
+
+def rgb2lab_normalized(image):
+    lab_image = skimage.color.rgb2lab(image)
+    return (lab_image / [L_MAX / 2, AB_SCALE_MAX, AB_SCALE_MAX]) - [1, 0, 0]
