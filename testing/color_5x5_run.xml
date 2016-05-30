@@ -1,0 +1,1343 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<population mutate_seed="21120" eval_seed="64935">
+  <result score="26.628">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.0225"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="95072" relu="False">
+          <image operation="conv_bias" patch_size="9" stride="2" padding="VALID" output_channels="12" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.01875" seed="10110"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="61565" relu="True">
+          <image operation="max_pool" patch_size="11" stride="2" padding="VALID" output_channels="20" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0825" seed="75809"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="73536" relu="True">
+          <image operation="conv_bias" patch_size="4" stride="1" padding="SAME" output_channels="15" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.01375" seed="67791"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="44803" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="3" padding="SAME" output_channels="20" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.01375" seed="83528"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="35143" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="VALID" output_channels="75" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.0495" seed="42679"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0" dropout_seed="71529" relu="False">
+          <hidden output_size="375" bias="True" l2_factor="0.001">
+            <initializer distribution="truncated" mean="0" scale="0.15" seed="36521"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="69415" relu="True">
+          <hidden output_size="15" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.05" seed="42367"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="88026" relu="True">
+          <hidden output_size="15" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.1" seed="51941"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="67712" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0605" seed="70384"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="26.621">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.0225"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="44423" relu="True">
+          <image operation="conv_bias" patch_size="9" stride="2" padding="VALID" output_channels="12" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.01875" seed="47876"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="74319" relu="True">
+          <image operation="max_pool" patch_size="11" stride="2" padding="SAME" output_channels="18" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0825" seed="11121"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="46415" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="1" padding="SAME" output_channels="15" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.01375" seed="34865"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="30483" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="3" padding="SAME" output_channels="10" l2_factor="0">
+            <initializer distribution="truncated" mean="0" scale="0.0171875" seed="30117"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="64686" relu="False">
+          <image operation="max_pool" patch_size="4" stride="2" padding="VALID" output_channels="56" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0495" seed="49843"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0.5" dropout_seed="31130" relu="False">
+          <hidden output_size="375" bias="True" l2_factor="0.001">
+            <initializer distribution="truncated" mean="0" scale="0.15" seed="54920"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="1281" relu="True">
+          <hidden output_size="15" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.05" seed="94692"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="95518" relu="True">
+          <hidden output_size="15" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.1" seed="40988"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="91506" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0605" seed="25543"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="94558" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0605" seed="8345"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="26.259">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.02"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="55391" relu="True">
+          <image operation="conv_bias" patch_size="9" stride="2" padding="VALID" output_channels="12" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.01875" seed="88850"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="33322" relu="True">
+          <image operation="max_pool" patch_size="11" stride="2" padding="VALID" output_channels="20" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0825" seed="24796"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="35244" relu="True">
+          <image operation="conv_bias" patch_size="4" stride="1" padding="VALID" output_channels="15" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.01375" seed="85928"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="26470" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="3" padding="SAME" output_channels="20" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.01375" seed="37908"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="44022" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="VALID" output_channels="75" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.099" seed="18324"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0" dropout_seed="87817" relu="False">
+          <hidden output_size="375" bias="True" l2_factor="0.001">
+            <initializer distribution="truncated" mean="0" scale="0.15" seed="43217"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="28170" relu="True">
+          <hidden output_size="15" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.05" seed="54095"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="19897" relu="True">
+          <hidden output_size="15" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.1" seed="6290"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="19486" relu="False">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0605" seed="84915"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="26.061">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.02"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="67425" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="10" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0125" seed="73658"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="35901" relu="True">
+          <image operation="avg_pool" patch_size="10" stride="1" padding="VALID" output_channels="11" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.075" seed="41563"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="12668" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="15" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0275" seed="71369"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="90504" relu="False">
+          <image operation="max_pool" patch_size="4" stride="3" padding="SAME" output_channels="25" l2_factor="0">
+            <initializer distribution="uniform" mean="0" scale="0.01375" seed="55355"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="99241" relu="False">
+          <image operation="max_pool" patch_size="4" stride="2" padding="VALID" output_channels="75" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.02475" seed="84363"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="44782" relu="False">
+          <image operation="max_pool" patch_size="2" stride="2" padding="SAME" output_channels="82" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.012375" seed="77735"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0" dropout_seed="42183" relu="True">
+          <hidden output_size="300" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.4" seed="59065"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="14526" relu="True">
+          <hidden output_size="15" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.05" seed="9840"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="55345" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0495" seed="97581"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="25.158">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.02"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="60317" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="10" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.0125" seed="93655"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="35842" relu="True">
+          <image operation="avg_pool" patch_size="10" stride="1" padding="VALID" output_channels="11" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.075" seed="84487"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="4339" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="15" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.01375" seed="43966"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="41464" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="3" padding="SAME" output_channels="25" l2_factor="0">
+            <initializer distribution="uniform" mean="0" scale="0.01375" seed="9724"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="33774" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="75" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.02475" seed="52237"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="14212" relu="False">
+          <image operation="max_pool" patch_size="4" stride="2" padding="SAME" output_channels="82" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.02475" seed="82969"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0" dropout_seed="97643" relu="True">
+          <hidden output_size="300" bias="True" l2_factor="0">
+            <initializer distribution="truncated" mean="0" scale="0.2" seed="69755"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="47445" relu="True">
+          <hidden output_size="15" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.05" seed="35333"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="11070" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0495" seed="80720"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="24.838">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.09"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="15881" relu="False">
+          <image operation="conv_bias" patch_size="9" stride="2" padding="VALID" output_channels="9" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.025" seed="89694"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="88515" relu="True">
+          <image operation="conv_bias" patch_size="8" stride="2" padding="VALID" output_channels="20" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.04125" seed="56841"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="39237" relu="True">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="20" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.0275" seed="55493"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="45997" relu="True">
+          <image operation="conv" patch_size="6" stride="2" padding="SAME" output_channels="110" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.027225" seed="27700"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="45951" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="55" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.0275" seed="25880"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0" dropout_seed="22380" relu="False">
+          <hidden output_size="375" bias="True" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.075" seed="87622"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="66141" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.05" seed="39620"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="92628" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.055" seed="66310"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="27958" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.06875" seed="37611"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="24.306">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.02"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="66276" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="10" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0125" seed="87947"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="22929" relu="True">
+          <image operation="avg_pool" patch_size="10" stride="1" padding="VALID" output_channels="11" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.075" seed="81008"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="35700" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="15" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.01375" seed="24958"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="94973" relu="False">
+          <image operation="max_pool" patch_size="6" stride="2" padding="SAME" output_channels="110" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.0245025" seed="50586"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="84932" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="3" padding="SAME" output_channels="27" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.0275" seed="35858"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0" dropout_seed="1439" relu="False">
+          <hidden output_size="300" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.4" seed="70124"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="95045" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.05" seed="4304"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="48279" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.055" seed="77933"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="64226" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.06875" seed="55272"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="24.051">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.0225"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="18770" relu="False">
+          <image operation="max_pool" patch_size="4" stride="2" padding="SAME" output_channels="10" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.0125" seed="55099"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="7750" relu="True">
+          <image operation="max_pool" patch_size="11" stride="2" padding="SAME" output_channels="20" l2_factor="0">
+            <initializer distribution="normal" mean="-1" scale="0.0825" seed="74656"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="21611" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="1" padding="SAME" output_channels="16" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.01375" seed="78462"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="78074" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="3" padding="VALID" output_channels="10" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.01375" seed="71754"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="15339" relu="False">
+          <image operation="max_pool" patch_size="4" stride="2" padding="VALID" output_channels="56" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.0495" seed="77595"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0" dropout_seed="68752" relu="False">
+          <hidden output_size="375" bias="True" l2_factor="0.001">
+            <initializer distribution="truncated" mean="0" scale="0.15" seed="71757"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="63023" relu="True">
+          <hidden output_size="15" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.1" seed="72443"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="21752" relu="False">
+          <hidden output_size="15" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.1" seed="14173"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="8552" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0605" seed="44111"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="24307" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0605" seed="21931"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="23.961">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.02"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="4100" relu="False">
+          <image operation="conv_bias" patch_size="20" stride="2" padding="SAME" output_channels="10" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.025" seed="49685"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="90889" relu="True">
+          <image operation="conv_bias" patch_size="8" stride="2" padding="VALID" output_channels="20" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0375" seed="26439"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="77372" relu="True">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="20" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.0275" seed="42089"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="29489" relu="False">
+          <image operation="conv_bias" patch_size="3" stride="2" padding="SAME" output_channels="55" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0275" seed="583"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="86877" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="27" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.055" seed="77789"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0" dropout_seed="404" relu="True">
+          <hidden output_size="300" bias="False" l2_factor="0.001">
+            <initializer distribution="truncated" mean="0" scale="0.1" seed="89235"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="22346" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.0375" seed="96522"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="77011" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.055" seed="68161"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="12945" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.06875" seed="89756"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="23.927">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.09"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="71177" relu="False">
+          <image operation="avg_pool" patch_size="4" stride="4" padding="SAME" output_channels="20" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.0125" seed="12152"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="775" relu="True">
+          <image operation="conv_bias" patch_size="10" stride="1" padding="VALID" output_channels="11" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.075" seed="14204"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="49583" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="15" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.01375" seed="49767"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="88416" relu="True">
+          <image operation="max_pool" patch_size="6" stride="2" padding="SAME" output_channels="110" l2_factor="0.001">
+            <initializer distribution="truncated" mean="0" scale="0.027225" seed="31548"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="57052" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="3" padding="SAME" output_channels="55" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.0275" seed="12246"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0" dropout_seed="79982" relu="False">
+          <hidden output_size="375" bias="True" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.075" seed="63635"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="89681" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.05" seed="21620"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="58090" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.055" seed="82577"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="15710" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.06875" seed="21947"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="23.706">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.02"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="33663" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="10" l2_factor="0.001">
+            <initializer distribution="truncated" mean="0" scale="0.0125" seed="78268"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="23741" relu="True">
+          <image operation="avg_pool" patch_size="10" stride="1" padding="SAME" output_channels="11" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.075" seed="46158"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="43761" relu="False">
+          <image operation="max_pool" patch_size="6" stride="2" padding="SAME" output_channels="15" l2_factor="0.001">
+            <initializer distribution="normal" mean="1" scale="0.01375" seed="97599"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="22866" relu="True">
+          <image operation="max_pool" patch_size="6" stride="2" padding="VALID" output_channels="110" l2_factor="0">
+            <initializer distribution="truncated" mean="0" scale="0.049005" seed="20517"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="56891" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="3" padding="SAME" output_channels="55" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.0275" seed="34992"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0" dropout_seed="12627" relu="False">
+          <hidden output_size="375" bias="True" l2_factor="0">
+            <initializer distribution="truncated" mean="0" scale="0.15" seed="61183"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="2058" relu="True">
+          <hidden output_size="15" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.05" seed="68406"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="77046" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="truncated" mean="0" scale="0.06875" seed="38754"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="23.449">
+    <evostack flatten="True">
+      <optimizer name="Adadelta" learning_rate="0.0225"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="59775" relu="True">
+          <image operation="max_pool" patch_size="9" stride="2" padding="VALID" output_channels="12" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.01875" seed="94198"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="62235" relu="True">
+          <image operation="max_pool" patch_size="11" stride="2" padding="SAME" output_channels="19" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0825" seed="2641"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="79520" relu="False">
+          <image operation="max_pool" patch_size="6" stride="2" padding="SAME" output_channels="13" l2_factor="0">
+            <initializer distribution="normal" mean="1" scale="0.0103125" seed="51323"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="57067" relu="False">
+          <image operation="max_pool" patch_size="6" stride="2" padding="VALID" output_channels="110" l2_factor="0">
+            <initializer distribution="truncated" mean="0" scale="0.09801" seed="30183"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="34396" relu="False">
+          <image operation="max_pool" patch_size="4" stride="3" padding="SAME" output_channels="55" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.0275" seed="97389"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0.75" dropout_seed="86546" relu="True">
+          <hidden output_size="11" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.05" seed="80120"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="83428" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="truncated" mean="0" scale="0.06875" seed="15670"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="23.426">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.02"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="87436" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="5" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.0125" seed="55509"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="51841" relu="True">
+          <image operation="avg_pool" patch_size="10" stride="1" padding="VALID" output_channels="8" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.075" seed="31044"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.5" dropout_seed="58720" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="15" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.01375" seed="39337"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="66110" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="3" padding="SAME" output_channels="25" l2_factor="0">
+            <initializer distribution="constant" mean="0" scale="0.01375" seed="36788"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="86201" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="75" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.02475" seed="97686"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="25103" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="82" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.02475" seed="89723"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0" dropout_seed="37972" relu="False">
+          <hidden output_size="300" bias="True" l2_factor="0">
+            <initializer distribution="truncated" mean="0" scale="0.2" seed="23639"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0.5" dropout_seed="30015" relu="True">
+          <hidden output_size="15" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.1" seed="46150"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="96252" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0495" seed="98440"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="23.426">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.02"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="31513" relu="False">
+          <image operation="conv_bias" patch_size="9" stride="2" padding="VALID" output_channels="9" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.0225" seed="20420"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="22660" relu="True">
+          <image operation="conv_bias" patch_size="8" stride="2" padding="VALID" output_channels="20" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.020625" seed="18395"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="26145" relu="True">
+          <image operation="conv_bias" patch_size="11" stride="2" padding="VALID" output_channels="20" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.0275" seed="73152"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="75938" relu="True">
+          <image operation="conv" patch_size="5" stride="2" padding="SAME" output_channels="110" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.027225" seed="68711"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="84075" relu="True">
+          <image operation="conv_bias" patch_size="3" stride="2" padding="SAME" output_channels="27" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.055" seed="59422"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0" dropout_seed="50471" relu="False">
+          <hidden output_size="375" bias="True" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.075" seed="72959"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="15096" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.05" seed="37331"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="18079" relu="True">
+          <hidden output_size="23" bias="True" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.055" seed="40915"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="19701" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.06875" seed="90267"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="23.426">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.02"/>
+      <layers type="image">
+        <layer dropout_rate="0.5" dropout_seed="24709" relu="False">
+          <image operation="conv_bias" patch_size="9" stride="2" padding="VALID" output_channels="9" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.01125" seed="61254"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="73676" relu="True">
+          <image operation="avg_pool" patch_size="10" stride="1" padding="VALID" output_channels="11" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.075" seed="60821"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="39343" relu="False">
+          <image operation="max_pool" patch_size="4" stride="2" padding="VALID" output_channels="15" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.0275" seed="47211"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="28160" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="3" padding="SAME" output_channels="25" l2_factor="0.01">
+            <initializer distribution="uniform" mean="0" scale="0.01375" seed="38468"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="71507" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="VALID" output_channels="75" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.012375" seed="29577"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="11588" relu="True">
+          <image operation="max_pool" patch_size="2" stride="2" padding="SAME" output_channels="180" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.02475" seed="89010"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0" dropout_seed="71013" relu="False">
+          <hidden output_size="375" bias="True" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.15" seed="92019"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0.5" dropout_seed="30927" relu="True">
+          <hidden output_size="15" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.05" seed="20215"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="70302" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0495" seed="46250"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="23.426">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.0225"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="63675" relu="False">
+          <image operation="conv_bias" patch_size="9" stride="2" padding="VALID" output_channels="6" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.009375" seed="18901"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="71193" relu="True">
+          <image operation="conv" patch_size="10" stride="1" padding="SAME" output_channels="5" l2_factor="0">
+            <initializer distribution="uniform" mean="0" scale="0.15" seed="61000"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="96668" relu="False">
+          <image operation="max_pool" patch_size="4" stride="1" padding="SAME" output_channels="15" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.0171875" seed="67271"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="18999" relu="True">
+          <image operation="conv" patch_size="6" stride="2" padding="VALID" output_channels="110" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.027225" seed="97388"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="22999" relu="True">
+          <image operation="conv_bias" patch_size="1" stride="1" padding="SAME" output_channels="55" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.0275" seed="86699"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="84933" relu="False">
+          <image operation="conv" patch_size="4" stride="3" padding="SAME" output_channels="60" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.0275" seed="82861"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0" dropout_seed="46999" relu="False">
+          <hidden output_size="375" bias="True" l2_factor="0.001">
+            <initializer distribution="truncated" mean="0" scale="0.3" seed="57573"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="57188" relu="True">
+          <hidden output_size="15" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="1" scale="0.05" seed="21053"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="44718" relu="False">
+          <hidden output_size="15" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.1" seed="86281"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="7397" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.06875" seed="21474"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="23.426">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.02"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="451" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="10" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.0125" seed="93893"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="47691" relu="True">
+          <image operation="avg_pool" patch_size="10" stride="1" padding="VALID" output_channels="11" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.075" seed="86164"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="30639" relu="False">
+          <image operation="max_pool" patch_size="4" stride="2" padding="VALID" output_channels="15" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.01375" seed="79327"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="45229" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="3" padding="SAME" output_channels="25" l2_factor="0.01">
+            <initializer distribution="uniform" mean="0" scale="0.01375" seed="19297"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="87086" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="VALID" output_channels="75" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.012375" seed="58117"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="30520" relu="False">
+          <image operation="max_pool" patch_size="2" stride="2" padding="SAME" output_channels="90" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.02475" seed="17734"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0" dropout_seed="7347" relu="True">
+          <hidden output_size="300" bias="True" l2_factor="0">
+            <initializer distribution="truncated" mean="0" scale="0.2" seed="31532"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0.5" dropout_seed="81091" relu="True">
+          <hidden output_size="15" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.05" seed="90787"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="50512" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0495" seed="33246"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="23.426">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.0225"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="23315" relu="False">
+          <image operation="conv_bias" patch_size="9" stride="2" padding="VALID" output_channels="6" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.009375" seed="46037"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="95323" relu="True">
+          <image operation="conv" patch_size="10" stride="1" padding="VALID" output_channels="5" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.075" seed="39502"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="82979" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="1" padding="SAME" output_channels="15" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.01375" seed="58825"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="25118" relu="False">
+          <image operation="conv" patch_size="6" stride="2" padding="SAME" output_channels="110" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.027225" seed="23405"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="9583" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="3" padding="SAME" output_channels="55" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.0275" seed="87845"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0" dropout_seed="95172" relu="False">
+          <hidden output_size="375" bias="True" l2_factor="0.001">
+            <initializer distribution="truncated" mean="0" scale="0.15" seed="20061"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="31830" relu="True">
+          <hidden output_size="15" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="1" scale="0.05" seed="98664"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="49700" relu="True">
+          <hidden output_size="15" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.1" seed="80455"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="98313" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.06875" seed="69522"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="23.387">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.02"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="83501" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="10" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.00625" seed="42722"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="32015" relu="True">
+          <image operation="max_pool" patch_size="10" stride="1" padding="VALID" output_channels="11" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.075" seed="82652"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="4949" relu="False">
+          <image operation="conv_bias" patch_size="2" stride="2" padding="SAME" output_channels="15" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.006875" seed="44357"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="5241" relu="False">
+          <image operation="max_pool" patch_size="4" stride="2" padding="SAME" output_channels="110" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.0245025" seed="33209"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="96347" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="3" padding="SAME" output_channels="55" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.0275" seed="94013"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0" dropout_seed="79881" relu="False">
+          <hidden output_size="375" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.15" seed="99708"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="50033" relu="True">
+          <hidden output_size="15" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.05" seed="11782"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="18292" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="truncated" mean="0" scale="0.06875" seed="24802"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="23.253">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.02"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="46327" relu="True">
+          <image operation="conv_bias" patch_size="9" stride="2" padding="VALID" output_channels="6" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.009375" seed="97811"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="7775" relu="True">
+          <image operation="avg_pool" patch_size="10" stride="1" padding="VALID" output_channels="9" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.075" seed="54843"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="24601" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="15" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.01375" seed="13493"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="99220" relu="False">
+          <image operation="max_pool" patch_size="6" stride="2" padding="SAME" output_channels="110" l2_factor="0.001">
+            <initializer distribution="normal" mean="1" scale="0.0245025" seed="17138"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="9093" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="3" padding="SAME" output_channels="27" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.0275" seed="18890"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0.5" dropout_seed="13900" relu="False">
+          <hidden output_size="375" bias="True" l2_factor="0.001">
+            <initializer distribution="truncated" mean="0" scale="0.15" seed="28051"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="71334" relu="True">
+          <hidden output_size="15" bias="True" l2_factor="0">
+            <initializer distribution="truncated" mean="0" scale="0.05" seed="28902"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="90713" relu="True">
+          <hidden output_size="13" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.1" seed="82921"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="38493" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.06875" seed="59254"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="22.697">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.02"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="78967" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="VALID" output_channels="10" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0125" seed="35372"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="95184" relu="True">
+          <image operation="max_pool" patch_size="10" stride="1" padding="VALID" output_channels="11" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.09375" seed="28914"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="62375" relu="False">
+          <image operation="max_pool" patch_size="4" stride="2" padding="VALID" output_channels="15" l2_factor="0.001">
+            <initializer distribution="normal" mean="1" scale="0.0275" seed="82703"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="86573" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="3" padding="SAME" output_channels="25" l2_factor="0">
+            <initializer distribution="uniform" mean="0" scale="0.01375" seed="91664"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="33510" relu="False">
+          <image operation="avg_pool" patch_size="4" stride="2" padding="VALID" output_channels="75" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.012375" seed="53779"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="28662" relu="True">
+          <image operation="max_pool" patch_size="2" stride="2" padding="SAME" output_channels="180" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.02475" seed="73226"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0" dropout_seed="78196" relu="False">
+          <hidden output_size="375" bias="True" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.15" seed="24182"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0.5" dropout_seed="4399" relu="True">
+          <hidden output_size="7" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.055" seed="37556"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="89734" relu="False">
+          <hidden output_size="21" bias="False" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0495" seed="15864"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="22.181">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.0225"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="81331" relu="False">
+          <image operation="conv_bias" patch_size="9" stride="2" padding="VALID" output_channels="12" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.01875" seed="17102"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="35651" relu="True">
+          <image operation="conv" patch_size="10" stride="1" padding="VALID" output_channels="5" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.075" seed="91964"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="25539" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="15" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.01375" seed="51446"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="97930" relu="True">
+          <image operation="max_pool" patch_size="6" stride="2" padding="SAME" output_channels="110" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.027225" seed="24173"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="10057" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="3" padding="SAME" output_channels="55" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.0275" seed="1622"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0" dropout_seed="61499" relu="False">
+          <hidden output_size="375" bias="True" l2_factor="0.001">
+            <initializer distribution="truncated" mean="0" scale="0.15" seed="18384"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="76564" relu="True">
+          <hidden output_size="15" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.05" seed="77794"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="22973" relu="True">
+          <hidden output_size="15" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.1" seed="42643"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="80038" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.06875" seed="74102"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="19.937">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.02"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="61781" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="10" l2_factor="0.001">
+            <initializer distribution="truncated" mean="0" scale="0.0125" seed="68576"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="52094" relu="True">
+          <image operation="avg_pool" patch_size="10" stride="1" padding="SAME" output_channels="11" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.075" seed="15771"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="73143" relu="False">
+          <image operation="conv" patch_size="4" stride="2" padding="SAME" output_channels="15" l2_factor="0.001">
+            <initializer distribution="normal" mean="1" scale="0.01375" seed="85970"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="55010" relu="True">
+          <image operation="max_pool" patch_size="6" stride="2" padding="SAME" output_channels="110" l2_factor="0.001">
+            <initializer distribution="truncated" mean="0" scale="0.0245025" seed="83746"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="93430" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="3" padding="SAME" output_channels="55" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.0275" seed="70771"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0" dropout_seed="70205" relu="True">
+          <hidden output_size="300" bias="True" l2_factor="0">
+            <initializer distribution="truncated" mean="0" scale="0.22" seed="79716"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="60949" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.05" seed="65510"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="39400" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.055" seed="18039"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="39924" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.06875" seed="94045"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="19.14">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.02"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="26008" relu="False">
+          <image operation="avg_pool" patch_size="4" stride="4" padding="SAME" output_channels="20" l2_factor="0.001">
+            <initializer distribution="normal" mean="1" scale="0.0125" seed="86177"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="30586" relu="True">
+          <image operation="conv_bias" patch_size="10" stride="1" padding="SAME" output_channels="5" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.15" seed="78899"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.25" dropout_seed="90143" relu="False">
+          <image operation="conv_bias" patch_size="4" stride="2" padding="VALID" output_channels="15" l2_factor="0.001">
+            <initializer distribution="truncated" mean="0" scale="0.01375" seed="48239"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.5" dropout_seed="59310" relu="True">
+          <image operation="conv_bias" patch_size="4" stride="3" padding="SAME" output_channels="25" l2_factor="0.01">
+            <initializer distribution="uniform" mean="0" scale="0.01375" seed="30323"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="52981" relu="False">
+          <image operation="max_pool" patch_size="4" stride="2" padding="VALID" output_channels="150" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.012375" seed="54771"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="95570" relu="False">
+          <image operation="conv_bias" patch_size="1" stride="1" padding="SAME" output_channels="99" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.02475" seed="97386"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0" dropout_seed="40666" relu="True">
+          <hidden output_size="375" bias="True" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.075" seed="54136"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="94698" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.05" seed="13101"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="43120" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0495" seed="60021"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+  <result score="19.134">
+    <evostack flatten="True">
+      <optimizer name="Adagrad" learning_rate="0.0225"/>
+      <layers type="image">
+        <layer dropout_rate="0.75" dropout_seed="85769" relu="False">
+          <image operation="conv_bias" patch_size="9" stride="2" padding="VALID" output_channels="10" l2_factor="0.01">
+            <initializer distribution="normal" mean="0" scale="0.025" seed="99268"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.75" dropout_seed="37633" relu="False">
+          <image operation="max_pool" patch_size="10" stride="1" padding="VALID" output_channels="9" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.0375" seed="75001"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0.5" dropout_seed="6201" relu="False">
+          <image operation="max_pool" patch_size="4" stride="2" padding="SAME" output_channels="18" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.01375" seed="1030"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="51541" relu="True">
+          <image operation="conv_bias" patch_size="4" stride="1" padding="SAME" output_channels="20" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.01375" seed="11608"/>
+          </image>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="92170" relu="False">
+          <image operation="conv_bias" patch_size="2" stride="2" padding="SAME" output_channels="75" l2_factor="0.01">
+            <initializer distribution="normal" mean="1" scale="0.02475" seed="93831"/>
+          </image>
+        </layer>
+      </layers>
+      <layers type="hidden">
+        <layer dropout_rate="0" dropout_seed="2566" relu="True">
+          <hidden output_size="375" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.075" seed="67920"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="70365" relu="True">
+          <hidden output_size="15" bias="True" l2_factor="0.001">
+            <initializer distribution="normal" mean="0" scale="0.05" seed="80829"/>
+          </hidden>
+        </layer>
+        <layer dropout_rate="0" dropout_seed="41910" relu="True">
+          <hidden output_size="21" bias="True" l2_factor="0">
+            <initializer distribution="normal" mean="0" scale="0.06875" seed="89504"/>
+          </hidden>
+        </layer>
+      </layers>
+    </evostack>
+  </result>
+</population>
