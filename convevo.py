@@ -634,6 +634,10 @@ def load_population(file, include_score=False):
     tree = et.parse(file)
     return parse_population(tree.getroot(), include_score)
 
+def load_stack(file):
+    tree = et.parse(file)
+    return parse_stack(tree.getroot())
+
 def breed(parents, options, entropy):
     if (len(parents) < 2 or parents[0] is parents[1]):
         offspring = copy.deepcopy(parents[0])
