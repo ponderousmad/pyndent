@@ -402,7 +402,7 @@ class LayerStack(object):
         if self.flatten:
             shape = convnet.flatten_output_shape(shape)
         for layer in self.hidden_layers:
-            is_output_layer = (layer == self.expand_layers[-1])
+            is_output_layer = (layer == self.hidden_layers[-1])
             shape = layer.make_safe(shape, output_shape if is_output_layer else None)
         return shape
         
