@@ -33,17 +33,17 @@ class Mutagen(object):
             (0.05, "avg_pool")
         ]
         self.patches = [
-            (0.008, 1),
-            (0.010, 2),
-            (0.012, 3),
-            (0.014, 4),
-            (0.018, 5),
-            (0.014, 6),
-            (0.011, 7),
-            (0.009, 8),
-            (0.007, 9),
-            (0.006, 10),
-            (0.005, 11),
+            (0.010, 1),
+            (0.015, 2),
+            (0.018, 3),
+            (0.020, 4),
+            (0.021, 5),
+            (0.020, 6),
+            (0.018, 7),
+            (0.015, 8),
+            (0.010, 9),
+            (0.008, 10),
+            (0.006, 11),
             (0.004, 12),
             (0.003, 13),
             (0.002, 14),
@@ -61,10 +61,10 @@ class Mutagen(object):
             (0.15, "VALID")
         ]
         self.block_sizes = [
-            (0.050, 2),
-            (0.020, 3),
-            (0.010, 4),
-            (0.005, 5)
+            (0.10, 2),
+            (0.08, 3),
+            (0.05, 4),
+            (0.02, 5)
         ]
         self.l2_factors = [
             (0.08, 0),
@@ -73,31 +73,31 @@ class Mutagen(object):
             (0.01, 0.1)
         ]
         self.add_layer = {
-            "image": 0.10,
-            "hidden": 0.10,
-            "expand": 0.01
+            "image": 0.20,
+            "hidden": 0.20,
+            "expand": 0.05
         }
         self.remove_layer = {
-            "image": 0.06,
-            "hidden": 0.06,
-            "expand": 0.01
+            "image": 0.15,
+            "hidden": 0.15,
+            "expand": 0.03
         }
         self.optimizers = [
-            (0.040, "GradientDescent"),
-            (0.040, "Adadelta"),
-            (0.040, "Adagrad"),
+            (0.080, "GradientDescent"),
+            (0.080, "Adadelta"),
+            (0.080, "Adagrad"),
             (0.001, "Momentum"),
-            (0.001, "Adam"),
-            (0.001, "RMSProp")
+            (0.080, "Adam"),
+            (0.080, "RMSProp")
         ]
         if not using_GPU:
             self.optimizers.append((0.01, "Ftrl"))
         
         self.learning_rate_factors = [
-            (0.02, 0.5),
-            (0.04, 0.75),
-            (0.04, 1.5),
-            (0.02, 2.0)
+            (0.04, 0.5),
+            (0.08, 0.75),
+            (0.08, 1.5),
+            (0.04, 2.0)
         ]
         self.entropy = entropy
 
