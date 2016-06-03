@@ -181,3 +181,11 @@ def cross_lists(list_a, list_b, entropy):
     result = list_b[:split_at]
     result.extend(list_a[-(len(list_a) - split_at):])
     return result
+
+def fisher_yates_shuffle(items, entropy):
+    """Based on https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle"""
+    i = len(items)
+    while i > 1:
+        i = i - 1
+        j = entropy.randint(0, i)
+        items[j], items[i] = items[i], items[j]

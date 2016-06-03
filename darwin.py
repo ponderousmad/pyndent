@@ -81,6 +81,7 @@ class Darwin(object):
             population_target = len(population)
 
         self.init_population([m for m, s in survivors], population_target, False, options, entropy)
+        return self.population
 
     def best(self):
         return max(self.history.iteritems(), key=(lambda entry: entry[1][1]))[1]
