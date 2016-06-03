@@ -1,11 +1,11 @@
 from __future__ import print_function
 
 import copy
-import datetime
 import itertools
 import os
 import lxml.etree as et
 
+import outputer
 import convnet
 import mutate
 
@@ -337,12 +337,11 @@ class Optimizer(object):
 
 class LayerStack(object):
     """Overall structure for the network"""
-    def __init__(self, flatten, optimizer=None, output_size=None):
+    def __init__(self, flatten, optimizer=None):
         self.flatten = flatten
         self.image_layers = []
         self.expand_layers = []
         self.hidden_layers = []
-        self.output_size = output_size
         if optimizer:
             self.optimizer = optimizer
         else:
@@ -394,6 +393,7 @@ class LayerStack(object):
         
     def make_safe(self, input_shape, output_shape):
         shape = input_shape
+
         for layer in self.image_layers:
             shape = layer.make_safe(shape, None)
         for layer in self.expand_layers:
@@ -426,7 +426,7 @@ class LayerStack(object):
         for layer in self.hidden_layers:
             layer.reseed(entropy)
 
-    def construct(self, input_shape):
+    def construct(self, input_shape, output_shape=None):
         layers = []
 
         shape = input_shape
@@ -443,8 +443,9 @@ class LayerStack(object):
         for layer in self.hidden_layers:
             shape = layer.construct(shape, layers)
 
-        if self.output_size and shape != self.output_size:
-            layers.append(convnet.create_slice(self.output_size))
+        if output_shape and shape != output_shape:
+            if convnet.can_slice(shape, output_shape):
+                layers.append(convnet.create_slice(output_shape))
 
         return layers
 
@@ -470,17 +471,17 @@ class LayerStack(object):
 
         return count
 
-    def construct_optimizer(self, global_step):
-        optimizer = self.optimizer;
-        return convnet.create_optimizer(
-            optimizer.name,
-            global_step,
-            optimizer.learning_rate,
-            optimizer.alpha,
-            optimizer.beta,
-            optimizer.gamma,
-            optimizer.delta
+    def construct_optimizer(self, loss):
+        options = self.optimizer;
+        optimizer, step = convnet.create_optimizer(
+            options.name,
+            options.learning_rate,
+            options.alpha,
+            options.beta,
+            options.gamma,
+            options.delta
         )
+        return optimizer.minimize(loss, global_step=step)
 
     def to_xml(self, parent = None):
         if parent is None:
@@ -508,6 +509,22 @@ class LayerStack(object):
 
 def serialize(stack):
     return et.tostring(stack.to_xml(), pretty_print=True)
+
+def create_stack(convolutions, flatten, hidden_sizes, output_size, init_mean, init_scale, l2, optimizer=None):
+    stack = LayerStack(flatten=flatten, optimizer=optimizer)
+    default_init = lambda: Initializer("normal", mean=init_mean, scale=init_scale)
+
+    for operation, patch_size, stride, depth, padding, relu in convolutions:
+        layer = ImageLayer(operation, patch_size, stride, depth, padding, default_init(), l2_factor=l2)
+        stack.add_layer(layer, relu=relu)
+    for hidden_size in hidden_sizes:
+        layer = HiddenLayer(hidden_size, bias=True, initializer=default_init(), l2_factor=l2)
+        stack.add_layer(layer, relu=True)
+    if output_size is not None:
+        layer = HiddenLayer(output_size, bias=True, initializer=default_init(), l2_factor=l2)
+        stack.add_layer(layer, relu=False)
+    
+    return stack
 
 def as_int(text, default=None, base=10):
     try:
@@ -647,9 +664,7 @@ def breed(parents, options, entropy):
     offspring.reseed(entropy)
     return offspring
 
-def output_results(results, path, filename=None, mutate_seed=None, eval_seed=None):
-    if not filename:
-        filename = datetime.datetime.now().strftime("%Y-%m-%d~%H_%M_%S_%f")[0:-3] + ".xml"
+def output_results(results, path, filename, mutate_seed=None, eval_seed=None):
     root = et.Element("population")
     if mutate_seed is not None:
         root.set("mutate_seed", str(mutate_seed))
@@ -661,22 +676,13 @@ def output_results(results, path, filename=None, mutate_seed=None, eval_seed=Non
         eval.set("score", fstr(score))
         stack.to_xml(eval)
 
-    try:    
-        os.makedirs(path)
-    except OSError:
-        pass
+    outputer.setup_directory(path)
 
     with open(os.path.join(path, filename), "w") as text_file:
         text_file.write(et.tostring(root, xml_declaration=True, encoding='UTF-8', pretty_print=True))
-        
-def output_error(stack, error_data, path, filename=None):
-    if not filename:
-        filename = datetime.datetime.now().strftime("ERR~%Y-%m-%d~%H_%M_%S_%f")[0:-3] + ".txt"
 
-    try:    
-        os.makedirs(path)
-    except OSError:
-        pass
+def output_error(stack, error_data, path, filename):
+    outputer.setup_directory(path)
 
     with open(os.path.join(path, filename), "w") as text_file:
         text_file.write(et.tostring(stack.to_xml(), pretty_print=True))        
