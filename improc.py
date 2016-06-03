@@ -91,6 +91,16 @@ def mipmap_imputer(image, strategy=np.mean, scales=None):
         target[nans] = expanded[nans]
     return target
 
+def compute_mean_depth(files):
+    depth_averages = []
+
+    for path in files:
+        _, depth, _ = improc.load_image(path)
+        depth_averages.append(np.nanmean(depth))
+        if len(depth_averages) % 1000 == 0:
+            print("Image", len(depth_averages))
+    return np.nanmean(depth_averages)
+
 #CIELAB image component scales:
 L_MAX = 100
 AB_SCALE_MAX = 127
