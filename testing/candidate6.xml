@@ -1,5 +1,5 @@
 <evostack flatten="True">
-  <optimizer name="Adadelta" learning_rate="0.001" alpha="0.99" beta="0.1"/>
+  <optimizer name="Adadelta" learning_rate="0.001" alpha="0.95" beta="0.1"/>
   <layers type="image">
     <layer dropout_rate="0.5" dropout_seed="74090" relu="True">
       <image operation="conv_bias" patch_size="6" stride="2" padding="VALID" output_channels="15" l2_factor="0">
@@ -33,9 +33,9 @@
         <initializer distribution="truncated" mean="0" scale="0.05" seed="39359"/>
       </hidden>
     </layer>
-    <layer dropout_rate="0.25" dropout_seed="59574" relu="True">
-      <hidden output_size="1126" bias="True" l2_factor="0">
-        <initializer distribution="truncated" mean="0" scale="0.05" seed="39359"/>
+    <layer dropout_rate="0.0" dropout_seed="59574" relu="True">
+      <hidden output_size="800" bias="True" l2_factor="0">
+        <initializer distribution="truncated" mean="0" scale="0.05" seed="3959"/>
       </hidden>
     </layer>
     <layer dropout_rate="0.25" dropout_seed="3533" relu="True">
