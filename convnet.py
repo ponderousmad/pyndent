@@ -27,6 +27,7 @@ def name_options(options, base_name):
     postfix = options.get("name_postfix")
     if postfix is not None:
         return { "name": base_name + str(postfix) }
+    return {}
 
 def no_parameters(options):
     return ()
