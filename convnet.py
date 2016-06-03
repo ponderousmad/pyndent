@@ -153,7 +153,18 @@ def apply_unflatten(input_node, train, parameters, options):
     
 def apply_depth_to_shape(input_node, train, parameters, options):
     return tf.depth_to_space(input_node, options["block_size"])
-    
+
+def can_slice(input_shape, output_shape):
+    if len(input_shape) != len(output_shape):
+        print("Incompatible size for slice!")
+        return False
+
+    for in_size, out_size in zip(input_shape, output_shape):
+        if in_size < out_size:
+            print("Input too small to slice:", input_shape, output_shape)
+            return False
+    return True
+
 def apply_slice(input_node, train, parameters, options):
     input_shape = input_node.get_shape()
     size = (int(input_shape[0]),) + options["size"]
@@ -161,7 +172,7 @@ def apply_slice(input_node, train, parameters, options):
 
     dims = len(size)
     if dims != len(input_shape):
-        print("Incompatible size!")
+        print("Incompatible size for slice!")
 
     begin = [0] * dims
     spare = [i - s for i, s in zip(input_shape, size)]
@@ -321,7 +332,8 @@ def make_rmsprop(step, learning_rate, alpha, beta, gamma, delta):
     options = make_options(alpha, beta, gamma, delta, "decay", "momentum", "epsilon")
     return tf.train.RMSPropOptimizer(learning_rate, **options)
 
-def create_optimizer(name, step, learning_rate, alpha, beta, gamma, delta):
+def create_optimizer(name, learning_rate, alpha, beta, gamma, delta):
+    step = tf.Variable(0)
     constructors = {
         "GradientDescent": make_gradient_descent,
         "Adadelta": make_adadelta,
@@ -331,4 +343,41 @@ def create_optimizer(name, step, learning_rate, alpha, beta, gamma, delta):
         "Ftrl": make_ftrl,
         "RMSProp": make_rmsprop
     }
-    return constructors[name](step, learning_rate, alpha, beta, gamma, delta)
+    return constructors[name](step, learning_rate, alpha, beta, gamma, delta), step
+
+def setup_layers(layers):
+    """Set up layer parameters on default graph"""
+    l2_loss = 0
+    
+    for layer in layers:
+        layer.setup_parameters()
+        l2_loss = layer.update_loss(l2_loss)
+        
+    return l2_loss
+
+def connect_model(input_node, layers, training=False):
+    """Create graph connections for layers on default graph"""
+    nodes = [input_node]
+    for layer in layers:
+        nodes.append(layer.connect(nodes[-1], training))
+    return nodes, nodes[-1]
+
+def setup_save_model(graph_info, path):
+    """Set up option to tell run_graph to save the graph after training."""
+    graph_info["save_to"] = path
+
+def save_model(graph_info, session):
+    save_to = graph_info.get("save_to")
+    if save_to:
+        graph_info["saver"].save(session, save_to)
+        print("Saved model to", save_to)
+
+def setup_restore_model(graph_info, path):
+    """Set up option to tell run_graph to restore graph values."""
+    graph_info["restore_from"] = path
+
+def restore_model(graph_info, session):
+    restore_from = graph_info.get("restore_from")
+    if restore_from:
+        graph_info["saver"].restore(session, restore_from)
+        print("Restored model from", restore_from)
