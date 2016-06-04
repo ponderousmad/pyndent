@@ -11,6 +11,9 @@ captures/
 # Temporary test results
 temp/
 
+# notMNIST data
+notMNIST/
+
 # =========================
 # Language/tool files
 # =========================
