@@ -1,10 +1,16 @@
 from __future__ import print_function
 
+import errno
+import gzip
 import math
+import os
+
 import numpy as np
 import skimage.color
+
 from scipy import ndimage
 from six.moves import zip_longest
+from six.moves import cPickle as pickle
 
 def split(image):
     """Split the image data into the top and bottom half."""
@@ -108,3 +114,41 @@ AB_SCALE_MAX = 127
 def rgb2lab_normalized(image):
     lab_image = skimage.color.rgb2lab(image)
     return (lab_image / [L_MAX / 2, AB_SCALE_MAX, AB_SCALE_MAX]) - [1, 0, 0]
+
+def process_cached(cache_directory, image_path):
+    """Process the image file and cache it, or grab cached result."""
+    cached = None
+    cache_file = os.path.split(image_path)[1] + ".pickle"
+    cache_path = os.path.join(cache_directory, cache_file)
+    try:
+        with gzip.open(cache_path, 'rb') as f:
+            cached = pickle.load(f)
+    except KeyboardInterrupt:
+        raise # Make sure this makes it out.
+    except OSError as e:
+        if e.errno != errno.ENOENT:
+            print("OSError opening cached image:", e.errno, e) 
+    except IOError as e:
+        if e.errno != errno.ENOENT:
+            print("IOError opening cached image:", e.errno, e) 
+    except Exception as e:
+        print("Error opening cached image:", e)
+
+    if cached:
+        return cached["image"], cached["depth"]
+
+    # Load and process the image.
+    rgb_image, depth, _ = load_image(image_path)
+    # Convert from rgb to CIE LAB format.
+    lab_image = rgb2lab_normalized(rgb_image)
+    
+    if not cached:
+        try:
+            with gzip.open(cache_path, 'wb') as f:
+                cache_data = { "image": lab_image, "depth": depth}
+                pickle.dump(cache_data, f, pickle.HIGHEST_PROTOCOL)
+        except KeyboardInterrupt:
+            raise # Make sure this makes it out.
+        except Exception as e:
+            print("Error caching image:", image_file, "-", e)
+    return lab_image, depth

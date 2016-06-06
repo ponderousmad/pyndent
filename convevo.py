@@ -390,7 +390,7 @@ class LayerStack(object):
             shape = convnet.flatten_output_shape(shape)
 
         return self.mutate_layers("hidden", self.hidden_layers, shape, output_shape, mutagen)
-        
+
     def make_safe(self, input_shape, output_shape):
         shape = input_shape
 
@@ -405,7 +405,7 @@ class LayerStack(object):
             is_output_layer = (layer == self.hidden_layers[-1])
             shape = layer.make_safe(shape, output_shape if is_output_layer else None)
         return shape
-        
+
     def cross(self, other, entropy):
         optimizer = copy.deepcopy(self.optimizer)
         optimizer.cross(other.optimizer, entropy)
@@ -510,20 +510,20 @@ class LayerStack(object):
 def serialize(stack):
     return et.tostring(stack.to_xml(), pretty_print=True)
 
-def create_stack(convolutions, flatten, hidden_sizes, output_size, init_mean, init_scale, l2, optimizer=None):
+def create_stack(convolutions, expands, flatten, hidden_sizes, init_mean, init_scale, l2, optimizer=None):
     stack = LayerStack(flatten=flatten, optimizer=optimizer)
     default_init = lambda: Initializer("normal", mean=init_mean, scale=init_scale)
 
     for operation, patch_size, stride, depth, padding, relu in convolutions:
         layer = ImageLayer(operation, patch_size, stride, depth, padding, default_init(), l2_factor=l2)
         stack.add_layer(layer, relu=relu)
+    for block_size, patch_size, padding, bias, relu in expands:
+        layer = ExpandLayer(block_size, patch_size, padding, bias, default_init(), l2_factor=l2)
+        stack.add_layer(layer, relu=relu)
     for hidden_size in hidden_sizes:
         layer = HiddenLayer(hidden_size, bias=True, initializer=default_init(), l2_factor=l2)
         stack.add_layer(layer, relu=True)
-    if output_size is not None:
-        layer = HiddenLayer(output_size, bias=True, initializer=default_init(), l2_factor=l2)
-        stack.add_layer(layer, relu=False)
-    
+
     return stack
 
 def as_int(text, default=None, base=10):

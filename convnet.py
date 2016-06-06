@@ -361,7 +361,7 @@ def connect_model(input_node, layers, training=False):
     nodes = [input_node]
     for layer in layers:
         nodes.append(layer.connect(nodes[-1], training))
-    return nodes, nodes[-1]
+    return nodes
 
 def setup_save_model(graph_info, path):
     """Set up option to tell run_graph to save the graph after training."""
