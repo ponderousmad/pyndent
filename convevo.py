@@ -500,7 +500,7 @@ class LayerStack(object):
             children.set("type", "expand")
             for layer in self.expand_layers:
                 layer.to_xml(children)
-        if self.image_layers:
+        if self.hidden_layers:
             children = et.SubElement(element, "layers")
             children.set("type", "hidden")
             for layer in self.hidden_layers:
