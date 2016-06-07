@@ -578,7 +578,7 @@ def parse_expand(expand_element):
         padding = expand_element.get("padding")
         l2_factor = as_float(expand_element.get("l2_factor"), 0.0)
         initializer = parse_initializer(expand_element)
-        if outputs and initializer:
+        if block_size and patch_size and padding and initializer:
             return ExpandLayer(block_size, patch_size, padding, bias, initializer, l2_factor)
         print("Bad expand layer:", et.tostring(expand_element))
         return None
