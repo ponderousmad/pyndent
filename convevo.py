@@ -366,7 +366,7 @@ class LayerStack(object):
             layers.insert(slot, layer)
 
         layer_count = len(layers)
-        if layer_type == "hidden":
+        if layer_type == "hidden" or (layer_type == "expand" and not self.flatten):
             layer_count -= 1
         slot = mutagen.mutate_remove_layer(layer_type, layer_count)
         if slot is not None:
@@ -412,6 +412,8 @@ class LayerStack(object):
         offspring = LayerStack(self.flatten, optimizer)
         image = mutate.cross_lists(self.image_layers, other.image_layers, entropy)
         offspring.image_layers = copy.deepcopy(image)
+        expand = mutate.cross_lists(self.expand_layers, other.expand_layers, entropy)
+        offspring.expand_layers = copy.deepcopy(expand)
         hidden = mutate.cross_lists(self.hidden_layers, other.hidden_layers, entropy)
         offspring.hidden_layers = copy.deepcopy(hidden)
         return offspring
