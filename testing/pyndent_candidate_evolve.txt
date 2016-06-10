@@ -1284,7 +1284,7 @@ Error computing loss: nan
 0
 Saved model to temp/pyndent_results/2016-06-09~10_08_44_776.ckpt
 Saved results: 2016-06-09~10_08_44_776
-Score: 1.1211389228
+Score: 1.1211389228 # Should have been -0.997069882324
 Evaluating 12
 Initialized
 Minibatch loss at step 0 : 641.812
@@ -2542,7 +2542,7 @@ Error computing loss: nan
 0
 Saved model to temp/pyndent_results/2016-06-09~22_38_26_692.ckpt
 Saved results: 2016-06-09~22_38_26_692
-Score: 1.55792037921
+Score: 1.55792037921 # Should have been -0.997069882324
 Evaluating 8
 TypeError: Input 'filter' of 'Conv2D' Op has type int32 that does not match type float32 of argument 'input'.
 
