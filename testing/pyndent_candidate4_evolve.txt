@@ -1,0 +1,180 @@
+Mutate Seed: 99401
+Eval Seed: 26968
+Generation 0
+Evaluating 0
+Initialized
+Error if just guess mean: 0.00287466744942
+Minibatch loss at step 0 : 23151.4
+Minibatch error: 26077.9
+Validation error: 23889.0104895
+Minibatch loss at step 20000 : 0.00954908
+Minibatch error: 0.0119102
+Validation error: 0.00287682511517
+Minibatch loss at step 40000 : 0.00229398
+Minibatch error: 0.00237505
+Validation error: 0.00287552565842
+Minibatch loss at step 60000 : 0.0061868
+Minibatch error: 0.00640545
+Validation error: 0.0029257689592
+Minibatch loss at step 80000 : 0.00777531
+Minibatch error: 0.00804554
+Validation error: 0.00286830577353
+Saved model to temp/pyndent_results/2016-06-10~14_53_29_478.ckpt
+Saved results: 2016-06-10~14_53_29_478
+Score: 6.36167588679e-06
+Evaluating 1
+Initialized
+Minibatch loss at step 0 : 9.03278e+11
+Minibatch error: 1.08284e+12
+Validation error: 0.0206433602333
+Saved model to temp/pyndent_results/2016-06-10~16_43_37_877.ckpt
+ValueError: Input contains NaN, infinity or a value too large for dtype('float32').
+
+Saved results: 2016-06-10~16_43_37_877
+Score: -1
+Evaluating 2
+Initialized
+Minibatch loss at step 0 : 1.51533e+18
+Minibatch error: 1.81656e+18
+Validation error: 4.36359920323e+17
+Minibatch loss at step 20000 : 0.00946526
+Minibatch error: 0.0117301
+Validation error: 0.00287876332412
+Minibatch loss at step 40000 : 0.00241458
+Minibatch error: 0.00246064
+Validation error: 0.00286648177012
+Minibatch loss at step 60000 : 0.00639966
+Minibatch error: 0.0065748
+Validation error: 0.00289125931971
+Minibatch loss at step 80000 : 0.0076648
+Minibatch error: 0.00791221
+Validation error: 0.00286815856182
+Saved model to temp/pyndent_results/2016-06-10~16_44_02_218.ckpt
+Saved results: 2016-06-10~16_44_02_218
+Score: 6.50888759913e-06
+Evaluating 3
+Initialized
+Minibatch loss at step 0 : 1.37587e+14
+Minibatch error: 1.64937e+14
+Validation error: 0.0282843112586
+Minibatch loss at step 20000 : 1556.98
+Minibatch error: 0.0118888
+Validation error: 0.00287350136165
+Minibatch loss at step 40000 : 98.6708
+Minibatch error: 0.0044349
+Validation error: 0.00911234598394
+Saved model to temp/pyndent_results/2016-06-11~00_32_46_155.ckpt
+ValueError: Input contains NaN, infinity or a value too large for dtype('float32').
+
+Saved results: 2016-06-11~00_32_46_155
+Score: -1
+Evaluating 4
+Initialized
+Minibatch loss at step 0 : 4.19652e+10
+Minibatch error: 5.03074e+10
+Validation error: 13464022971.7
+Minibatch loss at step 20000 : 0.00941391
+Minibatch error: 0.0117416
+Validation error: 0.00287898820881
+Minibatch loss at step 40000 : 0.00236831
+Minibatch error: 0.00245201
+Validation error: 0.00286712260816
+Minibatch loss at step 60000 : 0.00635668
+Minibatch error: 0.00658133
+Validation error: 0.00289215840723
+Minibatch loss at step 80000 : 0.00765263
+Minibatch error: 0.00791859
+Validation error: 0.00286820446491
+Saved model to temp/pyndent_results/2016-06-11~01_34_46_927.ckpt
+Saved results: 2016-06-11~01_34_46_927
+Score: 6.46298450498e-06
+Generation 1
+Evaluating 0
+Initialized
+Minibatch loss at step 0 : 1.71471e+12
+Minibatch error: 2.05558e+12
+Validation error: 1.02913693015e+12
+Minibatch loss at step 20000 : 0.00964907
+Minibatch error: 0.0120332
+Validation error: 0.00287675233371
+Minibatch loss at step 40000 : 0.00224296
+Minibatch error: 0.00232222
+Validation error: 0.00288995958796
+Minibatch loss at step 60000 : 0.00619035
+Minibatch error: 0.00640912
+Validation error: 0.00294194357646
+Minibatch loss at step 80000 : 0.00785038
+Minibatch error: 0.00812321
+Validation error: 0.00286939619214
+Saved model to temp/pyndent_results/2016-06-11~04_01_27_534.ckpt
+Saved results: 2016-06-11~04_01_27_534
+Score: 5.27125727229e-06
+Evaluating 1
+Initialized
+Minibatch loss at step 0 : 1.65361e+11
+Minibatch error: 1.98232e+11
+Validation error: 26776023724.0
+Minibatch loss at step 20000 : 0.00941389
+Minibatch error: 0.0117416
+Validation error: 0.002878987393
+Minibatch loss at step 40000 : 0.00236831
+Minibatch error: 0.00245201
+Validation error: 0.00286712209121
+Minibatch loss at step 60000 : 0.00635669
+Minibatch error: 0.00658133
+Validation error: 0.00289215782987
+Minibatch loss at step 80000 : 0.00765263
+Minibatch error: 0.00791859
+Validation error: 0.00286820439183
+Saved model to temp/pyndent_results/2016-06-11~06_02_18_109.ckpt
+Saved results: 2016-06-11~06_02_18_109
+Score: 6.46305758634e-06
+Evaluating 2
+Initialized
+Minibatch loss at step 0 : 1.80994e+17
+Minibatch error: 2.16974e+17
+Saved model to temp/pyndent_results/2016-06-11~08_55_41_784.ckpt
+ValueError: Input contains NaN, infinity or a value too large for dtype('float32').
+
+Saved results: 2016-06-11~08_55_41_784
+Score: -1
+Evaluating 3
+Initialized
+Minibatch loss at step 0 : 2319.26
+Minibatch error: 2669.55
+Validation error: 73395.3353567
+Minibatch loss at step 20000 : 0.0160817
+Minibatch error: 0.0117412
+Validation error: 0.00292652203465
+Minibatch loss at step 40000 : 0.00289542
+Minibatch error: 0.0024621
+Validation error: 0.00303850909217
+Minibatch loss at step 60000 : 0.00677896
+Minibatch error: 0.00675775
+Validation error: 0.00287655739932
+Minibatch loss at step 80000 : 0.00773001
+Minibatch error: 0.00781172
+Validation error: 0.00288464254764
+Saved model to temp/pyndent_results/2016-06-11~08_55_42_647.ckpt
+Saved results: 2016-06-11~08_55_42_647
+Score: -9.97509822748e-06
+Evaluating 4
+Initialized
+Minibatch loss at step 0 : 1656.87
+Minibatch error: 1954.81
+Validation error: 1861.15146785
+Minibatch loss at step 20000 : 0.00952028
+Minibatch error: 0.0118743
+Validation error: 0.00286937974685
+Minibatch loss at step 40000 : 0.00232976
+Minibatch error: 0.0024121
+Validation error: 0.00286836479499
+Minibatch loss at step 60000 : 0.00665021
+Minibatch error: 0.00688524
+Validation error: 0.00286921350209
+Minibatch loss at step 80000 : 0.00749028
+Minibatch error: 0.0077506
+Validation error: 0.00287000306507
+Saved model to temp/pyndent_results/2016-06-11~11_39_21_525.ckpt
+Saved results: 2016-06-11~11_39_21_525
+Score: 4.6643843416e-06
