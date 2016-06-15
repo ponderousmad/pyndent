@@ -1,0 +1,3212 @@
+Mutate Seed: 12505
+Eval Seed: 50622
+Generation 0
+Evaluating 0
+Initialized
+Error if just guess mean: 0.00293011767592
+Minibatch loss at step 0 : 640.145
+Minibatch error: 0.0109664
+Validation error: 0.0135769227099
+Minibatch loss at step 2000 : 615.038
+Minibatch error: 0.00100294
+Validation error: 0.00770465646315
+Minibatch loss at step 4000 : 590.921
+Minibatch error: 9.39544e-05
+Validation error: 0.00500844241647
+Minibatch loss at step 6000 : 567.751
+Minibatch error: 0.000338142
+Validation error: 0.00383393443586
+Minibatch loss at step 8000 : 545.49
+Minibatch error: 0.00142731
+Validation error: 0.00328990909833
+Saved model to temp/pyndent_results/2016-06-08~12_27_00_842.ckpt
+Saved results: 2016-06-08~12_27_00_842
+Score: -0.00035979142241
+Evaluating 1
+Initialized
+Minibatch loss at step 0 : 512.129
+Minibatch error: 0.0104139
+Validation error: 0.0115138134992
+Minibatch loss at step 2000 : 1.89785
+Minibatch error: 0.00381576
+Validation error: 0.00297608732099
+Minibatch loss at step 4000 : 0.012084
+Minibatch error: 0.00423631
+Validation error: 0.0030063563484
+Minibatch loss at step 6000 : 0.000924331
+Minibatch error: 0.00157696
+Validation error: 0.00293193008273
+Minibatch loss at step 8000 : 0.00111453
+Minibatch error: 0.00114622
+Validation error: 0.00294756730623
+Saved model to temp/pyndent_results/2016-06-08~12_37_22_888.ckpt
+Saved results: 2016-06-08~12_37_22_888
+Score: -1.74496303103e-05
+Evaluating 2
+Initialized
+Minibatch loss at step 0 : 512.129
+Minibatch error: 0.0104038
+Validation error: 0.0125239541247
+Minibatch loss at step 2000 : 69.4153
+Minibatch error: 0.00376022
+Validation error: 0.00297086192951
+Minibatch loss at step 4000 : 9.44985
+Minibatch error: 0.00440821
+Validation error: 0.00302523664728
+Minibatch loss at step 6000 : 1.29137
+Minibatch error: 0.00153611
+Validation error: 0.00293659508159
+Minibatch loss at step 8000 : 0.178136
+Minibatch error: 0.00114973
+Validation error: 0.00294962222049
+Saved model to temp/pyndent_results/2016-06-08~12_49_21_119.ckpt
+Saved results: 2016-06-08~12_49_21_119
+Score: -1.95045445767e-05
+Evaluating 3
+Initialized
+Minibatch loss at step 0 : 640.108
+Minibatch error: 0.0109272
+Validation error: 0.013540716407
+Minibatch loss at step 2000 : 87.1923
+Minibatch error: 0.00345322
+Validation error: 0.00364796057699
+Minibatch loss at step 4000 : 11.7969
+Minibatch error: 0.00379287
+Validation error: 0.00336488445638
+Minibatch loss at step 6000 : 1.59607
+Minibatch error: 0.00159951
+Validation error: 0.00337779533291
+Minibatch loss at step 8000 : 0.217286
+Minibatch error: 0.00155037
+Validation error: 0.00335177877758
+Saved model to temp/pyndent_results/2016-06-08~13_02_41_109.ckpt
+Saved results: 2016-06-08~13_02_41_109
+Score: -0.000421661101658
+Evaluating 4
+Initialized
+Minibatch loss at step 0 : 518.485
+Minibatch error: 0.0113726
+Validation error: 0.013985473988
+Minibatch loss at step 2000 : 70.626
+Minibatch error: 0.00372992
+Validation error: 0.0029673323259
+Minibatch loss at step 4000 : 9.55664
+Minibatch error: 0.00439266
+Validation error: 0.0030229439897
+Minibatch loss at step 6000 : 1.29291
+Minibatch error: 0.00148248
+Validation error: 0.00294252734294
+Minibatch loss at step 8000 : 0.175885
+Minibatch error: 0.00114914
+Validation error: 0.00294915281881
+Saved model to temp/pyndent_results/2016-06-08~13_28_06_195.ckpt
+Saved results: 2016-06-08~13_28_06_195
+Score: -1.90351428964e-05
+Evaluating 5
+Initialized
+Minibatch loss at step 0 : 512.056
+Minibatch error: 0.0109164
+Validation error: 0.0127609333455
+Minibatch loss at step 2000 : 2.62715e+11
+Minibatch error: 2.77803e+11
+Validation error: 9583085491.26
+Minibatch loss at step 4000 : 9.78085e+10
+Minibatch error: 1.02093e+11
+Validation error: 9239882238.53
+Minibatch loss at step 6000 : 6.341e+10
+Minibatch error: 1.12316e+11
+Validation error: 8904523770.89
+Minibatch loss at step 8000 : 1.88951e+11
+Minibatch error: 1.94348e+11
+Validation error: 8587656581.26
+Saved model to temp/pyndent_results/2016-06-08~13_42_59_562.ckpt
+Saved results: 2016-06-08~13_42_59_562
+Score: -0.997069882324
+Evaluating 6
+Initialized
+Minibatch loss at step 0 : 128.007
+Minibatch error: 0.0111487
+Validation error: 0.0137555460466
+Minibatch loss at step 2000 : 122.983
+Minibatch error: 0.000596581
+Validation error: 0.00471613127645
+Minibatch loss at step 4000 : 118.176
+Minibatch error: 0.00151006
+Validation error: 0.00317712142045
+Minibatch loss at step 6000 : 113.564
+Minibatch error: 0.00133928
+Validation error: 0.00295926711458
+Minibatch loss at step 8000 : 109.142
+Minibatch error: 0.00110835
+Validation error: 0.00292394553849
+Saved model to temp/pyndent_results/2016-06-08~13_53_47_354.ckpt
+Saved results: 2016-06-08~13_53_47_354
+Score: 6.17213742826e-06
+Evaluating 7
+Initialized
+Minibatch loss at step 0 : 160.012
+Minibatch error: 0.011729
+Validation error: 0.0137679517368
+Minibatch loss at step 2000 : 0.101123
+Minibatch error: 0.00130065
+Validation error: 0.00464923814577
+Minibatch loss at step 4000 : 0.112939
+Minibatch error: 0.0136181
+Validation error: 0.00343626937616
+Minibatch loss at step 6000 : 0.100317
+Minibatch error: 0.000750886
+Validation error: 0.00361823730023
+Minibatch loss at step 8000 : 0.101203
+Minibatch error: 0.00134779
+Validation error: 0.00305470569299
+Saved model to temp/pyndent_results/2016-06-08~14_06_53_962.ckpt
+Saved results: 2016-06-08~14_06_53_962
+Score: -0.000124588017074
+Evaluating 8
+Initialized
+Minibatch loss at step 0 : 51.2152
+Minibatch error: 0.0118708
+Validation error: 0.0127113516264
+Minibatch loss at step 2000 : 64.5816
+Minibatch error: 17.0275
+Validation error: 140.514810831
+Minibatch loss at step 4000 : 63.262
+Minibatch error: 15.4307
+Validation error: 51.6651679568
+Minibatch loss at step 6000 : 520.049
+Minibatch error: 835.273
+Validation error: 93.1049457458
+Minibatch loss at step 8000 : 378.807
+Minibatch error: 339.763
+Validation error: 8.19345384505
+Saved model to temp/pyndent_results/2016-06-08~16_25_12_411.ckpt
+Saved results: 2016-06-08~16_25_12_411
+Score: -0.997069882324
+Evaluating 9
+Initialized
+Minibatch loss at step 0 : 640.082
+Minibatch error: 0.0107594
+Validation error: 0.0133678838975
+Minibatch loss at step 2000 : 87.1885
+Minibatch error: 0.00332006
+Validation error: 0.00534677040519
+Minibatch loss at step 4000 : 11.7961
+Minibatch error: 0.00349861
+Validation error: 0.00537150674637
+Minibatch loss at step 6000 : 1.59636
+Minibatch error: 0.00223859
+Validation error: 0.00534720441673
+Minibatch loss at step 8000 : 0.219153
+Minibatch error: 0.00349425
+Validation error: 0.00535875877479
+Saved model to temp/pyndent_results/2016-06-08~16_47_27_060.ckpt
+Saved results: 2016-06-08~16_47_27_060
+Score: -0.00242864109887
+Evaluating 10
+Initialized
+Minibatch loss at step 0 : 640.081
+Minibatch error: 0.0107299
+Validation error: 0.0129098417192
+Minibatch loss at step 2000 : 0.00851033
+Minibatch error: 0.00397491
+Validation error: 0.00538994445928
+Minibatch loss at step 4000 : 0.00405552
+Minibatch error: 0.00423311
+Validation error: 0.00544394082382
+Minibatch loss at step 6000 : 0.00122946
+Minibatch error: 0.00217769
+Validation error: 0.00535017935935
+Minibatch loss at step 8000 : 0.00339825
+Minibatch error: 0.00349532
+Validation error: 0.00535740739822
+Saved model to temp/pyndent_results/2016-06-08~17_32_32_576.ckpt
+Saved results: 2016-06-08~17_32_32_576
+Score: -0.0024272897223
+Evaluating 11
+Initialized
+Minibatch loss at step 0 : 129.644
+Minibatch error: 0.0112425
+Validation error: 0.0138347240942
+Minibatch loss at step 2000 : 124.554
+Minibatch error: 0.00371195
+Validation error: 0.0138277797485
+Minibatch loss at step 4000 : 119.669
+Minibatch error: 0.00248312
+Validation error: 0.0138221641723
+Minibatch loss at step 6000 : 114.977
+Minibatch error: 0.00456619
+Validation error: 0.0138166176191
+Minibatch loss at step 8000 : 110.478
+Minibatch error: 0.0117357
+Validation error: 0.0138110142131
+Saved model to temp/pyndent_results/2016-06-08~17_45_33_282.ckpt
+Saved results: 2016-06-08~17_45_33_282
+Score: -0.0108808965372
+Evaluating 12
+Initialized
+Minibatch loss at step 0 : 128.339
+Minibatch error: 0.0137192
+Validation error: 0.0145893231419
+Minibatch loss at step 2000 : 0.0590243
+Minibatch error: 0.00387897
+Validation error: 0.00300944469141
+Minibatch loss at step 4000 : 0.00427705
+Minibatch error: 0.00446439
+Validation error: 0.0030727084431
+Minibatch loss at step 6000 : 0.00066138
+Minibatch error: 0.00117148
+Validation error: 0.0030007122241
+Minibatch loss at step 8000 : 0.00112721
+Minibatch error: 0.00115941
+Validation error: 0.00295839282977
+Saved model to temp/pyndent_results/2016-06-08~18_26_57_503.ckpt
+Saved results: 2016-06-08~18_26_57_503
+Score: -2.8275153851e-05
+Evaluating 13
+Initialized
+Minibatch loss at step 0 : 30.016
+Minibatch error: 0.0112941
+Validation error: 0.0133493776051
+Minibatch loss at step 2000 : 0.0237746
+Minibatch error: 0.00531707
+Validation error: 0.00463463724703
+Minibatch loss at step 4000 : 0.0324442
+Minibatch error: 0.0142979
+Validation error: 0.00331574570924
+Minibatch loss at step 6000 : 0.0192716
+Minibatch error: 0.000930513
+Validation error: 0.00367151539285
+Minibatch loss at step 8000 : 0.019823
+Minibatch error: 0.00110753
+Validation error: 0.00292538073914
+Saved model to temp/pyndent_results/2016-06-08~19_09_54_183.ckpt
+Saved results: 2016-06-08~19_09_54_183
+Score: 4.73693678227e-06
+Evaluating 14
+Initialized
+Minibatch loss at step 0 : 512.056
+Minibatch error: 0.011524
+Validation error: 0.0140364850992
+Minibatch loss at step 2000 : 1.89655
+Minibatch error: 0.00292735
+Validation error: 0.0029237744079
+Minibatch loss at step 4000 : 0.0113224
+Minibatch error: 0.00344437
+Validation error: 0.00293729850849
+Minibatch loss at step 6000 : 0.000977109
+Minibatch error: 0.00167047
+Validation error: 0.0029255681136
+Minibatch loss at step 8000 : 0.00110784
+Minibatch error: 0.00113934
+Validation error: 0.00294272500995
+Saved model to temp/pyndent_results/2016-06-08~23_06_56_155.ckpt
+Saved results: 2016-06-08~23_06_56_155
+Score: -1.26073340323e-05
+Evaluating 15
+Initialized
+Minibatch loss at step 0 : 640.033
+Minibatch error: 0.0109597
+Validation error: 0.0135696584775
+Minibatch loss at step 2000 : 11.8648
+Minibatch error: 0.00328294
+Validation error: 0.00684278822665
+Minibatch loss at step 4000 : 0.219851
+Minibatch error: 0.0032036
+Validation error: 0.00685761240633
+Minibatch loss at step 6000 : 0.00546902
+Minibatch error: 0.00266858
+Validation error: 0.00684512078135
+Minibatch loss at step 8000 : 0.00489108
+Minibatch error: 0.00495629
+Validation error: 0.0068551485629
+Saved model to temp/pyndent_results/2016-06-08~23_16_51_970.ckpt
+Saved results: 2016-06-08~23_16_51_970
+Score: -0.00392503088698
+Evaluating 16
+Initialized
+Minibatch loss at step 0 : 128.025
+Minibatch error: 0.0115835
+Validation error: 0.0139919021982
+Minibatch loss at step 2000 : 0.0588099
+Minibatch error: 0.00392238
+Validation error: 0.00301440339866
+Minibatch loss at step 4000 : 0.00412734
+Minibatch error: 0.00430812
+Validation error: 0.00304443056592
+Minibatch loss at step 6000 : 0.000927236
+Minibatch error: 0.00164237
+Validation error: 0.00292719575145
+Minibatch loss at step 8000 : 0.00112804
+Minibatch error: 0.00116026
+Validation error: 0.00295923262926
+Saved model to temp/pyndent_results/2016-06-08~23_28_20_557.ckpt
+Saved results: 2016-06-08~23_28_20_557
+Score: -2.91149533442e-05
+Evaluating 17
+Initialized
+Minibatch loss at step 0 : 32.0816
+Minibatch error: 0.0109437
+Validation error: 0.0128487601477
+Minibatch loss at step 2000 : 0.122151
+Minibatch error: 0.00368918
+Validation error: 0.00296465404302
+Minibatch loss at step 4000 : 0.00446927
+Minibatch error: 0.00413945
+Validation error: 0.00299600494099
+Minibatch loss at step 6000 : 0.000896546
+Minibatch error: 0.00158422
+Validation error: 0.00293123268993
+Minibatch loss at step 8000 : 0.00111409
+Minibatch error: 0.00114591
+Validation error: 0.00294737284161
+Saved model to temp/pyndent_results/2016-06-08~23_39_06_618.ckpt
+Saved results: 2016-06-08~23_39_06_618
+Score: -1.72551656886e-05
+Evaluating 18
+Initialized
+Saved model to temp/pyndent_results/2016-06-08~23_53_04_555.ckpt
+ResourceExhaustedError: OOM when allocating tensor with shape[1,9,4466,6066]
+	 [[Node: gradients/Conv2D_6_grad/Conv2DBackpropInput = Conv2DBackpropInput[T=DT_FLOAT, data_format="NHWC", padding="VALID", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/gpu:0"](gradients/Conv2D_6_grad/Shape, w18/read, gradients/add_8_grad/tuple/control_dependency)]]
+	 [[Node: Adagrad/update/_28 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/gpu:0", send_device_incarnation=1, tensor_name="edge_1139_Adagrad/update", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'gradients/Conv2D_6_grad/Conv2DBackpropInput', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/traitlets/config/application.py", line 589, in launch_instance
+    app.start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelapp.py", line 405, in start
+    ioloop.IOLoop.instance().start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/ioloop.py", line 162, in start
+    super(ZMQIOLoop, self).start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/ioloop.py", line 883, in start
+    handler_func(fd_obj, events)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 440, in _handle_events
+    self._handle_recv()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 472, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 260, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 212, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 370, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/ipkernel.py", line 175, in do_execute
+    shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 2902, in run_cell
+    interactivity=interactivity, compiler=compiler, result=result)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3006, in run_ast_nodes
+    if self.run_code(code, result):
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3066, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-34-daea9f2a273c>", line 30, in <module>
+    results = charles.evaluate(eval_entropy)
+  File "darwin.py", line 51, in evaluate
+    score = self.evaluator(member, entropy)
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 32, in setup_graph
+    "optimizer": layer_stack.construct_optimizer(loss),
+  File "convevo.py", line 486, in construct_optimizer
+    return optimizer.minimize(loss, global_step=step)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/training/optimizer.py", line 190, in minimize
+    colocate_gradients_with_ops=colocate_gradients_with_ops)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/training/optimizer.py", line 241, in compute_gradients
+    colocate_gradients_with_ops=colocate_gradients_with_ops)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gradients.py", line 481, in gradients
+    in_grads = _AsList(grad_fn(op, *out_grads))
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/nn_grad.py", line 204, in _Conv2DGrad
+    op.get_attr("data_format")),
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 379, in conv2d_backprop_input
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+...which was originally created as op u'Conv2D_6', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+[elided 20 identical lines from previous traceback]
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 18, in setup_graph
+    results = convnet.connect_model(train, layers, True)[-1]
+  File "convnet.py", line 366, in connect_model
+    nodes.append(layer.connect(nodes[-1], training))
+  File "convnet.py", line 224, in connect
+    node = self.node_setup(input_node, train, self.parameters, self.options)
+  File "convnet.py", line 133, in apply_conv
+    output = tf.nn.conv2d(input_node, parameters[0], [1, stride[0], stride[1], 1], padding=options["padding"])
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 295, in conv2d
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+
+Saved results: 2016-06-08~23_53_04_555
+Score: -1
+Evaluating 19
+Initialized
+Minibatch loss at step 0 : 0.122424
+Minibatch error: 0.010997
+Validation error: 0.0136121617857
+Minibatch loss at step 2000 : 0.00350895
+Minibatch error: 0.00371046
+Validation error: 0.00296008947462
+Minibatch loss at step 4000 : 0.00418208
+Minibatch error: 0.00436526
+Validation error: 0.00302170409806
+Minibatch loss at step 6000 : 0.00080907
+Minibatch error: 0.00143307
+Validation error: 0.00294901662
+Minibatch loss at step 8000 : 0.00111986
+Minibatch error: 0.00115184
+Validation error: 0.00295027319393
+Saved model to temp/pyndent_results/2016-06-08~23_53_16_101.ckpt
+Saved results: 2016-06-08~23_53_16_101
+Score: -2.01555180107e-05
+Generation 1
+Evaluating 0
+Initialized
+Minibatch loss at step 0 : 128.015
+Minibatch error: 0.0111894
+Validation error: 0.0138071003112
+Minibatch loss at step 2000 : 6.43583
+Minibatch error: 0.00375378
+Validation error: 0.00302151467827
+Minibatch loss at step 4000 : 0.324542
+Minibatch error: 0.00489781
+Validation error: 0.00313714172138
+Minibatch loss at step 6000 : 0.0166495
+Minibatch error: 0.0013066
+Validation error: 0.00294592115797
+Minibatch loss at step 8000 : 0.00191112
+Minibatch error: 0.00114886
+Validation error: 0.00294772857041
+Saved model to temp/pyndent_results/2016-06-09~00_02_24_517.ckpt
+Saved results: 2016-06-09~00_02_24_517
+Score: -1.76108944948e-05
+Evaluating 1
+Initialized
+Minibatch loss at step 0 : 0.0109801
+Minibatch error: 0.0110683
+Validation error: 0.0136817678358
+Minibatch loss at step 2000 : 0.00350779
+Minibatch error: 0.00370923
+Validation error: 0.00838790243928
+Minibatch loss at step 4000 : 0.00328357
+Minibatch error: 0.00342739
+Validation error: 0.00841567820613
+Minibatch loss at step 6000 : 0.00170315
+Minibatch error: 0.00301671
+Validation error: 0.00837551070846
+Minibatch loss at step 8000 : 0.00626116
+Minibatch error: 0.00644
+Validation error: 0.00837883551169
+Saved model to temp/pyndent_results/2016-06-09~00_15_11_229.ckpt
+Saved results: 2016-06-09~00_15_11_229
+Score: -0.00544871783577
+Evaluating 2
+Initialized
+Minibatch loss at step 0 : 551.145
+Minibatch error: 0.0116966
+Validation error: 0.0135474892834
+Minibatch loss at step 2000 : 1.9813
+Minibatch error: 0.00369113
+Validation error: 0.00296482035828
+Minibatch loss at step 4000 : 0.0122018
+Minibatch error: 0.00414126
+Validation error: 0.00299616965548
+Minibatch loss at step 6000 : 0.000928959
+Minibatch error: 0.00158408
+Validation error: 0.00293122577756
+Minibatch loss at step 8000 : 0.00111421
+Minibatch error: 0.00114588
+Validation error: 0.00294735415616
+Saved model to temp/pyndent_results/2016-06-09~00_30_57_064.ckpt
+Saved results: 2016-06-09~00_30_57_064
+Score: -1.72364802438e-05
+Evaluating 3
+Initialized
+Minibatch loss at step 0 : 640.111
+Minibatch error: 0.0110601
+Validation error: 0.0135432522952
+Minibatch loss at step 2000 : 20.3162
+Minibatch error: 0.182628
+Validation error: 0.329800257778
+Minibatch loss at step 4000 : 1.21573
+Minibatch error: 0.330222
+Validation error: 0.00663384334321
+Minibatch loss at step 6000 : 0.899899
+Minibatch error: 0.000954178
+Validation error: 0.00360826967394
+Minibatch loss at step 8000 : 0.900062
+Minibatch error: 0.00110905
+Validation error: 0.00292415942302
+Saved model to temp/pyndent_results/2016-06-09~00_46_27_782.ckpt
+Saved results: 2016-06-09~00_46_27_782
+Score: 5.95825289963e-06
+Evaluating 4
+Initialized
+Minibatch loss at step 0 : 2560.27
+Minibatch error: 0.0275278
+Validation error: 0.0138085612933
+Minibatch loss at step 2000 : 1.60093
+Minibatch error: 0.00368939
+Validation error: 0.0138085612933
+Minibatch loss at step 4000 : 1.5998
+Minibatch error: 0.00246296
+Validation error: 0.0138085612933
+Minibatch loss at step 6000 : 1.60001
+Minibatch error: 0.00455128
+Validation error: 0.0138085612933
+Minibatch loss at step 8000 : 1.60885
+Minibatch error: 0.0117312
+Validation error: 0.0138085612933
+Saved model to temp/pyndent_results/2016-06-09~01_23_17_533.ckpt
+Saved results: 2016-06-09~01_23_17_533
+Score: -0.0108784436174
+Evaluating 5
+Initialized
+Minibatch loss at step 0 : 56.1181
+Minibatch error: 0.0113656
+Validation error: 0.0137569478231
+Minibatch loss at step 2000 : 0.210525
+Minibatch error: 0.0031016
+Validation error: 0.00292648820799
+Minibatch loss at step 4000 : 0.00436912
+Minibatch error: 0.00364112
+Validation error: 0.00295017870698
+Minibatch loss at step 6000 : 0.000926537
+Minibatch error: 0.00163451
+Validation error: 0.00292733992223
+Minibatch loss at step 8000 : 0.00111075
+Minibatch error: 0.00114246
+Validation error: 0.00294504071688
+Saved model to temp/pyndent_results/2016-06-09~01_34_02_338.ckpt
+Saved results: 2016-06-09~01_34_02_338
+Score: -1.49230409661e-05
+Evaluating 6
+Initialized
+Minibatch loss at step 0 : 32.09
+Minibatch error: 0.0112609
+Validation error: 0.0137719767478
+Minibatch loss at step 2000 : 0.121482
+Minibatch error: 0.00292729
+Validation error: 0.00292377409555
+Minibatch loss at step 4000 : 0.00380689
+Minibatch error: 0.0034439
+Validation error: 0.00293727288639
+Minibatch loss at step 6000 : 0.000947249
+Minibatch error: 0.00167052
+Validation error: 0.00292556598139
+Minibatch loss at step 8000 : 0.00110876
+Minibatch error: 0.00113933
+Validation error: 0.00294272143245
+Saved model to temp/pyndent_results/2016-06-09~01_43_18_664.ckpt
+Saved results: 2016-06-09~01_43_18_664
+Score: -1.2603756537e-05
+Evaluating 7
+Initialized
+Minibatch loss at step 0 : 640.054
+Minibatch error: 0.0110006
+Validation error: 0.0135326465905
+Minibatch loss at step 2000 : 87.1852
+Minibatch error: 0.00384004
+Validation error: 0.00877717895597
+Minibatch loss at step 4000 : 11.7953
+Minibatch error: 0.00324795
+Validation error: 0.00855130129726
+Minibatch loss at step 6000 : 1.59711
+Minibatch error: 0.00368895
+Validation error: 0.0095051307795
+Minibatch loss at step 8000 : 0.224577
+Minibatch error: 0.00908237
+Validation error: 0.00890478293819
+Saved model to temp/pyndent_results/2016-06-09~01_53_23_075.ckpt
+Saved results: 2016-06-09~01_53_23_075
+Score: -0.00597466526228
+Evaluating 8
+Initialized
+Minibatch loss at step 0 : 779.949
+Minibatch error: 140.979
+Validation error: 1.21447257355
+Minibatch loss at step 2000 : 87.199
+Minibatch error: 0.00535658
+Validation error: 0.00421995570092
+Minibatch loss at step 4000 : 11.8074
+Minibatch error: 0.0140698
+Validation error: 0.00366958419239
+Minibatch loss at step 6000 : 1.59568
+Minibatch error: 0.000754394
+Validation error: 0.00361102468981
+Minibatch loss at step 8000 : 0.2169
+Minibatch error: 0.00111583
+Validation error: 0.00292668645214
+Saved model to temp/pyndent_results/2016-06-09~02_56_20_181.ckpt
+Saved results: 2016-06-09~02_56_20_181
+Score: 3.43122377377e-06
+Evaluating 9
+Initialized
+Minibatch loss at step 0 : 18.0741
+Minibatch error: 0.0112152
+Validation error: 0.0138332629056
+Minibatch loss at step 2000 : 6.65431
+Minibatch error: 0.00370268
+Validation error: 0.0138120278744
+Minibatch loss at step 4000 : 2.4561
+Minibatch error: 0.00246735
+Validation error: 0.0137905560756
+Minibatch loss at step 6000 : 0.909639
+Minibatch error: 0.00453195
+Validation error: 0.0137691778708
+Minibatch loss at step 8000 : 0.347339
+Minibatch error: 0.0116721
+Validation error: 0.0137476877906
+Saved model to temp/pyndent_results/2016-06-09~03_24_28_345.ckpt
+Saved results: 2016-06-09~03_24_28_345
+Score: -0.0108175701147
+Evaluating 10
+Initialized
+Minibatch loss at step 0 : 0.972199
+Minibatch error: 0.0114914
+Validation error: 0.0124630562848
+Minibatch loss at step 2000 : 0.00716496
+Minibatch error: 0.0038156
+Validation error: 0.00297588802488
+Minibatch loss at step 4000 : 0.0040735
+Minibatch error: 0.00423544
+Validation error: 0.00300626592456
+Minibatch loss at step 6000 : 0.00089076
+Minibatch error: 0.00157697
+Validation error: 0.00293193047369
+Minibatch loss at step 8000 : 0.00111461
+Minibatch error: 0.00114624
+Validation error: 0.00294757479449
+Saved model to temp/pyndent_results/2016-06-09~03_35_10_256.ckpt
+Saved results: 2016-06-09~03_35_10_256
+Score: -1.7457118572e-05
+Evaluating 11
+Initialized
+Minibatch loss at step 0 : 512.097
+Minibatch error: 0.011139
+Validation error: 0.0137885917993
+Minibatch loss at step 2000 : 8.7408e+06
+Minibatch error: 9.24232e+06
+Validation error: 246067.985807
+Minibatch loss at step 4000 : 3.51763e+06
+Minibatch error: 3.67126e+06
+Validation error: 858875.448321
+Minibatch loss at step 6000 : 818505.0
+Minibatch error: 1.44901e+06
+Validation error: 201925.680342
+Minibatch loss at step 8000 : 1.02941e+06
+Minibatch error: 1.05836e+06
+Validation error: 128600.062999
+Saved model to temp/pyndent_results/2016-06-09~04_10_01_484.ckpt
+Saved results: 2016-06-09~04_10_01_484
+Score: -0.997069882324
+Evaluating 12
+Initialized
+Minibatch loss at step 0 : 32.0756
+Minibatch error: 0.0112757
+Validation error: 0.0137061286173
+Minibatch loss at step 2000 : 0.121556
+Minibatch error: 0.00310186
+Validation error: 0.00292649680744
+Minibatch loss at step 4000 : 0.00399187
+Minibatch error: 0.00364141
+Validation error: 0.00295019317136
+Minibatch loss at step 6000 : 0.000924917
+Minibatch error: 0.00163448
+Validation error: 0.00292735163524
+Minibatch loss at step 8000 : 0.00111075
+Minibatch error: 0.00114247
+Validation error: 0.00294503473312
+Saved model to temp/pyndent_results/2016-06-09~04_25_36_644.ckpt
+Saved results: 2016-06-09~04_25_36_644
+Score: -1.49170572044e-05
+Evaluating 13
+Initialized
+Minibatch loss at step 0 : 641.763
+Minibatch error: 1.76322
+Validation error: 0.312873816146
+Minibatch loss at step 2000 : 11.8647
+Minibatch error: 0.00336323
+Validation error: 0.0029297791178
+Minibatch loss at step 4000 : 0.22049
+Minibatch error: 0.00387341
+Validation error: 0.0029686065032
+Minibatch loss at step 6000 : 0.00484733
+Minibatch error: 0.0015675
+Validation error: 0.00293217447621
+Minibatch loss at step 8000 : 0.00118527
+Minibatch error: 0.00114462
+Validation error: 0.00294643289711
+Saved model to temp/pyndent_results/2016-06-09~04_35_50_994.ckpt
+Saved results: 2016-06-09~04_35_50_994
+Score: -1.63152211944e-05
+Evaluating 14
+Initialized
+Minibatch loss at step 0 : 0.0111605
+Minibatch error: 0.0112502
+Validation error: 0.0138619481603
+Minibatch loss at step 2000 : 0.00352941
+Minibatch error: 0.0037321
+Validation error: 0.00296750942963
+Minibatch loss at step 4000 : 0.00421119
+Minibatch error: 0.00439564
+Validation error: 0.00302325775638
+Minibatch loss at step 6000 : 0.00083671
+Minibatch error: 0.00148203
+Validation error: 0.00294258974306
+Minibatch loss at step 8000 : 0.00111724
+Minibatch error: 0.00114915
+Validation error: 0.00294915654524
+Saved model to temp/pyndent_results/2016-06-09~04_49_19_614.ckpt
+Saved results: 2016-06-09~04_49_19_614
+Score: -1.90388693191e-05
+Evaluating 15
+Initialized
+Minibatch loss at step 0 : 2048.38
+Minibatch error: 0.0274142
+Validation error: 0.046894221249
+Minibatch loss at step 2000 : 1835.06
+Minibatch error: 0.00152505
+Validation error: 0.00882523865288
+Minibatch loss at step 4000 : 1835.06
+Minibatch error: 0.000668373
+Validation error: 0.00882523865288
+Minibatch loss at step 6000 : 1835.06
+Minibatch error: 0.00182903
+Validation error: 0.00882523865288
+Minibatch loss at step 8000 : 1835.07
+Minibatch error: 0.00682231
+Validation error: 0.00882523865288
+Saved model to temp/pyndent_results/2016-06-09~05_03_05_434.ckpt
+Saved results: 2016-06-09~05_03_05_434
+Score: -0.00589512097696
+Evaluating 16
+Initialized
+Minibatch loss at step 0 : 0.0109978
+Minibatch error: 0.0110829
+Validation error: 0.0131490207725
+Minibatch loss at step 2000 : 0.00505455
+Minibatch error: 0.00531707
+Validation error: 0.0046346365155
+Minibatch loss at step 4000 : 0.0137242
+Minibatch error: 0.0142979
+Validation error: 0.00331575000018
+Minibatch loss at step 6000 : 0.000551591
+Minibatch error: 0.000930514
+Validation error: 0.00367151504465
+Minibatch loss at step 8000 : 0.00110302
+Minibatch error: 0.00110753
+Validation error: 0.00292538075896
+Saved model to temp/pyndent_results/2016-06-09~05_13_48_345.ckpt
+Saved results: 2016-06-09~05_13_48_345
+Score: 4.73691695925e-06
+Evaluating 17
+Initialized
+Minibatch loss at step 0 : 162.025
+Minibatch error: 0.0112329
+Validation error: 0.0138226683522
+Minibatch loss at step 2000 : 0.601436
+Minibatch error: 0.00236249
+Validation error: 0.00571658413329
+Minibatch loss at step 4000 : 0.00539085
+Minibatch error: 0.00295505
+Validation error: 0.00317411417262
+Minibatch loss at step 6000 : 0.00064025
+Minibatch error: 0.00110763
+Validation error: 0.00319147309555
+Minibatch loss at step 8000 : 0.00165986
+Minibatch error: 0.00170523
+Validation error: 0.00310667636061
+Saved model to temp/pyndent_results/2016-06-09~07_29_53_254.ckpt
+Saved results: 2016-06-09~07_29_53_254
+Score: -0.000176558684693
+Evaluating 18
+Initialized
+Minibatch loss at step 0 : 32.4094
+Minibatch error: 0.0112125
+Validation error: 0.0138307605409
+Minibatch loss at step 2000 : 0.0268065
+Minibatch error: 0.0037605
+Validation error: 0.00290473425687
+Minibatch loss at step 4000 : 0.0283621
+Minibatch error: 0.00533575
+Validation error: 0.00303933150177
+Minibatch loss at step 6000 : 0.0241761
+Minibatch error: 0.00163991
+Validation error: 0.00287506082698
+Minibatch loss at step 8000 : 0.0248659
+Minibatch error: 0.00166183
+Validation error: 0.00285000549974
+Saved model to temp/pyndent_results/2016-06-09~07_40_21_229.ckpt
+Saved results: 2016-06-09~07_40_21_229
+Score: 8.01121761793e-05
+Evaluating 19
+Initialized
+Minibatch loss at step 0 : 527.129
+Minibatch error: 0.0218444
+Validation error: 0.0176015413622
+Minibatch loss at step 2000 : inf
+Minibatch error: inf
+Validation error: inf
+Minibatch loss at step 4000 : inf
+Minibatch error: inf
+Validation error: inf
+Minibatch loss at step 6000 : inf
+Minibatch error: inf
+Validation error: inf
+Minibatch loss at step 8000 : inf
+Minibatch error: inf
+Validation error: inf
+Saved model to temp/pyndent_results/2016-06-09~07_53_23_249.ckpt
+Saved results: 2016-06-09~07_53_23_249
+Score: -0.997069882324
+Generation 2
+Evaluating 0
+Initialized
+Minibatch loss at step 0 : 0.0113789
+Minibatch error: 0.0112604
+Validation error: 0.0138262364146
+Minibatch loss at step 2000 : 0.00409226
+Minibatch error: 0.00432142
+Validation error: 0.00687277622267
+Minibatch loss at step 4000 : 0.219721
+Minibatch error: 0.224419
+Validation error: 0.140659988395
+Minibatch loss at step 6000 : 0.0398471
+Minibatch error: 0.00413417
+Validation error: 0.00607675733284
+Minibatch loss at step 8000 : 0.115858
+Minibatch error: 0.00116962
+Validation error: 0.00306888856021
+Saved model to temp/pyndent_results/2016-06-09~08_08_47_315.ckpt
+Saved results: 2016-06-09~08_08_47_315
+Score: -0.000138770884291
+Evaluating 1
+Initialized
+Minibatch loss at step 0 : 644.337
+Minibatch error: 2.28126
+Validation error: 260819848219.0
+Minibatch loss at step 2000 : 546.094
+Minibatch error: 30.4383
+Validation error: 3457.60074187
+Minibatch loss at step 4000 : 540.366
+Minibatch error: 28.4036
+Validation error: 2406.84009325
+Minibatch loss at step 6000 : 133633.0
+Minibatch error: 235792.0
+Validation error: 2163.16560056
+Minibatch loss at step 8000 : 536.989
+Minibatch error: 27.1433
+Validation error: 1884.58696227
+Saved model to temp/pyndent_results/2016-06-09~08_18_29_561.ckpt
+Saved results: 2016-06-09~08_18_29_561
+Score: -0.997069882324
+Evaluating 2
+Initialized
+Minibatch loss at step 0 : 2409.39
+Minibatch error: 1783.55
+Validation error: 0.0138085612933
+Minibatch loss at step 2000 : 0.855047
+Minibatch error: 0.00368939
+Validation error: 0.0138085612933
+Minibatch loss at step 4000 : 0.533622
+Minibatch error: 0.00246296
+Validation error: 0.0138085612933
+Minibatch loss at step 6000 : 83.0233
+Minibatch error: 0.00455128
+Validation error: 0.0138085612933
+Minibatch loss at step 8000 : 60.0583
+Minibatch error: 0.0117312
+Validation error: 0.0138085612933
+Saved model to temp/pyndent_results/2016-06-09~08_42_15_294.ckpt
+Saved results: 2016-06-09~08_42_15_294
+Score: -0.0108784436174
+Evaluating 3
+Initialized
+Minibatch loss at step 0 : 3.31624
+Minibatch error: 0.0112369
+Validation error: 0.0130851601458
+Saved model to temp/pyndent_results/2016-06-09~08_57_23_900.ckpt
+ResourceExhaustedError: OOM when allocating tensor with shape[1,1,2824,3784]
+	 [[Node: gradients/Conv2D_7_grad/Conv2DBackpropFilter = Conv2DBackpropFilter[T=DT_FLOAT, data_format="NHWC", padding="SAME", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/gpu:0"](Relu_3, gradients/Conv2D_7_grad/Shape_1, gradients/add_10_grad/tuple/control_dependency)]]
+	 [[Node: Adagrad/update/_28 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/gpu:0", send_device_incarnation=1, tensor_name="edge_1418_Adagrad/update", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'gradients/Conv2D_7_grad/Conv2DBackpropFilter', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/traitlets/config/application.py", line 589, in launch_instance
+    app.start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelapp.py", line 405, in start
+    ioloop.IOLoop.instance().start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/ioloop.py", line 162, in start
+    super(ZMQIOLoop, self).start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/ioloop.py", line 883, in start
+    handler_func(fd_obj, events)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 440, in _handle_events
+    self._handle_recv()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 472, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 260, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 212, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 370, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/ipkernel.py", line 175, in do_execute
+    shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 2902, in run_cell
+    interactivity=interactivity, compiler=compiler, result=result)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3006, in run_ast_nodes
+    if self.run_code(code, result):
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3066, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-34-daea9f2a273c>", line 30, in <module>
+    results = charles.evaluate(eval_entropy)
+  File "darwin.py", line 51, in evaluate
+    score = self.evaluator(member, entropy)
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 32, in setup_graph
+    "optimizer": layer_stack.construct_optimizer(loss),
+  File "convevo.py", line 486, in construct_optimizer
+    return optimizer.minimize(loss, global_step=step)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/training/optimizer.py", line 190, in minimize
+    colocate_gradients_with_ops=colocate_gradients_with_ops)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/training/optimizer.py", line 241, in compute_gradients
+    colocate_gradients_with_ops=colocate_gradients_with_ops)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gradients.py", line 481, in gradients
+    in_grads = _AsList(grad_fn(op, *out_grads))
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/nn_grad.py", line 210, in _Conv2DGrad
+    op.get_attr("data_format"))]
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 338, in conv2d_backprop_filter
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+...which was originally created as op u'Conv2D_7', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+[elided 20 identical lines from previous traceback]
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 18, in setup_graph
+    results = convnet.connect_model(train, layers, True)[-1]
+  File "convnet.py", line 366, in connect_model
+    nodes.append(layer.connect(nodes[-1], training))
+  File "convnet.py", line 224, in connect
+    node = self.node_setup(input_node, train, self.parameters, self.options)
+  File "convnet.py", line 133, in apply_conv
+    output = tf.nn.conv2d(input_node, parameters[0], [1, stride[0], stride[1], 1], padding=options["padding"])
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 295, in conv2d
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+
+Saved results: 2016-06-09~08_57_23_900
+Score: -1
+Evaluating 4
+Initialized
+Saved model to temp/pyndent_results/2016-06-09~09_05_29_527.ckpt
+ResourceExhaustedError: OOM when allocating tensor with shape[1,1,9120,12480]
+	 [[Node: Conv2D_7 = Conv2D[T=DT_FLOAT, data_format="NHWC", padding="SAME", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/gpu:0"](DepthToSpace_4, w23/read)]]
+	 [[Node: gradients/Mean_grad/range_1/_15 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/gpu:0", send_device_incarnation=1, tensor_name="edge_915_gradients/Mean_grad/range_1", tensor_type=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'Conv2D_7', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/traitlets/config/application.py", line 589, in launch_instance
+    app.start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelapp.py", line 405, in start
+    ioloop.IOLoop.instance().start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/ioloop.py", line 162, in start
+    super(ZMQIOLoop, self).start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/ioloop.py", line 883, in start
+    handler_func(fd_obj, events)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 440, in _handle_events
+    self._handle_recv()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 472, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 260, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 212, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 370, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/ipkernel.py", line 175, in do_execute
+    shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 2902, in run_cell
+    interactivity=interactivity, compiler=compiler, result=result)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3006, in run_ast_nodes
+    if self.run_code(code, result):
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3066, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-34-daea9f2a273c>", line 30, in <module>
+    results = charles.evaluate(eval_entropy)
+  File "darwin.py", line 51, in evaluate
+    score = self.evaluator(member, entropy)
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 18, in setup_graph
+    results = convnet.connect_model(train, layers, True)[-1]
+  File "convnet.py", line 366, in connect_model
+    nodes.append(layer.connect(nodes[-1], training))
+  File "convnet.py", line 224, in connect
+    node = self.node_setup(input_node, train, self.parameters, self.options)
+  File "convnet.py", line 133, in apply_conv
+    output = tf.nn.conv2d(input_node, parameters[0], [1, stride[0], stride[1], 1], padding=options["padding"])
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 295, in conv2d
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+
+Saved results: 2016-06-09~09_05_29_527
+Score: -1
+Evaluating 5
+Initialized
+Minibatch loss at step 0 : 98.0857
+Minibatch error: 0.83005
+Validation error: 2.8601021058e+16
+Minibatch loss at step 2000 : 462794.0
+Minibatch error: 489368.0
+Validation error: 30915800.6896
+Minibatch loss at step 4000 : 10405.0
+Minibatch error: 10846.4
+Validation error: 6942.18736589
+Minibatch loss at step 6000 : 3077.35
+Minibatch error: 5417.87
+Validation error: 1494.19139374
+Minibatch loss at step 8000 : 1.4625e+08
+Minibatch error: 1.50427e+08
+Validation error: 60774521.943
+Saved model to temp/pyndent_results/2016-06-09~09_05_40_515.ckpt
+Saved results: 2016-06-09~09_05_40_515
+Score: -0.997069882324
+Evaluating 6
+Initialized
+Minibatch loss at step 0 : 338.229
+Minibatch error: 0.0113165
+Validation error: 0.0147976161347
+Saved model to temp/pyndent_results/2016-06-09~09_28_31_181.ckpt
+ValueError: Input contains NaN, infinity or a value too large for dtype('float32').
+
+Saved results: 2016-06-09~09_28_31_181
+Score: -1
+Evaluating 7
+Initialized
+Saved model to temp/pyndent_results/2016-06-09~09_28_51_153.ckpt
+ResourceExhaustedError: OOM when allocating tensor with shape[1,1,8000,10700]
+	 [[Node: Conv2D_6 = Conv2D[T=DT_FLOAT, data_format="NHWC", padding="SAME", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/gpu:0"](DepthToSpace_3, w19/read)]]
+	 [[Node: gradients/Mean_grad/range_1/_15 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/gpu:0", send_device_incarnation=1, tensor_name="edge_706_gradients/Mean_grad/range_1", tensor_type=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'Conv2D_6', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/traitlets/config/application.py", line 589, in launch_instance
+    app.start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelapp.py", line 405, in start
+    ioloop.IOLoop.instance().start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/ioloop.py", line 162, in start
+    super(ZMQIOLoop, self).start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/ioloop.py", line 883, in start
+    handler_func(fd_obj, events)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 440, in _handle_events
+    self._handle_recv()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 472, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 260, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 212, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 370, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/ipkernel.py", line 175, in do_execute
+    shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 2902, in run_cell
+    interactivity=interactivity, compiler=compiler, result=result)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3006, in run_ast_nodes
+    if self.run_code(code, result):
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3066, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-34-daea9f2a273c>", line 30, in <module>
+    results = charles.evaluate(eval_entropy)
+  File "darwin.py", line 51, in evaluate
+    score = self.evaluator(member, entropy)
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 18, in setup_graph
+    results = convnet.connect_model(train, layers, True)[-1]
+  File "convnet.py", line 366, in connect_model
+    nodes.append(layer.connect(nodes[-1], training))
+  File "convnet.py", line 224, in connect
+    node = self.node_setup(input_node, train, self.parameters, self.options)
+  File "convnet.py", line 133, in apply_conv
+    output = tf.nn.conv2d(input_node, parameters[0], [1, stride[0], stride[1], 1], padding=options["padding"])
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 295, in conv2d
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+
+Saved results: 2016-06-09~09_28_51_153
+Score: -1
+Evaluating 8
+Initialized
+Minibatch loss at step 0 : 28.304
+Minibatch error: 1.0847
+Validation error: 10344717277.0
+Minibatch loss at step 2000 : 7.36547e+08
+Minibatch error: 7.78846e+08
+Validation error: 824485089.169
+Minibatch loss at step 4000 : 1.76429e+08
+Minibatch error: 1.84157e+08
+Validation error: 556375296.291
+Minibatch loss at step 6000 : 2.26706e+08
+Minibatch error: 4.01554e+08
+Validation error: 300411248.953
+Minibatch loss at step 8000 : 5.06664e+07
+Minibatch error: 5.21135e+07
+Validation error: 172223920.841
+Saved model to temp/pyndent_results/2016-06-09~09_29_02_372.ckpt
+Saved results: 2016-06-09~09_29_02_372
+Score: -0.997069882324
+Evaluating 9
+Initialized
+Minibatch loss at step 0 : 0.0116882
+Minibatch error: 0.0112166
+Validation error: 0.0138345955754
+Minibatch loss at step 2000 : 0.0265291
+Minibatch error: 0.00522575
+Validation error: 0.00453307705803
+Minibatch loss at step 4000 : 1.07248
+Minibatch error: 0.0148708
+Validation error: 1704.58174141
+Minibatch loss at step 6000 : 0.0123234
+Minibatch error: 0.00193311
+Validation error: 0.00303642755672
+Minibatch loss at step 8000 : 0.0135788
+Minibatch error: 0.00241387
+Validation error: 0.0041831787996
+Saved model to temp/pyndent_results/2016-06-09~09_41_09_637.ckpt
+Saved results: 2016-06-09~09_41_09_637
+Score: -0.00125306112368
+Evaluating 10
+Initialized
+Minibatch loss at step 0 : 128.717
+Minibatch error: 0.422403
+Validation error: 0.120776685523
+Minibatch loss at step 2000 : 1.15209e+36
+Minibatch error: inf
+Validation error: inf
+Minibatch loss at step 4000 : 1.90155e+37
+Minibatch error: inf
+Validation error: inf
+Minibatch loss at step 6000 : 1.1192e+37
+Minibatch error: inf
+Validation error: inf
+Minibatch loss at step 8000 : 2.20984e+37
+Minibatch error: inf
+Validation error: inf
+Saved model to temp/pyndent_results/2016-06-09~09_56_07_659.ckpt
+Saved results: 2016-06-09~09_56_07_659
+Score: -0.997069882324
+Evaluating 11
+Initialized
+Minibatch loss at step 0 : 513.356
+Minibatch error: 1.28339
+Validation error: 1.1211389228
+Error computing loss: nan
+0
+Saved model to temp/pyndent_results/2016-06-09~10_08_44_776.ckpt
+Saved results: 2016-06-09~10_08_44_776
+Score: 1.1211389228 # Should have been -0.997069882324
+Evaluating 12
+Initialized
+Minibatch loss at step 0 : 641.812
+Minibatch error: 0.429831
+Validation error: 52862.0523765
+Minibatch loss at step 2000 : 0.907238
+Minibatch error: 0.00496835
+Validation error: 0.00664046685219
+Minibatch loss at step 4000 : 1.14166
+Minibatch error: 0.25048
+Validation error: 0.225683221354
+Minibatch loss at step 6000 : 0.914317
+Minibatch error: 0.0135697
+Validation error: 0.0299414254806
+Minibatch loss at step 8000 : 0.907284
+Minibatch error: 0.00151116
+Validation error: 0.00294440544747
+Saved model to temp/pyndent_results/2016-06-09~10_10_11_430.ckpt
+Saved results: 2016-06-09~10_10_11_430
+Score: -1.42877715485e-05
+Evaluating 13
+Initialized
+Minibatch loss at step 0 : 8.01309
+Minibatch error: 0.0112196
+Validation error: 0.0138371333545
+Minibatch loss at step 2000 : 0.0172922
+Minibatch error: 0.00349626
+Validation error: 0.00288111355195
+Minibatch loss at step 4000 : 0.0181334
+Minibatch error: 0.00468549
+Validation error: 0.00293543583335
+Minibatch loss at step 6000 : 0.014917
+Minibatch error: 0.00170251
+Validation error: 0.00285882920953
+Minibatch loss at step 8000 : 0.0156308
+Minibatch error: 0.00164219
+Validation error: 0.00284882382807
+Saved model to temp/pyndent_results/2016-06-09~10_53_05_880.ckpt
+Saved results: 2016-06-09~10_53_05_880
+Score: 8.12938478444e-05
+Evaluating 14
+Initialized
+Minibatch loss at step 0 : 32.427
+Minibatch error: 0.011341
+Validation error: 0.0137707155656
+Minibatch loss at step 2000 : 0.122854
+Minibatch error: 0.00310179
+Validation error: 0.00292649111791
+Minibatch loss at step 4000 : 0.00399721
+Minibatch error: 0.00364132
+Validation error: 0.00295018329566
+Minibatch loss at step 6000 : 0.000925208
+Minibatch error: 0.00163448
+Validation error: 0.00292734729948
+Minibatch loss at step 8000 : 0.00111089
+Minibatch error: 0.00114246
+Validation error: 0.00294503080347
+Saved model to temp/pyndent_results/2016-06-09~11_11_06_437.ckpt
+Saved results: 2016-06-09~11_11_06_437
+Score: -1.49131275554e-05
+Evaluating 15
+Initialized
+Minibatch loss at step 0 : 51574.6
+Minibatch error: 51343.9
+Validation error: 15345.535191
+Minibatch loss at step 2000 : 32.1854
+Minibatch error: 0.00321291
+Validation error: 0.00355858914539
+Minibatch loss at step 4000 : 1.60348
+Minibatch error: 0.00333074
+Validation error: 0.00342391842181
+Minibatch loss at step 6000 : 0.0809167
+Minibatch error: 0.00234318
+Validation error: 0.003696655849
+Minibatch loss at step 8000 : 0.00772989
+Minibatch error: 0.00377681
+Validation error: 0.00291271647228
+Saved model to temp/pyndent_results/2016-06-09~11_22_01_486.ckpt
+Saved results: 2016-06-09~11_22_01_486
+Score: 1.74012036374e-05
+Evaluating 16
+Initialized
+Minibatch loss at step 0 : 0.0111334
+Minibatch error: 0.0112189
+Validation error: 0.0138363594562
+Minibatch loss at step 2000 : 0.0038495
+Minibatch error: 0.00395869
+Validation error: 0.00293387571849
+Minibatch loss at step 4000 : 0.00569555
+Minibatch error: 0.00583458
+Validation error: 0.0030949433278
+Minibatch loss at step 6000 : 0.000955914
+Minibatch error: 0.00150576
+Validation error: 0.00292070857157
+Minibatch loss at step 8000 : 0.0017113
+Minibatch error: 0.00165135
+Validation error: 0.00284909938774
+Saved model to temp/pyndent_results/2016-06-09~11_37_03_215.ckpt
+Saved results: 2016-06-09~11_37_03_215
+Score: 8.10182881807e-05
+Evaluating 17
+Initialized
+Minibatch loss at step 0 : 640.077
+Minibatch error: 0.0214172
+Validation error: 3.91676174503
+Minibatch loss at step 2000 : 143.55
+Minibatch error: 0.00421593
+Validation error: 0.00298217892826
+Minibatch loss at step 4000 : 32.0422
+Minibatch error: 0.00537318
+Validation error: 0.00309605919517
+Minibatch loss at step 6000 : 7.16202
+Minibatch error: 0.00117724
+Validation error: 0.00302068093268
+Minibatch loss at step 8000 : 1.61156
+Minibatch error: 0.00114506
+Validation error: 0.00294319208953
+Saved model to temp/pyndent_results/2016-06-09~12_03_12_268.ckpt
+Saved results: 2016-06-09~12_03_12_268
+Score: -1.30744136111e-05
+Evaluating 18
+Initialized
+Saved model to temp/pyndent_results/2016-06-09~12_14_00_398.ckpt
+ResourceExhaustedError: OOM when allocating tensor with shape[1,549,849,230400]
+	 [[Node: Conv2D_8 = Conv2D[T=DT_FLOAT, data_format="NHWC", padding="VALID", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/gpu:0"](DepthToSpace_3, w24/read)]]
+	 [[Node: RMSProp/update/_28 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/gpu:0", send_device_incarnation=1, tensor_name="edge_1515_RMSProp/update", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'Conv2D_8', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/traitlets/config/application.py", line 589, in launch_instance
+    app.start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelapp.py", line 405, in start
+    ioloop.IOLoop.instance().start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/ioloop.py", line 162, in start
+    super(ZMQIOLoop, self).start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/ioloop.py", line 883, in start
+    handler_func(fd_obj, events)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 440, in _handle_events
+    self._handle_recv()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 472, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 260, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 212, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 370, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/ipkernel.py", line 175, in do_execute
+    shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 2902, in run_cell
+    interactivity=interactivity, compiler=compiler, result=result)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3006, in run_ast_nodes
+    if self.run_code(code, result):
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3066, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-34-daea9f2a273c>", line 30, in <module>
+    results = charles.evaluate(eval_entropy)
+  File "darwin.py", line 51, in evaluate
+    score = self.evaluator(member, entropy)
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 18, in setup_graph
+    results = convnet.connect_model(train, layers, True)[-1]
+  File "convnet.py", line 366, in connect_model
+    nodes.append(layer.connect(nodes[-1], training))
+  File "convnet.py", line 224, in connect
+    node = self.node_setup(input_node, train, self.parameters, self.options)
+  File "convnet.py", line 133, in apply_conv
+    output = tf.nn.conv2d(input_node, parameters[0], [1, stride[0], stride[1], 1], padding=options["padding"])
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 295, in conv2d
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+
+Saved results: 2016-06-09~12_14_00_398
+Score: -1
+Evaluating 19
+Initialized
+Minibatch loss at step 0 : 1.63433
+Minibatch error: 0.0122194
+Validation error: 0.0142380636465
+Minibatch loss at step 2000 : 0.00654883
+Minibatch error: 0.00531707
+Validation error: 0.00463463333969
+Minibatch loss at step 4000 : 0.0152185
+Minibatch error: 0.0142979
+Validation error: 0.00331574987497
+Minibatch loss at step 6000 : 0.00204586
+Minibatch error: 0.000930513
+Validation error: 0.0036715155173
+Minibatch loss at step 8000 : 0.00259729
+Minibatch error: 0.00110753
+Validation error: 0.00292538073898
+Saved model to temp/pyndent_results/2016-06-09~12_14_11_846.ckpt
+Saved results: 2016-06-09~12_14_11_846
+Score: 4.73693693698e-06
+Generation 3
+Evaluating 0
+Initialized
+Saved model to temp/pyndent_results/2016-06-09~12_57_43_989.ckpt
+ResourceExhaustedError: OOM when allocating tensor with shape[1,1,16,112]
+	 [[Node: Conv2D_10 = Conv2D[T=DT_FLOAT, data_format="NHWC", padding="VALID", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/gpu:0"](dropout_6/mul_1, w28/read)]]
+	 [[Node: gradients/Mean_grad/Shape_2/_13 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/gpu:0", send_device_incarnation=1, tensor_name="edge_1156_gradients/Mean_grad/Shape_2", tensor_type=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'Conv2D_10', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/traitlets/config/application.py", line 589, in launch_instance
+    app.start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelapp.py", line 405, in start
+    ioloop.IOLoop.instance().start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/ioloop.py", line 162, in start
+    super(ZMQIOLoop, self).start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/ioloop.py", line 883, in start
+    handler_func(fd_obj, events)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 440, in _handle_events
+    self._handle_recv()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 472, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 260, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 212, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 370, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/ipkernel.py", line 175, in do_execute
+    shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 2902, in run_cell
+    interactivity=interactivity, compiler=compiler, result=result)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3006, in run_ast_nodes
+    if self.run_code(code, result):
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3066, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-34-daea9f2a273c>", line 30, in <module>
+    results = charles.evaluate(eval_entropy)
+  File "darwin.py", line 51, in evaluate
+    score = self.evaluator(member, entropy)
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 18, in setup_graph
+    results = convnet.connect_model(train, layers, True)[-1]
+  File "convnet.py", line 366, in connect_model
+    nodes.append(layer.connect(nodes[-1], training))
+  File "convnet.py", line 224, in connect
+    node = self.node_setup(input_node, train, self.parameters, self.options)
+  File "convnet.py", line 133, in apply_conv
+    output = tf.nn.conv2d(input_node, parameters[0], [1, stride[0], stride[1], 1], padding=options["padding"])
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 295, in conv2d
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+
+Saved results: 2016-06-09~12_57_43_989
+Score: -1
+Evaluating 1
+Initialized
+Minibatch loss at step 0 : 3.97031
+Minibatch error: 0.0110526
+Validation error: 0.0135751772074
+Minibatch loss at step 2000 : 0.0081798
+Minibatch error: 0.00531714
+Validation error: 0.00463460971289
+Minibatch loss at step 4000 : 0.0168493
+Minibatch error: 0.0142979
+Validation error: 0.00331574217467
+Minibatch loss at step 6000 : 0.00367679
+Minibatch error: 0.000930532
+Validation error: 0.00367151020471
+Minibatch loss at step 8000 : 0.00422822
+Minibatch error: 0.00110754
+Validation error: 0.0029253836194
+Saved model to temp/pyndent_results/2016-06-09~12_57_55_236.ckpt
+Saved results: 2016-06-09~12_57_55_236
+Score: 4.73405651341e-06
+Evaluating 2
+TypeError: Expected int32, got 0.01 of type 'float' instead.
+
+Score: -10
+Evaluating 3
+Initialized
+Saved model to temp/pyndent_results/2016-06-09~14_25_50_750.ckpt
+ResourceExhaustedError: OOM when allocating tensor with shape[1,57,57,230400]
+	 [[Node: Conv2D_9 = Conv2D[T=DT_FLOAT, data_format="NHWC", padding="VALID", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/gpu:0"](dropout_7/mul_1, w29/read)]]
+	 [[Node: gradients/Mean_grad/Shape_2/_13 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/gpu:0", send_device_incarnation=1, tensor_name="edge_1054_gradients/Mean_grad/Shape_2", tensor_type=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'Conv2D_9', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/traitlets/config/application.py", line 589, in launch_instance
+    app.start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelapp.py", line 405, in start
+    ioloop.IOLoop.instance().start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/ioloop.py", line 162, in start
+    super(ZMQIOLoop, self).start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/ioloop.py", line 883, in start
+    handler_func(fd_obj, events)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 440, in _handle_events
+    self._handle_recv()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 472, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 260, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 212, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 370, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/ipkernel.py", line 175, in do_execute
+    shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 2902, in run_cell
+    interactivity=interactivity, compiler=compiler, result=result)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3006, in run_ast_nodes
+    if self.run_code(code, result):
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3066, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-34-daea9f2a273c>", line 30, in <module>
+    results = charles.evaluate(eval_entropy)
+  File "darwin.py", line 51, in evaluate
+    score = self.evaluator(member, entropy)
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 18, in setup_graph
+    results = convnet.connect_model(train, layers, True)[-1]
+  File "convnet.py", line 366, in connect_model
+    nodes.append(layer.connect(nodes[-1], training))
+  File "convnet.py", line 224, in connect
+    node = self.node_setup(input_node, train, self.parameters, self.options)
+  File "convnet.py", line 133, in apply_conv
+    output = tf.nn.conv2d(input_node, parameters[0], [1, stride[0], stride[1], 1], padding=options["padding"])
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 295, in conv2d
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+
+Saved results: 2016-06-09~14_25_50_750
+Score: -1
+Evaluating 4
+TypeError: Expected int32, got 0.01 of type 'float' instead.
+
+Score: -10
+Evaluating 5
+Initialized
+Saved model to temp/pyndent_results/2016-06-09~14_26_04_530.ckpt
+ResourceExhaustedError: OOM when allocating tensor with shape[1,323,467,230400]
+	 [[Node: Conv2D_9 = Conv2D[T=DT_FLOAT, data_format="NHWC", padding="VALID", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/gpu:0"](dropout_4/mul_1, w26/read)]]
+	 [[Node: Adadelta/update/_28 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/gpu:0", send_device_incarnation=1, tensor_name="edge_1781_Adadelta/update", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'Conv2D_9', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/traitlets/config/application.py", line 589, in launch_instance
+    app.start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelapp.py", line 405, in start
+    ioloop.IOLoop.instance().start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/ioloop.py", line 162, in start
+    super(ZMQIOLoop, self).start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/ioloop.py", line 883, in start
+    handler_func(fd_obj, events)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 440, in _handle_events
+    self._handle_recv()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 472, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 260, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 212, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 370, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/ipkernel.py", line 175, in do_execute
+    shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 2902, in run_cell
+    interactivity=interactivity, compiler=compiler, result=result)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3006, in run_ast_nodes
+    if self.run_code(code, result):
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3066, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-34-daea9f2a273c>", line 30, in <module>
+    results = charles.evaluate(eval_entropy)
+  File "darwin.py", line 51, in evaluate
+    score = self.evaluator(member, entropy)
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 18, in setup_graph
+    results = convnet.connect_model(train, layers, True)[-1]
+  File "convnet.py", line 366, in connect_model
+    nodes.append(layer.connect(nodes[-1], training))
+  File "convnet.py", line 224, in connect
+    node = self.node_setup(input_node, train, self.parameters, self.options)
+  File "convnet.py", line 133, in apply_conv
+    output = tf.nn.conv2d(input_node, parameters[0], [1, stride[0], stride[1], 1], padding=options["padding"])
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 295, in conv2d
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+
+Saved results: 2016-06-09~14_26_04_530
+Score: -1
+Evaluating 6
+Initialized
+Saved model to temp/pyndent_results/2016-06-09~14_26_15_747.ckpt
+ResourceExhaustedError: OOM when allocating tensor with shape[1,7021,9521,9]
+	 [[Node: Conv2D_6 = Conv2D[T=DT_FLOAT, data_format="NHWC", padding="VALID", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/gpu:0"](Relu_3, w21/read)]]
+	 [[Node: gradients/Mean_grad/Shape_2/_13 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/gpu:0", send_device_incarnation=1, tensor_name="edge_802_gradients/Mean_grad/Shape_2", tensor_type=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'Conv2D_6', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/traitlets/config/application.py", line 589, in launch_instance
+    app.start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelapp.py", line 405, in start
+    ioloop.IOLoop.instance().start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/ioloop.py", line 162, in start
+    super(ZMQIOLoop, self).start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/ioloop.py", line 883, in start
+    handler_func(fd_obj, events)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 440, in _handle_events
+    self._handle_recv()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 472, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 260, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 212, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 370, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/ipkernel.py", line 175, in do_execute
+    shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 2902, in run_cell
+    interactivity=interactivity, compiler=compiler, result=result)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3006, in run_ast_nodes
+    if self.run_code(code, result):
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3066, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-34-daea9f2a273c>", line 30, in <module>
+    results = charles.evaluate(eval_entropy)
+  File "darwin.py", line 51, in evaluate
+    score = self.evaluator(member, entropy)
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 18, in setup_graph
+    results = convnet.connect_model(train, layers, True)[-1]
+  File "convnet.py", line 366, in connect_model
+    nodes.append(layer.connect(nodes[-1], training))
+  File "convnet.py", line 224, in connect
+    node = self.node_setup(input_node, train, self.parameters, self.options)
+  File "convnet.py", line 133, in apply_conv
+    output = tf.nn.conv2d(input_node, parameters[0], [1, stride[0], stride[1], 1], padding=options["padding"])
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 295, in conv2d
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+
+Saved results: 2016-06-09~14_26_15_747
+Score: -1
+Evaluating 7
+Initialized
+Saved model to temp/pyndent_results/2016-06-09~14_26_26_719.ckpt
+ResourceExhaustedError: OOM when allocating tensor with shape[1,4,5680,7600]
+	 [[Node: gradients/Conv2D_6_grad/Conv2DBackpropInput = Conv2DBackpropInput[T=DT_FLOAT, data_format="NHWC", padding="SAME", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/gpu:0"](gradients/Conv2D_6_grad/Shape, w22/read, gradients/add_4_grad/tuple/control_dependency)]]
+	 [[Node: RMSProp/update/_28 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/gpu:0", send_device_incarnation=1, tensor_name="edge_1229_RMSProp/update", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'gradients/Conv2D_6_grad/Conv2DBackpropInput', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/traitlets/config/application.py", line 589, in launch_instance
+    app.start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelapp.py", line 405, in start
+    ioloop.IOLoop.instance().start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/ioloop.py", line 162, in start
+    super(ZMQIOLoop, self).start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/ioloop.py", line 883, in start
+    handler_func(fd_obj, events)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 440, in _handle_events
+    self._handle_recv()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 472, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 260, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 212, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 370, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/ipkernel.py", line 175, in do_execute
+    shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 2902, in run_cell
+    interactivity=interactivity, compiler=compiler, result=result)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3006, in run_ast_nodes
+    if self.run_code(code, result):
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3066, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-34-daea9f2a273c>", line 30, in <module>
+    results = charles.evaluate(eval_entropy)
+  File "darwin.py", line 51, in evaluate
+    score = self.evaluator(member, entropy)
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 32, in setup_graph
+    "optimizer": layer_stack.construct_optimizer(loss),
+  File "convevo.py", line 486, in construct_optimizer
+    return optimizer.minimize(loss, global_step=step)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/training/optimizer.py", line 190, in minimize
+    colocate_gradients_with_ops=colocate_gradients_with_ops)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/training/optimizer.py", line 241, in compute_gradients
+    colocate_gradients_with_ops=colocate_gradients_with_ops)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gradients.py", line 481, in gradients
+    in_grads = _AsList(grad_fn(op, *out_grads))
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/nn_grad.py", line 204, in _Conv2DGrad
+    op.get_attr("data_format")),
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 379, in conv2d_backprop_input
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+...which was originally created as op u'Conv2D_6', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+[elided 20 identical lines from previous traceback]
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 18, in setup_graph
+    results = convnet.connect_model(train, layers, True)[-1]
+  File "convnet.py", line 366, in connect_model
+    nodes.append(layer.connect(nodes[-1], training))
+  File "convnet.py", line 224, in connect
+    node = self.node_setup(input_node, train, self.parameters, self.options)
+  File "convnet.py", line 133, in apply_conv
+    output = tf.nn.conv2d(input_node, parameters[0], [1, stride[0], stride[1], 1], padding=options["padding"])
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 295, in conv2d
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+
+Saved results: 2016-06-09~14_26_26_719
+Score: -1
+Evaluating 8
+Initialized
+Minibatch loss at step 0 : 23.7711
+Minibatch error: 0.010971
+Validation error: 0.0135811883424
+Minibatch loss at step 2000 : 5.33125
+Minibatch error: 0.00354251
+Validation error: 0.00295158260833
+Minibatch loss at step 4000 : 1.19243
+Minibatch error: 0.00415374
+Validation error: 0.00299702614516
+Minibatch loss at step 6000 : 0.265956
+Minibatch error: 0.0015239
+Validation error: 0.00293692347764
+Minibatch loss at step 8000 : 0.0602478
+Minibatch error: 0.00114696
+Validation error: 0.00294787776193
+Saved model to temp/pyndent_results/2016-06-09~14_26_39_976.ckpt
+Saved results: 2016-06-09~14_26_39_976
+Score: -1.77600860172e-05
+Evaluating 9
+Initialized
+Minibatch loss at step 0 : 148.915
+Minibatch error: 0.896773
+Validation error: 2244.42593862
+Saved model to temp/pyndent_results/2016-06-09~16_26_15_454.ckpt
+ValueError: Input contains NaN, infinity or a value too large for dtype('float32').
+
+Saved results: 2016-06-09~16_26_15_454
+Score: -1
+Evaluating 10
+Initialized
+Saved model to temp/pyndent_results/2016-06-09~16_26_34_581.ckpt
+ResourceExhaustedError: OOM when allocating tensor with shape[1,85,117,409600]
+	 [[Node: Conv2D_8 = Conv2D[T=DT_FLOAT, data_format="NHWC", padding="VALID", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/gpu:0"](dropout_3/mul_1, w20/read)]]
+	 [[Node: RMSProp/update/_28 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/gpu:0", send_device_incarnation=1, tensor_name="edge_1720_RMSProp/update", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'Conv2D_8', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/traitlets/config/application.py", line 589, in launch_instance
+    app.start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelapp.py", line 405, in start
+    ioloop.IOLoop.instance().start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/ioloop.py", line 162, in start
+    super(ZMQIOLoop, self).start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/ioloop.py", line 883, in start
+    handler_func(fd_obj, events)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 440, in _handle_events
+    self._handle_recv()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 472, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 260, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 212, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 370, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/ipkernel.py", line 175, in do_execute
+    shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 2902, in run_cell
+    interactivity=interactivity, compiler=compiler, result=result)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3006, in run_ast_nodes
+    if self.run_code(code, result):
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3066, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-34-daea9f2a273c>", line 30, in <module>
+    results = charles.evaluate(eval_entropy)
+  File "darwin.py", line 51, in evaluate
+    score = self.evaluator(member, entropy)
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 18, in setup_graph
+    results = convnet.connect_model(train, layers, True)[-1]
+  File "convnet.py", line 366, in connect_model
+    nodes.append(layer.connect(nodes[-1], training))
+  File "convnet.py", line 224, in connect
+    node = self.node_setup(input_node, train, self.parameters, self.options)
+  File "convnet.py", line 133, in apply_conv
+    output = tf.nn.conv2d(input_node, parameters[0], [1, stride[0], stride[1], 1], padding=options["padding"])
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 295, in conv2d
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+
+Saved results: 2016-06-09~16_26_34_581
+Score: -1
+Evaluating 11
+Initialized
+Saved model to temp/pyndent_results/2016-06-09~16_26_46_210.ckpt
+ResourceExhaustedError: OOM when allocating tensor with shape[1,99,99,230400]
+	 [[Node: Conv2D_9 = Conv2D[T=DT_FLOAT, data_format="NHWC", padding="VALID", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/gpu:0"](dropout_5/mul_1, w30/read)]]
+	 [[Node: gradients/Mean_grad/range_1/_15 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/gpu:0", send_device_incarnation=1, tensor_name="edge_1130_gradients/Mean_grad/range_1", tensor_type=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'Conv2D_9', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/traitlets/config/application.py", line 589, in launch_instance
+    app.start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelapp.py", line 405, in start
+    ioloop.IOLoop.instance().start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/ioloop.py", line 162, in start
+    super(ZMQIOLoop, self).start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/ioloop.py", line 883, in start
+    handler_func(fd_obj, events)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 440, in _handle_events
+    self._handle_recv()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 472, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 260, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 212, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 370, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/ipkernel.py", line 175, in do_execute
+    shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 2902, in run_cell
+    interactivity=interactivity, compiler=compiler, result=result)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3006, in run_ast_nodes
+    if self.run_code(code, result):
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3066, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-34-daea9f2a273c>", line 30, in <module>
+    results = charles.evaluate(eval_entropy)
+  File "darwin.py", line 51, in evaluate
+    score = self.evaluator(member, entropy)
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 18, in setup_graph
+    results = convnet.connect_model(train, layers, True)[-1]
+  File "convnet.py", line 366, in connect_model
+    nodes.append(layer.connect(nodes[-1], training))
+  File "convnet.py", line 224, in connect
+    node = self.node_setup(input_node, train, self.parameters, self.options)
+  File "convnet.py", line 133, in apply_conv
+    output = tf.nn.conv2d(input_node, parameters[0], [1, stride[0], stride[1], 1], padding=options["padding"])
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 295, in conv2d
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+
+Saved results: 2016-06-09~16_26_46_210
+Score: -1
+Evaluating 12
+Initialized
+Saved model to temp/pyndent_results/2016-06-09~16_26_57_929.ckpt
+ResourceExhaustedError: OOM when allocating tensor with shape[1,1,7068,9588]
+	 [[Node: Conv2D_7 = Conv2D[T=DT_FLOAT, data_format="NHWC", padding="VALID", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/gpu:0"](Relu_3, w22/read)]]
+	 [[Node: gradients/Mean_grad/Shape_2/_13 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/gpu:0", send_device_incarnation=1, tensor_name="edge_779_gradients/Mean_grad/Shape_2", tensor_type=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'Conv2D_7', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/traitlets/config/application.py", line 589, in launch_instance
+    app.start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelapp.py", line 405, in start
+    ioloop.IOLoop.instance().start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/ioloop.py", line 162, in start
+    super(ZMQIOLoop, self).start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/ioloop.py", line 883, in start
+    handler_func(fd_obj, events)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 440, in _handle_events
+    self._handle_recv()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 472, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 260, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 212, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 370, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/ipkernel.py", line 175, in do_execute
+    shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 2902, in run_cell
+    interactivity=interactivity, compiler=compiler, result=result)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3006, in run_ast_nodes
+    if self.run_code(code, result):
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3066, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-34-daea9f2a273c>", line 30, in <module>
+    results = charles.evaluate(eval_entropy)
+  File "darwin.py", line 51, in evaluate
+    score = self.evaluator(member, entropy)
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 18, in setup_graph
+    results = convnet.connect_model(train, layers, True)[-1]
+  File "convnet.py", line 366, in connect_model
+    nodes.append(layer.connect(nodes[-1], training))
+  File "convnet.py", line 224, in connect
+    node = self.node_setup(input_node, train, self.parameters, self.options)
+  File "convnet.py", line 133, in apply_conv
+    output = tf.nn.conv2d(input_node, parameters[0], [1, stride[0], stride[1], 1], padding=options["padding"])
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 295, in conv2d
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+
+Saved results: 2016-06-09~16_26_57_929
+Score: -1
+Evaluating 13
+Initialized
+Minibatch loss at step 0 : 40.0049
+Minibatch error: 0.0111998
+Validation error: 0.0138158013742
+Minibatch loss at step 2000 : 0.0192297
+Minibatch error: 0.00431529
+Validation error: 0.0034532537273
+Minibatch loss at step 4000 : 0.0204449
+Minibatch error: 0.00552801
+Validation error: 0.00321324798854
+Minibatch loss at step 6000 : 0.0161919
+Minibatch error: 0.0018475
+Validation error: 0.00433636499363
+Minibatch loss at step 8000 : 0.0189261
+Minibatch error: 0.00388521
+Validation error: 0.00352905700869
+Saved model to temp/pyndent_results/2016-06-09~16_27_10_067.ckpt
+Saved results: 2016-06-09~16_27_10_067
+Score: -0.000598939332777
+Evaluating 14
+Initialized
+Minibatch loss at step 0 : 3.6101
+Minibatch error: 0.0113998
+Validation error: 0.013174849325
+Minibatch loss at step 2000 : 0.00993581
+Minibatch error: 0.00433142
+Validation error: 0.00657254597771
+Minibatch loss at step 4000 : 0.0240174
+Minibatch error: 0.018974
+Validation error: 0.00474118439988
+Minibatch loss at step 6000 : 0.00670103
+Minibatch error: 0.00152575
+Validation error: 0.00377908742894
+Minibatch loss at step 8000 : 0.00696379
+Minibatch error: 0.00115626
+Validation error: 0.00292628609073
+Saved model to temp/pyndent_results/2016-06-09~16_39_07_928.ckpt
+Saved results: 2016-06-09~16_39_07_928
+Score: 3.83158518639e-06
+Evaluating 15
+Initialized
+Minibatch loss at step 0 : 40.015
+Minibatch error: 0.0114625
+Validation error: 0.0136079929743
+Minibatch loss at step 2000 : 0.0221841
+Minibatch error: 0.00551905
+Validation error: 0.00844660447912
+Minibatch loss at step 4000 : 0.0271142
+Minibatch error: 0.010594
+Validation error: 0.0100299988591
+Minibatch loss at step 6000 : 0.0174701
+Minibatch error: 0.000895051
+Validation error: 0.00353847357055
+Minibatch loss at step 8000 : 0.0180466
+Minibatch error: 0.00111271
+Validation error: 0.00292415677789
+Saved model to temp/pyndent_results/2016-06-09~19_11_08_185.ckpt
+Saved results: 2016-06-09~19_11_08_185
+Score: 5.96089802448e-06
+Evaluating 16
+Initialized
+Minibatch loss at step 0 : 3821.77
+Minibatch error: 19.0219
+Validation error: 1.96843406863
+Minibatch loss at step 2000 : 1.1996e+35
+Minibatch error: inf
+Validation error: inf
+Minibatch loss at step 4000 : 1.73876e+35
+Minibatch error: inf
+Validation error: inf
+Minibatch loss at step 6000 : 1.11564e+35
+Minibatch error: inf
+Validation error: inf
+Minibatch loss at step 8000 : 2.34831e+35
+Minibatch error: inf
+Validation error: inf
+Saved model to temp/pyndent_results/2016-06-09~19_21_14_010.ckpt
+Saved results: 2016-06-09~19_21_14_010
+Score: -0.997069882324
+Evaluating 17
+Initialized
+Minibatch loss at step 0 : 0.220843
+Minibatch error: 0.0112731
+Validation error: 0.0137294038729
+Minibatch loss at step 2000 : 0.649771
+Minibatch error: 0.00524908
+Validation error: 0.00503539715739
+Minibatch loss at step 4000 : 0.663806
+Minibatch error: 0.0198317
+Validation error: 0.00611498203661
+Minibatch loss at step 6000 : 0.656998
+Minibatch error: 0.0215926
+Validation error: 0.00713090339299
+Minibatch loss at step 8000 : 0.645885
+Minibatch error: 0.00110865
+Validation error: 0.00292491898334
+Saved model to temp/pyndent_results/2016-06-09~19_37_40_387.ckpt
+Saved results: 2016-06-09~19_37_40_387
+Score: 5.19869257687e-06
+Evaluating 18
+Initialized
+Minibatch loss at step 0 : 128.023
+Minibatch error: 0.011219
+Validation error: 0.0138365557732
+Minibatch loss at step 2000 : 6.38882
+Minibatch error: 0.00370018
+Validation error: 0.0138080158905
+Minibatch loss at step 4000 : 0.322783
+Minibatch error: 0.00246188
+Validation error: 0.0137792464288
+Minibatch loss at step 6000 : 0.0187347
+Minibatch error: 0.00452547
+Validation error: 0.0137505692084
+Minibatch loss at step 8000 : 0.0121501
+Minibatch error: 0.0116488
+Validation error: 0.0137217679832
+Saved model to temp/pyndent_results/2016-06-09~19_48_12_353.ckpt
+Saved results: 2016-06-09~19_48_12_353
+Score: -0.0107916503073
+Evaluating 19
+Initialized
+Minibatch loss at step 0 : 18372.7
+Minibatch error: 15249.6
+Validation error: 159.509377213
+Minibatch loss at step 2000 : 165.902
+Minibatch error: 0.00321883
+Validation error: 0.00355839585677
+Minibatch loss at step 4000 : 10.3481
+Minibatch error: 0.0033284
+Validation error: 0.00342423102559
+Minibatch loss at step 6000 : 2.0681
+Minibatch error: 0.0023513
+Validation error: 0.00369507100966
+Minibatch loss at step 8000 : 1.25652
+Minibatch error: 0.00379518
+Validation error: 0.00343740698438
+Saved model to temp/pyndent_results/2016-06-09~20_10_11_220.ckpt
+Saved results: 2016-06-09~20_10_11_220
+Score: -0.000507289308464
+Generation 4
+Evaluating 0
+Initialized
+Minibatch loss at step 0 : 10.84
+Minibatch error: 0.010857
+Validation error: 0.013404634474
+Minibatch loss at step 2000 : 0.0318782
+Minibatch error: 0.00368939
+Validation error: 0.0138085612933
+Minibatch loss at step 4000 : 0.0307488
+Minibatch error: 0.00246296
+Validation error: 0.0138085612933
+Minibatch loss at step 6000 : 0.0309587
+Minibatch error: 0.00455128
+Validation error: 0.0138085612933
+Minibatch loss at step 8000 : 0.0397946
+Minibatch error: 0.0117312
+Validation error: 0.0138085612933
+Saved model to temp/pyndent_results/2016-06-09~20_25_29_543.ckpt
+Saved results: 2016-06-09~20_25_29_543
+Score: -0.0108784436174
+Evaluating 1
+Initialized
+Minibatch loss at step 0 : 0.0285745
+Minibatch error: 0.0112162
+Validation error: 0.00637273824266
+Minibatch loss at step 2000 : 0.00734469
+Minibatch error: 0.00730003
+Validation error: 0.00394480383804
+Minibatch loss at step 4000 : 0.00867291
+Minibatch error: 0.00899393
+Validation error: 0.00445844457465
+Minibatch loss at step 6000 : 0.00201545
+Minibatch error: 0.00330792
+Validation error: 0.00595076110196
+Minibatch loss at step 8000 : 0.00269844
+Minibatch error: 0.00263079
+Validation error: 0.00326557087085
+Saved model to temp/pyndent_results/2016-06-09~20_39_34_004.ckpt
+Saved results: 2016-06-09~20_39_34_004
+Score: -0.000335453194932
+Evaluating 2
+Initialized
+Minibatch loss at step 0 : 213708.0
+Minibatch error: 214910.0
+Validation error: 62384.8135381
+Minibatch loss at step 2000 : 4.18995e+35
+Minibatch error: inf
+Validation error: inf
+Minibatch loss at step 4000 : 1.33725e+36
+Minibatch error: inf
+Validation error: inf
+Minibatch loss at step 6000 : 1.10606e+36
+Minibatch error: inf
+Validation error: inf
+Minibatch loss at step 8000 : 1.94084e+36
+Minibatch error: inf
+Validation error: inf
+Saved model to temp/pyndent_results/2016-06-09~20_58_10_030.ckpt
+Saved results: 2016-06-09~20_58_10_030
+Score: -0.997069882324
+Evaluating 3
+Initialized
+Minibatch loss at step 0 : 1.23618
+Minibatch error: 1.24552
+Validation error: 8724.82428609
+Minibatch loss at step 2000 : 48.2353
+Minibatch error: 0.00287686
+Validation error: 0.00292384101736
+Minibatch loss at step 4000 : 24.4132
+Minibatch error: 0.00394959
+Validation error: 0.00299107800095
+Minibatch loss at step 6000 : 6.19579
+Minibatch error: 0.00152178
+Validation error: 0.00293708808933
+Minibatch loss at step 8000 : 0.480887
+Minibatch error: 0.0011732
+Validation error: 0.00296268387009
+Saved model to temp/pyndent_results/2016-06-09~21_58_33_939.ckpt
+Saved results: 2016-06-09~21_58_33_939
+Score: -3.25661941686e-05
+Evaluating 4
+Initialized
+Saved model to temp/pyndent_results/2016-06-09~22_18_39_208.ckpt
+ResourceExhaustedError: OOM when allocating tensor with shape[1,8381,11501,9]
+	 [[Node: Conv2D_6 = Conv2D[T=DT_FLOAT, data_format="NHWC", padding="VALID", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/gpu:0"](Relu_4, w25/read)]]
+	 [[Node: gradients/Mean_grad/Shape_2/_13 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/gpu:0", send_device_incarnation=1, tensor_name="edge_925_gradients/Mean_grad/Shape_2", tensor_type=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'Conv2D_6', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/traitlets/config/application.py", line 589, in launch_instance
+    app.start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelapp.py", line 405, in start
+    ioloop.IOLoop.instance().start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/ioloop.py", line 162, in start
+    super(ZMQIOLoop, self).start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/ioloop.py", line 883, in start
+    handler_func(fd_obj, events)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 440, in _handle_events
+    self._handle_recv()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 472, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 260, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 212, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 370, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/ipkernel.py", line 175, in do_execute
+    shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 2902, in run_cell
+    interactivity=interactivity, compiler=compiler, result=result)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3006, in run_ast_nodes
+    if self.run_code(code, result):
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3066, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-34-daea9f2a273c>", line 30, in <module>
+    results = charles.evaluate(eval_entropy)
+  File "darwin.py", line 51, in evaluate
+    score = self.evaluator(member, entropy)
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 18, in setup_graph
+    results = convnet.connect_model(train, layers, True)[-1]
+  File "convnet.py", line 366, in connect_model
+    nodes.append(layer.connect(nodes[-1], training))
+  File "convnet.py", line 224, in connect
+    node = self.node_setup(input_node, train, self.parameters, self.options)
+  File "convnet.py", line 133, in apply_conv
+    output = tf.nn.conv2d(input_node, parameters[0], [1, stride[0], stride[1], 1], padding=options["padding"])
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 295, in conv2d
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+
+Saved results: 2016-06-09~22_18_39_208
+Score: -1
+Evaluating 5
+Initialized
+Saved model to temp/pyndent_results/2016-06-09~22_18_50_230.ckpt
+ResourceExhaustedError: OOM when allocating tensor with shape[1,331,511,230400]
+	 [[Node: Conv2D_6 = Conv2D[T=DT_FLOAT, data_format="NHWC", padding="VALID", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/gpu:0"](dropout_4/mul_1, w24/read)]]
+	 [[Node: gradients/Mean_grad/range_2/_19 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/gpu:0", send_device_incarnation=1, tensor_name="edge_717_gradients/Mean_grad/range_2", tensor_type=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'Conv2D_6', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/traitlets/config/application.py", line 589, in launch_instance
+    app.start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelapp.py", line 405, in start
+    ioloop.IOLoop.instance().start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/ioloop.py", line 162, in start
+    super(ZMQIOLoop, self).start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/ioloop.py", line 883, in start
+    handler_func(fd_obj, events)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 440, in _handle_events
+    self._handle_recv()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 472, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 260, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 212, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 370, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/ipkernel.py", line 175, in do_execute
+    shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 2902, in run_cell
+    interactivity=interactivity, compiler=compiler, result=result)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3006, in run_ast_nodes
+    if self.run_code(code, result):
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3066, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-34-daea9f2a273c>", line 30, in <module>
+    results = charles.evaluate(eval_entropy)
+  File "darwin.py", line 51, in evaluate
+    score = self.evaluator(member, entropy)
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 18, in setup_graph
+    results = convnet.connect_model(train, layers, True)[-1]
+  File "convnet.py", line 366, in connect_model
+    nodes.append(layer.connect(nodes[-1], training))
+  File "convnet.py", line 224, in connect
+    node = self.node_setup(input_node, train, self.parameters, self.options)
+  File "convnet.py", line 133, in apply_conv
+    output = tf.nn.conv2d(input_node, parameters[0], [1, stride[0], stride[1], 1], padding=options["padding"])
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 295, in conv2d
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+
+Saved results: 2016-06-09~22_18_50_230
+Score: -1
+Evaluating 6
+Initialized
+Minibatch loss at step 0 : 43.2172
+Minibatch error: 0.011094
+Validation error: 0.0952112027451
+Minibatch loss at step 2000 : 4.49374
+Minibatch error: 0.00556008
+Validation error: 0.00304531769469
+Minibatch loss at step 4000 : 4.48918
+Minibatch error: 0.00530666
+Validation error: 0.00292522679278
+Minibatch loss at step 6000 : 4.47636
+Minibatch error: 0.00766804
+Validation error: 0.026518878873
+Minibatch loss at step 8000 : 4.44811
+Minibatch error: 0.00908849
+Validation error: 0.00353240600399
+Saved model to temp/pyndent_results/2016-06-09~22_19_01_831.ckpt
+Saved results: 2016-06-09~22_19_01_831
+Score: -0.000602288328068
+Evaluating 7
+Initialized
+Minibatch loss at step 0 : 811.159
+Minibatch error: 11.17
+Validation error: 1.55792037921
+Error computing loss: nan
+0
+Saved model to temp/pyndent_results/2016-06-09~22_38_26_692.ckpt
+Saved results: 2016-06-09~22_38_26_692
+Score: 1.55792037921 # Should have been -0.997069882324
+Evaluating 8
+TypeError: Input 'filter' of 'Conv2D' Op has type int32 that does not match type float32 of argument 'input'.
+
+Score: -10
+Evaluating 9
+Initialized
+Saved model to temp/pyndent_results/2016-06-09~22_39_12_321.ckpt
+ResourceExhaustedError: OOM when allocating tensor with shape[1,917,1253,230400]
+	 [[Node: Conv2D_7 = Conv2D[T=DT_FLOAT, data_format="NHWC", padding="VALID", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/gpu:0"](dropout_5/mul_1, w25/read)]]
+	 [[Node: gradients/Mean_grad/range_2/_19 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/gpu:0", send_device_incarnation=1, tensor_name="edge_927_gradients/Mean_grad/range_2", tensor_type=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'Conv2D_7', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/traitlets/config/application.py", line 589, in launch_instance
+    app.start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelapp.py", line 405, in start
+    ioloop.IOLoop.instance().start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/ioloop.py", line 162, in start
+    super(ZMQIOLoop, self).start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/ioloop.py", line 883, in start
+    handler_func(fd_obj, events)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 440, in _handle_events
+    self._handle_recv()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 472, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 260, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 212, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 370, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/ipkernel.py", line 175, in do_execute
+    shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 2902, in run_cell
+    interactivity=interactivity, compiler=compiler, result=result)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3006, in run_ast_nodes
+    if self.run_code(code, result):
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3066, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-34-daea9f2a273c>", line 30, in <module>
+    results = charles.evaluate(eval_entropy)
+  File "darwin.py", line 51, in evaluate
+    score = self.evaluator(member, entropy)
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 18, in setup_graph
+    results = convnet.connect_model(train, layers, True)[-1]
+  File "convnet.py", line 366, in connect_model
+    nodes.append(layer.connect(nodes[-1], training))
+  File "convnet.py", line 224, in connect
+    node = self.node_setup(input_node, train, self.parameters, self.options)
+  File "convnet.py", line 133, in apply_conv
+    output = tf.nn.conv2d(input_node, parameters[0], [1, stride[0], stride[1], 1], padding=options["padding"])
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 295, in conv2d
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+
+Saved results: 2016-06-09~22_39_12_321
+Score: -1
+Evaluating 10
+Initialized
+Minibatch loss at step 0 : 42.9833
+Minibatch error: 37.0301
+Validation error: 0.0143305220655
+Minibatch loss at step 2000 : 8.80441
+Minibatch error: 0.00330222
+Validation error: 0.00351518939174
+Minibatch loss at step 4000 : 3.82533
+Minibatch error: 0.00340603
+Validation error: 0.00339985327472
+Minibatch loss at step 6000 : 1.6649
+Minibatch error: 0.00236268
+Validation error: 0.00368569675554
+Minibatch loss at step 8000 : 0.729916
+Minibatch error: 0.0037969
+Validation error: 0.00343389578176
+Saved model to temp/pyndent_results/2016-06-09~22_39_32_406.ckpt
+Saved results: 2016-06-09~22_39_32_406
+Score: -0.000503778105842
+Evaluating 11
+Initialized
+Minibatch loss at step 0 : 128.073
+Minibatch error: 0.0536419
+Validation error: 0.0109972893116
+Saved model to temp/pyndent_results/2016-06-09~22_50_27_706.ckpt
+ValueError: Input contains NaN, infinity or a value too large for dtype('float32').
+
+Saved results: 2016-06-09~22_50_27_706
+Score: -1
+Evaluating 12
+Initialized
+Saved model to temp/pyndent_results/2016-06-09~22_51_45_925.ckpt
+ResourceExhaustedError: OOM when allocating tensor with shape[1,1,3258,4938]
+	 [[Node: Conv2D_7 = Conv2D[T=DT_FLOAT, data_format="NHWC", padding="VALID", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/gpu:0"](dropout_3/mul_1, w25/read)]]
+	 [[Node: RMSProp/update/_28 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/gpu:0", send_device_incarnation=1, tensor_name="edge_1542_RMSProp/update", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'Conv2D_7', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/traitlets/config/application.py", line 589, in launch_instance
+    app.start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelapp.py", line 405, in start
+    ioloop.IOLoop.instance().start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/ioloop.py", line 162, in start
+    super(ZMQIOLoop, self).start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/ioloop.py", line 883, in start
+    handler_func(fd_obj, events)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 440, in _handle_events
+    self._handle_recv()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 472, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 260, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 212, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 370, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/ipkernel.py", line 175, in do_execute
+    shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 2902, in run_cell
+    interactivity=interactivity, compiler=compiler, result=result)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3006, in run_ast_nodes
+    if self.run_code(code, result):
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3066, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-34-daea9f2a273c>", line 30, in <module>
+    results = charles.evaluate(eval_entropy)
+  File "darwin.py", line 51, in evaluate
+    score = self.evaluator(member, entropy)
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 18, in setup_graph
+    results = convnet.connect_model(train, layers, True)[-1]
+  File "convnet.py", line 366, in connect_model
+    nodes.append(layer.connect(nodes[-1], training))
+  File "convnet.py", line 224, in connect
+    node = self.node_setup(input_node, train, self.parameters, self.options)
+  File "convnet.py", line 133, in apply_conv
+    output = tf.nn.conv2d(input_node, parameters[0], [1, stride[0], stride[1], 1], padding=options["padding"])
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 295, in conv2d
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+
+Saved results: 2016-06-09~22_51_45_925
+Score: -1
+Evaluating 13
+Initialized
+Minibatch loss at step 0 : 0.494788
+Minibatch error: 0.0114145
+Validation error: 0.0135983756005
+Minibatch loss at step 2000 : 0.0114063
+Minibatch error: 0.00526119
+Validation error: 0.00375828635631
+Minibatch loss at step 4000 : 0.0178538
+Minibatch error: 0.0119232
+Validation error: 0.00300065708143
+Minibatch loss at step 6000 : 0.00685705
+Minibatch error: 0.000754868
+Validation error: 0.00361985027931
+Minibatch loss at step 8000 : 0.00751224
+Minibatch error: 0.00111225
+Validation error: 0.00292459269407
+Saved model to temp/pyndent_results/2016-06-09~22_51_57_178.ckpt
+Saved results: 2016-06-09~22_51_57_178
+Score: 5.5249818451e-06
+Evaluating 14
+Initialized
+Saved model to temp/pyndent_results/2016-06-09~23_06_30_338.ckpt
+ResourceExhaustedError: OOM when allocating tensor with shape[1,30,90,230400]
+	 [[Node: Conv2D_10 = Conv2D[T=DT_FLOAT, data_format="NHWC", padding="VALID", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/gpu:0"](dropout_3/mul_1, w24/read)]]
+	 [[Node: gradients/Mean_grad/Shape_2/_13 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/gpu:0", send_device_incarnation=1, tensor_name="edge_1079_gradients/Mean_grad/Shape_2", tensor_type=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'Conv2D_10', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/traitlets/config/application.py", line 589, in launch_instance
+    app.start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelapp.py", line 405, in start
+    ioloop.IOLoop.instance().start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/ioloop.py", line 162, in start
+    super(ZMQIOLoop, self).start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/ioloop.py", line 883, in start
+    handler_func(fd_obj, events)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 440, in _handle_events
+    self._handle_recv()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 472, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 260, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 212, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 370, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/ipkernel.py", line 175, in do_execute
+    shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 2902, in run_cell
+    interactivity=interactivity, compiler=compiler, result=result)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3006, in run_ast_nodes
+    if self.run_code(code, result):
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3066, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-34-daea9f2a273c>", line 30, in <module>
+    results = charles.evaluate(eval_entropy)
+  File "darwin.py", line 51, in evaluate
+    score = self.evaluator(member, entropy)
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 18, in setup_graph
+    results = convnet.connect_model(train, layers, True)[-1]
+  File "convnet.py", line 366, in connect_model
+    nodes.append(layer.connect(nodes[-1], training))
+  File "convnet.py", line 224, in connect
+    node = self.node_setup(input_node, train, self.parameters, self.options)
+  File "convnet.py", line 133, in apply_conv
+    output = tf.nn.conv2d(input_node, parameters[0], [1, stride[0], stride[1], 1], padding=options["padding"])
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 295, in conv2d
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+
+Saved results: 2016-06-09~23_06_30_338
+Score: -1
+Evaluating 15
+Initialized
+Minibatch loss at step 0 : 32.8776
+Minibatch error: 0.0113086
+Validation error: 0.0131388266818
+Minibatch loss at step 2000 : 0.0455331
+Minibatch error: 0.0033747
+Validation error: 0.00296788860365
+Minibatch loss at step 4000 : 0.00579463
+Minibatch error: 0.00389356
+Validation error: 0.00296841391619
+Minibatch loss at step 6000 : 0.0013653
+Minibatch error: 0.00159609
+Validation error: 0.00292800429057
+Minibatch loss at step 8000 : 0.00162549
+Minibatch error: 0.00113772
+Validation error: 0.00294058212131
+Saved model to temp/pyndent_results/2016-06-09~23_06_46_645.ckpt
+Saved results: 2016-06-09~23_06_46_645
+Score: -1.04644453923e-05
+Evaluating 16
+Initialized
+Saved model to temp/pyndent_results/2016-06-09~23_29_09_059.ckpt
+ResourceExhaustedError: OOM when allocating tensor with shape[1,4428,6108,25]
+	 [[Node: Conv2D_8 = Conv2D[T=DT_FLOAT, data_format="NHWC", padding="VALID", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/gpu:0"](dropout_4/mul_1, w25/read)]]
+	 [[Node: gradients/Mean_grad/range_1/_15 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/gpu:0", send_device_incarnation=1, tensor_name="edge_962_gradients/Mean_grad/range_1", tensor_type=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'Conv2D_8', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/traitlets/config/application.py", line 589, in launch_instance
+    app.start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelapp.py", line 405, in start
+    ioloop.IOLoop.instance().start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/ioloop.py", line 162, in start
+    super(ZMQIOLoop, self).start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/ioloop.py", line 883, in start
+    handler_func(fd_obj, events)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 440, in _handle_events
+    self._handle_recv()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 472, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 260, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 212, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 370, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/ipkernel.py", line 175, in do_execute
+    shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 2902, in run_cell
+    interactivity=interactivity, compiler=compiler, result=result)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3006, in run_ast_nodes
+    if self.run_code(code, result):
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3066, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-34-daea9f2a273c>", line 30, in <module>
+    results = charles.evaluate(eval_entropy)
+  File "darwin.py", line 51, in evaluate
+    score = self.evaluator(member, entropy)
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 18, in setup_graph
+    results = convnet.connect_model(train, layers, True)[-1]
+  File "convnet.py", line 366, in connect_model
+    nodes.append(layer.connect(nodes[-1], training))
+  File "convnet.py", line 224, in connect
+    node = self.node_setup(input_node, train, self.parameters, self.options)
+  File "convnet.py", line 133, in apply_conv
+    output = tf.nn.conv2d(input_node, parameters[0], [1, stride[0], stride[1], 1], padding=options["padding"])
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 295, in conv2d
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+
+Saved results: 2016-06-09~23_29_09_059
+Score: -1
+Evaluating 17
+Initialized
+Minibatch loss at step 0 : 133.035
+Minibatch error: 101.426
+Validation error: 15.9918218495
+Minibatch loss at step 2000 : 3.44496
+Minibatch error: 0.00380099
+Validation error: 0.00297342497115
+Minibatch loss at step 4000 : 0.366774
+Minibatch error: 0.00449636
+Validation error: 0.00303482867948
+Minibatch loss at step 6000 : 0.0390046
+Minibatch error: 0.00146184
+Validation error: 0.00294570321169
+Minibatch loss at step 8000 : 0.00514138
+Minibatch error: 0.00115014
+Validation error: 0.00294972135562
+Saved model to temp/pyndent_results/2016-06-09~23_29_21_075.ckpt
+Saved results: 2016-06-09~23_29_21_075
+Score: -1.96036797041e-05
+Evaluating 18
+Initialized
+Minibatch loss at step 0 : 26.0707
+Minibatch error: 0.0122281
+Validation error: 0.0148362428451
+Minibatch loss at step 2000 : 8.57521
+Minibatch error: 0.00335317
+Validation error: 0.00293783093941
+Minibatch loss at step 4000 : 2.85799
+Minibatch error: 0.00394465
+Validation error: 0.00297588066362
+Minibatch loss at step 6000 : 0.991473
+Minibatch error: 0.00155614
+Validation error: 0.00293329952354
+Minibatch loss at step 8000 : 0.379962
+Minibatch error: 0.00114527
+Validation error: 0.00294685285159
+Saved model to temp/pyndent_results/2016-06-10~00_06_44_795.ckpt
+Saved results: 2016-06-10~00_06_44_795
+Score: -1.67351756716e-05
+Evaluating 19
+Initialized
+Saved model to temp/pyndent_results/2016-06-10~00_16_32_304.ckpt
+ResourceExhaustedError: OOM when allocating tensor with shape[1,92,192,230400]
+	 [[Node: Conv2D_8 = Conv2D[T=DT_FLOAT, data_format="NHWC", padding="SAME", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/gpu:0"](dropout_4/mul_1, w26/read)]]
+	 [[Node: gradients/Mean_grad/Shape_2/_13 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/gpu:0", send_device_incarnation=1, tensor_name="edge_847_gradients/Mean_grad/Shape_2", tensor_type=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'Conv2D_8', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/traitlets/config/application.py", line 589, in launch_instance
+    app.start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelapp.py", line 405, in start
+    ioloop.IOLoop.instance().start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/ioloop.py", line 162, in start
+    super(ZMQIOLoop, self).start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/ioloop.py", line 883, in start
+    handler_func(fd_obj, events)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 440, in _handle_events
+    self._handle_recv()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 472, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 260, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 212, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 370, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/ipkernel.py", line 175, in do_execute
+    shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 2902, in run_cell
+    interactivity=interactivity, compiler=compiler, result=result)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3006, in run_ast_nodes
+    if self.run_code(code, result):
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3066, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-34-daea9f2a273c>", line 30, in <module>
+    results = charles.evaluate(eval_entropy)
+  File "darwin.py", line 51, in evaluate
+    score = self.evaluator(member, entropy)
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 18, in setup_graph
+    results = convnet.connect_model(train, layers, True)[-1]
+  File "convnet.py", line 366, in connect_model
+    nodes.append(layer.connect(nodes[-1], training))
+  File "convnet.py", line 224, in connect
+    node = self.node_setup(input_node, train, self.parameters, self.options)
+  File "convnet.py", line 133, in apply_conv
+    output = tf.nn.conv2d(input_node, parameters[0], [1, stride[0], stride[1], 1], padding=options["padding"])
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 295, in conv2d
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+
+Saved results: 2016-06-10~00_16_32_304
+Score: -1
+Generation 5
+Evaluating 0
+Initialized
+Minibatch loss at step 0 : 0.0116931
+Minibatch error: 0.0111906
+Validation error: 0.0138085612933
+Minibatch loss at step 2000 : 0.0034891
+Minibatch error: 0.00368939
+Validation error: 0.0138085612933
+Minibatch loss at step 4000 : 0.00235962
+Minibatch error: 0.00246296
+Validation error: 0.0138085612933
+Minibatch loss at step 6000 : 0.00256952
+Minibatch error: 0.00455128
+Validation error: 0.0138085612933
+Minibatch loss at step 8000 : 0.0114054
+Minibatch error: 0.0117312
+Validation error: 0.0138085612933
+Saved model to temp/pyndent_results/2016-06-10~00_16_43_827.ckpt
+Saved results: 2016-06-10~00_16_43_827
+Score: -0.0108784436174
+Evaluating 1
+Initialized
+Minibatch loss at step 0 : 2.03218
+Minibatch error: 1.72783
+Validation error: 2431772.98042
+Minibatch loss at step 2000 : 11.4528
+Minibatch error: 8.67813
+Validation error: 8.93248026958
+Minibatch loss at step 4000 : 4.66279
+Minibatch error: 1.47934
+Validation error: 1.79035483003
+Minibatch loss at step 6000 : 3.32192
+Minibatch error: 0.0593289
+Validation error: 0.0462247317389
+Minibatch loss at step 8000 : 3.27883
+Minibatch error: 0.00326546
+Validation error: 0.00496088830305
+Saved model to temp/pyndent_results/2016-06-10~02_32_55_834.ckpt
+Saved results: 2016-06-10~02_32_55_834
+Score: -0.00203077062713
+Evaluating 2
+Initialized
+Minibatch loss at step 0 : 1625.57
+Minibatch error: 1638.43
+Validation error: 1.18061716748
+Minibatch loss at step 2000 : 6.79336
+Minibatch error: 0.00379138
+Validation error: 0.00863908390021
+Minibatch loss at step 4000 : 5.52671
+Minibatch error: 0.00280724
+Validation error: 0.00874972484474
+Minibatch loss at step 6000 : 3.19286
+Minibatch error: 0.00399171
+Validation error: 0.00921863988143
+Minibatch loss at step 8000 : 0.833917
+Minibatch error: 0.00910041
+Validation error: 0.00880986835258
+Saved model to temp/pyndent_results/2016-06-10~04_43_00_796.ckpt
+Saved results: 2016-06-10~04_43_00_796
+Score: -0.00587975067666
+Evaluating 3
+Initialized
+Minibatch loss at step 0 : 1.10567
+Minibatch error: 1.11382
+Validation error: 0.147472304484
+Minibatch loss at step 2000 : 0.00392363
+Minibatch error: 0.00404673
+Validation error: 0.00656594159422
+Minibatch loss at step 4000 : 0.0178389
+Minibatch error: 0.0185359
+Validation error: 0.00623545215016
+Minibatch loss at step 6000 : 0.000508715
+Minibatch error: 0.00079289
+Validation error: 0.00364743860818
+Minibatch loss at step 8000 : 0.0011352
+Minibatch error: 0.00111503
+Validation error: 0.0029237049672
+Saved model to temp/pyndent_results/2016-06-10~07_18_26_373.ckpt
+Saved results: 2016-06-10~07_18_26_373
+Score: 6.4127087153e-06
+Evaluating 4
+Initialized
+Minibatch loss at step 0 : 288.039
+Minibatch error: 0.00814922
+Validation error: 0.00296145029469
+Minibatch loss at step 2000 : 0.103371
+Minibatch error: 0.00121042
+Validation error: 0.00408119720328
+Minibatch loss at step 4000 : 0.134894
+Minibatch error: 0.0354183
+Validation error: 0.0130913609592
+Minibatch loss at step 6000 : 0.103677
+Minibatch error: 0.00480852
+Validation error: 0.00318532965379
+Minibatch loss at step 8000 : 0.102318
+Minibatch error: 0.00129927
+Validation error: 0.00297757121269
+Saved model to temp/pyndent_results/2016-06-10~07_47_52_142.ckpt
+Saved results: 2016-06-10~07_47_52_142
+Score: -4.74535367753e-05
+Evaluating 5
+Initialized
+Minibatch loss at step 0 : 37.3186
+Minibatch error: 1.37262
+Validation error: 1.12058455977
+Minibatch loss at step 2000 : 0.00344655
+Minibatch error: 0.00364376
+Validation error: 0.00296058910153
+Minibatch loss at step 4000 : 0.00404273
+Minibatch error: 0.00421964
+Validation error: 0.00300450049738
+Minibatch loss at step 6000 : 0.000883841
+Minibatch error: 0.00156544
+Validation error: 0.00293313113339
+Minibatch loss at step 8000 : 0.00111565
+Minibatch error: 0.00114751
+Validation error: 0.00294831893881
+Saved model to temp/pyndent_results/2016-06-10~07_58_32_320.ckpt
+Saved results: 2016-06-10~07_58_32_320
+Score: -1.82012628928e-05
+Evaluating 6
+Initialized
+Saved model to temp/pyndent_results/2016-06-10~10_34_13_778.ckpt
+ResourceExhaustedError: OOM when allocating tensor with shape[1,16,3772,5116]
+	 [[Node: Conv2D_7 = Conv2D[T=DT_FLOAT, data_format="NHWC", padding="VALID", strides=[1, 1, 1, 1], use_cudnn_on_gpu=true, _device="/job:localhost/replica:0/task:0/gpu:0"](Relu_4, w24/read)]]
+	 [[Node: gradients/Mean_grad/range_1/_19 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/gpu:0", send_device_incarnation=1, tensor_name="edge_612_gradients/Mean_grad/range_1", tensor_type=DT_INT32, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+Caused by op u'Conv2D_7', defined at:
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/home/agnomen/anaconda2/lib/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/traitlets/config/application.py", line 589, in launch_instance
+    app.start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelapp.py", line 405, in start
+    ioloop.IOLoop.instance().start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/ioloop.py", line 162, in start
+    super(ZMQIOLoop, self).start()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/ioloop.py", line 883, in start
+    handler_func(fd_obj, events)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 440, in _handle_events
+    self._handle_recv()
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 472, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 260, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 212, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/kernelbase.py", line 370, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/ipykernel/ipkernel.py", line 175, in do_execute
+    shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 2902, in run_cell
+    interactivity=interactivity, compiler=compiler, result=result)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3006, in run_ast_nodes
+    if self.run_code(code, result):
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/IPython/core/interactiveshell.py", line 3066, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "<ipython-input-34-daea9f2a273c>", line 30, in <module>
+    results = charles.evaluate(eval_entropy)
+  File "darwin.py", line 51, in evaluate
+    score = self.evaluator(member, entropy)
+  File "<ipython-input-30-f24bb436e3e3>", line 34, in evaluate
+    evo_graph = setup_graph(batch_size, data["image_size"], data["depth_size"], stack)
+  File "<ipython-input-8-5790d29e710b>", line 18, in setup_graph
+    results = convnet.connect_model(train, layers, True)[-1]
+  File "convnet.py", line 366, in connect_model
+    nodes.append(layer.connect(nodes[-1], training))
+  File "convnet.py", line 224, in connect
+    node = self.node_setup(input_node, train, self.parameters, self.options)
+  File "convnet.py", line 133, in apply_conv
+    output = tf.nn.conv2d(input_node, parameters[0], [1, stride[0], stride[1], 1], padding=options["padding"])
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/gen_nn_ops.py", line 295, in conv2d
+    data_format=data_format, name=name)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/ops/op_def_library.py", line 655, in apply_op
+    op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 2154, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/agnomen/anaconda2/lib/python2.7/site-packages/tensorflow/python/framework/ops.py", line 1154, in __init__
+    self._traceback = _extract_stack()
+
+
+Saved results: 2016-06-10~10_34_13_778
+Score: -1
+Evaluating 7
+Initialized
+Minibatch loss at step 0 : 2097.64
+Minibatch error: 4.24681
+Saved model to temp/pyndent_results/2016-06-10~10_34_24_673.ckpt
+Saved results: 2016-06-10~10_34_24_673

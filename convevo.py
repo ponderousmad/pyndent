@@ -366,7 +366,7 @@ class LayerStack(object):
             layers.insert(slot, layer)
 
         layer_count = len(layers)
-        if layer_type == "hidden":
+        if layer_type == "hidden" or (layer_type == "expand" and not self.flatten):
             layer_count -= 1
         slot = mutagen.mutate_remove_layer(layer_type, layer_count)
         if slot is not None:
@@ -390,7 +390,7 @@ class LayerStack(object):
             shape = convnet.flatten_output_shape(shape)
 
         return self.mutate_layers("hidden", self.hidden_layers, shape, output_shape, mutagen)
-        
+
     def make_safe(self, input_shape, output_shape):
         shape = input_shape
 
@@ -405,13 +405,15 @@ class LayerStack(object):
             is_output_layer = (layer == self.hidden_layers[-1])
             shape = layer.make_safe(shape, output_shape if is_output_layer else None)
         return shape
-        
+
     def cross(self, other, entropy):
         optimizer = copy.deepcopy(self.optimizer)
         optimizer.cross(other.optimizer, entropy)
         offspring = LayerStack(self.flatten, optimizer)
         image = mutate.cross_lists(self.image_layers, other.image_layers, entropy)
         offspring.image_layers = copy.deepcopy(image)
+        expand = mutate.cross_lists(self.expand_layers, other.expand_layers, entropy)
+        offspring.expand_layers = copy.deepcopy(expand)
         hidden = mutate.cross_lists(self.hidden_layers, other.hidden_layers, entropy)
         offspring.hidden_layers = copy.deepcopy(hidden)
         return offspring
@@ -500,7 +502,7 @@ class LayerStack(object):
             children.set("type", "expand")
             for layer in self.expand_layers:
                 layer.to_xml(children)
-        if self.image_layers:
+        if self.hidden_layers:
             children = et.SubElement(element, "layers")
             children.set("type", "hidden")
             for layer in self.hidden_layers:
@@ -510,20 +512,20 @@ class LayerStack(object):
 def serialize(stack):
     return et.tostring(stack.to_xml(), pretty_print=True)
 
-def create_stack(convolutions, flatten, hidden_sizes, output_size, init_mean, init_scale, l2, optimizer=None):
+def create_stack(convolutions, expands, flatten, hidden_sizes, init_mean, init_scale, l2, optimizer=None):
     stack = LayerStack(flatten=flatten, optimizer=optimizer)
     default_init = lambda: Initializer("normal", mean=init_mean, scale=init_scale)
 
     for operation, patch_size, stride, depth, padding, relu in convolutions:
         layer = ImageLayer(operation, patch_size, stride, depth, padding, default_init(), l2_factor=l2)
         stack.add_layer(layer, relu=relu)
+    for block_size, patch_size, padding, bias, relu in expands:
+        layer = ExpandLayer(block_size, patch_size, padding, bias, default_init(), l2_factor=l2)
+        stack.add_layer(layer, relu=relu)
     for hidden_size in hidden_sizes:
         layer = HiddenLayer(hidden_size, bias=True, initializer=default_init(), l2_factor=l2)
         stack.add_layer(layer, relu=True)
-    if output_size is not None:
-        layer = HiddenLayer(output_size, bias=True, initializer=default_init(), l2_factor=l2)
-        stack.add_layer(layer, relu=False)
-    
+
     return stack
 
 def as_int(text, default=None, base=10):
@@ -576,7 +578,7 @@ def parse_expand(expand_element):
         padding = expand_element.get("padding")
         l2_factor = as_float(expand_element.get("l2_factor"), 0.0)
         initializer = parse_initializer(expand_element)
-        if outputs and initializer:
+        if block_size and patch_size and padding and initializer:
             return ExpandLayer(block_size, patch_size, padding, bias, initializer, l2_factor)
         print("Bad expand layer:", et.tostring(expand_element))
         return None

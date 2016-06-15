@@ -157,7 +157,7 @@ def apply_depth_to_shape(input_node, train, parameters, options):
 
 def can_slice(input_shape, output_shape):
     if len(input_shape) != len(output_shape):
-        print("Incompatible size for slice!")
+        print("Slice dimensions differ:", input_shape, output_shape)
         return False
 
     for in_size, out_size in zip(input_shape, output_shape):
@@ -168,21 +168,24 @@ def can_slice(input_shape, output_shape):
 
 def apply_slice(input_node, train, parameters, options):
     input_shape = input_node.get_shape()
-    size = (int(input_shape[0]),) + options["size"]
+    size = options["size"]
     alignments = options["align"]
 
     dims = len(size)
     if dims != len(input_shape):
-        print("Incompatible size for slice!")
+        raise ValueError("Incompatible size for slice:", input_shape, size)
 
     begin = [0] * dims
     spare = [i - s for i, s in zip(input_shape, size)]
-    
+
+    if len(alignments) != dims:
+        raise ValueError("Incompatible alignments for slice:", input_shape, alignments)
+
     for i, align in enumerate(alignments):
         if align == "center":
-            begin[i+1] = int(spare[i+1] / 2)
+            begin[i] = int(spare[i] / 2)
         elif align == "end":
-            begin[i+1] = int(spare[i+1])
+            begin[i] = int(spare[i])
 
     return tf.slice(input_node, begin=begin, size=size, name="slice")
 
@@ -361,7 +364,7 @@ def connect_model(input_node, layers, training=False):
     nodes = [input_node]
     for layer in layers:
         nodes.append(layer.connect(nodes[-1], training))
-    return nodes, nodes[-1]
+    return nodes
 
 def setup_save_model(graph_info, path):
     """Set up option to tell run_graph to save the graph after training."""
