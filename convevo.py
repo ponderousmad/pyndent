@@ -342,6 +342,7 @@ class LayerStack(object):
         self.image_layers = []
         self.expand_layers = []
         self.hidden_layers = []
+        self.checkpoint_at = None
         if optimizer:
             self.optimizer = optimizer
         else:
@@ -484,6 +485,11 @@ class LayerStack(object):
             options.delta
         )
         return optimizer.minimize(loss, global_step=step)
+
+    def checkpoint_path(self, path=None):
+        if path:
+            self.checkpoint_at = path
+        return self.checkpoint_at
 
     def to_xml(self, parent = None):
         if parent is None:
