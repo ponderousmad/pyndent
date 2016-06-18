@@ -48,6 +48,15 @@ def decode_depth(image):
     depth[np.where(red == 0)] = float('nan')
     return depth, orientation
 
+def encode_normalized_depth(depth):
+    depth_in_mm = int(depth * MAX_DEPTH)
+    red_bits = depth_in_mm / int(CHANNELS_MAX)
+    lower_bits = depth_in_mm % int(CHANNELS_MAX)
+    green_bits = lower_bits / int(CHANNEL_MAX)
+    blue_bits = lower_bits % int(CHANNEL_MAX)
+    red = int(MAX_RED_VALUE) - red_bits
+    return [red, red + green_bits, red + blue_bits, BYTE_MAX]
+
 def load_image(image_path):
     combined_image = ndimage.imread(image_path).astype(np.float32)
     color_image, depth_image = split(combined_image)
