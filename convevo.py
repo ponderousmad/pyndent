@@ -672,6 +672,15 @@ def breed(parents, options, entropy):
     offspring.reseed(entropy)
     return offspring
 
+def rebreed(parents, options, entropy):
+    for i in xrange(entropy.randint(1, 5)):
+        offspring = [
+            breed(parents, options, entropy),
+            breed(parents, options, entropy)
+        ]
+        parents = offspring
+    return offspring[0]
+
 def output_results(results, path, filename, mutate_seed=None, eval_seed=None):
     root = et.Element("population")
     if mutate_seed is not None:
