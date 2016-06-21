@@ -32,7 +32,6 @@ except NameError:
 if setup_flush:
     oldsysstdout = sys.stdout
     sys.stdout = flushfile(oldsysstdout)
-    print("Setup auto-flush and tee")
 
 class TeeOutput():
     def __init__(self, path):
