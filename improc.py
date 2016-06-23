@@ -57,6 +57,21 @@ def encode_normalized_depth(depth):
     red = int(MAX_RED_VALUE) - red_bits
     return [red, red + green_bits, red + blue_bits, BYTE_MAX]
 
+def encode_normalized_depths(depths):
+    channel_max = np.int32(CHANNEL_MAX)
+    channels_max = np.int32(CHANNELS_MAX)
+    int_depths = (depths * MAX_DEPTH).astype(np.int32)
+    red_bits = int_depths / channels_max
+    lower_bits = np.mod(int_depths, channels_max)
+    red = np.uint8(MAX_RED_VALUE) - red_bits.astype(np.uint8)
+    green_bits = (lower_bits / channel_max).astype(np.uint8)
+    blue_bits = np.mod(lower_bits, channel_max).astype(np.uint8)
+    alpha_bits = np.ones_like(red) * np.uint8(BYTE_MAX)
+    return np.concatenate(
+        [red, red + green_bits, red + blue_bits, alpha_bits],
+         axis=len(depths.shape) - 1
+    )
+
 def load_image(image_path):
     combined_image = ndimage.imread(image_path).astype(np.float32)
     color_image, depth_image = split(combined_image)
