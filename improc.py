@@ -176,3 +176,65 @@ def process_cached(cache_directory, image_path):
         except Exception as e:
             print("Error caching image:", image_file, "-", e)
     return lab_image, depth
+
+def lerp(a, b, t):
+    return (1.0 - t) * a + t * b;
+
+class PerlinNoise(object):
+    def __init__(self, height, width, entropy):
+        self.height = height
+        self.width = width
+        self.setup_noise(entropy)
+
+    def setup_noise(self, entropy):
+        """Generate random unit length vectors for each grid point."""
+        self.noise_grid = np.zeros(shape=(self.height, self.width, 2))
+        for y in range(self.height):
+            for x in range(self.width):
+                angle = entropy.random() * 2 * math.pi
+                self.noise_grid[y, x, 0] = math.sin(angle)
+                self.noise_grid[y, x, 1] = math.cos(angle)
+
+    def dot_noise(self, iy, ix, y, x):
+        return (y * self.noise_grid[iy, ix, 0] + x * self.noise_grid[iy, ix, 1] + 1) / 2
+
+    def fade(self, t):
+        return 6 * math.pow(t, 5) - 15 * math.pow(t, 4) + 10 * math.pow(t, 3)
+
+    def at(self, y, x):
+        y = y % self.height
+        x = x % self.width
+
+        iy0 = int(math.floor(y))
+        iy1 = (iy0 + 1) % self.height
+        ix0 = int(math.floor(x))
+        ix1 = (ix0 + 1) % self.width
+
+        dy = y - iy0
+        dx = x - ix0
+
+        sy = self.fade(dy)
+        sx = self.fade(dx)
+
+        # Interpolate between grid point gradients
+        n00 = self.dot_noise(iy0, ix0, dy - 0, dx - 0)
+        n10 = self.dot_noise(iy1, ix0, dy - 1, dx - 0)
+        n01 = self.dot_noise(iy0, ix1, dy - 0, dx - 1)
+        n11 = self.dot_noise(iy1, ix1, dy - 1, dx - 1)
+        value = lerp(lerp(n00, n10, sy), lerp(n01, n11, sy), sx)
+
+        return value
+
+    def fill(self, array, y_min, y_max, x_min, x_max):
+        height = array.shape[0]
+        width = array.shape[1]
+        y_step = (y_max - y_min) / float(height)
+        x_step = (x_max - x_min) / float(width)
+        for i in xrange(height):
+            for j in xrange(width):
+                array[i,j] = self.at(y_min + i * y_step, x_min + j * x_step)
+
+def make_noise(image, y_scale, x_scale, entropy):
+    noise = PerlinNoise(y_scale, x_scale, entropy)
+    noise.fill(image, 0, y_scale, 0, x_scale)
+    return image
