@@ -497,6 +497,8 @@ class LayerStack(object):
         else:
             element = et.SubElement(parent, "evostack")
         element.set("flatten", str(self.flatten))
+        if self.checkpoint_at:
+            element.set("checkpoint", self.checkpoint_at)
         self.optimizer.to_xml(element)
         if self.image_layers:
             children = et.SubElement(element, "layers")
@@ -630,6 +632,9 @@ def parse_optimizer(optimizer_element):
 def parse_stack(stack_element):
     optimizer = parse_optimizer(stack_element.find("optimizer"))
     stack = LayerStack(stack_element.get("flatten") == "True", optimizer)
+    checkpoint_path = stack_element.get("checkpoint")
+    if checkpoint_path:
+        stack.checkpoint_path(checkpoint_path)
     for layers in stack_element.iter("layers"):
         layer_type = layers.get("type")
         for layer in layers.iter("layer"):
