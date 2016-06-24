@@ -305,7 +305,9 @@ def make_options(a, b, g, d, alpha_name, beta_name=None, gamma_name=None, delta_
 
 def make_gradient_descent(step, learning_rate, alpha, beta, gamma, delta):
     if alpha and beta:
-        learning_rate = tf.train.exponential_decay(learning_rate, step, int(beta), alpha)
+        learning_rate = tf.train.exponential_decay(
+            learning_rate, step, int(beta), alpha, staircase=(gamma == 1)
+        )
     return tf.train.GradientDescentOptimizer(learning_rate)
 
 def make_adadelta(step, learning_rate, alpha, beta, gamma, delta):
