@@ -201,7 +201,7 @@ class PerlinNoise(object):
         self.noise_cos = np.cos(self.noise_angles)
 
     def dot_noise(self, iy, ix, y, x):
-        return (y * self.noise_sin[iy, ix] + x * self.noise_cos[iy, ix] + 1) / 2
+        return y * self.noise_sin[iy, ix] + x * self.noise_cos[iy, ix]
 
     def fade(self, t):
         return ((6 * t - 15) * t + 10) * np.power(t, 3)
