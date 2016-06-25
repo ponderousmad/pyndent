@@ -181,60 +181,55 @@ def lerp(a, b, t):
     return (1.0 - t) * a + t * b;
 
 class PerlinNoise(object):
-    def __init__(self, height, width, entropy):
+    def __init__(self, height, width, entropy=np.random):
         self.height = height
         self.width = width
         self.setup_noise(entropy)
 
     def setup_noise(self, entropy):
         """Generate random unit length vectors for each grid point."""
-        self.noise_grid = np.zeros(shape=(self.height, self.width, 2))
-        for y in range(self.height):
-            for x in range(self.width):
-                angle = entropy.random() * 2 * math.pi
-                self.noise_grid[y, x, 0] = math.sin(angle)
-                self.noise_grid[y, x, 1] = math.cos(angle)
+        self.noise_angles = entropy.uniform(0, 2 * math.pi, size=(self.height, self.width))
+        self.noise_sin = np.sin(self.noise_angles)
+        self.noise_cos = np.cos(self.noise_angles)
 
     def dot_noise(self, iy, ix, y, x):
-        return (y * self.noise_grid[iy, ix, 0] + x * self.noise_grid[iy, ix, 1] + 1) / 2
+        return (y * self.noise_sin[iy, ix] + x * self.noise_cos[iy, ix] + 1) / 2
 
     def fade(self, t):
-        return 6 * math.pow(t, 5) - 15 * math.pow(t, 4) + 10 * math.pow(t, 3)
+        return ((6 * t - 15) * t + 10) * np.power(t, 3)
 
-    def at(self, y, x):
-        y = y % self.height
-        x = x % self.width
+    def at(self, ys, xs):
+        ys = np.mod(ys, self.height)
+        xs = np.mod(xs, self.width)
 
-        iy0 = int(math.floor(y))
-        iy1 = (iy0 + 1) % self.height
-        ix0 = int(math.floor(x))
-        ix1 = (ix0 + 1) % self.width
+        iy0 = np.floor(ys).astype(np.int32)
+        ix0 = np.floor(xs).astype(np.int32)
 
-        dy = y - iy0
-        dx = x - ix0
+        dy = ys - iy0
+        dx = xs - ix0
+
+        iy1 = np.mod(iy0 + 1, self.height)
+        ix1 = np.mod(ix0 + 1, self.width)
 
         sy = self.fade(dy)
         sx = self.fade(dx)
 
         # Interpolate between grid point gradients
-        n00 = self.dot_noise(iy0, ix0, dy - 0, dx - 0)
-        n10 = self.dot_noise(iy1, ix0, dy - 1, dx - 0)
-        n01 = self.dot_noise(iy0, ix1, dy - 0, dx - 1)
+        n00 = self.dot_noise(iy0, ix0, dy,     dx)
+        n10 = self.dot_noise(iy1, ix0, dy - 1, dx)
+        n01 = self.dot_noise(iy0, ix1, dy,     dx - 1)
         n11 = self.dot_noise(iy1, ix1, dy - 1, dx - 1)
-        value = lerp(lerp(n00, n10, sy), lerp(n01, n11, sy), sx)
+        values = lerp(lerp(n00, n10, sy), lerp(n01, n11, sy), sx)
 
-        return value
+        return values
 
-    def fill(self, array, y_min, y_max, x_min, x_max):
-        height = array.shape[0]
-        width = array.shape[1]
-        y_step = (y_max - y_min) / float(height)
-        x_step = (x_max - x_min) / float(width)
-        for i in xrange(height):
-            for j in xrange(width):
-                array[i,j] = self.at(y_min + i * y_step, x_min + j * x_step)
+    def fill(self, height, width, y_min, y_max, x_min, x_max):
+        ys = np.empty(shape=(height, width), dtype=np.float32)
+        xs = np.empty_like(ys)
+        ys[:, :] = np.linspace(y_min, y_max, num=height, dtype=np.float32)[:,np.newaxis]
+        xs[:, :] = np.linspace(x_min, x_max, num=width, dtype=np.float32)[np.newaxis,:]
+        return self.at(ys, xs)
 
-def make_noise(image, y_scale, x_scale, entropy):
+def make_noise(height, width, y_scale, x_scale, entropy=np.random):
     noise = PerlinNoise(y_scale, x_scale, entropy)
-    noise.fill(image, 0, y_scale, 0, x_scale)
-    return image
+    return noise.fill(height, width, 0, y_scale, 0, x_scale)
