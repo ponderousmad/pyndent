@@ -93,11 +93,12 @@ def compute_scales(height, width):
     width_scales = reversed(list(ascending_factors(width)))
     return list(zip_longest(height_scales, width_scales, fillvalue=1))
 
-def mipmap_imputer(image, strategy=np.mean, scales=None):
+def mipmap_imputer(image, strategy=np.mean, smooth=False, scales=None):
     """Fill NaNs with localized aggregate values using mipmaps"""
     # Combination of: http://stackoverflow.com/questions/14549696/mipmap-of-image-in-numpy
     # and: http://stackoverflow.com/questions/5480694/numpy-calculate-averages-with-nans-removed
     scales = scales if scales else compute_scales(image.shape[0], image.shape[1])
+
     mipmaps = []
     mipmap = image
     for y, x in scales:
@@ -107,18 +108,25 @@ def mipmap_imputer(image, strategy=np.mean, scales=None):
         masked = np.ma.masked_array(reshaped, np.isnan(reshaped))
         mipmap = strategy(strategy(masked, axis=3), axis=1).filled(np.nan)
         mipmaps.append(mipmap)
-    
-    for index, mipmap in reversed(list(enumerate(mipmaps))):
+
+    for index in reversed(range(len(mipmaps))):
         y, x = scales[index]
-        expanded = mipmap
         if x > 1:
-            expanded = np.repeat(expanded, x, axis=1).reshape(expanded.shape[0], expanded.shape[1] * x)
+            mipmap = np.repeat(mipmap, x, axis=1).reshape(mipmap.shape[0], mipmap.shape[1] * x)
         if y > 1:
-            expanded = np.repeat(expanded, y, axis=0).reshape(expanded.shape[0] * y, expanded.shape[1])
+            mipmap = np.repeat(mipmap, y, axis=0).reshape(mipmap.shape[0] * y, mipmap.shape[1])
         target = mipmaps[index - 1] if index > 0 else image.copy()
 
         nans = np.where(np.isnan(target))
-        target[nans] = expanded[nans]
+        target[nans] = mipmap[nans]
+        if index > 0 and smooth:
+            target = ndimage.filters.gaussian_filter(target, max(y, x))
+        mipmap = target
+
+    if smooth:
+        finites = np.where(np.isfinite(image))
+        target[finites] = image[finites]
+
     return target
 
 def compute_mean_depth(files):
