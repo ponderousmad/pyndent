@@ -380,8 +380,8 @@ class LayerStack(object):
             shape = layer.make_safe(shape, output_shape if is_last else None)
         return shape
 
-    def mutate(self, input_shape, output_shape, entropy):
-        mutagen = mutate.Mutagen(entropy)
+    def mutate(self, input_shape, output_shape, mutate_options, entropy):
+        mutagen = mutate.Mutagen(mutate_options, entropy)
         self.optimizer.mutate(mutagen)
         shape = self.mutate_layers("image", self.image_layers, input_shape, None, mutagen)
         expand_output = None if self.flatten else output_shape
@@ -673,7 +673,7 @@ def breed(parents, options, entropy):
         offspring = copy.deepcopy(parents[0])
     else:
         offspring = parents[0].cross(parents[1], entropy)
-    offspring.mutate(options["input_shape"], options.get("output_shape"), entropy)
+    offspring.mutate(options["input_shape"], options.get("output_shape"), options, entropy)
     offspring.reseed(entropy)
     return offspring
 

@@ -2,7 +2,7 @@ import random
 
 class Mutagen(object):
     """Keep track of probabilities and randomness for mutating conv nets."""
-    def __init__(self, entropy, using_GPU=True):
+    def __init__(self, options, entropy, using_GPU=True):
         self.toggle_relu = 0.1
         self.toggle_bias = 0.05
         self.change_dropout_rate = 0.1
@@ -99,6 +99,12 @@ class Mutagen(object):
             (0.08, 1.5),
             (0.04, 2.0)
         ]
+        if options:
+            if options["fixed_stride"]:
+                self.strides = []
+            if options["fixed_padding"]:
+                self.paddings = []
+
         self.entropy = entropy
 
     def branch(self, bias):
