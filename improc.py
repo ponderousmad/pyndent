@@ -130,14 +130,29 @@ def mipmap_imputer(image, strategy=np.mean, smooth=False, scales=None):
     return target
 
 def compute_mean_depth(files):
-    depth_averages = []
+    depth_sum = 0
+    depth_count = 0
 
-    for path in files:
-        _, depth, _ = improc.load_image(path)
-        depth_averages.append(np.nanmean(depth))
-        if len(depth_averages) % 1000 == 0:
-            print("Image", len(depth_averages))
-    return np.nanmean(depth_averages)
+    for i, path in enumerate(files):
+        _, depth, _ = load_image(path)
+        depth_sum += np.nansum(depth)
+        depth_count += np.sum(np.isfinite(depth))
+        if i % 1000 == 0:
+            print("Image", i)
+    return depth_sum / depth_count
+
+def compute_std_dev(files, mean):
+    variance_sum = 0
+    depth_count = 0
+
+    for i, path in enumerate(files):
+        _, depth, _ = load_image(path)
+        diff = depth - mean
+        variance_sum += np.nansum(diff * diff)
+        depth_count += np.sum(np.isfinite(depth))
+        if i % 1000 == 0:
+            print("Image", i)
+    return math.sqrt(variance_sum / depth_count)
 
 #CIELAB image component scales:
 L_MAX = 100
@@ -241,3 +256,19 @@ class PerlinNoise(object):
 def make_noise(height, width, y_scale, x_scale, entropy=np.random):
     noise = PerlinNoise(y_scale, x_scale, entropy)
     return noise.fill(height, width, 0, y_scale, 0, x_scale)
+
+def enumerate_images(root):
+    training = []
+    test = []
+
+    for root, dirs, files in os.walk(root):
+        for name in files:
+            path = os.path.join(root, name)
+            low_name = name.lower()
+            # Find all the image files, split into test and training.
+            if low_name.endswith(".png"):
+                if low_name.endswith("0.png"):
+                    test.append(path)
+                else:
+                    training.append(path)
+    return training, test
