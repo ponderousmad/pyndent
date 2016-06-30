@@ -108,9 +108,11 @@ class Mutagen(object):
         self.entropy = entropy
 
     def branch(self, bias):
+        """Make a biased coin flip."""
         return self.entropy.random() < bias
 
     def select(self, choices, default=None):
+        """Choose a new value given choices with probabilities, or return the default."""
         value = self.entropy.random()
         threshold = 0
         for entry in choices:
@@ -179,6 +181,7 @@ class Mutagen(object):
         return rate * self.select(self.learning_rate_factors, 1)
 
 def cross_lists(list_a, list_b, entropy):
+    """Combine some of the start of the first list with some of the end of the second."""
     if len(list_a) < 1:
         return list_b
     if len(list_b) < 1:
