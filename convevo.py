@@ -486,9 +486,11 @@ class LayerStack(object):
         )
         return optimizer.minimize(loss, global_step=step)
 
-    def checkpoint_path(self, path=None):
+    def checkpoint_path(self, path=None, graph_info=None):
         if path:
             self.checkpoint_at = path
+            if graph_info:
+                convnet.setup_save_model(graph_info, path)
         return self.checkpoint_at
 
     def to_xml(self, parent = None):
@@ -703,11 +705,3 @@ def output_results(results, path, filename, mutate_seed=None, eval_seed=None):
     with open(os.path.join(path, filename), "w") as text_file:
         text_file.write(et.tostring(root, xml_declaration=True, encoding='UTF-8', pretty_print=True))
 
-def output_error(stack, error_data, path, filename):
-    outputer.setup_directory(path)
-
-    with open(os.path.join(path, filename), "w") as text_file:
-        text_file.write(et.tostring(stack.to_xml(), pretty_print=True))        
-        text_file.write("\n------------------------------------------------------------\n")
-        for line in error_data:
-            text_file.write(line)
