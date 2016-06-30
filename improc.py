@@ -49,6 +49,7 @@ def decode_depth(image):
     return depth, orientation
 
 def encode_normalized_depth(depth):
+    """Given a single normalized depth value, encode it into an RGBA pixel."""
     depth_in_mm = int(depth * MAX_DEPTH)
     red_bits = depth_in_mm / int(CHANNELS_MAX)
     lower_bits = depth_in_mm % int(CHANNELS_MAX)
@@ -58,6 +59,7 @@ def encode_normalized_depth(depth):
     return [red, red + green_bits, red + blue_bits, BYTE_MAX]
 
 def encode_normalized_depths(depths):
+    """Given a normalized depth image, encode it into an RGBA image."""
     channel_max = np.int32(CHANNEL_MAX)
     channels_max = np.int32(CHANNELS_MAX)
     int_depths = (depths * MAX_DEPTH).astype(np.int32)
@@ -73,6 +75,7 @@ def encode_normalized_depths(depths):
     )
 
 def load_image(image_path):
+    """Load, split and decode an image."""
     combined_image = ndimage.imread(image_path).astype(np.float32)
     color_image, depth_image = split(combined_image)
     color_image = color_image[:, :, 0 : COLOR_CHANNELS] / BYTE_MAX # Discard alpha and normalize
@@ -80,6 +83,7 @@ def load_image(image_path):
     return (color_image, depths, attitude)
 
 def ascending_factors(number):
+    """Calculate the prime factors of a number in ascending order."""
     factor = 2
     while number > 1:
         if number % factor == 0:
@@ -89,6 +93,7 @@ def ascending_factors(number):
             factor += 1
 
 def compute_scales(height, width):
+    """Compute the prime factors of a the specified image dimensions, padding with 1 if neccesary."""
     height_scales = reversed(list(ascending_factors(height)))
     width_scales = reversed(list(ascending_factors(width)))
     return list(zip_longest(height_scales, width_scales, fillvalue=1))
@@ -97,8 +102,11 @@ def mipmap_imputer(image, strategy=np.mean, smooth=False, scales=None):
     """Fill NaNs with localized aggregate values using mipmaps"""
     # Combination of: http://stackoverflow.com/questions/14549696/mipmap-of-image-in-numpy
     # and: http://stackoverflow.com/questions/5480694/numpy-calculate-averages-with-nans-removed
+
+    # If we weren't provided with scale values, compute them.
     scales = scales if scales else compute_scales(image.shape[0], image.shape[1])
 
+    # Calculate the mipmaps by averaging around NaNs.
     mipmaps = []
     mipmap = image
     for y, x in scales:
@@ -109,6 +117,7 @@ def mipmap_imputer(image, strategy=np.mean, smooth=False, scales=None):
         mipmap = strategy(strategy(masked, axis=3), axis=1).filled(np.nan)
         mipmaps.append(mipmap)
 
+    # Progresively fill in holes in each mipmap scale from the next smaller one.
     for index in reversed(range(len(mipmaps))):
         y, x = scales[index]
         if x > 1:
@@ -123,13 +132,12 @@ def mipmap_imputer(image, strategy=np.mean, smooth=False, scales=None):
             target = ndimage.filters.gaussian_filter(target, max(y, x))
         mipmap = target
 
-    if smooth:
-        finites = np.where(np.isfinite(image))
-        target[finites] = image[finites]
-
     return target
 
 def compute_mean_depth(files):
+    """Given a set of image files, compute the mean of all the depth values."""
+    # NOTE: The original version of this function computed the mean of the image means.
+    # Since the images have different numbers of missing pixels, this skewed the result slightly.
     depth_sum = 0
     depth_count = 0
 
@@ -142,6 +150,7 @@ def compute_mean_depth(files):
     return depth_sum / depth_count
 
 def compute_std_dev(files, mean):
+    """Given a set of image files and the mean depth, compute the standard deviation."""
     variance_sum = 0
     depth_count = 0
 
@@ -159,6 +168,7 @@ L_MAX = 100
 AB_SCALE_MAX = 127
 
 def rgb2lab_normalized(image):
+    """Convert an RGB image to a CIELAB image and normalize it."""
     lab_image = skimage.color.rgb2lab(image)
     return (lab_image / [L_MAX / 2, AB_SCALE_MAX, AB_SCALE_MAX]) - [1, 0, 0]
 
@@ -201,9 +211,14 @@ def process_cached(cache_directory, image_path):
     return lab_image, depth
 
 def lerp(a, b, t):
+    """Linearly interploate between a and b by t."""
     return (1.0 - t) * a + t * b;
 
+# Based on http://flafla2.github.io/2014/08/09/perlinnoise.html and
+# https://en.wikipedia.org/wiki/Perlin_noise
+
 class PerlinNoise(object):
+    """Compute 2D Perlin noise."""
     def __init__(self, height, width, entropy=np.random):
         self.height = height
         self.width = width
@@ -216,12 +231,15 @@ class PerlinNoise(object):
         self.noise_cos = np.cos(self.noise_angles)
 
     def dot_noise(self, iy, ix, y, x):
+        """Dot product of noise with local vector."""
         return y * self.noise_sin[iy, ix] + x * self.noise_cos[iy, ix]
 
     def fade(self, t):
+        """Non-linear sigmoid like function for easeing noise shape."""
         return ((6 * t - 15) * t + 10) * np.power(t, 3)
 
     def at(self, ys, xs):
+        """Given 'index' arrays, calculate corresponding noise."""
         ys = np.mod(ys, self.height)
         xs = np.mod(xs, self.width)
 
@@ -238,6 +256,8 @@ class PerlinNoise(object):
         sx = self.fade(dx)
 
         # Interpolate between grid point gradients
+        # Fun fact, the pseudocode for this on wikipedia was wrong, (missing "- 1"s)
+        # I tried to fix it, but my change was reverted.
         n00 = self.dot_noise(iy0, ix0, dy,     dx)
         n10 = self.dot_noise(iy1, ix0, dy - 1, dx)
         n01 = self.dot_noise(iy0, ix1, dy,     dx - 1)
@@ -247,6 +267,7 @@ class PerlinNoise(object):
         return values
 
     def fill(self, height, width, y_min, y_max, x_min, x_max):
+        """Construct a noise image for the given size and range."""
         ys = np.empty(shape=(height, width), dtype=np.float32)
         xs = np.empty_like(ys)
         ys[:, :] = np.linspace(y_min, y_max, num=height, dtype=np.float32)[:,np.newaxis]
@@ -254,10 +275,12 @@ class PerlinNoise(object):
         return self.at(ys, xs)
 
 def make_noise(height, width, y_scale, x_scale, entropy=np.random):
+    """Create a noise image for the given size and scale."""
     noise = PerlinNoise(y_scale, x_scale, entropy)
     return noise.fill(height, width, 0, y_scale, 0, x_scale)
 
 def enumerate_images(root):
+    """List all the png files starting from root and split them into test and training sets."""
     training = []
     test = []
 
