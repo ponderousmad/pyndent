@@ -82,12 +82,13 @@ def show_progress(description, steps):
     return progress_bar
 
 class ProgressTracker(object):
-    def __init__(self, titles, steps, output_path, average_window=100):
+    def __init__(self, titles, steps, output_path, serializer, average_window=100):
         self.titles = titles
         self.steps = steps
         self.average_window = average_window
         self.results = []
-        self.output_path = setup_directory(output_path)
+        self.output_path = output_path
+        self.serializer = serializer
 
         self.setup_widgets()
 
@@ -101,8 +102,8 @@ class ProgressTracker(object):
         self.progress_bar = show_progress("Graph Steps:", self.steps)
 
         # Set up to show current training results as well as a running average.
-        self.current_display = [self.setup_label(title) for title in titles]
-        self.average_display = [self.setup_label(" ") for _ in titles]
+        self.current_display = [self.setup_label(title) for title in self.titles]
+        self.average_display = [self.setup_label(" ") for _ in self.titles]
         current_title_html = "<div style=""margin-left:90px"">Current</div>"
         average_title_html = "<div style=""margin-left:90px"">Running Average</div>"
         display(ipywidgets.HBox([
@@ -110,14 +111,14 @@ class ProgressTracker(object):
             ipywidgets.Box([ipywidgets.HTML(average_title_html)] + self.average_display)
         ]))
 
-    def setup_eval(self, stack_data):
+    def setup_eval(self, stack):
         self.timestamp = timestamp()
-        self.stack_data = stack_data
+        self.stack = stack
 
-    def start_eval(self, stack, graph_info):
+    def start_eval(self, graph_info):
+        self.stack.checkpoint_path(os.path.join(self.output_path, self.timestamp + ".ckpt"), graph_info)
         with open(os.path.join(self.output_path, self.timestamp + ".xml"), "w") as text_file:
-            text_file.write(stack_data)
-        stack.checkpoint_path(os.path.join(self.output_path, self.timestamp + ".ckpt"), graph_info)
+            text_file.write(self.serializer(self.stack))
         self.results = []
 
     def record_score(self, score):
@@ -129,8 +130,8 @@ class ProgressTracker(object):
             if value is not None:
                 display.value = value
 
-        resultCount = min(len(results), 100)
-        last_results = zip(*results[-resultCount:])
+        resultCount = min(len(self.results), 100)
+        last_results = zip(*self.results[-resultCount:])
         filtered = [[v for v in x if v is not None] for x in last_results]
         for display, values in zip(self.average_display, filtered):
             count = len(values)
@@ -142,7 +143,7 @@ class ProgressTracker(object):
             text_file.write(",".join(self.titles) + "\n")
             for score in self.results:
                 text_file.write((",".join(str(v) for v in score)) + "\n")
-        print("Saved results:", timestamp)
+        print("Saved results:", self.timestamp)
         self.results = []
 
     def error(self, exc_info):
@@ -152,9 +153,9 @@ class ProgressTracker(object):
 
         error_file = "ERR~" + self.timestamp + ".txt"
         with open(os.path.join(self.output_path, error_file), "w") as text_file:
-            text_file.write(self.stack_data)
+            text_file.write(self.serializer(self.stack))
             text_file.write("\n------------------------------------------------------------\n")
-            for line in error_data:
+            for line in lines:
                 text_file.write(line)
 
     def update_progress(self, value):
