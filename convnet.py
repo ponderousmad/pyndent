@@ -245,7 +245,7 @@ class Operation(object):
         self.parameters = self.parameter_setup(self.options)
     
     def set_l2_factor(self, loss_factor):
-        """Set the L2 factor to use for regularization.""""
+        """Set the L2 factor to use for regularization."""
         self.loss_factor = loss_factor
     
     def update_loss(self, loss):
