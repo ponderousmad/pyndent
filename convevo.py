@@ -266,7 +266,7 @@ class ExpandLayer(object):
         )
         op.set_l2_factor(self.l2_factor)
         yield op
-        yield convnet.create_depth_to_shape(self.block_size)
+        yield convnet.create_depth_to_space(self.block_size)
 
     def make_safe(self, input_shape, output_shape):
         self.patch_size = min(self.patch_size, input_shape[1], input_shape[2])
