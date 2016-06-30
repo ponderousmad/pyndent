@@ -42,14 +42,14 @@ class EvoLayer(object):
         self.relu = mutagen.mutate_relu(self.relu)
         self.dropout_rate = mutagen.mutate_dropout(self.dropout_rate)
 
-    def construct(self, input_shape, layers):
-        for layer in self.primary.construct(input_shape): 
-            layers.append(layer)
-            layer.set_layer_number(len(layers))
+    def construct(self, input_shape, operations):
+        for op in self.primary.construct(input_shape): 
+            operations.append(op)
+            op.set_number(len(operations))
         if self.relu:
-            layers.append(convnet.create_relu_layer())
+            operations.append(convnet.create_relu())
         if self.dropout_rate > 0:
-            layers.append(convnet.create_dropout_layer(self.dropout_rate, self.dropout_seed))
+            operations.append(convnet.create_dropout(self.dropout_rate, self.dropout_seed))
         return self.output_shape(input_shape)
 
     def make_safe(self, input_shape, output_shape):
@@ -122,9 +122,9 @@ class HiddenLayer(object):
         self.initializer.reseed(entropy)
 
     def construct(self, input_shape):
-        layer = convnet.create_matrix_layer(input_shape[1], self.output_size, self.bias, self.initializer.construct())
-        layer.set_l2_factor(self.l2_factor)
-        yield layer
+        op = convnet.create_matrix(input_shape[1], self.output_size, self.bias, self.initializer.construct())
+        op.set_l2_factor(self.l2_factor)
+        yield op
 
     def make_safe(self, input_shape, output_shape):
         if output_shape:
@@ -183,22 +183,22 @@ class ImageLayer(object):
 
     def construct(self, input_shape):
         if self.operation.startswith("conv"):
-            layer = convnet.create_conv_layer(
+            op = convnet.create_conv(
                 (self.patch_size, self.patch_size),
                 (self.stride, self.stride),
                 input_shape[3], self.output_channels,
                 self.operation.endswith("bias"), self.padding,
                 self.initializer.construct()
             )
-            layer.set_l2_factor(self.l2_factor)
+            op.set_l2_factor(self.l2_factor)
         else:
-            layer = convnet.create_pool_layer(
+            op = convnet.create_pool(
                 self.operation,
                 (self.patch_size, self.patch_size),
                 (self.stride, self.stride),
                 self.padding
             )
-        yield layer
+        yield op
 
     def make_safe(self, input_shape, output_shape):
         self.patch_size = min(self.patch_size, input_shape[1], input_shape[2])
@@ -257,16 +257,16 @@ class ExpandLayer(object):
 
     def construct(self, input_shape):
         depth = convnet.depth_to_space_channels(input_shape[-1], self.block_size)
-        layer = convnet.create_conv_layer(
+        op = convnet.create_conv(
             (self.patch_size, self.patch_size),
             (1, 1),
             input_shape[3], depth,
             self.bias, self.padding,
             self.initializer.construct()
         )
-        layer.set_l2_factor(self.l2_factor)
-        yield layer
-        yield convnet.create_depth_to_shape_layer(self.block_size)
+        op.set_l2_factor(self.l2_factor)
+        yield op
+        yield convnet.create_depth_to_shape(self.block_size)
 
     def make_safe(self, input_shape, output_shape):
         self.patch_size = min(self.patch_size, input_shape[1], input_shape[2])
@@ -430,27 +430,27 @@ class LayerStack(object):
             layer.reseed(entropy)
 
     def construct(self, input_shape, output_shape=None):
-        layers = []
+        operations = []
 
         shape = input_shape
         for layer in self.image_layers:
-            shape = layer.construct(shape, layers)
+            shape = layer.construct(shape, operations)
 
         for layer in self.expand_layers:
-            shape = layer.construct(shape, layers)
+            shape = layer.construct(shape, operations)
 
         if self.flatten:
-            layers.append(convnet.create_flatten_layer())
+            operations.append(convnet.create_flatten())
             shape = convnet.flatten_output_shape(shape)
 
         for layer in self.hidden_layers:
-            shape = layer.construct(shape, layers)
+            shape = layer.construct(shape, operations)
 
         if output_shape and shape != output_shape:
             if convnet.can_slice(shape, output_shape):
-                layers.append(convnet.create_slice(output_shape))
+                operations.append(convnet.create_slice(output_shape))
 
-        return layers
+        return operations
 
     def all_layers(self):
         return itertools.chain(self.image_layers, self.expand_layers, self.hidden_layers)

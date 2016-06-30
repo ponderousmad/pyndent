@@ -197,8 +197,8 @@ def shape_test(shape, options, func):
         result = func(input, False, parameters, options)
         return tuple(int(d) for d in result.get_shape())
 
-class Layer(object):
-    """Setup and keep track of graph parameters and nodes for a layer."""
+class Operation(object):
+    """Setup and keep track of graph parameters and nodes for an operation."""
     def __init__(self, options, parameter_setup, node_setup):
         self.options = options
         self.parameter_setup = parameter_setup
@@ -206,7 +206,7 @@ class Layer(object):
         self.parameters = None
         self.loss_factor = 0
         
-    def set_layer_number(self, number):
+    def set_number(self, number):
         self.options["name_postfix"] = str(number)
 
     def setup_parameters(self):
@@ -224,9 +224,9 @@ class Layer(object):
         node = self.node_setup(input_node, train, self.parameters, self.options)
         return node
 
-# Layer setup functions.
+# Operation setup functions.
 
-def create_matrix_layer(inputs, outputs, bias=True, init=setup_initializer(distribution="normal", scale=0.1)):
+def create_matrix(inputs, outputs, bias=True, init=setup_initializer(distribution="normal", scale=0.1)):
     size = (inputs, outputs)
     options = {
         "size": size,
@@ -234,19 +234,19 @@ def create_matrix_layer(inputs, outputs, bias=True, init=setup_initializer(distr
         "init": lambda size: init(size),
         "bias_init": lambda size: init((outputs,))
     }
-    return Layer(options, setup_matrix, apply_matrix)
+    return Operation(options, setup_matrix, apply_matrix)
 
-def create_relu_layer():
-    return Layer({}, no_parameters, apply_relu)
+def create_relu():
+    return Operation({}, no_parameters, apply_relu)
 
-def create_dropout_layer(rate, seed):
+def create_dropout(rate, seed):
     options = {
         "dropout_rate": rate,
         "seed": seed
     }
-    return Layer(options, no_parameters, apply_dropout)
+    return Operation(options, no_parameters, apply_dropout)
 
-def create_conv_layer(patch_size, stride, in_channels, out_channels, bias=True, padding="SAME", init=setup_initializer(distribution="normal", scale=0.1)):
+def create_conv(patch_size, stride, in_channels, out_channels, bias=True, padding="SAME", init=setup_initializer(distribution="normal", scale=0.1)):
     options = {
         "size": patch_size + (in_channels, out_channels),
         "bias": bias,
@@ -255,32 +255,32 @@ def create_conv_layer(patch_size, stride, in_channels, out_channels, bias=True, 
         "stride": stride,
         "padding": padding
     }
-    return Layer(options, setup_matrix, apply_conv)
+    return Operation(options, setup_matrix, apply_conv)
 
-def create_pool_layer(strategy, patch_size, stride, padding="SAME"):
+def create_pool(strategy, patch_size, stride, padding="SAME"):
     options = {
         "pool_type": strategy,
         "size": patch_size,
         "stride": stride,
         "padding": padding
     }
-    return Layer(options, no_parameters, apply_pool)
+    return Operation(options, no_parameters, apply_pool)
 
-def create_flatten_layer():
+def create_flatten():
     options = {}
-    return Layer(options, no_parameters, apply_flatten)
+    return Operation(options, no_parameters, apply_flatten)
 
-def create_unflatten_layer(size):
+def create_unflatten(size):
     options = {
         "size": size
     }
-    return Layer(options, no_parameters, apply_unflatten)
+    return Operation(options, no_parameters, apply_unflatten)
 
-def create_depth_to_shape_layer(block_size):
+def create_depth_to_shape(block_size):
     options = {
         "block_size": block_size
     }
-    return Layer(options, no_parameters, apply_depth_to_shape)
+    return Operation(options, no_parameters, apply_depth_to_shape)
     
 def create_slice(size, alignments = None):
     if not alignments:
@@ -289,7 +289,7 @@ def create_slice(size, alignments = None):
         "size": size,
         "align": alignments
     }
-    return Layer(options, no_parameters, apply_slice)
+    return Operation(options, no_parameters, apply_slice)
 
 def make_options(a, b, g, d, alpha_name, beta_name=None, gamma_name=None, delta_name=None):
     options = {}
@@ -351,21 +351,21 @@ def create_optimizer(name, learning_rate, alpha, beta, gamma, delta):
     }
     return constructors[name](step, learning_rate, alpha, beta, gamma, delta), step
 
-def setup_layers(layers):
-    """Set up layer parameters on default graph"""
+def setup(operations):
+    """Set up parameters on default graph"""
     l2_loss = 0
     
-    for layer in layers:
-        layer.setup_parameters()
-        l2_loss = layer.update_loss(l2_loss)
+    for op in operations:
+        op.setup_parameters()
+        l2_loss = op.update_loss(l2_loss)
         
     return l2_loss
 
-def connect_model(input_node, layers, training=False):
-    """Create graph connections for layers on default graph"""
+def connect_model(input_node, operations, training=False):
+    """Create graph connections for operations on default graph"""
     nodes = [input_node]
-    for layer in layers:
-        nodes.append(layer.connect(nodes[-1], training))
+    for op in operations:
+        nodes.append(op.connect(nodes[-1], training))
     return nodes
 
 def setup_save_model(graph_info, path):

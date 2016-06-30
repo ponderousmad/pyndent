@@ -100,9 +100,9 @@ class Mutagen(object):
             (0.04, 2.0)
         ]
         if options:
-            if options["fixed_stride"]:
+            if options.get("fixed_stride"):
                 self.strides = []
-            if options["fixed_padding"]:
+            if options.get("fixed_padding"):
                 self.paddings = []
 
         self.entropy = entropy
