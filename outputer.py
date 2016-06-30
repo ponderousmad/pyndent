@@ -34,13 +34,16 @@ if setup_flush:
     sys.stdout = flushfile(oldsysstdout)
 
 class TeeOutput():
+    """Wrapper to pipe standard output into a file as well as the console using 'with'."""
     def __init__(self, path):
         self.path = path
+
     def __enter__(self):
         self.fd = open(self.path, "w")
         global tee_file
         tee_file = self.fd
         return self.fd
+
     def __exit__(self, type, value, traceback):
         global tee_file
         tee_file.flush()
@@ -49,6 +52,7 @@ class TeeOutput():
             tee_file = None
 
 def setup_directory(*path_parts):
+    """Create the directory if it doesn't exist yet."""
     path = os.path.join(*path_parts)
     try:
         os.makedirs(path)
@@ -57,6 +61,7 @@ def setup_directory(*path_parts):
     return path
 
 def timestamp(base_name=None, extension=None):
+    """Get a canonical timestamp suitable for file names."""
     name = datetime.datetime.now().strftime("%Y-%m-%d~%H_%M_%S_%f")[0:-3]
     if base_name:
         name = base_name + name
