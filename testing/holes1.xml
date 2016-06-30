@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<evostack flatten="False">
+  <optimizer name="Adadelta" learning_rate="0.075"/>
+  <layers type="image">
+    <layer dropout_rate="0.5" dropout_seed="89571" relu="False">
+      <image operation="conv_bias" patch_size="6" stride="1" padding="SAME" output_channels="36" l2_factor="0.01">
+        <initializer distribution="truncated" mean="0" scale="0.0375" seed="23428"/>
+      </image>
+    </layer>
+    <layer dropout_rate="0.5" dropout_seed="89571" relu="False">
+      <image operation="conv_bias" patch_size="10" stride="1" padding="SAME" output_channels="50" l2_factor="0.01">
+        <initializer distribution="truncated" mean="0" scale="0.0375" seed="23428"/>
+      </image>
+    </layer>
+    <layer dropout_rate="0.5" dropout_seed="89571" relu="False">
+      <image operation="conv_bias" patch_size="6" stride="1" padding="SAME" output_channels="30" l2_factor="0.01">
+        <initializer distribution="truncated" mean="0" scale="0.0375" seed="23428"/>
+      </image>
+    </layer>
+    <layer dropout_rate="0.5" dropout_seed="89571" relu="False">
+      <image operation="conv_bias" patch_size="2" stride="1" padding="SAME" output_channels="1" l2_factor="0.01">
+        <initializer distribution="truncated" mean="0" scale="0.0375" seed="23428"/>
+      </image>
+    </layer>
+  </layers>
+</evostack>
+
