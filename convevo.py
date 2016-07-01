@@ -28,21 +28,26 @@ class EvoLayer(object):
         self.relu = relu
 
     def output_shape(self, input_shape):
+        """Determine the output shape given the input shape."""
         return self.primary.output_shape(input_shape)
 
     def parameter_count(self, input_shape):
+        """Get the number of model parameters in this layer."""
         return self.primary.parameter_count(input_shape)
 
     def reseed(self, entropy):
+        """Generate new random seed values."""
         self.primary.reseed(entropy)
         self.dropout_seed = entropy.randint(1, 100000)
 
     def mutate(self, mutagen, is_last):
+        """Randomly change layer settings."""
         self.primary.mutate(mutagen, is_last)
         self.relu = mutagen.mutate_relu(self.relu)
         self.dropout_rate = mutagen.mutate_dropout(self.dropout_rate)
 
     def construct(self, input_shape, operations):
+        """Add the convnet operations for this layer to the list of operations."""
         for op in self.primary.construct(input_shape): 
             operations.append(op)
             op.set_number(len(operations))
@@ -53,10 +58,12 @@ class EvoLayer(object):
         return self.output_shape(input_shape)
 
     def make_safe(self, input_shape, output_shape):
+        """Adjust layer settings to conform to the input/output shape and internal constraints."""
         self.primary.make_safe(input_shape, output_shape)
         return self.output_shape(input_shape)
 
     def to_xml(self, parent):
+        """Output the details of the layer as children of the parent node."""
         element = et.SubElement(parent, "layer")
         element.set("dropout_rate", fstr(self.dropout_rate))
         if self.dropout_seed:
@@ -73,17 +80,21 @@ class Initializer(object):
         self.seed = seed
 
     def mutate(self, mutagen):
+        """Randomly alter initializer settings"""
         self.distribution = mutagen.mutate_distribution(self.distribution)
         self.mean = mutagen.mutate_initial_mean(self.mean)
         self.scale = mutagen.mutate_initial_scale(self.scale)
 
     def reseed(self, entropy):
+        """Generate new random seed values."""
         self.seed = entropy.randint(1, 100000)
 
     def construct(self):
+        """Set up the convnet data needed to build the TensorFlow initializer."""
         return convnet.setup_initializer(self.mean, self.scale, self.distribution, self.seed)
 
     def to_xml(self, parent):
+        """Output the details of the initializer as children of the parent node."""
         element = et.SubElement(parent, "initializer")
         element.set("distribution", self.distribution)
         element.set("mean", fstr(self.mean))
@@ -100,18 +111,22 @@ class HiddenLayer(object):
         self.initializer = initializer
 
     def layer_type(self):
+        """Get the type of the layer."""
         return "hidden"
 
     def output_shape(self, input_shape):
+        """Determine the output shape given the input shape."""
         return (input_shape[0], self.output_size)
 
     def parameter_count(self, input_shape):
+        """Get the number of model parameters in this layer."""
         count = input_shape[1] * self.output_size
         if self.bias:
             count += self.output_size
         return count
 
     def mutate(self, mutagen, is_last):
+        """Randomly alter layer settings"""
         self.bias = mutagen.mutate_bias(self.bias)
         if not is_last:
             self.output_size = mutagen.mutate_output_size(self.output_size)
@@ -119,18 +134,22 @@ class HiddenLayer(object):
         self.l2_factor = mutagen.mutate_l2_factor(self.l2_factor)
 
     def reseed(self, entropy):
+        """Generate new random seed values."""
         self.initializer.reseed(entropy)
 
     def construct(self, input_shape):
+        """Construct the convnet the operations for this layer."""
         op = convnet.create_matrix(input_shape[1], self.output_size, self.bias, self.initializer.construct())
         op.set_l2_factor(self.l2_factor)
         yield op
 
     def make_safe(self, input_shape, output_shape):
+        """Adjust layer settings to conform to the input/output shape and internal constraints."""
         if output_shape:
             self.output_size = output_shape[-1]
 
     def to_xml(self, parent):
+        """Output the details of the layer as children of the parent node."""
         element = et.SubElement(parent, "hidden")
         element.set("output_size", fstr(self.output_size))
         element.set("bias", str(self.bias))
@@ -138,7 +157,7 @@ class HiddenLayer(object):
         self.initializer.to_xml(element)
 
 class ImageLayer(object):
-    """Image convolution or pooling layer"""
+    """Image convolution or pooling layer."""
     def __init__(self, operation, patch_size, stride, output_channels, padding, initializer, l2_factor=0.0):
         self.operation = operation
         self.patch_size = patch_size
@@ -149,9 +168,11 @@ class ImageLayer(object):
         self.initializer = initializer
 
     def layer_type(self):
+        """Get the type of the layer."""
         return "image"
 
     def output_shape(self, input_shape):
+        """Determine the output shape given the input shape."""
         depth = self.output_channels if self.operation.startswith("conv") else input_shape[3]
         return convnet.image_output_size(
             input_shape,
@@ -161,6 +182,7 @@ class ImageLayer(object):
         )
 
     def parameter_count(self, input_shape):
+        """Get the number of model parameters in this layer."""
         if self.operation.startswith("conv"):
             count = self.patch_size * self.patch_size * input_shape[-1] * self.output_channels
             if self.operation.endswith("bias"):
@@ -170,6 +192,7 @@ class ImageLayer(object):
             return 0
 
     def mutate(self, mutagen, is_last):
+        """Randomly alter layer settings"""
         self.operation = mutagen.mutate_image_operation(self.operation)
         self.patch_size = mutagen.mutate_patch_size(self.patch_size)
         self.stride = mutagen.mutate_stride(self.stride)
@@ -179,9 +202,11 @@ class ImageLayer(object):
         self.l2_factor = mutagen.mutate_l2_factor(self.l2_factor)
 
     def reseed(self, entropy):
+        """Generate new random seed values."""
         self.initializer.reseed(entropy)
 
     def construct(self, input_shape):
+        """Construct the convnet the operations for this layer."""
         if self.operation.startswith("conv"):
             op = convnet.create_conv(
                 (self.patch_size, self.patch_size),
@@ -201,11 +226,13 @@ class ImageLayer(object):
         yield op
 
     def make_safe(self, input_shape, output_shape):
+        """Adjust layer settings to conform to the input/output shape and internal constraints."""
         self.patch_size = min(self.patch_size, input_shape[1], input_shape[2])
         self.stride = min(self.stride, self.patch_size)
         assert(not output_shape), "Image layers cannot adapt to arbitrary sizes."
 
     def to_xml(self, parent):
+        """Output the details of the layer as children of the parent node."""
         element = et.SubElement(parent, "image")
         element.set("operation", self.operation)
         element.set("patch_size", str(self.patch_size))
@@ -226,9 +253,11 @@ class ExpandLayer(object):
         self.initializer = initializer
 
     def layer_type(self):
+        """Get the type of the layer."""
         return "expand"
 
     def output_shape(self, input_shape):
+        """Determine the output shape given the input shape."""
         depth = convnet.depth_to_space_channels(input_shape[-1], self.block_size)
         shape = convnet.image_output_size(
             input_shape,
@@ -238,6 +267,7 @@ class ExpandLayer(object):
         return convnet.depth_to_space_shape(shape, {"block_size":self.block_size})
 
     def parameter_count(self, input_shape):
+        """Get the number of model parameters in this layer."""
         depth = convnet.depth_to_space_channels(input_shape[-1], self.block_size)
         count = self.patch_size * self.patch_size * input_shape[-1] * depth
         if self.bias:
@@ -245,6 +275,7 @@ class ExpandLayer(object):
         return count
 
     def mutate(self, mutagen, is_last):
+        """Randomly alter layer settings"""
         self.block_size = mutagen.mutate_block_size(self.block_size)
         self.patch_size = mutagen.mutate_patch_size(self.patch_size)
         self.padding = mutagen.mutate_padding(self.padding)
@@ -253,9 +284,11 @@ class ExpandLayer(object):
         self.l2_factor = mutagen.mutate_l2_factor(self.l2_factor)
 
     def reseed(self, entropy):
+        """Generate new random seed values."""
         self.initializer.reseed(entropy)
 
     def construct(self, input_shape):
+        """Construct the convnet the operations for this layer."""
         depth = convnet.depth_to_space_channels(input_shape[-1], self.block_size)
         op = convnet.create_conv(
             (self.patch_size, self.patch_size),
@@ -269,6 +302,7 @@ class ExpandLayer(object):
         yield convnet.create_depth_to_space(self.block_size)
 
     def make_safe(self, input_shape, output_shape):
+        """Adjust layer settings to conform to the input/output shape and internal constraints."""
         self.patch_size = min(self.patch_size, input_shape[1], input_shape[2])
         if output_shape:
             while True:
@@ -278,6 +312,7 @@ class ExpandLayer(object):
                 self.block_size += 1
 
     def to_xml(self, parent):
+        """Output the details of the layer as children of the parent node."""
         element = et.SubElement(parent, "expand")
         element.set("block_size", str(self.block_size))
         element.set("patch_size", fstr(self.patch_size))
@@ -297,6 +332,7 @@ class Optimizer(object):
         self.delta = delta
 
     def mutate(self, mutagen):
+        """Randomly alter optimizer settings"""
         new_name = mutagen.mutate_optimizer(self.name)
         if self.name != new_name:
             self.name = new_name
@@ -304,6 +340,7 @@ class Optimizer(object):
         self.learning_rate = mutagen.mutate_learning_rate(self.learning_rate)
 
     def cross(self, other, entropy):
+        """Randomly combine the settings of this optimizer and the other."""
         self.learning_rate = entropy.choice([self.learning_rate, other.learning_rate])
         new_name = entropy.choice([self.name, other.name])
         if self.name != new_name:
@@ -311,6 +348,7 @@ class Optimizer(object):
             self.default_parameters()
         
     def default_parameters(self):
+        """Reset optimizer parameters to default values."""
         self.alpha = None
         self.beta = None
         self.gamma = None
@@ -322,6 +360,7 @@ class Optimizer(object):
             self.alpha = 1.0
 
     def to_xml(self, parent):
+        """Output the details of the optimizer as children of the parent node."""
         element = et.SubElement(parent, "optimizer")
         element.set("name", self.name)
         element.set("learning_rate", fstr(self.learning_rate))
@@ -351,6 +390,7 @@ class LayerStack(object):
             self.optimizer.default_parameters()
 
     def add_layer(self, operation, relu=False, dropout_rate=0.0, dropout_seed=None):
+        """Add a new layer for the given operation."""
         layer = EvoLayer(operation, relu, dropout_rate, dropout_seed)
         if operation.layer_type() == "image":
             self.image_layers.append(layer)
@@ -360,6 +400,7 @@ class LayerStack(object):
             self.hidden_layers.append(layer)
 
     def mutate_layers(self, layer_type, layers, input_shape, output_shape, mutagen):
+        """Randomly alter layer settings, duplicate, remove layers."""
         slot = mutagen.mutate_duplicate_layer(layer_type, len(layers))
         if slot is not None:
             layer = layers[slot]
@@ -381,6 +422,7 @@ class LayerStack(object):
         return shape
 
     def mutate(self, input_shape, output_shape, mutate_options, entropy):
+        """Randomly alter all aspects of the layer stack."""
         mutagen = mutate.Mutagen(mutate_options, entropy)
         self.optimizer.mutate(mutagen)
         shape = self.mutate_layers("image", self.image_layers, input_shape, None, mutagen)
@@ -393,6 +435,7 @@ class LayerStack(object):
         return self.mutate_layers("hidden", self.hidden_layers, shape, output_shape, mutagen)
 
     def make_safe(self, input_shape, output_shape):
+        """Try to fix any layer settings to make compatible with the specified input and output shapes."""
         shape = input_shape
 
         for layer in self.image_layers:
@@ -408,6 +451,7 @@ class LayerStack(object):
         return shape
 
     def cross(self, other, entropy):
+        """Combine aspects of another layer stack into this one."""
         optimizer = copy.deepcopy(self.optimizer)
         optimizer.cross(other.optimizer, entropy)
         offspring = LayerStack(self.flatten, optimizer)
@@ -420,6 +464,7 @@ class LayerStack(object):
         return offspring
 
     def reseed(self, entropy):
+        """Generate new random seed values for all children."""
         for layer in self.image_layers:
             layer.reseed(entropy)
 
@@ -430,6 +475,7 @@ class LayerStack(object):
             layer.reseed(entropy)
 
     def construct(self, input_shape, output_shape=None):
+        """Construct the convnet operations for this stack."""
         operations = []
 
         shape = input_shape
@@ -453,9 +499,11 @@ class LayerStack(object):
         return operations
 
     def all_layers(self):
+        """Gets all the layers."""
         return itertools.chain(self.image_layers, self.expand_layers, self.hidden_layers)
 
     def layer_count(self):
+        """Gets a counts of all the layers."""
         return len(self.all_layers())
 
     def parameter_count(self, input_shape):
@@ -475,6 +523,7 @@ class LayerStack(object):
         return count
 
     def construct_optimizer(self, loss):
+        """Construct the TensorFlow optimizer object."""
         options = self.optimizer;
         optimizer, step = convnet.create_optimizer(
             options.name,
@@ -487,6 +536,7 @@ class LayerStack(object):
         return optimizer.minimize(loss, global_step=step)
 
     def checkpoint_path(self, path=None, graph_info=None):
+        """Get or set the current checkpoint path to save or restore the model."""
         if path:
             self.checkpoint_at = path
             if graph_info:
@@ -494,6 +544,7 @@ class LayerStack(object):
         return self.checkpoint_at
 
     def to_xml(self, parent = None):
+        """Generate xml corresponding to this stack, optionally as a child of parent."""
         if parent is None:
             element = et.Element("evostack")
         else:
@@ -520,9 +571,11 @@ class LayerStack(object):
         return element
 
 def serialize(stack):
+    """Convert the stack to the canonical xml representation."""
     return et.tostring(stack.to_xml(), pretty_print=True)
 
 def create_stack(convolutions, expands, flatten, hidden_sizes, init_mean, init_scale, l2, optimizer=None):
+    """Construct a LayerStack instance given the specified options."""
     stack = LayerStack(flatten=flatten, optimizer=optimizer)
     default_init = lambda: Initializer("normal", mean=init_mean, scale=init_scale)
 
@@ -539,18 +592,21 @@ def create_stack(convolutions, expands, flatten, hidden_sizes, init_mean, init_s
     return stack
 
 def as_int(text, default=None, base=10):
+    """Parse the specified value as an integer."""
     try:
         return int(text, base)
     except (ValueError, TypeError):
         return default
 
 def as_float(text, default=None):
+    """Parse the specified value as a floating point number."""
     try:
         return float(text)
     except (ValueError, TypeError):
         return default
 
 def parse_initializer(operation_element):
+    """Try to parse the element assuming it's an initializer."""
     init_element = operation_element.find("initializer")
     if init_element is not None:
         distribution = init_element.get("distribution")
@@ -558,13 +614,14 @@ def parse_initializer(operation_element):
         scale = as_float(init_element.get("scale"), 1.0)
         seed = as_int(init_element.get("seed"))
         if distribution:
-            return Initializer(distribution, mean, scale, seed)        
+            return Initializer(distribution, mean, scale, seed)
         print("Bad initializer:", et.tostring(init_element))
         return None
     print("Missing initializer element")
     return None
 
 def parse_image(image_element):
+    """Try and parse the element assuming it's an image layer operation."""
     if image_element is not None:
         operation = image_element.get("operation")
         patch_size = as_int(image_element.get("patch_size"))
@@ -581,6 +638,7 @@ def parse_image(image_element):
     return None
 
 def parse_expand(expand_element):
+    """Try and parse the element assuming it's an expand layer operation."""
     if expand_element is not None:
         block_size = as_int(expand_element.get("block_size"))
         bias = expand_element.get("bias") == "True"
@@ -596,6 +654,7 @@ def parse_expand(expand_element):
     return None
 
 def parse_hidden(hidden_element):
+    """Try and parse the element assuming it's a hidden layer operation."""
     if hidden_element is not None:
         outputs = as_int(hidden_element.get("output_size"))
         bias = hidden_element.get("bias") == "True"
@@ -609,6 +668,7 @@ def parse_hidden(hidden_element):
     return None
 
 def parse_operation(layer_element, layer_type):
+    """Try and parse the operation for a layer element given it's type."""
     if layer_type == "image":
         return parse_image(layer_element.find("image"))
     elif layer_type == "expand":
@@ -617,6 +677,7 @@ def parse_operation(layer_element, layer_type):
         return parse_hidden(layer_element.find("hidden"))
         
 def parse_optimizer(optimizer_element):
+    """Try and parse the element assuming it's an optimizer."""
     if optimizer_element is not None:
         name = optimizer_element.get("name")
         learning_rate = as_float(optimizer_element.get("learning_rate"))
@@ -632,6 +693,7 @@ def parse_optimizer(optimizer_element):
     return None
 
 def parse_stack(stack_element):
+    """Try and parse the element assuming it's an entire layer stack."""
     optimizer = parse_optimizer(stack_element.find("optimizer"))
     stack = LayerStack(stack_element.get("flatten") == "True", optimizer)
     checkpoint_path = stack_element.get("checkpoint")
@@ -649,6 +711,8 @@ def parse_stack(stack_element):
     return stack
 
 def parse_population(population_element, include_score):
+    """Try and parse the children of the population element as scored layer stacks.
+    If the score is included, returns a list of (stack, score) tuples."""
     population = []
     mutate_seed = as_int(population_element.get("mutate_seed"))
     eval_seed = as_int(population_element.get("eval_seed"))
@@ -663,14 +727,18 @@ def parse_population(population_element, include_score):
     return (population, mutate_seed, eval_seed)
     
 def load_population(file, include_score=False):
+    """Try and load a population of layer stacks from the specified file.
+    If the score is included, returns a list of (stack, score) tuples."""
     tree = et.parse(file)
     return parse_population(tree.getroot(), include_score)
 
 def load_stack(file):
+    """Try and load a layer stack from the specified file."""
     tree = et.parse(file)
     return parse_stack(tree.getroot())
 
 def breed(parents, options, entropy):
+    """Combine one or more parents to produce an offspring and mutate it."""
     if (len(parents) < 2 or parents[0] is parents[1]):
         offspring = copy.deepcopy(parents[0])
     else:
@@ -680,6 +748,7 @@ def breed(parents, options, entropy):
     return offspring
 
 def rebreed(parents, options, entropy):
+    """Repeated breeding for increased variation."""
     for i in xrange(entropy.randint(1, 5)):
         offspring = [
             breed(parents, options, entropy),
@@ -689,6 +758,7 @@ def rebreed(parents, options, entropy):
     return offspring[0]
 
 def output_results(results, path, filename, mutate_seed=None, eval_seed=None):
+    """Output a population of scored layer stacks to the specified file."""
     root = et.Element("population")
     if mutate_seed is not None:
         root.set("mutate_seed", str(mutate_seed))
