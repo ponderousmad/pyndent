@@ -1,0 +1,7 @@
+Initialized
+Restored model from testing/pyndent6/2016-06-22~17_51_16_872.ckpt
+Total,0.0405123770664,211809120
+Error high
+cap - 5600,0.230893,90098
+Error low
+cap - 3240,0.00445517,204281
