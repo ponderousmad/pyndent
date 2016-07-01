@@ -131,25 +131,25 @@ def image_output_shape(input_shape, options):
 # Node connection functions
 
 def apply_matrix(input_node, train, parameters, options):
-    """Construct Tensorflow graph nodes for matrix multiply and optionally bias add."""
+    """Construct TensorFlow graph nodes for matrix multiply and optionally bias add."""
     application = tf.matmul(input_node, parameters[0])
     if len(parameters) > 1:
         return application + parameters[1]
     return application
 
 def apply_relu(input_node, train, parameters, options):
-    """Construct Tensorflow graph node for RELU."""
+    """Construct TensorFlow graph node for RELU."""
     return tf.nn.relu(input_node)
 
 def apply_dropout(input_node, train, parameters, options):
-    """Construct Tensorflow dropout node (if training) or no op otherwise."""
+    """Construct TensorFlow dropout node (if training) or no op otherwise."""
     if train:
         return tf.nn.dropout(input_node, options["dropout_rate"], seed=options["seed"])
     else:
         return input_node
 
 def apply_conv(input_node, train, parameters, options):
-    """Construct Tensorflow convolution node and optionally bias add."""
+    """Construct TensorFlow convolution node and optionally bias add."""
     stride = options["stride"]
     output = tf.nn.conv2d(input_node, parameters[0], [1, stride[0], stride[1], 1], padding=options["padding"])
 
@@ -159,7 +159,7 @@ def apply_conv(input_node, train, parameters, options):
     return output
 
 def apply_pool(input_node, train, parameters, options):
-    """Construct Tensorflow graph node for pooling (max or avg)."""
+    """Construct TensorFlow graph node for pooling (max or avg)."""
     if options["pool_type"].startswith("max"):
         pool_function = tf.nn.max_pool
     else:
@@ -169,15 +169,15 @@ def apply_pool(input_node, train, parameters, options):
     return pool_function(input_node, size, stride, padding=options["padding"])
 
 def apply_flatten(input_node, train, parameters, options):
-    """Construct a Tensorflow reshape node to flatten image tensors."""
+    """Construct a TensorFlow reshape node to flatten image tensors."""
     return tf.reshape(input_node, flatten_output_shape(input_node.get_shape(), options))
 
 def apply_unflatten(input_node, train, parameters, options):
-    """Construct a Tensorflow reshape node convert flat tensors to images."""
+    """Construct a TensorFlow reshape node convert flat tensors to images."""
     return tf.reshape(input_node, unflatten_output_shape(input_node.get_shape(), options))
     
 def apply_depth_to_space(input_node, train, parameters, options):
-    """Construct a Tensorflow depth_to_space node."""
+    """Construct a TensorFlow depth_to_space node."""
     return tf.depth_to_space(input_node, options["block_size"])
 
 def can_slice(input_shape, output_shape):
@@ -193,7 +193,7 @@ def can_slice(input_shape, output_shape):
     return True
 
 def apply_slice(input_node, train, parameters, options):
-    """Construct a Tensorflow slice node."""
+    """Construct a TensorFlow slice node."""
     input_shape = input_node.get_shape()
     size = options["size"]
     alignments = options["align"]
@@ -217,7 +217,7 @@ def apply_slice(input_node, train, parameters, options):
     return tf.slice(input_node, begin=begin, size=size, name="slice")
 
 def shape_test(shape, options, func):
-    """Construct a simple Tensorflow graph to verify the output shape corresponding to func"""
+    """Construct a simple TensorFlow graph to verify the output shape corresponding to func"""
     graph = tf.Graph()
     with graph.as_default():
         input = tf.placeholder(tf.float32, shape=shape)
@@ -237,11 +237,11 @@ class Operation(object):
         self.loss_factor = 0
         
     def set_number(self, number):
-        """Set up ID number used to save/restore Tensorflow parameters."""
+        """Set up ID number used to save/restore TensorFlow parameters."""
         self.options["name_postfix"] = str(number)
 
     def setup_parameters(self):
-        """Construct and initialize any needed Tensorflow variables in the current graph."""
+        """Construct and initialize any needed TensorFlow variables in the current graph."""
         self.parameters = self.parameter_setup(self.options)
     
     def set_l2_factor(self, loss_factor):
