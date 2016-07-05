@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<evostack flatten="True">
+<evostack flatten="True" checkpoint="testing/candidate6/2016-06-05~05_51_05_612.ckpt">
   <optimizer name="Adadelta" learning_rate="0.001" alpha="0.95" beta="0.1"/>
   <layers type="image">
     <layer dropout_rate="0.5" dropout_seed="74090" relu="True">
@@ -34,7 +34,7 @@
         <initializer distribution="truncated" mean="0" scale="0.05" seed="39359"/>
       </hidden>
     </layer>
-    <layer dropout_rate="0.0" dropout_seed="59574" relu="True">
+    <layer dropout_rate="0" dropout_seed="59574" relu="True">
       <hidden output_size="800" bias="True" l2_factor="0">
         <initializer distribution="truncated" mean="0" scale="0.05" seed="3959"/>
       </hidden>

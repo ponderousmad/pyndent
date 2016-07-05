@@ -1,4 +1,4 @@
-<evostack flatten="True" checkpoint="testing/candidate6/2016-06-11~15_23_44_712.ckpt">
+<evostack flatten="True" checkpoint="testing/candidate6/full/2016-06-11~15_23_44_712.ckpt">
   <optimizer name="Adadelta" learning_rate="0.001" alpha="0.95" beta="0.1"/>
   <layers type="image">
     <layer dropout_rate="0.5" dropout_seed="74090" relu="True">
