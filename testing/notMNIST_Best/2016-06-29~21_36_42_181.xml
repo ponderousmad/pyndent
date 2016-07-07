@@ -1,0 +1,27 @@
+<evostack flatten="True" checkpoint="temp/notMNIST_results/2016-06-29~21_36_42_181.ckpt">
+  <optimizer name="GradientDescent" learning_rate="0.05" alpha="0.999" beta="1000"/>
+  <layers type="image">
+    <layer dropout_rate="0" relu="True">
+      <image operation="conv_bias" patch_size="5" stride="2" padding="SAME" output_channels="64" l2_factor="0">
+        <initializer distribution="normal" mean="0" scale="0.1"/>
+      </image>
+    </layer>
+    <layer dropout_rate="0" relu="True">
+      <image operation="conv_bias" patch_size="5" stride="2" padding="SAME" output_channels="64" l2_factor="0">
+        <initializer distribution="normal" mean="0" scale="0.1"/>
+      </image>
+    </layer>
+  </layers>
+  <layers type="hidden">
+    <layer dropout_rate="0" relu="True">
+      <hidden output_size="128" bias="True" l2_factor="0">
+        <initializer distribution="normal" mean="0" scale="0.1"/>
+      </hidden>
+    </layer>
+    <layer dropout_rate="0" relu="True">
+      <hidden output_size="10" bias="True" l2_factor="0">
+        <initializer distribution="normal" mean="0" scale="0.1"/>
+      </hidden>
+    </layer>
+  </layers>
+</evostack>

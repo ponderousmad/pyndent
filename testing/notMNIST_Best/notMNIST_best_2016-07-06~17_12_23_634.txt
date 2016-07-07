@@ -1,0 +1,9 @@
+Initialized
+Validation accuracy: 21.9%
+Validation accuracy: 90.6%
+Validation accuracy: 90.7%
+Validation accuracy: 90.9%
+Validation accuracy: 90.9%
+Test accuracy: 96.0%
+Saved model to temp/notMNIST_results/2016-07-06~17_12_30_543.ckpt
+Saved results: 2016-07-06~17_12_30_543
