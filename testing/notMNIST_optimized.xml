@@ -2,24 +2,24 @@
 <evostack flatten="True">
   <optimizer name="GradientDescent" learning_rate="0.3" alpha="0.86" beta="3500" gamma="1"/>
   <layers type="hidden">
-    <layer dropout_rate="0.75" dropout_seed="39370" relu="True">
+    <layer dropout_rate="0.75" dropout_seed="58543" relu="True">
       <hidden output_size="1024" bias="True" l2_factor="0">
-        <initializer distribution="normal" mean="0" scale="0.0441" seed="97243"/>
+        <initializer distribution="normal" mean="0" scale="0.0441" seed="12729"/>
       </hidden>
     </layer>
-    <layer dropout_rate="0.75" dropout_seed="5199" relu="True">
+    <layer dropout_rate="0.75" dropout_seed="34881" relu="True">
       <hidden output_size="305" bias="True" l2_factor="0">
-        <initializer distribution="normal" mean="0" scale="0.0441" seed="37623"/>
+        <initializer distribution="normal" mean="0" scale="0.0441" seed="75145"/>
       </hidden>
     </layer>
-    <layer dropout_rate="0.75" dropout_seed="5199" relu="True">
+    <layer dropout_rate="0.75" dropout_seed="35784" relu="True">
       <hidden output_size="75" bias="True" l2_factor="0">
-        <initializer distribution="normal" mean="0" scale="0.0809" seed="37623"/>
+        <initializer distribution="normal" mean="0" scale="0.0809" seed="57956"/>
       </hidden>
     </layer>
-    <layer dropout_rate="0" dropout_seed="24993" relu="False">
+    <layer dropout_rate="0" dropout_seed="40984" relu="False">
       <hidden output_size="10" bias="True" l2_factor="0">
-        <initializer distribution="normal" mean="0" scale="0.1632" seed="25292"/>
+        <initializer distribution="normal" mean="0" scale="0.1632" seed="47042"/>
       </hidden>
     </layer>
   </layers>
