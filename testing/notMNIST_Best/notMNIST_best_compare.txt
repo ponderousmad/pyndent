@@ -1,0 +1,246 @@
+Seeds: [43214, 9126, 26644, 31917, 69460]
+Baseline optimized network:
+<evostack flatten="True">
+  <optimizer name="GradientDescent" learning_rate="0.3" alpha="0.86" beta="3500" gamma="1"/>
+  <layers type="hidden">
+    <layer dropout_rate="0.75" dropout_seed="58543" relu="True">
+      <hidden output_size="1024" bias="True" l2_factor="0">
+        <initializer distribution="normal" mean="0" scale="0.0441" seed="12729"/>
+      </hidden>
+    </layer>
+    <layer dropout_rate="0.75" dropout_seed="34881" relu="True">
+      <hidden output_size="305" bias="True" l2_factor="0">
+        <initializer distribution="normal" mean="0" scale="0.0441" seed="75145"/>
+      </hidden>
+    </layer>
+    <layer dropout_rate="0.75" dropout_seed="35784" relu="True">
+      <hidden output_size="75" bias="True" l2_factor="0">
+        <initializer distribution="normal" mean="0" scale="0.0809" seed="57956"/>
+      </hidden>
+    </layer>
+    <layer dropout_rate="0" dropout_seed="40984" relu="False">
+      <hidden output_size="10" bias="True" l2_factor="0">
+        <initializer distribution="normal" mean="0" scale="0.1632" seed="47042"/>
+      </hidden>
+    </layer>
+  </layers>
+</evostack>
+
+Initialized
+Validation accuracy: 17.9%
+Validation accuracy: 90.1%
+Validation accuracy: 90.5%
+Validation accuracy: 90.7%
+Validation accuracy: 90.7%
+Test accuracy: 95.7%
+Saved model to temp/notMNIST_results/2016-07-07~08_12_02_004.ckpt
+Saved results: 2016-07-07~08_12_02_004
+Initialized
+Validation accuracy: 19.4%
+Validation accuracy: 90.8%
+Validation accuracy: 91.1%
+Validation accuracy: 91.1%
+Validation accuracy: 91.2%
+Test accuracy: 95.8%
+Saved model to temp/notMNIST_results/2016-07-07~08_19_26_707.ckpt
+Saved results: 2016-07-07~08_19_26_707
+Initialized
+Validation accuracy: 23.0%
+Validation accuracy: 91.1%
+Validation accuracy: 91.2%
+Validation accuracy: 91.2%
+Validation accuracy: 91.2%
+Test accuracy: 95.9%
+Saved model to temp/notMNIST_results/2016-07-07~08_26_36_473.ckpt
+Saved results: 2016-07-07~08_26_36_473
+Initialized
+Validation accuracy: 26.4%
+Validation accuracy: 90.8%
+Validation accuracy: 90.9%
+Validation accuracy: 91.0%
+Validation accuracy: 91.0%
+Test accuracy: 95.9%
+Saved model to temp/notMNIST_results/2016-07-07~08_33_55_206.ckpt
+Saved results: 2016-07-07~08_33_55_206
+Initialized
+Validation accuracy: 23.6%
+Validation accuracy: 90.3%
+Validation accuracy: 90.6%
+Validation accuracy: 90.7%
+Validation accuracy: 90.8%
+Test accuracy: 95.7%
+Saved model to temp/notMNIST_results/2016-07-07~08_41_05_900.ckpt
+Saved results: 2016-07-07~08_41_05_900
+
+------------------------------------------------
+Evolved from prototypes only:
+<evostack flatten="True">
+  <optimizer name="Adagrad" learning_rate="0.05"/>
+  <layers type="image">
+    <layer dropout_rate="0.5" dropout_seed="99846" relu="True">
+      <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="128" l2_factor="0">
+        <initializer distribution="normal" mean="0" scale="0.1" seed="80878"/>
+      </image>
+    </layer>
+    <layer dropout_rate="0.5" dropout_seed="95749" relu="True">
+      <image operation="conv_bias" patch_size="4" stride="2" padding="SAME" output_channels="64" l2_factor="0">
+        <initializer distribution="normal" mean="0" scale="0.1" seed="28890"/>
+      </image>
+    </layer>
+  </layers>
+  <layers type="hidden">
+    <layer dropout_rate="0" dropout_seed="39370" relu="True">
+      <hidden output_size="140" bias="True" l2_factor="0">
+        <initializer distribution="normal" mean="0" scale="0.11" seed="97243"/>
+      </hidden>
+    </layer>
+    <layer dropout_rate="0.75" dropout_seed="5199" relu="False">
+      <hidden output_size="9" bias="True" l2_factor="0">
+        <initializer distribution="normal" mean="0" scale="0.11" seed="37623"/>
+      </hidden>
+    </layer>
+    <layer dropout_rate="0" dropout_seed="24993" relu="False">
+      <hidden output_size="10" bias="True" l2_factor="0.01">
+        <initializer distribution="normal" mean="1" scale="0.1" seed="25292"/>
+      </hidden>
+    </layer>
+  </layers>
+</evostack>
+
+Initialized
+Validation accuracy: 11.6%
+Validation accuracy: 89.9%
+Validation accuracy: 91.0%
+Validation accuracy: 91.3%
+Validation accuracy: 91.5%
+Test accuracy: 96.8%
+Saved model to temp/notMNIST_results/2016-07-07~08_48_15_088.ckpt
+Saved results: 2016-07-07~08_48_15_088
+Initialized
+Validation accuracy: 11.5%
+Validation accuracy: 90.5%
+Validation accuracy: 91.6%
+Validation accuracy: 91.9%
+Validation accuracy: 92.2%
+Test accuracy: 96.6%
+Saved model to temp/notMNIST_results/2016-07-07~09_11_03_817.ckpt
+Saved results: 2016-07-07~09_11_03_817
+Initialized
+Validation accuracy: 12.1%
+Validation accuracy: 90.7%
+Validation accuracy: 91.6%
+Validation accuracy: 91.9%
+Validation accuracy: 92.2%
+Test accuracy: 96.7%
+Saved model to temp/notMNIST_results/2016-07-07~09_34_32_454.ckpt
+Saved results: 2016-07-07~09_34_32_454
+Initialized
+Validation accuracy: 10.6%
+Validation accuracy: 90.3%
+Validation accuracy: 91.2%
+Validation accuracy: 91.6%
+Validation accuracy: 91.8%
+Test accuracy: 96.7%
+Saved model to temp/notMNIST_results/2016-07-07~09_58_00_350.ckpt
+Saved results: 2016-07-07~09_58_00_350
+Initialized
+Validation accuracy: 12.0%
+Validation accuracy: 90.6%
+Validation accuracy: 91.5%
+Validation accuracy: 91.8%
+Validation accuracy: 92.0%
+Test accuracy: 96.7%
+Saved model to temp/notMNIST_results/2016-07-07~10_21_24_388.ckpt
+Saved results: 2016-07-07~10_21_24_388
+
+------------------------------------------------
+Evolved from prototypes plus optimized baseline:
+<evostack flatten="True" checkpoint="temp/notMNIST_results/2016-06-24~04_44_20_182.ckpt">
+  <optimizer name="Adadelta" learning_rate="0.15"/>
+  <layers type="image">
+    <layer dropout_rate="0" dropout_seed="43894" relu="True">
+      <image operation="conv_bias" patch_size="9" stride="2" padding="SAME" output_channels="64" l2_factor="0">
+        <initializer distribution="normal" mean="0" scale="0.09" seed="6414"/>
+      </image>
+    </layer>
+    <layer dropout_rate="0" dropout_seed="20889" relu="True">
+      <image operation="max_pool" patch_size="4" stride="2" padding="SAME" output_channels="64" l2_factor="0">
+        <initializer distribution="normal" mean="0" scale="0.1" seed="70387"/>
+      </image>
+    </layer>
+  </layers>
+  <layers type="hidden">
+    <layer dropout_rate="0.75" dropout_seed="77013" relu="True">
+      <hidden output_size="512" bias="True" l2_factor="0">
+        <initializer distribution="normal" mean="0" scale="0.0441" seed="18552"/>
+      </hidden>
+    </layer>
+    <layer dropout_rate="0.75" dropout_seed="67751" relu="True">
+      <hidden output_size="1024" bias="True" l2_factor="0">
+        <initializer distribution="normal" mean="0" scale="0.0441" seed="63635"/>
+      </hidden>
+    </layer>
+    <layer dropout_rate="0" dropout_seed="95200" relu="True">
+      <hidden output_size="10" bias="True" l2_factor="0">
+        <initializer distribution="normal" mean="0" scale="0.1" seed="26742"/>
+      </hidden>
+    </layer>
+    <layer dropout_rate="0.25" dropout_seed="83945" relu="False">
+      <hidden output_size="75" bias="True" l2_factor="0">
+        <initializer distribution="normal" mean="0" scale="0.04045" seed="66644"/>
+      </hidden>
+    </layer>
+    <layer dropout_rate="0" dropout_seed="80268" relu="False">
+      <hidden output_size="10" bias="False" l2_factor="0">
+        <initializer distribution="normal" mean="0" scale="0.3264" seed="67641"/>
+      </hidden>
+    </layer>
+  </layers>
+</evostack>
+
+Initialized
+Validation accuracy: 8.3%
+Validation accuracy: 90.8%
+Validation accuracy: 90.5%
+Validation accuracy: 91.0%
+Validation accuracy: 90.6%
+Test accuracy: 96.0%
+Saved model to temp/notMNIST_results/2016-07-07~10_44_23_761.ckpt
+Saved results: 2016-07-07~10_44_23_761
+Initialized
+Validation accuracy: 9.0%
+Validation accuracy: 91.3%
+Validation accuracy: 91.0%
+Validation accuracy: 91.2%
+Validation accuracy: 91.2%
+Test accuracy: 96.2%
+Saved model to temp/notMNIST_results/2016-07-07~10_58_07_956.ckpt
+Saved results: 2016-07-07~10_58_07_956
+Initialized
+Validation accuracy: 8.9%
+Validation accuracy: 91.7%
+Validation accuracy: 91.7%
+Validation accuracy: 91.5%
+Validation accuracy: 91.6%
+Test accuracy: 96.2%
+Saved model to temp/notMNIST_results/2016-07-07~11_11_55_517.ckpt
+Saved results: 2016-07-07~11_11_55_517
+Initialized
+Validation accuracy: 8.5%
+Validation accuracy: 91.2%
+Validation accuracy: 91.3%
+Validation accuracy: 91.2%
+Validation accuracy: 91.3%
+Test accuracy: 96.3%
+Saved model to temp/notMNIST_results/2016-07-07~11_25_36_558.ckpt
+Saved results: 2016-07-07~11_25_36_558
+Initialized
+Validation accuracy: 7.2%
+Validation accuracy: 91.4%
+Validation accuracy: 91.5%
+Validation accuracy: 91.3%
+Validation accuracy: 91.5%
+Test accuracy: 96.2%
+Saved model to temp/notMNIST_results/2016-07-07~11_39_20_160.ckpt
+Saved results: 2016-07-07~11_39_20_160
+
