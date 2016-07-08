@@ -31,7 +31,7 @@ Instructions for download of data for depth reconstruction can be found in **dep
 
 The notebook **notMNIST_setup** automatically downloads and processes the notMNIST dataset, and provides some visualization of the data.
 
-Constructing and running convnet operations and convevo LayerStacks is demonstrated in the stack test notebook, and a demonstration of the darwin module can be found in the notebook darwin_test.
+Constructing and running convnet operations and convevo LayerStacks is demonstrated in the **stack_test** notebook, and a demonstration of the darwin module can be found in the notebook **darwin_test**.
 
 The actual learning and evolution takes place in **depth_classy** and **depth_pyndent** for depth reconstruction, and in **notMNIST_evo**. Each of these does essentially the same things - construct the TensorFlow graph corresponding to a LayerStack, load and batch the data, run the training data through the graph, calculate metrics, and finally set up an evolutionary process over a population of LayerStacks.
 
