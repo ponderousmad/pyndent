@@ -27,7 +27,7 @@ Cross breeding combines two layer stacks by randomly taking the first several la
 
 ## Jupyter Notebooks
 
-Instructions for download of data for depth reconstruction can be found in depth_setup. Unfortunately the automated download system is both slow and error prone, so the recommended route is to download and decompress the zip files manually.
+Instructions for download of data for depth reconstruction can be found in **depth_setup**. Unfortunately the automated download system is both slow and error prone, so the recommended route is to download and decompress the zip files manually.
 
 The notebook **notMNIST_setup** automatically downloads and processes the notMNIST dataset, and provides some visualization of the data.
 
