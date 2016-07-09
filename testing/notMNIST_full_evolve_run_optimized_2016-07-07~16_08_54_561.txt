@@ -1,0 +1,731 @@
+Mutate Seed: 14197
+Eval Seed: 97815
+Generation 0
+Evaluating 0
+Initialized
+Validation accuracy: 16.6%
+Validation accuracy: 89.0%
+Validation accuracy: 89.3%
+Validation accuracy: 89.2%
+Validation accuracy: 89.5%
+Saved model to temp/notMNIST_results/2016-07-07~16_08_56_456.ckpt
+Saved results: 2016-07-07~16_08_56_456
+Score: 89.5032051282
+Evaluating 1
+Initialized
+Validation accuracy: 9.3%
+Validation accuracy: 90.4%
+Validation accuracy: 90.3%
+Validation accuracy: 90.3%
+Validation accuracy: 89.9%
+Saved model to temp/notMNIST_results/2016-07-07~16_26_06_122.ckpt
+Saved results: 2016-07-07~16_26_06_122
+Score: 89.8637820513
+Evaluating 2
+Initialized
+Validation accuracy: 14.0%
+Validation accuracy: 89.3%
+Validation accuracy: 89.4%
+Validation accuracy: 89.4%
+Validation accuracy: 89.3%
+Saved model to temp/notMNIST_results/2016-07-07~17_07_28_742.ckpt
+Saved results: 2016-07-07~17_07_28_742
+Score: 89.2628205128
+Evaluating 3
+Initialized
+Validation accuracy: 10.4%
+Validation accuracy: 9.4%
+Early out.
+Saved model to temp/notMNIST_results/2016-07-07~17_20_55_792.ckpt
+Saved results: 2016-07-07~17_20_55_792
+Score: 9.43509615385
+Evaluating 4
+Initialized
+Validation accuracy: 11.0%
+Validation accuracy: 9.4%
+Early out.
+Saved model to temp/notMNIST_results/2016-07-07~17_26_20_350.ckpt
+Saved results: 2016-07-07~17_26_20_350
+Score: 9.39503205128
+Evaluating 5
+Initialized
+Validation accuracy: 14.6%
+Validation accuracy: 89.8%
+Validation accuracy: 89.8%
+Validation accuracy: 90.1%
+Validation accuracy: 90.1%
+Saved model to temp/notMNIST_results/2016-07-07~17_28_33_806.ckpt
+Saved results: 2016-07-07~17_28_33_806
+Score: 90.0641025641
+Evaluating 6
+Initialized
+Validation accuracy: 10.4%
+Validation accuracy: 10.2%
+Early out.
+Saved model to temp/notMNIST_results/2016-07-07~17_35_45_700.ckpt
+Saved results: 2016-07-07~17_35_45_700
+Score: 10.2163461538
+Evaluating 7
+Initialized
+Validation accuracy: 11.2%
+Validation accuracy: 62.8%
+Validation accuracy: 63.0%
+Validation accuracy: 54.5%
+Validation accuracy: 54.3%
+Saved model to temp/notMNIST_results/2016-07-07~17_38_26_809.ckpt
+Saved results: 2016-07-07~17_38_26_809
+Score: 54.3068910256
+Evaluating 8
+Initialized
+Validation accuracy: 10.4%
+Validation accuracy: 64.7%
+Validation accuracy: 65.8%
+Validation accuracy: 66.8%
+Validation accuracy: 66.9%
+Saved model to temp/notMNIST_results/2016-07-07~17_55_41_036.ckpt
+Saved results: 2016-07-07~17_55_41_036
+Score: 66.9270833333
+Evaluating 9
+Initialized
+Validation accuracy: 11.0%
+Validation accuracy: 79.9%
+Validation accuracy: 80.3%
+Validation accuracy: 88.6%
+Validation accuracy: 88.9%
+Saved model to temp/notMNIST_results/2016-07-07~18_01_14_472.ckpt
+Saved results: 2016-07-07~18_01_14_472
+Score: 88.9423076923
+Evaluating 10
+Initialized
+Validation accuracy: 14.8%
+Validation accuracy: 90.2%
+Validation accuracy: 90.5%
+Validation accuracy: 90.3%
+Validation accuracy: 90.5%
+Saved model to temp/notMNIST_results/2016-07-07~18_44_09_572.ckpt
+Saved results: 2016-07-07~18_44_09_572
+Score: 90.5048076923
+Evaluating 11
+Initialized
+Validation accuracy: 9.3%
+Validation accuracy: 87.9%
+Validation accuracy: 87.5%
+Validation accuracy: 87.2%
+Validation accuracy: 86.9%
+Saved model to temp/notMNIST_results/2016-07-07~18_53_01_490.ckpt
+Saved results: 2016-07-07~18_53_01_490
+Score: 86.9190705128
+Evaluating 12
+Initialized
+Validation accuracy: 7.9%
+Validation accuracy: 80.2%
+Validation accuracy: 80.8%
+Validation accuracy: 80.9%
+Validation accuracy: 80.6%
+Saved model to temp/notMNIST_results/2016-07-07~19_05_29_637.ckpt
+Saved results: 2016-07-07~19_05_29_637
+Score: 80.6490384615
+Evaluating 13
+Initialized
+Validation accuracy: 10.5%
+Validation accuracy: 10.5%
+Early out.
+Saved model to temp/notMNIST_results/2016-07-07~19_12_13_348.ckpt
+Saved results: 2016-07-07~19_12_13_348
+Score: 10.4967948718
+Evaluating 14
+Initialized
+Validation accuracy: 12.3%
+Validation accuracy: 10.1%
+Early out.
+Saved model to temp/notMNIST_results/2016-07-07~19_17_28_525.ckpt
+Saved results: 2016-07-07~19_17_28_525
+Score: 10.0560897436
+Evaluating 15
+Initialized
+Validation accuracy: 9.9%
+Validation accuracy: 75.8%
+Validation accuracy: 76.2%
+Validation accuracy: 74.2%
+Validation accuracy: 71.7%
+Saved model to temp/notMNIST_results/2016-07-07~19_20_22_461.ckpt
+Saved results: 2016-07-07~19_20_22_461
+Score: 71.6546474359
+Evaluating 16
+Initialized
+Validation accuracy: 9.8%
+Validation accuracy: 10.4%
+Early out.
+Saved model to temp/notMNIST_results/2016-07-07~19_26_30_505.ckpt
+Saved results: 2016-07-07~19_26_30_505
+Score: 10.4166666667
+Evaluating 17
+Initialized
+Validation accuracy: 13.1%
+Validation accuracy: 91.9%
+Validation accuracy: 92.1%
+Validation accuracy: 92.2%
+Validation accuracy: 92.3%
+Saved model to temp/notMNIST_results/2016-07-07~19_28_48_525.ckpt
+Saved results: 2016-07-07~19_28_48_525
+Score: 92.2876602564
+Evaluating 18
+Initialized
+Validation accuracy: 12.8%
+Validation accuracy: 89.4%
+Validation accuracy: 90.0%
+Validation accuracy: 90.1%
+Validation accuracy: 90.0%
+Saved model to temp/notMNIST_results/2016-07-07~20_11_49_401.ckpt
+Saved results: 2016-07-07~20_11_49_401
+Score: 90.0440705128
+Evaluating 19
+Initialized
+Validation accuracy: 9.8%
+Validation accuracy: 9.8%
+Early out.
+Saved model to temp/notMNIST_results/2016-07-07~20_22_17_484.ckpt
+Saved results: 2016-07-07~20_22_17_484
+Score: 9.79567307692
+Generation 1
+Evaluating 0
+Initialized
+Validation accuracy: 11.2%
+Validation accuracy: 90.0%
+Validation accuracy: 90.2%
+Validation accuracy: 90.5%
+Validation accuracy: 90.2%
+Saved model to temp/notMNIST_results/2016-07-07~20_25_09_186.ckpt
+Saved results: 2016-07-07~20_25_09_186
+Score: 90.2243589744
+Evaluating 1
+Initialized
+Validation accuracy: 5.3%
+Validation accuracy: 89.6%
+Validation accuracy: 90.1%
+Validation accuracy: 90.5%
+Validation accuracy: 90.3%
+Saved model to temp/notMNIST_results/2016-07-07~21_30_01_660.ckpt
+Saved results: 2016-07-07~21_30_01_660
+Score: 90.3044871795
+Evaluating 2
+Initialized
+Validation accuracy: 21.9%
+Validation accuracy: 90.8%
+Validation accuracy: 90.8%
+Validation accuracy: 90.9%
+Validation accuracy: 90.7%
+Saved model to temp/notMNIST_results/2016-07-07~21_41_47_251.ckpt
+Saved results: 2016-07-07~21_41_47_251
+Score: 90.6850961538
+Evaluating 3
+Initialized
+Validation accuracy: 11.5%
+Validation accuracy: 89.9%
+Validation accuracy: 90.2%
+Validation accuracy: 90.4%
+Validation accuracy: 90.5%
+Saved model to temp/notMNIST_results/2016-07-07~22_09_53_367.ckpt
+Saved results: 2016-07-07~22_09_53_367
+Score: 90.5048076923
+Evaluating 4
+Initialized
+Validation accuracy: 10.6%
+Validation accuracy: 91.3%
+Validation accuracy: 92.0%
+Validation accuracy: 92.3%
+Validation accuracy: 92.3%
+Saved model to temp/notMNIST_results/2016-07-07~22_22_07_147.ckpt
+Saved results: 2016-07-07~22_22_07_147
+Score: 92.2676282051
+Evaluating 5
+Initialized
+Validation accuracy: 14.2%
+Validation accuracy: 71.3%
+Validation accuracy: 69.7%
+Validation accuracy: 68.0%
+Validation accuracy: 67.1%
+Saved model to temp/notMNIST_results/2016-07-07~23_06_40_594.ckpt
+Saved results: 2016-07-07~23_06_40_594
+Score: 67.1274038462
+Evaluating 6
+Initialized
+Validation accuracy: 20.9%
+Validation accuracy: 10.1%
+Early out.
+Saved model to temp/notMNIST_results/2016-07-07~23_40_13_200.ckpt
+Saved results: 2016-07-07~23_40_13_200
+Score: 10.1161858974
+Evaluating 7
+Initialized
+Validation accuracy: 9.7%
+Validation accuracy: 91.6%
+Validation accuracy: 91.9%
+Validation accuracy: 92.2%
+Validation accuracy: 92.1%
+Saved model to temp/notMNIST_results/2016-07-07~23_42_59_331.ckpt
+Saved results: 2016-07-07~23_42_59_331
+Score: 92.1274038462
+Evaluating 8
+Initialized
+Validation accuracy: 14.6%
+Validation accuracy: 9.9%
+Early out.
+Saved model to temp/notMNIST_results/2016-07-08~00_25_54_638.ckpt
+Saved results: 2016-07-08~00_25_54_638
+Score: 9.89583333333
+Evaluating 9
+Initialized
+Validation accuracy: 10.0%
+Validation accuracy: 9.9%
+Early out.
+Saved model to temp/notMNIST_results/2016-07-08~00_34_52_920.ckpt
+Saved results: 2016-07-08~00_34_52_920
+Score: 9.89583333333
+Evaluating 10
+Initialized
+Validation accuracy: 10.2%
+Validation accuracy: 10.4%
+Early out.
+Saved model to temp/notMNIST_results/2016-07-08~00_56_14_591.ckpt
+Saved results: 2016-07-08~00_56_14_591
+Score: 10.4366987179
+Evaluating 11
+Initialized
+Validation accuracy: 10.3%
+Validation accuracy: 90.1%
+Validation accuracy: 90.3%
+Validation accuracy: 90.3%
+Validation accuracy: 90.3%
+Saved model to temp/notMNIST_results/2016-07-08~01_03_16_997.ckpt
+Saved results: 2016-07-08~01_03_16_997
+Score: 90.2644230769
+Evaluating 12
+Initialized
+Validation accuracy: 13.3%
+Validation accuracy: 90.5%
+Validation accuracy: 90.7%
+Validation accuracy: 90.8%
+Validation accuracy: 90.8%
+Saved model to temp/notMNIST_results/2016-07-08~01_17_28_817.ckpt
+Saved results: 2016-07-08~01_17_28_817
+Score: 90.765224359
+Evaluating 13
+Initialized
+Validation accuracy: 9.9%
+Validation accuracy: 10.0%
+Early out.
+Saved model to temp/notMNIST_results/2016-07-08~01_28_21_800.ckpt
+Saved results: 2016-07-08~01_28_21_800
+Score: 9.97596153846
+Evaluating 14
+Initialized
+Validation accuracy: 25.2%
+Validation accuracy: 83.8%
+Validation accuracy: 83.8%
+Validation accuracy: 84.0%
+Validation accuracy: 83.8%
+Saved model to temp/notMNIST_results/2016-07-08~01_39_19_182.ckpt
+Saved results: 2016-07-08~01_39_19_182
+Score: 83.8141025641
+Evaluating 15
+Initialized
+Validation accuracy: 25.8%
+Validation accuracy: 86.7%
+Validation accuracy: 86.9%
+Validation accuracy: 87.0%
+Validation accuracy: 87.1%
+Saved model to temp/notMNIST_results/2016-07-08~01_48_21_905.ckpt
+Saved results: 2016-07-08~01_48_21_905
+Score: 87.0993589744
+Evaluating 16
+Initialized
+Validation accuracy: 11.7%
+Validation accuracy: 90.4%
+Validation accuracy: 90.7%
+Validation accuracy: 90.8%
+Validation accuracy: 90.8%
+Saved model to temp/notMNIST_results/2016-07-08~01_59_59_284.ckpt
+Saved results: 2016-07-08~01_59_59_284
+Score: 90.8253205128
+Evaluating 17
+Initialized
+Validation accuracy: 23.6%
+Validation accuracy: 90.1%
+Validation accuracy: 90.5%
+Validation accuracy: 90.6%
+Validation accuracy: 90.7%
+Saved model to temp/notMNIST_results/2016-07-08~02_41_35_875.ckpt
+Saved results: 2016-07-08~02_41_35_875
+Score: 90.6650641026
+Evaluating 18
+Initialized
+Validation accuracy: 12.6%
+Validation accuracy: 82.2%
+Validation accuracy: 81.2%
+Validation accuracy: 82.1%
+Validation accuracy: 81.9%
+Saved model to temp/notMNIST_results/2016-07-08~02_52_46_962.ckpt
+Saved results: 2016-07-08~02_52_46_962
+Score: 81.9310897436
+Evaluating 19
+Initialized
+Validation accuracy: 20.6%
+Validation accuracy: 89.9%
+Validation accuracy: 90.6%
+Validation accuracy: 90.4%
+Validation accuracy: 90.3%
+Saved model to temp/notMNIST_results/2016-07-08~03_09_44_083.ckpt
+Saved results: 2016-07-08~03_09_44_083
+Score: 90.3245192308
+Generation 2
+Evaluating 0
+Initialized
+Validation accuracy: 10.5%
+Validation accuracy: 91.8%
+Validation accuracy: 91.9%
+Validation accuracy: 91.9%
+Validation accuracy: 92.2%
+Saved model to temp/notMNIST_results/2016-07-08~03_17_08_911.ckpt
+Saved results: 2016-07-08~03_17_08_911
+Score: 92.1875
+Evaluating 1
+Initialized
+Validation accuracy: 9.2%
+Validation accuracy: 89.2%
+Validation accuracy: 90.1%
+Validation accuracy: 90.3%
+Validation accuracy: 90.4%
+Saved model to temp/notMNIST_results/2016-07-08~03_53_32_230.ckpt
+Saved results: 2016-07-08~03_53_32_230
+Score: 90.4246794872
+Evaluating 2
+Initialized
+Validation accuracy: 9.9%
+Validation accuracy: 9.8%
+Early out.
+Saved model to temp/notMNIST_results/2016-07-08~04_21_21_764.ckpt
+Saved results: 2016-07-08~04_21_21_764
+Score: 9.83573717949
+Evaluating 3
+Initialized
+Validation accuracy: 9.9%
+Validation accuracy: 10.0%
+Early out.
+Saved model to temp/notMNIST_results/2016-07-08~04_27_53_125.ckpt
+Saved results: 2016-07-08~04_27_53_125
+Score: 9.99599358974
+Evaluating 4
+Initialized
+Validation accuracy: 15.9%
+Validation accuracy: 9.5%
+Early out.
+Saved model to temp/notMNIST_results/2016-07-08~04_36_07_260.ckpt
+Saved results: 2016-07-08~04_36_07_260
+Score: 9.47516025641
+Evaluating 5
+Initialized
+Validation accuracy: 12.0%
+Validation accuracy: 91.6%
+Validation accuracy: 92.1%
+Validation accuracy: 92.0%
+Validation accuracy: 92.1%
+Saved model to temp/notMNIST_results/2016-07-08~04_46_26_355.ckpt
+Saved results: 2016-07-08~04_46_26_355
+Score: 92.1073717949
+Evaluating 6
+Initialized
+Validation accuracy: 10.5%
+Validation accuracy: 78.0%
+Validation accuracy: 78.5%
+Validation accuracy: 78.7%
+Validation accuracy: 78.7%
+Saved model to temp/notMNIST_results/2016-07-08~05_23_30_542.ckpt
+Saved results: 2016-07-08~05_23_30_542
+Score: 78.6858974359
+Evaluating 7
+Initialized
+Validation accuracy: 10.2%
+Validation accuracy: 91.2%
+Validation accuracy: 91.7%
+Validation accuracy: 91.9%
+Validation accuracy: 91.8%
+Saved model to temp/notMNIST_results/2016-07-08~05_29_15_398.ckpt
+Saved results: 2016-07-08~05_29_15_398
+Score: 91.7668269231
+Evaluating 8
+Initialized
+Validation accuracy: 30.2%
+Validation accuracy: 87.2%
+Validation accuracy: 88.6%
+Validation accuracy: 89.5%
+Validation accuracy: 89.6%
+Saved model to temp/notMNIST_results/2016-07-08~06_39_51_051.ckpt
+Saved results: 2016-07-08~06_39_51_051
+Score: 89.5833333333
+Evaluating 9
+Initialized
+Validation accuracy: 13.5%
+Validation accuracy: 90.0%
+Validation accuracy: 90.9%
+Validation accuracy: 91.3%
+Validation accuracy: 91.2%
+Saved model to temp/notMNIST_results/2016-07-08~07_09_30_856.ckpt
+Saved results: 2016-07-08~07_09_30_856
+Score: 91.1658653846
+Evaluating 10
+Initialized
+Validation accuracy: 10.1%
+Validation accuracy: 9.9%
+Early out.
+Saved model to temp/notMNIST_results/2016-07-08~07_22_38_418.ckpt
+Saved results: 2016-07-08~07_22_38_418
+Score: 9.87580128205
+Evaluating 11
+Initialized
+Validation accuracy: 16.6%
+Validation accuracy: 90.7%
+Validation accuracy: 88.0%
+Validation accuracy: 89.6%
+Validation accuracy: 88.8%
+Saved model to temp/notMNIST_results/2016-07-08~07_30_11_231.ckpt
+Saved results: 2016-07-08~07_30_11_231
+Score: 88.8020833333
+Evaluating 12
+Initialized
+Validation accuracy: 9.4%
+Validation accuracy: 75.2%
+Validation accuracy: 75.4%
+Validation accuracy: 75.7%
+Validation accuracy: 75.5%
+Saved model to temp/notMNIST_results/2016-07-08~08_04_11_403.ckpt
+Saved results: 2016-07-08~08_04_11_403
+Score: 75.5208333333
+Evaluating 13
+Initialized
+Validation accuracy: 9.6%
+Validation accuracy: 91.0%
+Validation accuracy: 91.5%
+Validation accuracy: 91.9%
+Validation accuracy: 91.8%
+Saved model to temp/notMNIST_results/2016-07-08~08_10_44_646.ckpt
+Saved results: 2016-07-08~08_10_44_646
+Score: 91.8068910256
+Evaluating 14
+Initialized
+Validation accuracy: 10.0%
+Validation accuracy: 91.4%
+Validation accuracy: 92.5%
+Validation accuracy: 92.9%
+Validation accuracy: 93.1%
+Saved model to temp/notMNIST_results/2016-07-08~10_51_38_290.ckpt
+Saved results: 2016-07-08~10_51_38_290
+Score: 93.0689102564
+Evaluating 15
+Initialized
+Validation accuracy: 8.9%
+Validation accuracy: 89.2%
+Validation accuracy: 90.2%
+Validation accuracy: 89.7%
+Validation accuracy: 90.4%
+Saved model to temp/notMNIST_results/2016-07-08~11_59_26_152.ckpt
+Saved results: 2016-07-08~11_59_26_152
+Score: 90.3846153846
+Evaluating 16
+Initialized
+Validation accuracy: 10.0%
+Validation accuracy: 84.3%
+Validation accuracy: 88.9%
+Validation accuracy: 89.4%
+Validation accuracy: 89.2%
+Saved model to temp/notMNIST_results/2016-07-08~12_06_02_493.ckpt
+Saved results: 2016-07-08~12_06_02_493
+Score: 89.2427884615
+Evaluating 17
+Initialized
+Validation accuracy: 13.2%
+Validation accuracy: 82.4%
+Validation accuracy: 82.9%
+Validation accuracy: 83.3%
+Validation accuracy: 83.5%
+Saved model to temp/notMNIST_results/2016-07-08~12_44_36_984.ckpt
+Saved results: 2016-07-08~12_44_36_984
+Score: 83.4935897436
+Evaluating 18
+Initialized
+Validation accuracy: 9.5%
+Error computing loss
+Saved model to temp/notMNIST_results/2016-07-08~12_56_12_424.ckpt
+Saved results: 2016-07-08~12_56_12_424
+Score: 9.49519230769
+Evaluating 19
+Initialized
+Validation accuracy: 9.8%
+Validation accuracy: 10.5%
+Early out.
+Saved model to temp/notMNIST_results/2016-07-08~12_56_14_149.ckpt
+Saved results: 2016-07-08~12_56_14_149
+Score: 10.5168269231
+Generation 3
+Evaluating 0
+Initialized
+Validation accuracy: 10.0%
+Validation accuracy: 91.8%
+Validation accuracy: 91.8%
+Validation accuracy: 92.1%
+Validation accuracy: 92.1%
+Saved model to temp/notMNIST_results/2016-07-08~13_07_27_824.ckpt
+Saved results: 2016-07-08~13_07_27_824
+Score: 92.1474358974
+Evaluating 1
+Initialized
+Validation accuracy: 9.8%
+Validation accuracy: 10.1%
+Early out.
+Saved model to temp/notMNIST_results/2016-07-08~13_52_33_035.ckpt
+Saved results: 2016-07-08~13_52_33_035
+Score: 10.0560897436
+Evaluating 2
+Initialized
+Validation accuracy: 9.8%
+Validation accuracy: 91.8%
+Validation accuracy: 91.6%
+Validation accuracy: 91.6%
+Validation accuracy: 91.4%
+Saved model to temp/notMNIST_results/2016-07-08~14_19_13_049.ckpt
+Saved results: 2016-07-08~14_19_13_049
+Score: 91.4463141026
+Evaluating 3
+Initialized
+Validation accuracy: 11.3%
+Validation accuracy: 91.6%
+Validation accuracy: 92.0%
+Validation accuracy: 92.1%
+Validation accuracy: 91.7%
+Saved model to temp/notMNIST_results/2016-07-08~17_21_50_393.ckpt
+Saved results: 2016-07-08~17_21_50_393
+Score: 91.7467948718
+Evaluating 4
+Initialized
+Validation accuracy: 10.6%
+Validation accuracy: 90.8%
+Validation accuracy: 91.4%
+Validation accuracy: 91.4%
+Validation accuracy: 91.5%
+Saved model to temp/notMNIST_results/2016-07-08~19_00_32_837.ckpt
+Saved results: 2016-07-08~19_00_32_837
+Score: 91.4663461538
+Evaluating 5
+Initialized
+Validation accuracy: 10.6%
+Validation accuracy: 82.4%
+Validation accuracy: 83.2%
+Validation accuracy: 83.5%
+Validation accuracy: 83.6%
+Saved model to temp/notMNIST_results/2016-07-08~19_30_59_207.ckpt
+Saved results: 2016-07-08~19_30_59_207
+Score: 83.6137820513
+Evaluating 6
+Initialized
+Validation accuracy: 9.6%
+Validation accuracy: 10.0%
+Early out.
+Saved model to temp/notMNIST_results/2016-07-08~19_44_37_438.ckpt
+Saved results: 2016-07-08~19_44_37_438
+Score: 10.016025641
+Evaluating 7
+Initialized
+Validation accuracy: 9.5%
+Validation accuracy: 10.0%
+Early out.
+Saved model to temp/notMNIST_results/2016-07-08~20_29_44_750.ckpt
+Saved results: 2016-07-08~20_29_44_750
+Score: 9.97596153846
+Evaluating 8
+Initialized
+Validation accuracy: 10.5%
+Validation accuracy: 88.2%
+Validation accuracy: 89.3%
+Validation accuracy: 89.8%
+Validation accuracy: 90.2%
+Saved model to temp/notMNIST_results/2016-07-08~20_49_03_891.ckpt
+Saved results: 2016-07-08~20_49_03_891
+Score: 90.1842948718
+Evaluating 9
+Initialized
+Validation accuracy: 14.2%
+Validation accuracy: 92.3%
+Validation accuracy: 92.4%
+Validation accuracy: 92.3%
+Validation accuracy: 92.1%
+Saved model to temp/notMNIST_results/2016-07-08~22_04_01_848.ckpt
+Saved results: 2016-07-08~22_04_01_848
+Score: 92.0673076923
+Evaluating 10
+Initialized
+Validation accuracy: 12.0%
+Validation accuracy: 92.1%
+Validation accuracy: 92.1%
+Validation accuracy: 92.0%
+Validation accuracy: 92.1%
+Saved model to temp/notMNIST_results/2016-07-08~23_24_00_098.ckpt
+Saved results: 2016-07-08~23_24_00_098
+Score: 92.0673076923
+Evaluating 11
+Initialized
+Validation accuracy: 13.4%
+Validation accuracy: 10.4%
+Early out.
+Saved model to temp/notMNIST_results/2016-07-09~00_24_39_735.ckpt
+Saved results: 2016-07-09~00_24_39_735
+Score: 10.4166666667
+Evaluating 12
+Initialized
+Validation accuracy: 10.2%
+Validation accuracy: 10.2%
+Early out.
+Saved model to temp/notMNIST_results/2016-07-09~00_41_38_039.ckpt
+Saved results: 2016-07-09~00_41_38_039
+Score: 10.15625
+Evaluating 13
+Initialized
+Validation accuracy: 15.7%
+Validation accuracy: 90.8%
+Validation accuracy: 91.1%
+Validation accuracy: 90.9%
+Validation accuracy: 91.2%
+Saved model to temp/notMNIST_results/2016-07-09~00_57_11_193.ckpt
+Saved results: 2016-07-09~00_57_11_193
+Score: 91.2459935897
+Evaluating 14
+Initialized
+Validation accuracy: 9.5%
+Validation accuracy: 10.0%
+Early out.
+Saved model to temp/notMNIST_results/2016-07-09~02_44_08_513.ckpt
+Saved results: 2016-07-09~02_44_08_513
+Score: 10.016025641
+Evaluating 15
+Initialized
+Validation accuracy: 9.7%
+Validation accuracy: 89.9%
+Validation accuracy: 91.0%
+Validation accuracy: 91.3%
+Validation accuracy: 91.8%
+Saved model to temp/notMNIST_results/2016-07-09~02_46_03_631.ckpt
+Saved results: 2016-07-09~02_46_03_631
+Score: 91.7668269231
+Evaluating 16
+Initialized
+Validation accuracy: 6.8%
+Validation accuracy: 90.2%
+Validation accuracy: 90.7%
+Validation accuracy: 90.7%
+Validation accuracy: 91.1%
+Saved model to temp/notMNIST_results/2016-07-09~03_21_30_349.ckpt
+Saved results: 2016-07-09~03_21_30_349
+Score: 91.1458333333
+Evaluating 17
+Initialized
+Validation accuracy: 9.9%
+Validation accuracy: 90.
