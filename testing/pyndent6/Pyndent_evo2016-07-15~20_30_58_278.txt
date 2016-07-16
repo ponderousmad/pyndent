@@ -1,0 +1,106 @@
+Mutate Seed: 44051
+Eval Seed: 78895
+Generation 0
+Evaluating 0
+Initialized
+Error if just guess mean: 0.04063897228
+Minibatch loss at step 0 : 189087.0
+Minibatch error: 0.0568784
+Validation error: 0.139847270129
+Minibatch loss at step 8000 : 1.1724
+Minibatch error: 0.0681716
+Validation error: 0.103052902502
+Minibatch loss at step 16000 : 0.0457544
+Minibatch error: 0.245856
+Validation error: 0.10252967764
+Minibatch loss at step 24000 : 0.0148674
+Minibatch error: 0.112716
+Validation error: 0.0939765396165
+Minibatch loss at step 32000 : 0.0540595
+Minibatch error: 0.211928
+Validation error: 0.0591228422401
+Minibatch loss at step 40000 : 0.00297333
+Minibatch error: 0.0522493
+Validation error: 0.0400396577946
+Minibatch loss at step 48000 : 0.0023768
+Minibatch error: 0.0349519
+Validation error: 0.0409247713305
+Minibatch loss at step 56000 : 0.00202459
+Minibatch error: 0.041389
+Validation error: 0.0400688468103
+Minibatch loss at step 64000 : 0.00288671
+Minibatch error: 0.0545204
+Validation error: 0.0398819446131
+Minibatch loss at step 72000 : 0.00192524
+Minibatch error: 0.032347
+Validation error: 0.0406716792057
+Minibatch loss at step 80000 : 0.000461203
+Minibatch error: 0.0183383
+Validation error: 0.040328719612
+Saved model to temp/pyndent_results/2016-07-15~20_30_58_640.ckpt
+Saved results: 2016-07-15~20_30_58_640
+Score: 0.000310252668043
+Evaluating 1
+Initialized
+Minibatch loss at step 0 : 189086.0
+Minibatch error: 0.0579027
+Validation error: 0.103916325129
+Minibatch loss at step 8000 : 1.17011
+Minibatch error: 0.038506
+Validation error: 0.0403021567253
+Minibatch loss at step 16000 : 0.0172437
+Minibatch error: 0.13689
+Validation error: 0.0416715534006
+Minibatch loss at step 24000 : 0.00160724
+Minibatch error: 0.0270186
+Validation error: 0.0400726597996
+Minibatch loss at step 32000 : 0.0451213
+Minibatch error: 0.192469
+Validation error: 0.0407587234964
+Minibatch loss at step 40000 : 0.00339415
+Minibatch error: 0.0559423
+Validation error: 0.0400286581663
+Minibatch loss at step 48000 : 0.00255944
+Minibatch error: 0.0329337
+Validation error: 0.0416091362485
+Minibatch loss at step 56000 : 0.00221507
+Minibatch error: 0.0398066
+Validation error: 0.0405109824067
+Minibatch loss at step 64000 : 0.00284366
+Minibatch error: 0.0534404
+Validation error: 0.0403750379505
+Minibatch loss at step 72000 : 0.00256268
+Minibatch error: 0.0369964
+Validation error: 0.0410259158002
+Minibatch loss at step 80000 : 0.000666815
+Minibatch error: 0.0216402
+Validation error: 0.0407445449919
+Saved model to temp/pyndent_results/2016-07-16~00_44_24_675.ckpt
+Saved results: 2016-07-16~00_44_24_675
+Score: -0.00010557271184
+Evaluating 2
+Initialized
+Minibatch loss at step 0 : 1.08807e+08
+Minibatch error: 6738.46
+Validation error: 0.483172560195
+Minibatch loss at step 8000 : 0.29316
+Minibatch error: 0.038506
+Validation error: 0.040302156842
+Minibatch loss at step 16000 : 0.0172165
+Minibatch error: 0.136916
+Validation error: 0.0416763764512
+Minibatch loss at step 24000 : 0.00162396
+Minibatch error: 0.0275734
+Validation error: 0.040229885147
+Minibatch loss at step 32000 : 0.0451573
+Minibatch error: 0.192474
+Validation error: 0.0407880057932
+Minibatch loss at step 40000 : 0.00332527
+Minibatch error: 0.0556332
+Validation error: 0.0398962494849
+Minibatch loss at step 48000 : 0.00258131
+Minibatch error: 0.0334344
+Validation error: 0.0413882219277
+Saved model to temp/pyndent_results/2016-07-16~04_28_59_451.ckpt
+Saved results: 2016-07-16~04_28_59_451
+Evaluated 2
