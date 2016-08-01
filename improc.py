@@ -24,29 +24,53 @@ CHANNELS_MAX = CHANNEL_MAX * CHANNEL_MAX
 MAX_DEPTH = MAX_RED_VALUE * CHANNELS_MAX
 COLOR_CHANNELS = 3
 
+def byteToUnit(value):
+    return ((2.0 * value) / BYTE_MAX) - 1
+
 def decode_depth(image):
     """~14 bits of depth in millimeters is encoded with 8 bits in red and 3 bits in each of green and blue."""
     orientation = [1, 0, 0, 0] # default orientation if not present in image.
-   
+
+    attitude = {
+        "quaternion": [1, 0, 0, 0],
+        "euler": [0, 0, 0],
+        "matrix": [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+    }
+    leading_nans = 0
+
     if np.array_equal(image[0, 0], [BYTE_MAX, 0, 0, BYTE_MAX]):
         # Orientation quaternion is present.
         pixel = image[0, 1]
+        orientation = attitude["quaternion"]
         for c in range(len(orientation)):
-            orientation[c] = ((2.0 * pixel[c]) / BYTE_MAX) - 1
+            orientation[c] = byteToUnit(pixel[c])
+        leading_nans += 2
 
-        # Clear out the pixels so they don't get interepreted as depth.
-        image[0, 0] = [0, 0, 0, BYTE_MAX]
-        image[0, 1] = [0, 0, 0, BYTE_MAX]
+    if np.array_equal(image[0, 2], [BYTE_MAX, 0, 0, BYTE_MAX]):
+        # Euler angles and 3x3 rotation matrix are present.
+        pixel = image[0, 3]
+        orientation = attitude["euler"]
+        for c in range(len(orientation)):
+            orientation[c] = math.pi * byteToUnit(pixel[c])
+        matrix = attitude["matrix"]
+        for r in range(len(matrix)):
+            pixel = image[0, 4 + r]
+            row = matrix[r]
+            for c in range(len(row)):
+                row[c] = byteToUnit(pixel[c])
+        leading_nans += 5
 
     red = image[:, :, 0]
     green = image[:, :, 1]
     blue = image[:, :, 2]
 
     depth = ((MAX_RED_VALUE - red) * CHANNELS_MAX) + ((green - red) * CHANNEL_MAX) + (blue - red)
-    
+
     # Zero in the red channel indicates the sensor provided no data.
-    depth[np.where(red == 0)] = float('nan')
-    return depth, orientation
+    depth[np.where(red == 0)] = np.nan
+    # Zero out garbage values from encoded attitude
+    depth[0, :leading_nans] = np.nan
+    return depth, attitude
 
 def encode_normalized_depth(depth):
     """Given a single normalized depth value, encode it into an RGBA pixel."""
@@ -184,10 +208,10 @@ def process_cached(cache_directory, image_path):
         raise # Make sure this makes it out.
     except OSError as e:
         if e.errno != errno.ENOENT:
-            print("OSError opening cached image:", e.errno, e) 
+            print("OSError opening cached image:", e.errno, e)
     except IOError as e:
         if e.errno != errno.ENOENT:
-            print("IOError opening cached image:", e.errno, e) 
+            print("IOError opening cached image:", e.errno, e)
     except Exception as e:
         print("Error opening cached image:", e)
 
@@ -198,7 +222,7 @@ def process_cached(cache_directory, image_path):
     rgb_image, depth, _ = load_image(image_path)
     # Convert from rgb to CIE LAB format.
     lab_image = rgb2lab_normalized(rgb_image)
-    
+
     if not cached:
         try:
             with gzip.open(cache_path, 'wb') as f:
