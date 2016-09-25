@@ -76,20 +76,20 @@ def unflatten_output_shape(input_shape, options):
     """Unflatten operation input to output shape conversion"""
     size = options["size"]
     pixels = size[0] * size[1]
-    return (int(input_shape[0]), size[0], size[1], int(input_shape[1] / pixels))
+    return (int(input_shape[0]), size[0], size[1], int(input_shape[1] // pixels))
     
 def depth_to_space_shape(input_shape, options):
     """Depth to space input to output shape conversion."""
     block_size = options["block_size"]
     height = int(input_shape[1] * block_size)
     width = int(input_shape[2] * block_size)
-    return (int(input_shape[0]), height, width, int(input_shape[3] / (block_size * block_size)))
+    return (int(input_shape[0]), height, width, int(input_shape[3] // (block_size * block_size)))
     
 def depth_to_space_channels(depth, block_size):
     """Determine the number of input channels depth_to_space needs for a given block size."""
     block = block_size * block_size
     if depth % block != 0:
-        depth = block * (1 + (depth / block))
+        depth = block * (1 + (depth // block))
     return depth
 
 def slice_output_shape(input_shape, options):
@@ -115,8 +115,8 @@ def image_output_size(input_shape, size, stride, padding):
 
     return (
         int(input_shape[0]),
-        (input_height + stride[0] - 1) / stride[0],
-        (input_width  + stride[1] - 1) / stride[1],
+        (input_height + stride[0] - 1) // stride[0],
+        (input_width  + stride[1] - 1) // stride[1],
         out_depth
     )
 
@@ -210,7 +210,7 @@ def apply_slice(input_node, train, parameters, options):
 
     for i, align in enumerate(alignments):
         if align == "center":
-            begin[i] = int(spare[i] / 2)
+            begin[i] = int(spare[i] // 2)
         elif align == "end":
             begin[i] = int(spare[i])
 
