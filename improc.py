@@ -14,7 +14,7 @@ from six.moves import cPickle as pickle
 
 def split(image):
     """Split the image data into the top and bottom half."""
-    split_height = image.shape[0] / 2
+    split_height = image.shape[0] // 2
     return image[:split_height], image[split_height:]
 
 BYTE_MAX = 255
@@ -75,9 +75,9 @@ def decode_depth(image):
 def encode_normalized_depth(depth):
     """Given a single normalized depth value, encode it into an RGBA pixel."""
     depth_in_mm = int(depth * MAX_DEPTH)
-    red_bits = depth_in_mm / int(CHANNELS_MAX)
+    red_bits = depth_in_mm // int(CHANNELS_MAX)
     lower_bits = depth_in_mm % int(CHANNELS_MAX)
-    green_bits = lower_bits / int(CHANNEL_MAX)
+    green_bits = lower_bits // int(CHANNEL_MAX)
     blue_bits = lower_bits % int(CHANNEL_MAX)
     red = int(MAX_RED_VALUE) - red_bits
     return [red, red + green_bits, red + blue_bits, BYTE_MAX]
@@ -87,10 +87,10 @@ def encode_normalized_depths(depths):
     channel_max = np.int32(CHANNEL_MAX)
     channels_max = np.int32(CHANNELS_MAX)
     int_depths = (depths * MAX_DEPTH).astype(np.int32)
-    red_bits = int_depths / channels_max
+    red_bits = int_depths // channels_max
     lower_bits = np.mod(int_depths, channels_max)
     red = np.uint8(MAX_RED_VALUE) - red_bits.astype(np.uint8)
-    green_bits = (lower_bits / channel_max).astype(np.uint8)
+    green_bits = (lower_bits // channel_max).astype(np.uint8)
     blue_bits = np.mod(lower_bits, channel_max).astype(np.uint8)
     alpha_bits = np.ones_like(red) * np.uint8(BYTE_MAX)
     return np.concatenate(
@@ -112,7 +112,7 @@ def ascending_factors(number):
     while number > 1:
         if number % factor == 0:
             yield factor
-            number = number / factor
+            number = number // factor
         else:
             factor += 1
 
@@ -136,7 +136,7 @@ def mipmap_imputer(image, strategy=np.mean, smooth=False, scales=None):
     for y, x in scales:
         mipmap = mipmap.copy()
         size = mipmap.shape
-        reshaped = mipmap.reshape(size[0] / y, y, size[1] / x, x)
+        reshaped = mipmap.reshape(size[0] // y, y, size[1] // x, x)
         masked = np.ma.masked_array(reshaped, np.isnan(reshaped))
         mipmap = strategy(strategy(masked, axis=3), axis=1).filled(np.nan)
         mipmaps.append(mipmap)
