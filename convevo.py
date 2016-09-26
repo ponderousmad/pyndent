@@ -572,7 +572,7 @@ class LayerStack(object):
 
 def serialize(stack):
     """Convert the stack to the canonical xml representation."""
-    return et.tostring(stack.to_xml(), pretty_print=True)
+    return et.tostring(stack.to_xml(), encoding="unicode", pretty_print=True)
 
 def create_stack(convolutions, expands, flatten, hidden_sizes, init_mean, init_scale, l2, optimizer=None):
     """Construct a LayerStack instance given the specified options."""
@@ -772,6 +772,7 @@ def output_results(results, path, filename, mutate_seed=None, eval_seed=None):
 
     outputer.setup_directory(path)
 
-    with open(os.path.join(path, filename), "w") as text_file:
-        text_file.write(et.tostring(root, xml_declaration=True, encoding='UTF-8', pretty_print=True))
+    with open(os.path.join(path, filename), "wb") as text_file:
+        tree = et.ElementTree(root)
+        tree.write(text_file, encoding="utf8", xml_declaration=True, pretty_print=True)
 
