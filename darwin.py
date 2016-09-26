@@ -100,4 +100,4 @@ class Darwin(object):
 
     def best(self):
         """Get the best all time result."""
-        return max(self.history.iteritems(), key=(lambda entry: entry[1][1]))[1]
+        return max(self.history.items(), key=(lambda entry: entry[1][1]))[1]
