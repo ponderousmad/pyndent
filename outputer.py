@@ -103,12 +103,12 @@ class ProgressTracker(object):
 
         # Set up to show current training results as well as a running average.
         self.current_display = [self.setup_label(title) for title in self.titles]
-        self.average_display = [self.setup_label(" ") for _ in self.titles]
+        self.average_display = [self.setup_label(title) for title in self.titles]
         current_title_html = "<div style=""margin-left:90px"">Current</div>"
         average_title_html = "<div style=""margin-left:90px"">Running Average</div>"
         display(ipywidgets.HBox([
-            ipywidgets.Box([ipywidgets.HTML(current_title_html)] + self.current_display),
-            ipywidgets.Box([ipywidgets.HTML(average_title_html)] + self.average_display)
+            ipywidgets.VBox([ipywidgets.HTML(current_title_html)] + self.current_display),
+            ipywidgets.VBox([ipywidgets.HTML(average_title_html)] + self.average_display)
         ]))
 
     def setup_eval(self, stack):
