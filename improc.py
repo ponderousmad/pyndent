@@ -162,8 +162,8 @@ def compute_mean_depth(files):
     """Given a set of image files, compute the mean of all the depth values."""
     # NOTE: The original version of this function computed the mean of the image means.
     # Since the images have different numbers of missing pixels, this skewed the result slightly.
-    depth_sum = 0
-    depth_count = 0
+    depth_sum = np.int64(0)
+    depth_count = np.int64(0)
 
     for i, path in enumerate(files):
         _, depth, _ = load_image(path)
